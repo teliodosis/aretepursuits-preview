@@ -109,7 +109,7 @@ section{padding-block:clamp(64px,9vw,120px)}
 .names .lbl{width:100%;text-align:center;margin-bottom:6px}
 .names{background:#ECEAE3;border-radius:var(--r);border:0;padding-inline:24px}
 .names .lbl{color:#4D6A49}
-.names img{height:54px;width:auto;max-width:160px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.05);opacity:.8;transition:filter .3s,opacity .3s}
+.names img{height:48px;width:auto;max-width:170px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.05);opacity:.8;transition:filter .3s,opacity .3s}
 .names img:hover{filter:none;opacity:1}
 .names .need{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;height:54px;padding:0 14px;border:1px dashed #9AA39C;border-radius:6px;font-family:var(--f-display);font-size:1.05rem;color:#2A332F;white-space:nowrap;line-height:1.1}
 .names .need small{font-family:var(--f-mono);font-size:.6rem;color:#6A746E;letter-spacing:.06em;margin-top:3px}
@@ -701,7 +701,7 @@ const NAMED=[
  ['Josh’s coaching presence is gold standard, full stop. I feel fortunate to have found him when I was not even looking.','Mary Elizabeth Parks'],
  ['Josh takes a very personalized approach to coaching and mentorship. His approach expanded my perspective and pushed me to have more of a growth mindset.','Nick Larche']
 ];
-const CLIENTS=[['Amazon',''],['Paylocity',''],['LendingTree',''],['Ellucian','ellucian'],['NICE',''],['Washington and Lee University','wl'],['Unanet','unanet'],['National Pharmaceutical Council','']];
+const CLIENTS=[['Amazon','amazon.png'],['Paylocity','paylocity.png'],['LendingTree','lendingtree.png'],['Ellucian','ellucian.png'],['NICE','nice.png'],['Washington and Lee University','wl.jpg'],['Unanet','unanet.jpg'],['National Pharmaceutical Council','npc.png']];
 
 /* ---------- pieces ---------- */
 const threshold=(title='Every path here starts with a conversation.')=>`<section class="threshold"><div class="wrap inner">
@@ -744,7 +744,7 @@ pages.home=()=>`
  </div>
 </div></section>
 
-<div class="wrap"><div class="names"><div class="label lbl">Leaders I’ve worked with come from</div>${CLIENTS.map(([n,k])=>k?`<img src="img/c-${k}.jpg" alt="${n}">`:`<span class="need">${n}<small>logo file needed</small></span>`).join('')}</div></div>
+<div class="wrap"><div class="names"><div class="label lbl">Leaders I’ve worked with come from</div>${CLIENTS.map(([n,k])=>`<img src="img/c-${k}" alt="${n}">`).join('')}</div></div>
 
 <section><div class="wrap">
  <div class="label" style="margin-bottom:20px">In their words</div>
