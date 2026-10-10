@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Arete Pursuits Wider Door</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,100;1,9..144,300..500,100&family=Albert+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: "Two doors, one threshold" — dusk-dark first; a full-bleed photograph opens the site, two doors split below it, and every page ends at the same threshold (a conversation). */
+:root{
+  --bg:#0F1614; --surface:#16201D; --raise:#1C2824; --ink:#ECE6DA; --muted:#A3ACA5; --rule:#2A3632;
+  --ember:#E49A5B; --sage:#A6BC9F; --on-accent:#1A120B; --shade:rgba(8,12,11,.62);
+  --f-display:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --f-body:"Albert Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --max:1200px; --measure:64ch; --r:4px;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#EFF1EC; --surface:#FFFFFF; --raise:#F7F8F4; --ink:#17201C; --muted:#5A6660; --rule:#D3D9D1;
+  --ember:#B2591F; --sage:#4D6A49; --on-accent:#FFFFFF; --shade:rgba(10,14,12,.55); color-scheme:light }}
+:root[data-theme="light"]{
+  --bg:#EFF1EC; --surface:#FFFFFF; --raise:#F7F8F4; --ink:#17201C; --muted:#5A6660; --rule:#D3D9D1;
+  --ember:#B2591F; --sage:#4D6A49; --on-accent:#FFFFFF; --shade:rgba(10,14,12,.55); color-scheme:light }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(16px,4vw,44px)}
+h1,h2,h3{font-family:var(--f-display);font-weight:350;font-variation-settings:"SOFT" 100;text-wrap:balance;line-height:1.08;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.label{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:.6em;font:600 .95rem/1 var(--f-body);padding:1em 1.45em;border-radius:999px;text-decoration:none;border:1px solid transparent;transition:transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-ember{background:var(--ember);color:var(--on-accent)}
+.btn-line{border-color:currentColor;color:var(--ink)}
+.tl-link{color:var(--ink);text-decoration:underline;text-decoration-color:var(--ember);text-underline-offset:.22em;text-decoration-thickness:1.5px}
+.tl-link:hover{color:var(--ember)}
+
+/* header */
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.nav{display:flex;align-items:center;gap:22px;min-height:70px}
+.brand{text-decoration:none;display:flex;align-items:baseline;gap:.5em;line-height:1}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:1.35rem;font-variation-settings:"SOFT" 100}
+.brand i{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:1.35rem;color:var(--ember)}
+.menu{display:flex;gap:2px;margin-left:auto;align-items:center}
+.menu > a,.menu .dd > button{font:500 .95rem var(--f-body);color:var(--ink);text-decoration:none;background:none;border:0;padding:.6em .85em;border-radius:6px;cursor:pointer}
+.menu > a:hover,.menu .dd > button:hover{background:var(--raise)}
+.menu [aria-current="page"],.menu .dd > button.on{color:var(--ember)}
+.dd{position:relative}
+.dd-panel{position:absolute;top:calc(100% + 10px);left:-10px;min-width:280px;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:8px;box-shadow:0 24px 50px -24px rgba(0,0,0,.6)}
+.dd-panel::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+.dd-panel a{display:block;padding:.65em .85em;border-radius:6px;text-decoration:none}
+.dd-panel a small{display:block;color:var(--muted);font-size:.82rem}
+.dd-panel a:hover{background:var(--raise)}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--rule);border-radius:8px;padding:.5em .75em;font:500 .9rem var(--f-body);color:var(--ink)}
+.mobile{border-top:1px solid var(--rule);padding-block:10px 18px;display:grid}
+.mobile a{padding:.5em 0;text-decoration:none;font-size:1.05rem}
+.mobile .grp{margin-top:8px}
+@media (max-width:940px){ .menu,.nav > .btn{display:none} .burger{display:inline-block} }
+
+section{padding-block:clamp(64px,9vw,120px)}
+.rt{border-top:1px solid var(--rule)}
+
+/* hero */
+.hero{position:relative;padding:0;min-height:min(78vh,720px);display:grid;align-items:end;overflow:hidden;color:#F3EEE4}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,11,.15) 0%,rgba(8,12,11,.25) 40%,rgba(8,12,11,.86) 100%)}
+.hero .inner{position:relative;z-index:1;padding-block:clamp(120px,18vw,220px) clamp(40px,6vw,72px)}
+.hero h1{font-size:clamp(2.6rem,7.4vw,6.4rem);font-weight:300;max-width:15ch;letter-spacing:-.025em}
+.hero h1 em{font-style:italic;color:#F0A867}
+.hero .sub{font-size:clamp(1.05rem,1.8vw,1.3rem);max-width:46ch;margin-top:22px;color:#E3DCCF}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .btn-line{color:#F3EEE4}
+.hero .credit{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;color:#C9C1B3;margin-top:40px;opacity:.85}
+
+/* doors */
+.doors{display:flex;gap:14px;min-height:520px}
+.door{position:relative;flex:1 1 0;min-width:0;border-radius:var(--r);overflow:hidden;text-decoration:none;color:#F3EEE4;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(22px,3vw,40px);transition:flex-grow .6s cubic-bezier(.2,.7,.2,1)}
+.door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.door::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,11,.05),rgba(8,12,11,.82) 70%)}
+.door > *:not(img){position:relative;z-index:1}
+.door .label{color:#CFE0C8}
+.door h2{font-size:clamp(2rem,3.6vw,3.1rem);margin:10px 0 12px}
+.door p{max-width:40ch;color:#E5DFD3}
+.door ul{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.door li{font-size:.82rem;border:1px solid rgba(243,238,228,.4);border-radius:999px;padding:.3em .8em}
+@media (hover:hover) and (min-width:861px){ .doors:hover .door{flex-grow:.85} .doors .door:hover{flex-grow:1.4} .door:hover img{transform:scale(1.04)} }
+@media (max-width:860px){ .doors{flex-direction:column;min-height:0} .door{min-height:420px} }
+
+/* thesis */
+.thesis{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.thesis h2{font-size:clamp(2rem,4vw,3.3rem)}
+.thesis .body{display:grid;gap:18px;color:var(--muted);max-width:var(--measure)}
+.coin{border:1px solid var(--rule);border-radius:var(--r);padding:22px 24px;background:var(--surface);margin-top:28px}
+.coin .w{font-family:var(--f-display);font-style:italic;font-size:1.9rem}
+.coin .ph{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);margin-left:.6em}
+.coin p{margin-top:8px;color:var(--ink)}
+@media (max-width:820px){ .thesis{grid-template-columns:1fr} }
+
+/* clients */
+.names{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:center;padding-block:44px;border-block:1px solid var(--rule)}
+.names .lbl{width:100%;text-align:center;margin-bottom:6px}
+.names{background:#ECEAE3;border-radius:var(--r);border:0;padding-inline:24px}
+.names .lbl{color:#4D6A49}
+.names img{height:54px;width:auto;max-width:160px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.05);opacity:.8;transition:filter .3s,opacity .3s}
+.names img:hover{filter:none;opacity:1}
+.names .need{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;height:54px;padding:0 14px;border:1px dashed #9AA39C;border-radius:6px;font-family:var(--f-display);font-size:1.05rem;color:#2A332F;white-space:nowrap;line-height:1.1}
+.names .need small{font-family:var(--f-mono);font-size:.6rem;color:#6A746E;letter-spacing:.06em;margin-top:3px}
+.names span.n{font-family:var(--f-display);font-size:clamp(1.15rem,2vw,1.5rem);font-weight:350;color:var(--muted);white-space:nowrap}
+
+/* testimonials */
+.quote-big{font-family:var(--f-display);font-weight:300;font-style:italic;font-size:clamp(2.2rem,5.6vw,4.4rem);line-height:1.06;max-width:18ch}
+.qby{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:16px 0 56px}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:36px}
+.q{margin:0;padding-top:18px;border-top:1px solid var(--rule)}
+.q p{font-family:var(--f-display);font-size:1.15rem;line-height:1.5}
+.q cite{display:block;margin-top:12px;font-style:normal;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ember)}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:44px 28px}
+.card{text-decoration:none;display:grid;gap:12px;align-content:start}
+.card .ph{aspect-ratio:3/2;max-width:100%;border-radius:var(--r);overflow:hidden;background:var(--raise)}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.card:hover .ph img{transform:scale(1.04)}
+.card h3{font-size:1.5rem}
+.card:hover h3{color:var(--ember)}
+.meta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);display:flex;gap:.6em;flex-wrap:wrap;letter-spacing:.04em}
+.meta .c{color:var(--sage)}
+.card .ex{color:var(--muted);font-size:.96rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+/* waystations */
+.road{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px);align-items:start}
+.stops{list-style:none;margin:0;padding:0;border-left:1px solid var(--rule)}
+.stops li{position:relative;padding:0 0 18px 22px;display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px}
+.stops li::before{content:"";position:absolute;left:-5px;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1.5px solid var(--sage)}
+.stops li.now::before{background:var(--ember);border-color:var(--ember)}
+.stops .y{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);padding-top:.2em}
+@media (max-width:820px){ .road{grid-template-columns:1fr} .stops li{grid-template-columns:1fr;gap:2px} }
+
+/* threshold band */
+.threshold{background:var(--surface);border-top:1px solid var(--rule)}
+.threshold .inner{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:end}
+.threshold h2{font-size:clamp(2rem,4.4vw,3.6rem)}
+.threshold .opts{display:grid;gap:12px}
+.threshold .opt{display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none;border:1px solid var(--rule);border-radius:var(--r);padding:16px 18px;background:var(--bg)}
+.threshold .opt:hover{border-color:var(--ember)}
+.threshold .opt b{font-weight:600}
+.threshold .opt span{font-size:.88rem;color:var(--muted)}
+.threshold .opt i{font-style:normal;color:var(--ember);font-size:1.3rem}
+@media (max-width:820px){ .threshold .inner{grid-template-columns:1fr} }
+
+/* page head */
+.phead{padding-block:clamp(56px,8vw,104px) clamp(32px,4vw,52px);border-bottom:1px solid var(--rule)}
+.phead h1{font-size:clamp(2.6rem,6.4vw,5.2rem);margin-top:16px;max-width:18ch;font-weight:300}
+.phead h1 em{font-style:italic;color:var(--ember)}
+.phead .lede{font-family:var(--f-display);font-size:clamp(1.2rem,2.1vw,1.55rem);color:var(--muted);max-width:42ch;margin-top:20px;font-weight:350}
+.crumbs{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);letter-spacing:.04em}
+.crumbs a{color:var(--muted)}
+
+.cols{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:18px 56px;padding-block:48px;border-bottom:1px solid var(--rule)}
+.cols:last-child{border-bottom:0}
+.cols > .label{padding-top:.5em}
+.prose{max-width:var(--measure);display:grid;gap:1.05em}
+.prose h3{font-size:1.6rem;margin-top:.4em}
+.prose ul,.prose ol{margin:0;padding-left:1.15em;display:grid;gap:.55em}
+@media (max-width:780px){ .cols{grid-template-columns:1fr} }
+
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding-block:14px;border-top:1px solid var(--rule)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--f-mono);font-size:.8rem;color:var(--ember);padding-top:.25em}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+.facts div{background:var(--surface);padding:16px 18px}
+.facts b{display:block;font-family:var(--f-display);font-weight:350;font-size:1.7rem}
+.facts span{font-size:.85rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.85rem;padding:.38em .9em;border-radius:999px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;font-family:var(--f-body)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip .n{color:var(--muted);margin-left:.35em;font-family:var(--f-mono);font-size:.78em}
+.chip[aria-pressed="true"] .n{color:inherit;opacity:.7}
+
+/* consciousness path */
+.path{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:10px;position:relative}
+.path::before{content:"";position:absolute;left:0;right:0;top:15px;height:1px;background:linear-gradient(90deg,var(--sage),var(--ember))}
+.stn{position:relative;padding:0 14px 0 0}
+.stn .dot{width:31px;height:31px;border-radius:50%;background:var(--bg);border:1.5px solid var(--sage);display:grid;place-items:center;font-family:var(--f-mono);font-size:.72rem;color:var(--ink);position:relative}
+.stn:last-child .dot{border-color:var(--ember)}
+.stn h3{font-size:1.25rem;margin:14px 0 6px}
+.stn p{font-size:.92rem;color:var(--muted)}
+.stn .off{margin-top:10px;font-size:.82rem;color:var(--muted);border-top:1px dashed var(--rule);padding-top:8px}
+.stn .off b{font-family:var(--f-mono);font-weight:400;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ember);display:block}
+@media (max-width:900px){ .path{grid-template-columns:1fr;gap:22px} .path::before{left:15px;right:auto;top:0;bottom:0;width:1px;height:auto;background:linear-gradient(180deg,var(--sage),var(--ember))} .stn{padding:0 0 0 48px} .stn .dot{position:absolute;left:0;top:0} .stn h3{margin-top:2px} }
+
+.vs{width:100%;border-collapse:collapse;font-size:.98rem}
+.vs th,.vs td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.vs th{font-family:var(--f-mono);font-weight:400;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.vs td:first-child{color:var(--muted);width:24%}
+.vs td:nth-child(3){color:var(--ember)}
+.tablewrap{overflow-x:auto}
+
+/* about */
+.ab-hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr);gap:clamp(28px,5vw,72px);align-items:end}
+.ab-hero img{width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r);filter:saturate(.85)}
+.ab-hero h1 span{display:block}
+.ab-hero h1 span:nth-child(even){font-style:italic;color:var(--ember)}
+@media (max-width:820px){ .ab-hero{grid-template-columns:1fr} .ab-hero img{max-width:340px} }
+.tline{list-style:none;margin:0;padding:0;display:grid}
+.tline li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;padding-block:16px;border-top:1px solid var(--rule)}
+.tline .y{font-family:var(--f-mono);font-size:.8rem;color:var(--ember);padding-top:.3em}
+.tline b{font-family:var(--f-display);font-weight:400;font-size:1.25rem;display:block}
+.tline span{color:var(--muted)}
+@media (max-width:600px){ .tline li{grid-template-columns:1fr;gap:4px} }
+
+/* workshops */
+.ws{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:0 40px}
+.w{padding-block:24px;border-top:1px solid var(--rule);display:grid;gap:8px;align-content:start}
+.w h3{font-size:1.4rem}
+.w .tag{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
+.w .tag.hot{color:var(--ember)}
+.w p{color:var(--muted);font-size:.96rem}
+.offer{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px}
+.of{border:1px solid var(--rule);border-radius:var(--r);background:var(--surface);padding:24px;display:grid;gap:10px;align-content:start}
+.of h3{font-size:1.5rem}
+.of p{color:var(--muted);font-size:.96rem}
+
+/* writing */
+.feature{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;text-decoration:none;padding-block:44px;border-bottom:1px solid var(--rule)}
+.feature .ph{aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;max-width:100%}
+.feature .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.feature h2{font-size:clamp(2.2rem,4.4vw,3.6rem);margin-block:12px 14px;font-weight:300}
+.feature:hover h2{color:var(--ember)}
+@media (max-width:780px){ .feature{grid-template-columns:1fr} }
+.toolbar{display:grid;gap:16px;padding-block:28px;border-bottom:1px solid var(--rule)}
+.search{display:flex;align-items:center;gap:10px;border:1px solid var(--rule);background:var(--surface);border-radius:999px;padding:.55em 1em;max-width:440px}
+.search input{border:0;background:transparent;font:inherit;color:var(--ink);width:100%;outline:none}
+.year{display:grid;grid-template-columns:minmax(0,140px) minmax(0,1fr);gap:12px 40px;padding-block:28px;border-bottom:1px solid var(--rule)}
+.year h3{font-family:var(--f-mono);font-size:1.3rem;font-weight:400}
+.year h3 small{display:block;font-size:.72rem;color:var(--muted);margin-top:4px}
+.row{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:16px;padding-block:9px;border-bottom:1px dashed var(--rule);text-decoration:none;align-items:baseline}
+.row:last-child{border-bottom:0}
+.row .d{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+.row .t{font-family:var(--f-display);font-size:1.15rem;font-weight:350}
+.row:hover .t{color:var(--ember)}
+.row .k{font-size:.78rem;color:var(--muted);text-align:right}
+@media (max-width:780px){ .year{grid-template-columns:1fr} .row{grid-template-columns:60px minmax(0,1fr)} .row .k{display:none} }
+.empty{padding-block:40px;color:var(--muted)}
+
+/* post */
+.post-head{padding-block:clamp(44px,6vw,84px) 28px;max-width:880px}
+.post-head h1{font-size:clamp(2.5rem,6vw,4.6rem);margin-block:14px 18px;font-weight:300}
+.post-hero{max-width:1100px;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden}
+.post-hero img{width:100%;height:100%;object-fit:cover;display:block}
+.article{max-width:var(--measure);font-family:var(--f-display);font-weight:350;font-size:1.25rem;line-height:1.66;padding-block:44px;display:grid;gap:1.05em}
+.article h2{font-size:1.8rem;margin-top:.9em;font-weight:400}
+.article ul{margin:0;padding-left:1.1em;display:grid;gap:.45em}
+.article strong{font-weight:550}
+.article a{text-decoration-color:var(--ember);text-underline-offset:.2em}
+.article .practice{border-left:2px solid var(--ember);padding:4px 0 4px 20px;font-style:italic}
+.note{font-family:var(--f-body);font-size:.95rem;background:var(--surface);border:1px dashed var(--rule);border-radius:var(--r);padding:16px 18px;color:var(--muted)}
+.bio{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;align-items:start;max-width:var(--measure);padding:24px;border:1px solid var(--rule);border-radius:var(--r);background:var(--surface)}
+.bio img{width:72px;height:72px;border-radius:50%;object-fit:cover}
+.bio p{font-size:.98rem}
+.bio .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:.92rem}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-block:40px;max-width:880px}
+.pn a{text-decoration:none;display:grid;gap:4px}
+.pn a:last-child{text-align:right}
+.pn span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.pn b{font-family:var(--f-display);font-weight:400;font-size:1.25rem}
+.pn a:hover b{color:var(--ember)}
+
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:8px 40px}
+.shelf .grp{padding-block:24px;border-top:1px solid var(--rule)}
+.shelf h3{font-size:1.35rem;margin-bottom:10px}
+.shelf ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.shelf li a{text-decoration:none;display:block}
+.shelf li a b{font-family:var(--f-display);font-weight:400;font-size:1.1rem}
+.shelf li a:hover b{color:var(--ember)}
+.shelf li span{display:block;font-size:.85rem;color:var(--muted)}
+
+.ways{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px;padding-block:48px}
+.way{border:1px solid var(--rule);border-radius:var(--r);padding:24px;background:var(--surface);display:grid;gap:10px;align-content:start}
+.way h3{font-size:1.45rem}
+.way .val{font-family:var(--f-display);font-size:1.3rem;user-select:all;word-break:break-word}
+.copy{justify-self:start;font:500 .85rem var(--f-body);background:none;border:1px solid var(--rule);border-radius:999px;padding:.45em .9em;color:var(--ink);cursor:pointer}
+
+footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px}
+.fgrid h4{font-family:var(--f-mono);font-weight:400;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;color:var(--sage);margin:0 0 12px}
+.fgrid ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.95rem}
+.fgrid a{text-decoration:none;color:var(--muted)}
+.fgrid a:hover{color:var(--ink)}
+.fgrid .tag{font-family:var(--f-display);font-style:italic;font-size:1.25rem;margin-top:14px;max-width:24ch;font-weight:300}
+.fine{margin-top:44px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:860px){ .fgrid{grid-template-columns:1fr 1fr} .fgrid > :first-child{grid-column:1/-1} }
+
+.pill{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:.5em .6em .5em 1em;font-size:.82rem;box-shadow:0 12px 30px -16px rgba(0,0,0,.6)}
+.pill b{font-family:var(--f-mono);letter-spacing:.1em;text-transform:uppercase;font-size:.68rem;color:var(--ember);font-weight:400}
+.pill a{text-decoration:none;background:var(--raise);color:var(--ink);padding:.35em .8em;border-radius:999px}
+.pill button{background:none;border:0;color:var(--muted);cursor:pointer;font-size:1rem;padding:0 .3em}
+
+@keyframes rise{from{opacity:.001;transform:translateY(12px)}to{opacity:1;transform:none}}
+.enter{animation:rise .55s ease both}
+.hero h1,.hero .sub,.hero .actions{animation:rise .9s ease both}
+.hero .sub{animation-delay:.12s}.hero .actions{animation-delay:.24s}
+@media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important} }
+</style>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Arete Pursuits home"><b>Arete</b><i>Pursuits</i></a>
+    <nav class="menu" aria-label="Main">
+      <div class="dd" data-dd="lead"><button aria-expanded="false" data-group="lead">Leadership ▾</button>
+        <div class="dd-panel" hidden>
+          <a href="#executive-coaching">Executive Coaching<small>Six months, 13 sessions, two assessments</small></a>
+          <a href="#organizations">For Organizations<small>Workshops, DiSC, 360s, new leaders</small></a>
+        </div></div>
+      <div class="dd" data-dd="being"><button aria-expanded="false" data-group="being">Consciousness ▾</button>
+        <div class="dd-panel" hidden>
+          <a href="#consciousness-coaching">Consciousness Coaching<small>The one who is living the life</small></a>
+          <a href="#life-coaching">Life Coaching<small>The life itself</small></a>
+        </div></div>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn btn-ember" href="#contact">Begin a conversation</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+  </div>
+  <div class="wrap mobile" id="mobileNav" hidden>
+    <span class="label grp">Leadership</span><a href="#executive-coaching">Executive Coaching</a><a href="#organizations">For Organizations</a>
+    <span class="label grp">Consciousness</span><a href="#consciousness-coaching">Consciousness Coaching</a><a href="#life-coaching">Life Coaching</a>
+    <span class="label grp">More</span><a href="#writing">Writing</a><a href="#resources">Library</a><a href="#about">About</a><a href="#contact">Begin a conversation</a>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer class="site"><div class="wrap">
+  <div class="fgrid">
+    <div><a class="brand" href="#home"><b>Arete</b><i>Pursuits</i></a><p class="tag">Accelerating the evolution of human consciousness, one leader at a time.</p></div>
+    <div><h4>Leadership</h4><ul><li><a href="#executive-coaching">Executive Coaching</a></li><li><a href="#organizations">For Organizations</a></li><li><a href="#organizations">DiSC &amp; 360 Feedback</a></li></ul></div>
+    <div><h4>Consciousness</h4><ul><li><a href="#consciousness-coaching">Consciousness Coaching</a></li><li><a href="#life-coaching">Life Coaching</a></li><li><a href="https://teliodosis.com" target="_blank" rel="noopener">Teliodosis ↗</a></li></ul></div>
+    <div><h4>Stay close</h4><ul><li><a href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Subscribe on Substack ↗</a></li><li><a href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">LinkedIn newsletter ↗</a></li><li><a href="#writing">Writing</a></li><li><a href="#resources">Library</a></li><li><a href="#contact">Contact</a></li></ul></div>
+  </div>
+  <div class="fine"><span>© 2026 Arete Pursuits · Josh Dietrich, PCC</span><span><a href="#privacy-policy" style="color:inherit">Privacy</a> · <a href="#terms-and-conditions" style="color:inherit">Terms</a></span></div>
+</div></footer>
+
+<div class="pill" id="pill"><b>Bold concept</b><a id="liveLink" href="https://aretepursuits.com/" target="_blank" rel="noopener">Compare with current page ↗</a><button id="pillX" aria-label="Hide concept label">×</button></div>
+
+<script>
+const LIVE='https://aretepursuits.com';
+const CAL=LIVE+'/schedule/website', CAL_C=LIVE+'/schedule/consciousness';
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const slugify=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+/* ---------- posts (from the WordPress export) ---------- */
+const POSTS = `2026-08-10|gentleness|Gentleness|Consciousness,Mindfulness
+2026-08-03|leading-without-authority|Leading Without Authority|Executive Presence,Management,Trust
+2026-07-15|change-of-plans|Change of Plans|Walkabout
+2026-07-06|allowing-everything-to-be-as-it-is|Allowing Everything to Be as It Is|Awareness,Consciousness,Mindfulness,Spirituality
+2026-06-29|untethered-and-tethered|Untethered. And Tethered.|Emotions,Perspectives
+2026-06-15|the-pendulum|The Pendulum|Awareness,Mindfulness
+2026-06-01|welcoming|Welcoming|Awareness,Growth,Mindfulness
+2026-05-26|meditations-on-ogha-pooge|Meditations on O’gha Po’oge|Walkabout
+2026-05-18|unnesting|Unnesting|Awareness,Consciousness,Mindfulness,Walkabout
+2026-04-27|the-gem-within-executive-presence|The Gem Within Executive Presence|Executive Presence,Mindfulness
+2026-04-06|growing-up-again|Growing Up, Again|Growth
+2026-03-30|more-of-less|More or Less|Awareness,Mindfulness
+2026-03-23|same-coach-wider-door|Same Coach, Wider Door|Coaching,Consciousness
+2026-03-16|fiercely-loyal|Fiercely Loyal|Awareness,Perspectives
+2026-03-02|zones-of-engagement|Zones of Engagement|Growth,Learning,Management,Neuroscience,Productivity
+2026-02-23|acknowledge-honour-release|Acknowledge. Honour. Release.|Awareness,Growth,Mindfulness
+2026-02-16|ten-hours|Ten Hours|Health
+2026-02-02|learning-to-read|Learning to Read|Awareness,Growth,Learning,Mindfulness
+2026-01-26|my-service-shift|My Service Shift|Awareness
+2026-01-19|be-a-liver-2|Be A Liver|Mindfulness
+2026-01-12|restoring-empathy|Restoring Empathy|Emotions
+2026-01-05|zero-based-living|Zero-Based Living|Life Planning
+2025-12-22|2025-highlights|2025 Highlights|Health
+2025-12-15|the-best-week-of-my-life|The Best Week of My Life|Mindfulness,Spirituality
+2025-12-01|vision|Vision|AI,Executive Presence,Life Planning,Strategic Thinking
+2025-11-24|spreading-joy|Spreading Joy|Joy
+2025-11-17|welcome-josh-enjoy-your-stay|Welcome Josh. Enjoy your stay.|Health
+2025-11-10|leading-with-love|Leading With Love|Executive Presence,Spirituality
+2025-10-06|when-the-world-changes-overnight|When the World Changes Overnight|AI
+2025-09-29|appreciating-your-value|Appreciating Your Value|Communication,Delegation,Management
+2025-09-08|the-story-of-doug|The Story of Doug|Management,Teams
+2025-09-02|lucid-dreaming|Lucid Dreaming|Consciousness
+2025-08-25|the-mirage-of-the-mountain-biker|The Mirage of the Mountain Biker|Neuroscience,Perspectives
+2025-08-18|a-love-story|A Love Story|Walkabout
+2025-08-11|magical-gateways|Magical Gateways|Spirituality
+2025-08-04|reliability|Reliability|Delegation,Management
+2025-06-16|the-master-and-his-emissary|The Master and His Emissary|Neuroscience
+2025-05-19|rest|Rest|Health
+2025-05-12|elevating-consciousness|Elevating Consciousness|Growth
+2025-05-05|the-box|The Box|Strategic Thinking
+2025-04-28|walkabout-update|Walkabout Update|Walkabout
+2025-04-21|stillness|Stillness|Awareness,Executive Presence,Mindfulness
+2025-04-14|mastery|Mastery|Growth,Mindfulness
+2025-04-07|public-speaking|Public Speaking|Executive Presence
+2025-03-31|colorado|Colorado|Walkabout
+2025-03-24|building-teams|Building Teams|Management,Teams
+2025-03-17|integrity|Integrity|Executive Presence,Growth,Trust
+2025-03-10|the-gift-of-time|The Gift of Time|Management,Productivity
+2025-03-03|anchor-points|Anchor Points|Awareness,Growth,Perspectives
+2025-02-24|openness|Openness|Awareness,Growth,Mindfulness,Walkabout
+2025-02-18|management-fundamentals|Management Fundamentals|Management
+2025-02-10|from-operational-to-strategic|From Operational to Strategic|Strategic Thinking
+2025-02-03|navigating-troubled-waters|Navigating Troubled Waters|Mindfulness,Perspectives
+2025-01-27|achieving-and-awakened-awareness|Achieving and Awakened Awareness|Awareness,Growth,Neuroscience
+2025-01-21|building-your-council|Building Your Council|Awareness,Growth,Life Planning,Mindfulness,Perspectives
+2025-01-13|reorienting|Reorienting|Awareness,Mindfulness,Perspectives
+2025-01-06|synchronicity|Synchronicity|Life Planning
+2024-12-23|best-of-2024|Best of 2024|Compilations
+2024-12-16|tales-from-the-road|Tales From the Road|Walkabout
+2024-12-09|new-manager-feeling-unsure|New Manager. Feeling Unsure.|Career,Management
+2024-12-02|rethinking-retirement|Rethinking Retirement|Career,Life Planning
+2024-11-25|an-abundance-of-gratitude|An Abundance of Gratitude|Gratitude
+2024-11-18|walking-about|Walking About|Awareness,Growth,Perspectives
+2024-11-12|strengthening-strategic|Strengthening Strategic|Executive Presence,Strategic Thinking
+2024-11-04|a-historic-week|A Historic Week|Communication
+2024-10-28|a-story-of-presence|A Story of Presence|Awareness,Executive Presence,Mindfulness
+2024-10-21|the-unwinding-of-an-athlete|The Unwinding of an Athlete|Awareness,Growth,Perspectives
+2024-10-14|by-request|By Request|Communication,Delegation,Management
+2024-10-07|celebrating-three-years|Celebrating Three Years|Coaching
+2024-09-30|two-ears-one-mouth-one-brain|Two Ears. One Mouth. One Brain.|Communication
+2024-09-23|the-council-of-joshes|The Council of Joshes|Awareness,Growth,Life Planning,Perspectives
+2024-09-16|just-a-little-patience|Just a Little Patience|Awareness,Growth
+2024-09-09|your-first-90-days|Your First 90 Days|Career
+2024-09-03|the-neuroscience-of-doing-and-being|The Neuroscience of Doing and Being|Neuroscience
+2024-08-26|dragonfly|Dragonfly|Health
+2024-08-19|refining-teliodosis|Refining Teliodosis|Growth
+2024-08-12|social-connections|Social Connections|Communication,Growth,Health
+2024-08-05|credentials-matter|Credentials Matter|Coaching
+2024-07-29|meaningful-conversations|Meaningful Conversations|Communication
+2024-07-22|as-measured-by|As Measured By…|Goals,Productivity
+2024-07-15|neuroplasticity|Neuroplasticity|Neuroscience
+2024-07-08|summer-thinking|Summer Thinking|Learning,Life Planning
+2024-07-01|summer-reading|Summer Reading|Compilations
+2024-06-24|exploring-integration|Exploring Integration|Awareness,Growth,Mindfulness,Perspectives
+2024-06-17|running-with-the-turtles|Running With The Turtles|Health
+2024-06-10|a-funny-thing-happened-on-vacation|A Funny Thing Happened on Vacation|Health,Life Planning
+2024-06-03|transformation|Transformation|Growth
+2024-05-28|mirror-mirror|Mirror, Mirror|Awareness,Mindfulness,Neuroscience,Perspectives
+2024-05-20|be-a-raven|Be A Raven|Gratitude
+2024-05-13|leading-through-coaching|Leading Through Coaching|Coaching
+2024-05-06|be-a-liver|Be A Liver|Communication,Growth,Mindfulness
+2024-04-29|thus-spoke-taylor|Thus Spoke Taylor|Perspectives
+2024-04-22|authenticity|Authenticity|Executive Presence,Management,Trust
+2024-04-15|beneficial-communication|Beneficial Communication|Awareness,Communication,Management,Mindfulness
+2024-04-08|the-wisdom-in-your-body|The Wisdom In Your Body|Somatics
+2024-04-01|presence|Presence|Awareness,Coaching,Executive Presence,Management,Mindfulness
+2024-03-25|great-leaders-speak-last|Great Leaders Speak Last|Executive Presence,Management,Teams
+2024-03-18|understanding-trust|Understanding Trust|Trust
+2024-03-11|listening-to-the-universe-part-3|Listening to the Universe, Part 3|Coaching
+2024-03-04|coaching-discovery|Coaching Discovery|Coaching
+2024-02-26|courageous-conversations|Courageous Conversations|Management
+2024-02-20|how-to-do-your-taxes|How To Do Your Taxes|Productivity
+2024-02-12|embracing-intuition|Embracing Intuition|Neuroscience
+2024-02-05|life-accounts|Life Accounts|Life Planning
+2024-01-29|cultivating-wonder|Cultivating Wonder|Growth
+2024-01-22|work-life-balance-is-a-myth|Work-Life Balance is a Myth|Health
+2024-01-12|more-doing-less|More Doing Less|Productivity
+2024-01-08|doing-less|Doing Less|Productivity
+2024-01-02|best-of-2023|Best of 2023|
+2023-12-18|listening-to-the-universe-part-2|Listening to the Universe, Part 2|Coaching
+2023-12-11|unlocking-opportunities-how-to-strengthen-your-linkedin-profile|Unlocking Opportunities: How to Strengthen Your LinkedIn Profile|Career
+2023-12-04|happy-new-year|Happy New Year|Goals
+2023-11-27|arete|Arete|Growth
+2023-11-20|creating-space|Creating Space|Mindfulness
+2023-11-13|shared-background-of-obviousness|Shared Background of Obviousness|Management
+2023-11-06|prince-kohaku|Prince Kohaku|Mindfulness
+2023-10-30|your-future-self|Your Future Self|Awareness,Perspectives
+2023-10-23|from-subject-to-object|From Subject to Object|Awareness
+2023-10-16|my-second-year|My Second Year|Coaching
+2023-10-09|never-grow-up|Never Grow Up|Learning
+2023-10-02|missing-conversations|Missing Conversations|Teams
+2023-09-25|we-are-always-growing|We Are Always Growing|Learning
+2023-09-18|golden-mean|The Golden Mean|Mindfulness
+2023-09-11|what-should-i-do|What Should I Do?|Productivity
+2023-09-05|journal-of-awareness|Journal of Awareness|Awareness
+2023-08-28|459-2|The Hero’s Journey|Life Planning
+2023-08-21|transitions|Transitions|Life Planning
+2023-08-21|on-hiring|On Hiring|Management
+2023-08-07|managing-managers|Managing Managers|Management
+2023-07-31|what-ai-can-teach-us-about-ni|What AI Can Teach Us About NI|Neuroscience
+2023-07-24|f-clearing-the-fog|Clearing the Fog|Health
+2023-07-17|flashlights-and-floodlights|Flashlights and Floodlights|Awareness
+2023-07-10|productivity-anthology|Productivity Anthology|Productivity
+2023-07-03|this-space-intentionally-left-blank|This Space Intentionally Left Blank|Health
+2023-06-26|embodying-your-values|Embodying Your Values|Life Planning
+2023-06-20|magical-meetings|Magical Meetings|Management,Productivity,Teams
+2023-06-12|meditation-has-gone-mainstream|Meditation Has Gone Mainstream|Mindfulness
+2023-06-05|youre-not-the-leader-you-think-you-are|You’re Not The Leader You Think You Are|Coaching,Management,Perspectives
+2023-05-30|building-resilience|Building Resilience|Mindfulness
+2023-05-22|living-heroically|Living Heroically|Life Planning
+2023-05-15|expanding-awareness|Expanding Awareness|Awareness
+2023-05-08|brain-energy|Brain Energy|Health
+2023-05-01|raising-awareness|Raising Awareness|Growth,Mindfulness
+2023-04-24|lets-move|Let’s Move|Coaching,Somatics
+2023-04-17|remembering-jack-2|Remembering Jack|Gratitude
+2023-04-10|desktop-detox|Desktop Detox|Management,Productivity
+2023-04-05|focus-pocus|Focus Pocus|Management,Productivity
+2023-03-27|coaching-ontologically|Coaching Ontologically|Coaching,Emotions,Learning,Mindfulness,Perspectives
+2023-03-20|listening-to-the-universe|Listening to the Universe|Learning,Mindfulness
+2023-03-13|412-2|Teliodosis|Growth
+2023-03-06|conquering-your-calendar|Conquering Your Calendar|Management,Productivity
+2023-02-27|building-bridges|Building Bridges|Delegation,Management,Teams
+2023-02-21|a-tale-of-two-paths|A Tale of Two Paths|Management
+2023-02-13|valuing-every-voice|Valuing Every Voice|Management,Teams
+2023-02-06|so-emotional|So Emotional|Emotions
+2023-01-30|promote-yourself|Promote Yourself|Executive Presence
+2023-01-23|to-do-or-not-to-do|To Do, Or Not To Do|Productivity
+2023-01-16|carpe-septimana|Carpe Septimana|Productivity
+2023-01-09|carpe-diem|Carpe Diem|Productivity
+2023-01-02|its-called-breakfast-for-a-reason|It’s Called Breakfast for a Reason|Health
+2022-12-26|top-ten-blog-posts-of-2022|Top Ten Blog Posts of 2022|
+2022-12-19|all-you-need-is-love|All You Need Is Love|Gratitude,Mindfulness
+2022-12-12|gooooooooooooooooooooooals|Gooooooooooooooooooooooals!|Goals,Life Planning,Productivity
+2022-12-05|384-2|Promises, Promises|Delegation,Management,Teams
+2022-11-28|i-do-declare|I Do Declare|Management,Perspectives
+2022-11-21|just-the-facts|Just The Facts|Management,Perspectives
+2022-11-14|we-can-do-hard-things|We Can Do Hard Things|Learning
+2022-11-07|who-are-your-heroes|Who Are Your Heroes?|Gratitude
+2022-10-31|face-to-face|Face-to-Face|Management,Teams
+2022-10-24|your-personal-board-of-directors|Your Personal Board of Directors|Goals,Life Planning
+2022-10-17|my-first-year|My First Year|Coaching,Gratitude
+2022-10-10|more-of-what-you-love|More of What You Love|Life Planning
+2022-10-03|your-360-feedback|Your 360 Feedback|Management,Teams
+2022-09-26|zen-and-the-art-of-feedback|Zen and the Art of Feedback|Coaching,Management,Teams
+2022-09-19|feedback-is-a-gift|Feedback is a Gift|Coaching,Management,Teams,Trust
+2022-09-12|life-is-calling|Life is Calling|Life Planning
+2022-09-06|taking-initiative|Taking Initiative|Delegation,Management
+2022-08-29|cut-me-some-slack|Cut Me Some Slack|Productivity
+2022-08-22|onstage-and-backstage|Onstage and Backstage|Management
+2022-08-15|on-the-path|On the Path|Coaching,Gratitude
+2022-08-08|go-on-tour|Go on Tour|Management,Teams
+2022-08-01|11-101|1:1 101|Management
+2022-07-25|decisions-decisions|Decisions, Decisions|Management
+2022-07-18|shifting-perspectives|Shifting Perspectives|Coaching,Perspectives
+2022-07-11|do-as-i-say-not-as-i-do|Do As I Say, Not As I Do|Management
+2022-06-27|overcoming-procrastination|Overcoming Procrastination|Productivity
+2022-06-20|overcoming-overwhelm|Overcoming Overwhelm|Productivity
+2022-06-13|fathers-day-gratitude|Father’s Day Gratitude|Gratitude
+2022-06-06|running-with-the-bunnies|Running with the Bunnies|Health
+2022-05-30|how-are-you|How Are You?|Gratitude,Mindfulness
+2022-05-23|the-rider-and-the-elephant|The Rider and the Elephant|Management,Teams
+2022-05-16|strengthening-connections|Strengthening Connections|Management,Teams
+2022-05-09|please-shorten-your-meetings|Please Shorten Your Meetings|Productivity
+2022-04-25|paying-attention|Paying Attention|Mindfulness
+2022-04-18|remembering-jack|Remembering Jack|Health
+2022-04-11|discovering-our-strengths|Discovering Our Strengths|Management,Teams
+2022-04-04|delegation-102|Delegation 102|Delegation,Management,Teams,Trust
+2022-03-28|delegation-101|Delegation 101|Delegation,Management,Teams,Trust
+2022-03-21|the-enemies-of-delegation|The Enemies of Delegation|Delegation,Management,Teams
+2022-03-14|unexpected-success|Unexpected Success|Career,Gratitude,Trust
+2022-03-07|i-dont-know-how-to-put-this|I Don’t Know How to Put This…|Health
+2022-03-02|mothers-day-gratitude|Mother’s Day Gratitude|Gratitude
+2022-02-28|unplug-yourself|Unplug Yourself|Mindfulness
+2022-02-21|the-best-technology-available|The Best Technology Available|Learning
+2022-02-07|finding-focus|Finding Focus|Mindfulness,Productivity
+2022-02-04|put-on-your-white-belt|Put On Your White Belt|Learning
+2022-01-31|meeting-maximization|Meeting Maximization|Productivity
+2022-01-24|calendar-construction|Calendar Construction|Productivity
+2022-01-17|the-week-ahead|The Week Ahead|Productivity
+2022-01-10|whats-your-plan-for-today|What’s Your Plan for Today?|Productivity
+2022-01-03|rome-wasnt-built-in-a-day|Rome Wasn’t Built in a Day|Goals
+2021-12-27|for-the-love-of-reading|For the Love of Reading|Health
+2021-12-20|its-the-most-wonderful-time-of-the-year|It’s The Most Wonderful Time of the Year|Goals
+2021-12-13|the-elements-of-trust|The Elements of Trust|Trust
+2021-12-06|just-breathe|Just Breathe|Mindfulness
+2021-11-29|the-case-for-fortnightly|The Case for Fortnightly|Perspectives
+2021-11-18|my-most-memorable-team|My Most Memorable Team|Management`.split('\n').map(l=>{const [d,s,t,c]=l.split('|');return {d,s,t,c:c?c.split(','):[]}});
+
+const IMG = new Set(['gentleness','leading-without-authority','change-of-plans','allowing-everything-to-be-as-it-is','untethered-and-tethered','the-pendulum','welcoming','meditations-on-ogha-pooge','unnesting','the-gem-within-executive-presence','growing-up-again','more-of-less','same-coach-wider-door','fiercely-loyal','zones-of-engagement','acknowledge-honour-release']);
+const EX = {
+'gentleness':'Since arriving at my mother and stepfather’s home this weekend, I have regularly seen a Doe and two Fawns in the areas behind their home.',
+'leading-without-authority':'Most of the leaders I work with are in senior roles, managing multiple teams, if not entire organizations. Sooner or later, they find themselves leading without authority.',
+'change-of-plans':'I’m six weeks into my return to nomadic life. It’s been a magical time for me, and I feel like the first arc is already coming to a close.',
+'allowing-everything-to-be-as-it-is':'A few weeks ago, we were honoured to have the renowned spiritual teacher Adyashanti in one of our meditation teacher training classes.',
+'untethered-and-tethered':'Two weeks ago, when I arrived in Fairfax, California, things felt different. As I’ve grown accustomed to doing, I leaned into the feeling to explore it.',
+'the-pendulum':'I traveled 1,100 miles over four days, and then shut everything off for another week of silent retreat. It was like crashing into a wall of water.',
+'welcoming':'This has been a week of change. Exiting my home for the last time. Traveling from New Mexico to California. Embracing nomadic life more fully than before.',
+'meditations-on-ogha-pooge':'This week marks the end of my year in Santa Fe. When I decided to settle here, it wasn’t because of the city or the people. It was the land.',
+'unnesting':'A friend recently characterized this period of my life as a time of locomotion. I loved the imagery of a locomotive gathering steam.',
+'the-gem-within-executive-presence':'As I wrap up a week connecting with lifelong friends and colleagues at Ellucian Live, I sense more deeply than ever the richness of life that emerges when we are fully present.',
+'growing-up-again':'I wrote about adult development theory a few years ago. At the time, I still had a scientific bias.',
+'more-of-less':'Recently, I caught up with a friend who is approaching that magical age of 50.',
+'same-coach-wider-door':'If you have followed my blog for a while, you may be noticing a new pattern. I’m talking less about leadership and more about consciousness.',
+'fiercely-loyal':'Throughout my life, I’ve described myself as fiercely loyal. Historically, I’d say that’s an aspect of my personal brand.',
+'zones-of-engagement':'Engagement. It’s the holy grail of employee performance. When our employees are highly engaged, they do their best work.',
+'acknowledge-honour-release':'The past few months have been filled with new gifts of awareness. The primary catalyst was my meditation retreat in December.'
+};
+
+const BODY = {
+'gentleness': `<p>Since arriving at my mother and stepfather’s home this weekend, I have regularly seen a Doe and two Fawns in the areas behind their home. One night this week, I went to bed early. When I awoke the next morning, my Mom told me that after I went downstairs to bed, the two Fawns came up to the house and lay down in the grass outside my bedroom window. They rested there for over an hour.</p>
+<p>Perhaps it’s just a coincidence, but I kinda doubt it. The past two months, Deer has taken center stage.</p>
+<h2>Ecocentricity</h2>
+<p>In my meditation program, we are reading <em>The Journey of Soul Initiation</em>, by Bill Plotkin. It’s right up my alley, and I’m enjoying reading Plotkin’s perspective on the development of both human and soul.</p>
+<p>He writes of a critical shift from Late Adolescence to True Adulthood. This is not the traditional notion we are familiar with. In Plotkin’s definitions, very few of us ever make it out of adolescence. To make this shift, one key ingredient is a move from <em>egocentricity</em> to <em>ecocentricity.</em></p>
+<p>Egocentricity is a worldview most of us develop early in life, though not every culture cultivates it the same way. When we’re egocentric, we live with the ego, i.e., our personality and social self, at the center of our world. Our center of gravity orients around our standing in human society: how we’re seen, how secure we feel, and where we rank.</p>
+<p>As a child, I remember a recurring dream in which I was “G.I. Josh.” In my dreams, I was much larger than everyone around me, the quintessential hero, running around saving everyone. In these dreams, my egocentricity was made manifest by my comically large size relative to the world around me.</p>
+<p>As I grew older, my size returned to normal in my dreams. One might assume this represented a move away from egocentricity. In fact, I’d say the egocentricity went from being conscious to unconscious. It had become such a staple of who I was that I could no longer see it. In hindsight, I wonder if G.I. Josh represented the initial development of my egocentric nature.</p>
+<p>In an ecocentric orientation, our center of gravity shifts outward. We become fully aware that we belong to a more-than-human world, one that includes humans but extends far beyond us, and our focus turns to recognizing our place within that larger community of Earth and serving it.</p>
+<p>Considering my childhood G.I. Josh identity, I see ecocentric orientation as a shrinking down. All the other humans and I are shrinking in size relative to our non-human partners, drawing our attention to the breadth and depth of nature, and showing us what a small place humans represent in the more-than-human world.</p>
+<p>This concept is very timely for me because I can see how I’m living this transformation in real time. Don’t get me wrong. I still have plenty of ego. But the natural world is beginning to take center stage, and I can feel my center of gravity shifting.</p>
+<h2>Gentleness</h2>
+<p>Looking back, I can see how Deer began to emerge prominently in June. During my meditation retreat on Mount Madonna, we were surrounded by Deer. Coupling their presence with the retreat’s silence brought a deeper connection. I remember walking back to my cabin one day and seeing a Deer in the front yard, eating from a tree, and brushing up against my car. I was touched that my car, Beloved, was able to pet a Deer (or that a Deer pet her).</p>
+<p>While in Fairfax, California, I cohabited with Deer. I saw one looking in my bathroom window and, upon further investigation, discovered a Doe and a Fawn resting next to the house. They stayed there all day and returned every day that week. I previously shared <a href="https://photos.app.goo.gl/EQecxhTJUpQvD3dd9" target="_blank" rel="noopener">this video</a>, where they literally walked up the street, up the steps, and into the yard while I sat on the patio.</p>
+<p>So, when arriving at my mother’s house, it came as little surprise that a family of Deer would suddenly pop up and start hanging around. We share an energetic connection.</p>
+<p>This week, I connected with a friend, and she shared that Doe was a power animal for her (a concept she’d studied through shamanic practice). I asked her what the Doe signified, thinking of my own recent experiences. The first thing she said was <em>gentleness</em>. There is a gentle quality to Doe, and she saw that same gentleness in my way of being. It resonated deeply.</p>
+<p>That gentleness and the connection to the gentleness of Deer feels like a doorway to my own ecocentricity. As I sat in the kitchen this week, looking out at the trees, I could feel the natural world tugging me outdoors. Beckoning me to come outside and just be present with nature. I sat on the porch, watching the Deer graze in the woods, and listening to a chorus of birdsong. I walked barefoot in the grass, over to the pond, and spied a small Turtle. Everything in me settled. I felt the gentleness.</p>
+<h2>Putting It Into Practice</h2>
+<p class="practice">Where might gentleness already be finding you, if you let yourself notice it?</p>
+<h2>Tales of Wanderment</h2>
+<p>I am so grateful for the welcoming love I feel when I’m with my mother and stepfather. Their home is a true waystation for me. I’ve stopped here three times now on my nomadic travels. I remember discovering back in late 2024 that the pond behind their house was filled with Turtles. I have spotted a few, but so far this stay has been overflowing with Deer. Last night, <a href="https://photos.app.goo.gl/VZ1pcY1gH5PwVKhb6" target="_blank" rel="noopener">a Fox visited</a>. As they ran across the lawn behind the house, I realized they ran right past a Bunny without noticing, and the Bunny did not move. That was unexpected!</p>`,
+'leading-without-authority': `<p>Most of the leaders I work with are in senior roles, managing multiple teams, if not entire organizations. These leaders are accustomed to leading <em>with</em> authority, as the teams and leaders who report to them naturally recognize their role as their senior leader.</p>
+<p>Sooner or later, they find themselves in a leadership situation where they do not have direct authority over the team they are leading. Often, they find this requires a different approach to leadership.</p>
+<h2>My Experience</h2>
+<p>Reflecting on my experience, I recall two key moments in my career where I found myself leading without direct authority. While the two scenarios are distinctly different, they share a common thread that runs through my experience.</p>
+<p>Early in my career, as a software developer, I was asked to become an “area leader.” It was the traditional stepping stone towards a management role. I was the technical lead for an area of our product, guiding other developers, directing their work, and ensuring the overall health of my area. I had no personnel management responsibilities. Many of the people I was leading were more experienced than I was.</p>
+<p>Arguably, this role had some notion of authority. I’ve worked with coachees who had a more extreme entry into leadership. People in individual contributor roles, such as product managers, are expected to guide a product or initiative across a multidisciplinary team. They have to work with people from engineering, finance, services, support, and operations, and they often have no leadership training. Since this isn’t a role that naturally feeds into a personnel management role, they often aren’t afforded exposure to the management training resources their company offers.</p>
+<p>Later in my career, as a director managing managers, I was tasked with leading the migration of our client base to our next major release. That, too, had a good bit of implied authority, as the initiative was an existential threat to the company, providing one of those rare opportunities where there was a single clear #1 priority. The approach was so successful that we expanded it, creating six strategic programs and assigning a director to lead each. As I led our reporting strategic program, the role became far more complex, as we now had six high-priority initiatives.</p>
+<p>In the first experience, I found myself with no management experience, leading people who had more experience than I did. In the second experience, I had plenty of management experience. Still, I had grown accustomed to a more hierarchical structure in which my authority was explicit, and I could expect my directives to be carried out reliably.</p>
+<p>In both cases, the secret sauce to getting buy-in and collaboration without that direct authority was relationship building.</p>
+<h2>Trust</h2>
+<p>When people report to you, they are likely to follow your guidance naturally. When you are leading people who report to someone else, there is natural friction. Often, the initiative you’re leading is not the “day job” for the team members.</p>
+<p>The single greatest indicator of your success in this situation is the level of trust between you and each team member.</p>
+<p>I’ve <a href="https://www.linkedin.com/pulse/understanding-trust-josh-dietrich-h1she/" target="_blank" rel="noopener">written about trust before</a>. There are three components of the trust framework that can make or break your success in these situations:</p>
+<ul><li><strong>Sincerity.</strong> For colleagues to trust you, they must believe that your words are sincere. The things you say mirror what you are actually thinking and the actions you take.</li>
+<li><strong>Reliability.</strong> You will ask colleagues to prioritize work that may conflict with their day jobs. If you consistently follow through on your own commitments, and they see you as reliable, they are more likely to respond in kind. If you are unreliable and fail to meet your own obligations, they will assume the initiative is not important and can do the same.</li>
+<li><strong>Care.</strong> Colleagues must see and feel that you care about their interests, not just your own. This requires empathy and understanding. Connecting the mission of the team to each individual.</li></ul>
+<p>This simple framework proves incredibly powerful for assessing the health of any relationship, whether a colleague, your partner, a family member, or a close friend. We strengthen our relationships and enhance our leadership capacity by uncovering and healing any gaps in trust.</p>
+<h2>Intentionality</h2>
+<p>It’s easy to be intentional about building relationships with your boss and your direct reports. It’s inherent to the organization’s structure. When we don’t have direct authority, that lack of formal structure often results in less investment in relationship building.</p>
+<p>Building awareness of the key relationships outside organizational reporting lines is one of the key ingredients of executive presence. Many of the clients I work with like using a simple tool to assess the health of their relationships and prioritize the ones that need work. I’ve <a href="https://www.linkedin.com/pulse/strengthening-connections-josh-dietrich/" target="_blank" rel="noopener">written about this tool in detail before</a>. I’ll summarize it here. Note that this is a tool for directing your attention, not for ranking people’s worth. If the numbers feel clinical, assess informally instead:</p>
+<ul><li>Brainstorm all the key relationships in your life. List them in the first column of a spreadsheet.</li>
+<li>Rate the importance of each relationship 1-5, with 5 being most important.</li>
+<li>Rate the health of each relationship 1-5, with 5 signaling it needs the most work.</li>
+<li>Multiply the two ratings together. The higher the score, the more important it is to invest in the relationship.</li></ul>
+<p>For some, this approach may feel like overkill. Feel free to assess informally if that feels more comfortable.</p>
+<p>The key is to recognize the relationships that need work and to be intentional about strengthening them. Assessing the level of trust is a great place to start. The trust goes both ways. Do they trust you to be sincere, reliable, and to care, and do you trust them across the same dimensions? If there’s a gap, you want to invest the time and energy to heal that gap.</p>
+<p>Are you spending regular time with this person? I find regularly scheduled 1-on-1 meetings to be one of the most powerful ways to build trust and strengthen a relationship. If there is critical feedback to share, do so privately, not in front of the larger team. Frequent communication can help you build empathy, which shows you care.</p>
+<p>Richer channels build trust faster. In-person when you can, video when you can’t, and be aware that written communication leaves out tone and body language that are key to empathy. Norms vary by team and by person, so ask what works for them rather than assuming.</p>
+<p>Relationship building takes energy. It may be out of your comfort zone. As you grow as a leader, it becomes an increasingly critical skill for your long-term success. And spoiler alert – it’s equally critical to your success as a human, regardless of your professional role.</p>
+<h2>Putting It Into Practice</h2>
+<p>Leading without authority strips away the scaffolding and reveals what your leadership actually rests on. A few ways to strengthen that foundation:</p>
+<ul><li><strong>Map your relationships.</strong> Rate each on importance and health (1-5) and multiply. Let the highest scores tell you where to invest first.</li>
+<li><strong>Audit the trust in both directions.</strong> Where’s the gap — sincerity, reliability, or care? Then ask the harder question: do they have reason to doubt you on any of the three?</li>
+<li><strong>Protect your reliability ruthlessly.</strong> When you have no authority, your follow-through is your authority. Commit to less, and deliver all of it.</li>
+<li><strong>Put a recurring 1-on-1 on the calendar.</strong> Not a project check-in. A conversation. It’s the first thing to disappear when you’re outside the reporting line.</li>
+<li><strong>Connect the mission to the person.</strong> Know what this initiative gives them. If you can’t name it, you don’t yet know them well enough.</li></ul>
+<h2>Tales of Wanderment</h2>
+<p>In my <a href="https://www.linkedin.com/pulse/change-plans-josh-dietrich-9wkxc/" target="_blank" rel="noopener">last update</a>, I was preparing to drive across the country. My journey spanned five days:</p>
+<ul><li>Thursday: Fairfax, California → Elko, Nevada</li><li>Friday: Elko → Ogallala, Nebraska</li><li>Saturday: Ogallala → Des Moines, Iowa</li><li>Sunday: Des Moines → Columbus, Ohio</li><li>Monday: Columbus → Ashburn, Virginia</li></ul>
+<p>Roughly 3,000 miles and 50 hours on the road. I was fortunate to stay with friends in Des Moines, and we had time for dinner and a bit of downtown exploring. I loved an amazing piece of digital art by Oyoram titled <a href="https://youtu.be/Dn1m5LfIi3w" target="_blank" rel="noopener">TimePiece</a>. <a href="https://www.blackcaticecream.com/" target="_blank" rel="noopener">Black Cat Ice Cream</a> was another highlight, with a wall filled with photos of black cats that reminded me of my beloved <a href="#post-prince-kohaku">Kohaku</a>.</p>
+<p>I was struck by how relaxing the entire trip was. I was a present, engaged driver, and at the same time, it was meditative and refreshing. Even though I spent most of those five days driving, it felt like a vacation, which I found fascinating.</p>
+<p>I’ve now wrapped up two weeks in Ashburn, Virginia. I spent most of my life in Virginia. This didn’t feel like a nostalgic return home. It felt like rediscovering the land as a different human, looking upon it with fresh eyes. Yes, there are familiar stomping grounds and lifelong friends here, but there is something entirely new about this experience.</p>
+<p>Next, I am headed to West Chester, Pennsylvania, to stay with my mother and stepfather for a month or so. To my friends and colleagues in that area, please reach out if you’d like to connect!</p>`
+};
+
+const TESTI = [
+ ['I wish I had started this two years ago! I feel like I’ve been living my life without the operating manual.','Chief Client Officer'],
+ ['I always look forward to my coaching sessions with Josh. His energy, preparedness, and passion are contagious, and he genuinely cares about your growth and improvement. He learns how to engage quickly with his coachees and his style is one that pushes you to be the best version of yourself without beating you up or kicking you while down. His approach is simple and often gets you to uncover that, a lot of times, you already have the answer; you just need to get out of your own way.','EVP, Sales'],
+ ['Josh has been instrumental in helping me get over the transition from being a do-er to being a true leader. He is understanding, empathetic, and did not hesitate to push me to realize my true capabilities.','Deputy CIO'],
+ ['Josh is amazing at what he does. He is a great listener, understands your situation, brings out your strengths, and helps present your best version of yourself. He has great people skills and is honest and sincere. His advice has been very valuable to me.','Chief Operating Officer'],
+ ['Josh has the maturity and gift to understand what I am talking about when I am trying not to say it outright. He continues to help narrow the discussion, and I can say it hits the center of the issue every time. It helps me focus harder after my meetings to address these issues. As a coach, I can say that he is exceptional.','Director, Information Technology']
+];
+
+const WORKSHOPS = [
+ ['The Neuroscience of Stress Management','Most popular','Leaders and employees frequently struggle with stress and burnout. This workshop explains the research behind the neuroscience of stress and its impact on learning, growth, emotional intelligence, and engagement, providing practical strategies to manage stress effectively.',['Explore the research on the impact of stress on our higher brains','Participate in an experiential process to get “in the bones” the impact of having too much, too little, or just the right amount of stress in one’s life','Learn and begin to apply the research on how to impact stress—what works on both a biochemical and practical level']],
+ ['Strengthening Strategic Thinking','Neuroscience','We have two networks in our brain that activate depending on where our attention is focused. Explore the strengths and challenges of the Task Positive Network (focus and flow) and the Default Mode Network (inspiration, vision, and meaning), and learn to use them more intentionally as leaders, particularly in strategic thinking.',['Explore your own experience being in both task and default modes, and what is possible in each','Learn how to apply this with individuals and teams for greater productivity and inspiration','Practice integrating each network applied to a personal task or challenge']],
+ ['Understanding the Right and Left Hemispheres','Neuroscience','The brain’s two hemispheres work together in almost everything we do, yet they view the world in vastly different ways. The left provides a narrowed, precise view; the right gives a holistic, big-picture view and provides empathy, meaning, and interconnectedness. Using both in a balanced, integrated way is the hallmark of the most effective leaders.',['Explore the pluses and minuses of each hemisphere, as well as your own default under stress','Learn to recognize the unhelpful aspects of each hemisphere in yourself and others, and discover strategies for greater balance and integration']],
+ ['The Seven Levels of Effectiveness','Consciousness','A model developed and researched over many years, grounded in neuroscience, used to provide context, direction, and powerful shifts in consciousness all over the world. In an experiential format, explore BEabove Leadership’s Seven Levels of Effectiveness personally and organizationally.',['Explore the scientifically validated Seven Levels of Effectiveness model','Explore practical ideas for moving to higher levels of effectiveness','Learn the relationship between neuroscience and human effectiveness']],
+ ['Neuroplasticity: The Brain’s Mechanism for Change','Neuroscience','Most people recognize that we can grow and change throughout our lifetimes. Understanding how neuroplasticity works—what supports real change and what impedes it—is vital information for every leader.',['Learn the mechanisms of neuroplasticity and how they facilitate lasting change in yourself and others','Understand the factors that support or impede “rewiring” the brain','Practice applying neuroplasticity to your own leadership challenges']],
+ ['Mastering Feedback','Management','Techniques to create an environment that encourages feedback and to deliver feedback effectively.',['Understand the importance of feedback','Learn strategies to create an environment that encourages feedback','Learn how to structure and deliver feedback effectively']],
+ ['Goals','Management','Strategies to set effective goals, align goals across the organization, and drive accountability and results.',['Creating effective goals','Understand the OKR (Objectives & Key Results) framework','Aligning goals at all levels','How to monitor goals and course-correct']],
+ ['Personal Productivity','Productivity','Build habits to improve personal productivity and increase reliability and accountability. This workshop focuses on planning rituals and email management.',['Improve your personal productivity','Increase your responsiveness and personal accountability','Reduce your stress by organizing your workload','Build a daily planning ritual','Implement a zero-inbox email system']],
+ ['Effective Delegation','Management','Delegation is a critical skill for effective leaders at every level. Discover common barriers to delegation and effective strategies for overcoming them.',['Understand the typical delegation pitfalls leaders encounter','Learn techniques to delegate more effectively','Understand a framework for effective requests','Leverage your team more effectively through proper delegation']]
+];
+
+const SHELF = [
+ ['Life, the Universe, and Everything',[['The Alchemist','Paulo Coelho','https://amzn.to/49KcjZM'],['Designing Your Life','Bill Burnett & Dave Evans','https://amzn.to/3C68amJ'],['The Celestine Prophecy','James Redfield','https://amzn.to/49WTtyR'],['Power vs. Force','David Hawkins','https://amzn.to/41XTJvo'],['The Untethered Soul','Michael A. Singer','https://amzn.to/3PliTwC'],['A Brief History of Everything','Ken Wilber','https://amzn.to/40ivfvq'],['Living in Flow','Sky Nelson-Isaacs','https://amzn.to/3ZXk8Hc'],['The Tao of Pooh','Benjamin Hoff','https://amzn.to/3PhKL4q']]],
+ ['Neuroscience',[['Seven and a Half Lessons About the Brain','Lisa Feldman Barrett','https://amzn.to/3W3w4Wu'],['Your Body Is Your Brain','Amanda Blake','https://amzn.to/3BGvhEh'],['How Emotions Are Made','Lisa Feldman Barrett','https://amzn.to/4gXLmnJ'],['The Divided Brain','Documentary','https://thedividedbrain.com/'],['The Awakened Brain','Lisa Miller','https://amzn.to/4j33DCb'],['The Extended Mind','Annie M. Paul','https://amzn.to/3W0nM1L']]],
+ ['Leadership',[['Dare to Lead','Brené Brown','https://amzn.to/40et64a'],['The Thin Book of Trust','Charles Feltman','https://amzn.to/3W2RfIn'],['The Five Dysfunctions of a Team','Patrick Lencioni','https://www.amazon.com/gp/product/0787960756'],['The Advantage','Patrick Lencioni','https://www.amazon.com/dp/0470941529'],['StrengthsFinder 2.0','Gallup','https://www.amazon.com/dp/159562015X'],['The First 90 Days','Michael D. Watkins','https://www.amazon.com/dp/1422188612'],['Positive Intelligence','Shirzad Chamine','https://amzn.to/3DWmBur']]],
+ ['Productivity',[['Atomic Habits','James Clear','https://amzn.to/41WwvWj'],['Essentialism','Greg McKeown','https://www.amazon.com/dp/0804137404'],['Effortless','Greg McKeown','https://amzn.to/41Zc630'],['Four Thousand Weeks','Oliver Burkeman','https://amzn.to/3BVj7Hx'],['Make Time','Jake Knapp, John Zeratsky','https://www.amazon.com/dp/0525572422'],['Getting Things Done','David Allen','https://www.amazon.com/dp/0143126563']]],
+ ['Coaching',[['Newfield Network','Ontological Coaching','https://fk319.isrefer.com/go/sp/joshdietrich'],['BEabove Leadership','Neuroscience, Consciousness & Transformational Coaching','https://www.beaboveleadership.com/'],['Practice','Coaching platform','https://practice.do/'],['Co-Active Coaching','Kimsey-House, Kimsey-House, Sandahl, Whitworth','https://www.amazon.com/dp/1473674980'],['Integration: The Power of Being Co-Active in Work and Life','Ann Betz, Karen Kimsey-House','https://www.amazon.com/dp/178279865X'],['Language and the Pursuit of Leadership Excellence','Chalmers Brothers, Vinay Kumar','https://www.amazon.com/dp/0974948756']]],
+ ['Product',[['Inspired','Marty Cagan','https://www.amazon.com/dp/1119387507'],['Strategize','Roman Pichler','https://www.amazon.com/dp/0993499244'],['Jobs to Be Done','Wunker, Wattman, Farber',LIVE+'/resources/'],['Sprint','Knapp, Zeratsky, Kowitz',LIVE+'/resources/'],['The Product Manager’s Survival Guide','Steven Haines',LIVE+'/resources/']]],
+ ['Meditations',[['Decision Meditation','Insight Timer','https://insighttimer.com/josh00203/guided-meditations/decision-meditation'],['Future Self Meditation','Insight Timer','https://insighttimer.com/josh00203/guided-meditations/future-self-meditation_8'],['Centering Meditation – Unplug Yourself','YouTube','https://youtu.be/UdrOeuSR0jI']]]
+];
+
+
+const NAMED=[
+ ['Josh’s coaching presence is gold standard, full stop. I feel fortunate to have found him when I was not even looking.','Mary Elizabeth Parks'],
+ ['Josh takes a very personalized approach to coaching and mentorship. His approach expanded my perspective and pushed me to have more of a growth mindset.','Nick Larche']
+];
+const CLIENTS=[['Amazon',''],['Paylocity',''],['LendingTree',''],['Ellucian','ellucian'],['NICE',''],['Washington and Lee University','wl'],['Unanet','unanet'],['National Pharmaceutical Council','']];
+
+/* ---------- pieces ---------- */
+const threshold=(title='Every path here starts with a conversation.')=>`<section class="threshold"><div class="wrap inner">
+<div><div class="label">The threshold</div><h2 style="margin-top:14px">${title}</h2><p class="muted" style="margin-top:14px;max-width:44ch">Twenty-five minutes, no preparation needed. Pick the door that fits, or just pick a time.</p></div>
+<div class="opts">
+ <a class="opt" href="${CAL}" target="_blank" rel="noopener"><div><b>Leadership conversation</b><br><span>Executive coaching, workshops, teams</span></div><i>→</i></a>
+ <a class="opt" href="${CAL_C}" target="_blank" rel="noopener"><div><b>Consciousness discovery call</b><br><span>Consciousness or life coaching</span></div><i>→</i></a>
+</div></div></section>`;
+const phead=(label,title,lede,crumb)=>`<div class="phead"><div class="wrap">${crumb?`<div class="crumbs">${crumb}</div>`:''}<div class="label" style="margin-top:${crumb?14:0}px">${label}</div><h1>${title}</h1>${lede?`<p class="lede">${lede}</p>`:''}</div></div>`;
+const cols=(lbl,inner)=>`<div class="cols"><div class="label">${lbl}</div><div class="prose">${inner}</div></div>`;
+const card=p=>`<a class="card" href="#post-${p.s}"><div class="ph">${IMG.has(p.s)?`<img src="img/p-${p.s}.jpg" alt="" loading="lazy">`:''}</div><div class="meta"><span>${fmt(p.d)}</span>${p.c[0]?`<span class="c">${esc(p.c[0])}</span>`:''}</div><h3>${esc(p.t)}</h3>${EX[p.s]?`<p class="ex">${esc(EX[p.s])}</p>`:''}</a>`;
+
+const pages={};
+pages.home=()=>`
+<section class="hero"><img src="img/p-meditations-on-ogha-pooge.jpg" alt="Storm light over the Sangre de Cristo foothills near Santa Fe">
+<div class="wrap inner">
+ <div class="label" style="color:#CFE0C8">Arete Pursuits · Josh Dietrich, PCC</div>
+ <h1 style="margin-top:18px">Accelerating the evolution of human <em>consciousness</em>.</h1>
+ <p class="sub">One leader, one human, one conversation at a time. Executive coaching for the work you lead, and consciousness coaching for the life you are living.</p>
+ <div class="actions"><a class="btn btn-ember" href="#executive-coaching">For leaders <span>→</span></a><a class="btn btn-line" href="#consciousness-coaching">For the inner journey <span>→</span></a></div>
+ <div class="credit">SANTA FE, NEW MEXICO · PHOTO: JOSH DIETRICH</div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="label" style="margin-bottom:22px">Two doors · same coach</div>
+ <div class="doors">
+  <a class="door" href="#executive-coaching"><img src="img/p-change-of-plans.jpg" alt=""><span class="label">Doing</span><h2>Leadership</h2><p>Radically accelerating leadership growth for executives and the organizations they serve. Grounded in neuroscience, ontological coaching, and three decades in the executive chair.</p><ul><li>Executive coaching</li><li>Workshops</li><li>DiSC</li><li>360 feedback</li></ul></a>
+  <a class="door" href="#consciousness-coaching"><img src="img/p-gentleness.jpg" alt="" style="object-position:22% 45%"><span class="label">Being</span><h2>Consciousness</h2><p>For people who have achieved much of what they set out to do and sense there is more to who they are. Awareness, presence, and the quiet work of becoming.</p><ul><li>Consciousness coaching</li><li>Life coaching</li><li>Meditation</li></ul></a>
+ </div>
+</div></section>
+
+<section class="rt"><div class="wrap thesis">
+ <div><div class="label">Why two doors</div><h2 style="margin-top:16px">Most people arrive through leadership. Many stay for everything else.</h2>
+ <div class="coin"><span class="w">teliodosis</span><span class="ph">/ tel·ee·oh·DOH·sis /</span><p>A word I coined for a way of living where doing and being are integrated, and purposeful action flows from presence.</p><p style="margin-top:10px"><a class="tl-link" href="https://teliodosis.com" target="_blank" rel="noopener">Read more at teliodosis.com ↗</a></p></div></div>
+ <div class="body">
+  <p>Executive coaching asks how you lead. Sooner or later it also asks who is doing the leading. The answer to that second question is where the most durable growth happens.</p>
+  <p>I spent thirty years as a technology executive and still bring that experience to every engagement. I also spend my days in meditation teacher training, on silent retreat, and on the road, and I bring that too.</p>
+  <p>You don’t have to choose a door in advance. Plenty of clients begin with delegation and strategic thinking and end up somewhere they didn’t expect.</p>
+  <p><a class="tl-link" href="#post-same-coach-wider-door">Same coach, wider door</a></p>
+ </div>
+</div></section>
+
+<div class="wrap"><div class="names"><div class="label lbl">Leaders I’ve worked with come from</div>${CLIENTS.map(([n,k])=>k?`<img src="img/c-${k}.jpg" alt="${n}">`:`<span class="need">${n}<small>logo file needed</small></span>`).join('')}</div></div>
+
+<section><div class="wrap">
+ <div class="label" style="margin-bottom:20px">In their words</div>
+ <p class="quote-big">“It’s the Josh Effect.”</p>
+ <div class="qby">An AVP of Information Technology, explaining the kinder, gentler version of themselves that people kept noticing</div>
+ <div class="qgrid">${NAMED.map(([q,r])=>`<figure class="q"><p>“${q}”</p><cite>${r}</cite></figure>`).join('')}${TESTI.slice(0,4).map(([q,r])=>`<figure class="q"><p>“${q.length>260?q.slice(0,q.lastIndexOf(' ',250))+'…':q}”</p><cite>${r}</cite></figure>`).join('')}</div>
+</div></section>
+
+<section class="rt"><div class="wrap road">
+ <div><div class="label">Field notes</div><h2 style="font-size:clamp(2rem,4vw,3.2rem);margin-top:16px">Coaching from the road.</h2>
+ <p class="muted" style="margin-top:16px;max-width:42ch">Since late 2024 I have lived a month or so at a time wherever life calls me, coaching on Zoom as always and writing every week about what the road is teaching me.</p>
+ <ul class="stops" style="margin-top:28px">
+  <li><span class="y">Nov 2024</span><span>Left Virginia after five decades</span></li>
+  <li><span class="y">2025–26</span><span>A year in Santa Fe, New Mexico</span></li>
+  <li><span class="y">Jun 2026</span><span>Fairfax, California</span></li>
+  <li><span class="y">Jul 2026</span><span>Ashburn, Virginia · West Chester, Pennsylvania</span></li>
+  <li class="now"><span class="y">Now</span><span>Somewhere new. <a class="tl-link" href="#writing">Read the latest</a></span></li>
+ </ul></div>
+ <div class="cards" style="grid-template-columns:1fr">${POSTS.slice(0,2).map(card).join('')}</div>
+</div></section>
+${threshold()}`;
+
+pages['executive-coaching']=()=>phead('Leadership · Doing','Executive <em>Coaching</em>','A six-month engagement for senior leaders who want to grow faster than the job alone will teach them.','<a href="#home">Home</a> / Leadership')+`<div class="wrap">
+${cols('At a glance',`<div class="facts"><div><b>6</b><span>months</span></div><div><b>13</b><span>fortnightly sessions</span></div><div><b>2</b><span>assessments: Everything DiSC and the Leadership Circle Profile 360</span></div><div><b>1</b><span>written closeout report</span></div></div>`)}
+${cols('Why coaching',`<p>You learn in the flow of work, not the classroom. Coaching gives you a confidential, reflective space to work on real situations as they happen, so new ways of leading take hold while the stakes are real.</p><p>Research consistently links coaching to stronger emotional intelligence, communication, and adaptability. In my experience the bigger gift is simpler: most leaders already have the answers they need. Coaching helps them get out of their own way.</p>`)}
+${cols('How it unfolds',`<ol class="steps">
+<li><div><b>Launch session</b><span>We meet, set a recurring schedule, and talk through your 360 questions.</span></div></li>
+<li><div><b>Vision first</b><span>You draft a vision of the leader you want to become, three sentences or fewer, in the present tense, before any feedback arrives. We move toward what you want, not away from what is broken.</span></div></li>
+<li><div><b>Assessments</b><span>Everything DiSC for your communication style. The Leadership Circle Profile 360 for what you do and the thinking underneath it.</span></div></li>
+<li><div><b>Debriefs</b><span>We work through both sets of results together and design an awareness practice you carry into your week.</span></div></li>
+<li><div><b>Goals</b><span>Three to five areas, grown from your vision. A learning agenda, not a performance plan.</span></div></li>
+<li><div><b>Fortnightly coaching</b><span>You bring real situations. I bring questions, frameworks, and three decades of leadership experience when they help.</span></div></li>
+<li><div><b>Closeout</b><span>A final session and a written closeout report, with the option to extend.</span></div></li></ol>`)}
+${cols('Confidentiality',`<ul><li>What you say stays in the session.</li><li>Your organization hears only that we met.</li><li>Anything beyond that is shared only with your approval.</li><li>Your assessment results belong to you.</li></ul>`)}
+${cols('The 360',`<p>The Leadership Circle Profile measures what you do as a leader and connects it to the habits of thought that drive it, which is where durable change tends to happen.</p><div class="facts"><div><b>15+</b><span>reviewers invited, for about ten responses</span></div><div><b>3</b><span>minimum responses before an anonymous group is shown</span></div><div><b>2</b><span>weeks to collect. I send the reminders</span></div></div><p>Your boss and your boss’s boss are reported on their own. Everyone else is anonymous.</p>`)}
+${cols('What I ask of you',`<ol><li>Bring real situations, not status updates.</li><li>Tell me when something is not working between us.</li><li>48 hours’ notice to cancel, and the same from me.</li></ol>`)}
+${cols('AI in our work',`<p>I use AI on my notes, your 360, and session prep, and I stay responsible for all of it. If you’d like transcripts of our sessions, you can have them. When you use AI between sessions, use your organization’s approved tool.</p>`)}
+</div>${threshold('Ready to grow faster than the job alone will teach you?')}`;
+
+pages.organizations=()=>phead('Leadership · Doing','For <em>Organizations</em>','Workshops, assessments, and integration sessions for HR, talent, and executive teams.','<a href="#home">Home</a> / Leadership')+`<div class="wrap" style="padding-block:48px">
+<div class="offer">
+ <div class="of"><span class="label">Team</span><h3>Everything DiSC Workshop</h3><p>Three hours, virtual, for a leadership team of up to 15 (I have facilitated groups as large as 50). Genuine team building that leaves everyone with a shared language for communication, plus the Catalyst platform’s view of how each style meets every colleague’s.</p></div>
+ <div class="of"><span class="label">Transition</span><h3>New Leader Integration</h3><p>A two-hour facilitated session that accelerates a new leader’s first weeks with an existing team, surfacing questions and expectations on both sides early.</p></div>
+ <div class="of"><span class="label">Individual</span><h3>Leadership Circle 360</h3><p>Available outside a full coaching engagement, with three debrief sessions with a certified LCP practitioner and a development plan. Unlimited reviewers.</p></div>
+</div>
+<div class="cols" style="margin-top:28px"><div class="label">Leadership workshops</div><div class="prose"><p>Ninety-minute interactive working sessions for up to 25 participants, virtual or in person. Participants apply each concept to a real situation they are carrying. The two neuroscience sessions draw on BEabove Leadership’s NeuroTransformational material, which I am certified to deliver.</p></div></div>
+<div class="ws">${WORKSHOPS.map(([t,tag,d])=>{const hot=['Effective Delegation','Mastering Feedback','The Neuroscience of Stress Management','Strengthening Strategic Thinking'].includes(t);return `<article class="w"><span class="tag ${hot?'hot':''}">${hot?'Most requested · ':''}${tag}</span><h3>${t}</h3><p>${d}</p></article>`}).join('')}</div>
+</div>${threshold('Building leaders across a team? Let’s design it together.')}`;
+
+pages['consciousness-coaching']=()=>phead('Consciousness · Being','Consciousness <em>Coaching</em>','Life coaching works on the life. Consciousness coaching works on the one who is living it.','<a href="#home">Home</a> / Consciousness')+`<div class="wrap">
+${cols('What it is',`<p>Most coaching helps you change what you do. This work looks at where you are doing it from: the awareness behind your choices, your reactions, and the stories you tell about yourself.</p><p>As awareness widens, things that felt like fixed facts about you start to look like habits you can hold more lightly. Insight arrives on its own schedule. Action begins to change without so much forcing. I call the destination <a class="tl-link" href="https://teliodosis.com" target="_blank" rel="noopener">teliodosis</a>: doing that flows from being.</p>`)}
+${cols('You might be here if',`<ul>
+<li>You have achieved much of what you set out to achieve, and you are quietly asking what it was for.</li>
+<li>A meditation practice has opened something you want to understand rather than just enjoy.</li>
+<li>You have had a glimpse, a moment of deep stillness or connection, that you can’t explain and don’t want to dismiss.</li>
+<li>You are between chapters: a role, a place, a relationship, or an identity is ending, and the next one hasn’t arrived.</li>
+<li>You want a guide who is as comfortable with a spreadsheet as with silence.</li></ul>`)}
+${cols('The path',`<p>The Institute of Noetic Sciences maps how consciousness tends to transform. I find the off-ramps as useful as the stations. Nobody walks this in a straight line, me included.</p>
+<div class="path">
+ <div class="stn"><div class="dot">1</div><h3>A noetic moment</h3><p>Direct knowing that doesn’t come from thinking.</p><div class="off"><b>Off-ramp</b>Explaining it away.</div></div>
+ <div class="stn"><div class="dot">2</div><h3>Exploration</h3><p>Trying practices with curiosity.</p><div class="off"><b>Off-ramp</b>Endless seeking, no commitment.</div></div>
+ <div class="stn"><div class="dot">3</div><h3>A practice</h3><p>Going deep with one that resonates.</p><div class="off"><b>Off-ramp</b>Mistaking the practice for the point.</div></div>
+ <div class="stn"><div class="dot">4</div><h3>Life as practice</h3><p>Presence in ordinary moments.</p><div class="off"><b>Off-ramp</b>Growth that becomes about me.</div></div>
+ <div class="stn"><div class="dot">5</div><h3>I to We</h3><p>Growth that turns toward others.</p><div class="off"><b>Off-ramp</b>Sliding from we back to me.</div></div>
+</div>`)}
+${cols('How we work',`<p>The foundation is the same as all my coaching: confidential, client-led, and held to the ICF Code of Ethics. On top of it, we draw on whatever serves you:</p>
+<ul><li><b>Contemplative practice.</b> Meditation in session when it helps, informed by my two-year teacher training in nondual meditation.</li>
+<li><b>The body.</b> Somatic awareness, noticing what you know before you can say it.</li>
+<li><b>Language.</b> Ontological coaching’s view of how the words we use shape the world we see.</li>
+<li><b>The brain.</b> The neuroscience of the two hemispheres and the brain’s task and default networks, for those who like to know why.</li>
+<li><b>Inquiry.</b> For people drawn to it, direct looking into the nature of awareness itself.</li></ul>
+<p>No belief system is required. For most of my life I called myself a child of modernity, and I still bring the engineer with me. Skeptics are welcome.</p>`)}
+${cols('Life or consciousness?',`<div class="tablewrap"><table class="vs"><thead><tr><th></th><th>Life coaching</th><th>Consciousness coaching</th></tr></thead><tbody>
+<tr><td>Works on</td><td>Your goals, habits, balance, and career</td><td>Your awareness, identity, presence, and meaning</td></tr>
+<tr><td>Central question</td><td>What do I want to change?</td><td>Who is it that wants to change?</td></tr>
+<tr><td>Feels like</td><td>Building a life that works</td><td>Living from a different place</td></tr>
+<tr><td>Often leads to</td><td>Consciousness coaching</td><td>A life that works, as a side effect</td></tr></tbody></table></div><p class="muted">Many people need a little of both. We’ll find the balance together.</p>`)}
+${cols('Format',`<p>We start with a free discovery conversation to see whether this is the right work and whether I am the right guide. Engagements typically run six months of 50-minute sessions, every two weeks or monthly.</p>`)}
+</div>${threshold('Curious whether this is your next step?')}`;
+
+pages['life-coaching']=()=>phead('Consciousness · Being','Life <em>Coaching</em>','A confidential thought partner for the practical work of building a life that works.','<a href="#home">Home</a> / Consciousness')+`<div class="wrap">
+${cols('What it is',`<p>Life coaching blends proven strategies from the corporate world with a holistic approach to personal growth. It is practical and forward-moving: we name what you want and build the habits, structures, and courage to get there.</p><p>If your questions are more about who you are than what you do, <a class="tl-link" href="#consciousness-coaching">consciousness coaching</a> may fit better. Many people move between the two.</p>`)}
+${cols('Common areas',`<ul>
+<li><a class="tl-link" href="#post-work-life-balance-is-a-myth"><b>Work/life balance.</b></a> Harmonize your professional aspirations with your personal life so both flourish.</li>
+<li><a class="tl-link" href="#post-life-is-calling"><b>Purpose.</b></a> Tap into your passions and talents and align your actions with your calling.</li>
+<li><a class="tl-link" href="#post-productivity-anthology"><b>Productivity.</b></a> Planning rituals, a remodeled calendar, a tamed inbox, and real focus.</li>
+<li><a class="tl-link" href="#post-gooooooooooooooooooooooals"><b>Goals.</b></a> Set ambitious objectives and conquer them step by step.</li>
+<li><a class="tl-link" href="#post-transitions"><b>Transitions.</b></a> New job, new career, new city.</li>
+<li><a class="tl-link" href="#writing~health"><b>Health habits.</b></a> Sleep, brain health, running, nutrition, and meditation.</li></ul>`)}
+${cols('Format',`<p>A six-month package of 50-minute sessions: thirteen sessions fortnightly, or six monthly.</p>`)}
+</div>${threshold()}`;
+
+pages.about=()=>`<div class="phead"><div class="wrap ab-hero">
+ <div><div class="label">About</div><h1 style="margin-top:16px"><span>Coach. Leader.</span><span>Learner. Father.</span><span>Runner. Alchemist.</span></h1>
+ <p class="lede">I’m Josh. I spent thirty years leading technology teams, and the last five helping leaders, and humans, grow faster than they thought they could.</p></div>
+ <img src="img/josh.jpg" alt="Josh Dietrich">
+</div></div>
+<div class="wrap">
+${cols('The short version',`<p>I coach senior leaders across technology, education, healthcare, and finance. I hold a certification in Ontological Coaching from the Newfield Network, I am a Certified NeuroTransformational Coach through BEabove Leadership, and I am a Professional Certified Coach with the International Coaching Federation.</p><p>Some clients want a confidential thought partner who stays present and curious. Others want an extended mind who also mentors from three decades in the executive chair. I can be either, and I’ll ask which you need.</p>`)}
+${cols('How I got here',`<ul class="tline">
+<li><span class="y">1993</span><div><b>Software developer</b><span>Fresh out of William &amp; Mary, determined to be a “Renaissance programmer.”</span></div></li>
+<li><span class="y">1993–2021</span><div><b>Technology executive</b><span>Engineering, product management, sales, and customer success, much of it in higher-education technology.</span></div></li>
+<li><span class="y">2021</span><div><b>Arete Pursuits</b><span>I left the executive trail to coach full time. Within five months I had a waiting list.</span></div></li>
+<li><span class="y">Nov 2024</span><div><b>Walkabout</b><span>After five decades in Virginia, I set out to discover where I want to put down roots, or whether I need to.</span></div></li>
+<li><span class="y">Dec 2025</span><div><b>Silence</b><span>My first in-person retreat: a week of silent meditation at Upaya Zen Center. I called it the best week of my life.</span></div></li>
+<li><span class="y">2026–27</span><div><b>Teacher training</b><span>A two-year teacher training in nondual meditation with Jonathan Gustin.</span></div></li>
+<li><span class="y">Now</span><div><b>On the road</b><span>Living a month or so at a time wherever I’m called, and coaching from wherever that is.</span></div></li></ul>`)}
+${cols('Why the road',`<p>Living without a fixed home has stripped away a lot of what I used to think I needed. It has also made me a better coach. Every month brings new people, new land, and new lessons, and I write about them every week in <a class="tl-link" href="#writing">Tales of Wanderment</a>.</p><p>For clients, nothing changes: we meet on Zoom, on the same schedule, wherever I am. If you’re near my next waystation, I would love to meet in person.</p>`)}
+${cols('Elsewhere',`<p><a class="tl-link" href="https://www.linkedin.com/in/joshuadietrich/" target="_blank" rel="noopener">LinkedIn ↗</a> · <a class="tl-link" href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Substack ↗</a> · <a class="tl-link" href="https://teliodosis.com" target="_blank" rel="noopener">teliodosis.com ↗</a></p>`)}
+</div>${threshold()}`;
+
+pages.resources=()=>phead('Library','Books, programs <em>&amp;</em> meditations','Clients often ask me for recommendations. These are my favorites, loosely sorted to help you find your way in.')+`<div class="wrap" style="padding-block:40px 72px"><div class="shelf">${SHELF.map(([g,items])=>`<div class="grp"><h3>${g}</h3><ul>${items.map(([t,a,u])=>`<li><a href="${u}" target="_blank" rel="noopener"><b>${t}</b><span>${a}</span></a></li>`).join('')}</ul></div>`).join('')}</div><p class="muted" style="margin-top:32px;font-size:.88rem">Arete Pursuits may receive compensation for purchases made through links on this page.</p></div>`;
+
+pages.contact=()=>phead('Begin','Begin a <em>conversation</em>','Twenty-five minutes. No preparation. Choose the call that fits, or just write.')+`<div class="wrap"><div class="ways">
+ <div class="way"><span class="label">Leadership</span><h3>Executive coaching &amp; teams</h3><p class="muted">For leaders and the people who develop them.</p><a class="btn btn-ember" style="justify-self:start" href="${CAL}" target="_blank" rel="noopener">Schedule →</a></div>
+ <div class="way"><span class="label">Consciousness</span><h3>Discovery call</h3><p class="muted">For consciousness and life coaching.</p><a class="btn btn-line" style="justify-self:start" href="${CAL_C}" target="_blank" rel="noopener">Schedule →</a></div>
+ <div class="way"><span class="label">Email</span><span class="val">josh@aretepursuits.com</span><button class="copy" data-copy="josh@aretepursuits.com">Copy address</button><span class="label" style="margin-top:12px">Phone</span><span class="val">+1 703 431 8025</span><button class="copy" data-copy="+1 703 431 8025">Copy number</button></div>
+</div></div>`;
+const legal=n=>()=>phead('Legal',n,'')+`<div class="wrap" style="padding-block:48px 80px"><p class="note">The current ${n.toLowerCase()} moves over word for word at cutover.</p></div>`;
+pages['privacy-policy']=legal('Privacy Policy'); pages['terms-and-conditions']=legal('Terms and Conditions');
+
+/* writing */
+let cat=null,q='';
+const CATS=(()=>{const m={};POSTS.forEach(p=>p.c.forEach(c=>m[c]=(m[c]||0)+1));return Object.entries(m).sort((a,b)=>b[1]-a[1]);})();
+function list(){const qq=q.trim().toLowerCase();const L=POSTS.filter(p=>(!cat||p.c.includes(cat))&&(!qq||p.t.toLowerCase().includes(qq)||p.c.join(' ').toLowerCase().includes(qq)));
+ if(!L.length)return `<p class="empty">No posts match “${esc(q)}”. Try another word or clear the topic.</p>`;
+ const Y={};L.forEach(p=>(Y[p.d.slice(0,4)]||=[]).push(p));
+ return Object.keys(Y).sort((a,b)=>b-a).map(y=>`<div class="year"><h3>${y}<small>${Y[y].length} post${Y[y].length>1?'s':''}</small></h3><div>${Y[y].map(p=>`<a class="row" href="#post-${p.s}"><span class="d">${fmt(p.d).replace(/, \d{4}$/,'')}</span><span class="t">${esc(p.t)}</span><span class="k">${esc(p.c.slice(0,2).join(' · '))}</span></a>`).join('')}</div></div>`).join('');}
+pages.writing=()=>{const f=POSTS[0],fil=cat||q;return phead('Writing','Field notes on leading <em>&amp;</em> being','Weekly since 2021: leadership, neuroscience, consciousness, and tales from the road. Subscribe on Substack to get each one in your inbox.')+`<div class="wrap">
+${fil?'':`<a class="feature" href="#post-${f.s}"><div class="ph"><img src="img/p-${f.s}.jpg" alt=""></div><div><div class="meta"><span>Latest · ${fmt(f.d)}</span><span class="c">${f.c.join(', ')}</span></div><h2>${esc(f.t)}</h2><p class="muted">${esc(EX[f.s])}</p></div></a>
+<section style="padding-block:48px"><div class="cards">${POSTS.slice(1,13).map(card).join('')}</div></section>`}
+<div class="toolbar" id="toolbar"><label class="search"><span class="muted" aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Search ${POSTS.length} posts" value="${esc(q)}" aria-label="Search posts"></label>
+<div class="chips" role="group" aria-label="Filter by topic"><button class="chip" data-cat="" aria-pressed="${!cat}">All<span class="n">${POSTS.length}</span></button>${CATS.map(([c,n])=>`<button class="chip" data-cat="${esc(c)}" aria-pressed="${cat===c}">${esc(c)}<span class="n">${n}</span></button>`).join('')}</div></div>
+<div id="archive" style="padding-bottom:72px">${list()}</div></div>`;};
+
+function post(slug){const i=POSTS.findIndex(p=>p.s===slug);if(i<0)return pages.writing();const p=POSTS[i],nw=POSTS[i-1],od=POSTS[i+1];
+ const body=BODY[slug]||`${EX[slug]?`<p>${esc(EX[slug])}</p>`:''}<p class="note">This concept carries full text for the two newest posts only. All ${POSTS.length} posts move over at cutover. <a href="${LIVE}/${slug}/" target="_blank" rel="noopener">Read this one on the current site ↗</a></p>`;
+ return `<div class="wrap"><div class="post-head"><div class="crumbs"><a href="#writing">Writing</a> / ${p.c.map(c=>`<a href="#writing~${slugify(c)}">${esc(c)}</a>`).join(', ')}</div><h1>${esc(p.t)}</h1><div class="meta"><span>${fmt(p.d)}</span><span>Josh Dietrich</span></div></div>
+ ${IMG.has(slug)?`<div class="post-hero"><img src="img/p-${slug}.jpg" alt=""></div>`:''}<article class="article">${body}</article>
+ <aside class="bio"><img src="img/josh.jpg" alt=""><div><p>I’m an executive coach and consciousness coach with software executive roots. I write every week about leading, being, and life on the road.</p><div class="links"><a class="tl-link" href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Subscribe on Substack</a><a class="tl-link" href="#contact">Begin a conversation</a></div></div></aside>
+ <nav class="pn" aria-label="More posts">${od?`<a href="#post-${od.s}"><span>← OLDER</span><b>${esc(od.t)}</b></a>`:'<span></span>'}${nw?`<a href="#post-${nw.s}"><span>NEWER →</span><b>${esc(nw.t)}</b></a>`:'<span></span>'}</nav></div>`;}
+
+/* router */
+const app=document.getElementById('app');
+const GROUP={'executive-coaching':'lead',organizations:'lead','consciousness-coaching':'being','life-coaching':'being'};
+const live=r=>({home:'/', 'executive-coaching':'/services/executive-coaching/', organizations:'/services/leadership-workshops/','consciousness-coaching':'/services/life-coaching/','life-coaching':'/services/life-coaching/',writing:'/blog/',about:'/about/',resources:'/resources/',contact:'/contact/','privacy-policy':'/privacy-policy/','terms-and-conditions':'/terms-and-conditions/'}[r] || (r.startsWith('post-')?'/'+r.slice(5)+'/':'/'));
+function render(){let r=decodeURIComponent(location.hash.slice(1))||'home';let h;
+ if(r==='blog')r='writing';
+ if(r.startsWith('post-'))h=post(r.slice(5));
+ else if(r.startsWith('writing')){const cs=r.split('~')[1];if(cs!==undefined){const hit=CATS.find(([c])=>slugify(c)===cs);cat=hit?hit[0]:null;q='';}h=pages.writing();r='writing';}
+ else h=(pages[r]||pages.home)();
+ app.innerHTML=`<div class="enter">${h}</div>`;
+ document.querySelectorAll('.menu > a').forEach(a=>{const on=a.getAttribute('href')==='#'+r||(r.startsWith('post-')&&a.getAttribute('href')==='#writing');on?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current');});
+ document.querySelectorAll('.dd > button').forEach(b=>b.classList.toggle('on',GROUP[r]===b.dataset.group));
+ document.getElementById('liveLink').href=LIVE+live(r);
+ closeAll(); mobile.hidden=true; burger.setAttribute('aria-expanded','false'); burger.textContent='Menu';
+ if(location.hash.includes('~')){const t=document.getElementById('toolbar');if(t)t.scrollIntoView();}else window.scrollTo(0,0);}
+function refresh(){const a=document.getElementById('archive');if(!a){render();return;}a.innerHTML=list();document.querySelectorAll('[data-cat]').forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.cat||null)===cat)));}
+app.addEventListener('click',e=>{const ch=e.target.closest('[data-cat]');if(ch){const c=ch.dataset.cat||null;const was=!(cat||q);cat=(cat===c)?null:c;if(was!==!(cat||q)){render();const t=document.getElementById('toolbar');if(t)t.scrollIntoView();}else refresh();return;}
+ const cp=e.target.closest('.copy');if(cp){const v=cp.dataset.copy;try{navigator.clipboard.writeText(v).then(()=>{cp.textContent='Copied';setTimeout(()=>cp.textContent=v.includes('@')?'Copy address':'Copy number',1600)},()=>{cp.textContent='Select the text above to copy';});}catch(_){}}});
+app.addEventListener('input',e=>{if(e.target.id==='q'){const was=!(cat||q);q=e.target.value;if(was!==!(cat||q)){const pos=e.target.selectionStart;render();const i=document.getElementById('q');i.focus();i.setSelectionRange(pos,pos);document.getElementById('toolbar').scrollIntoView();}else refresh();}});
+
+/* menus with forgiving hover */
+const dds=[...document.querySelectorAll('.dd')];
+function closeAll(except){dds.forEach(d=>{if(d!==except){d.querySelector('.dd-panel').hidden=true;d.querySelector('button').setAttribute('aria-expanded','false');}});}
+dds.forEach(d=>{const b=d.querySelector('button'),p=d.querySelector('.dd-panel');let t=null;
+ const open=()=>{clearTimeout(t);closeAll(d);p.hidden=false;b.setAttribute('aria-expanded','true');};
+ b.addEventListener('click',e=>{e.stopPropagation();p.hidden?open():(p.hidden=true,b.setAttribute('aria-expanded','false'));});
+ d.addEventListener('mouseenter',()=>{if(matchMedia('(hover:hover)').matches)open();});
+ d.addEventListener('mouseleave',()=>{if(matchMedia('(hover:hover)').matches){clearTimeout(t);t=setTimeout(()=>{p.hidden=true;b.setAttribute('aria-expanded','false');},400);}});});
+document.addEventListener('click',e=>{if(!e.target.closest('.dd'))closeAll();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll();});
+const burger=document.getElementById('burger'),mobile=document.getElementById('mobileNav');
+burger.addEventListener('click',()=>{const o=mobile.hidden;mobile.hidden=!o;burger.setAttribute('aria-expanded',String(o));burger.textContent=o?'Close':'Menu';});
+document.getElementById('pillX').addEventListener('click',()=>document.getElementById('pill').hidden=true);
+window.addEventListener('hashchange',render);
+render();
+</script>
+
+</html>
