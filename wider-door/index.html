@@ -8,13 +8,13 @@
 <title>Arete Pursuits Wider Door</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,100;1,9..144,300..500,100&family=Albert+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..700;1,7..72,200..600&family=Albert+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: "Two doors, one threshold" — dusk-dark first; a full-bleed photograph opens the site, two doors split below it, and every page ends at the same threshold (a conversation). */
 :root{
   --bg:#0F1614; --surface:#16201D; --raise:#1C2824; --ink:#ECE6DA; --muted:#A3ACA5; --rule:#2A3632;
   --ember:#E49A5B; --sage:#A6BC9F; --on-accent:#1A120B; --shade:rgba(8,12,11,.62);
-  --f-display:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --f-display:"Literata", "Iowan Old Style", Georgia, serif;
   --f-body:"Albert Sans", "Segoe UI", system-ui, sans-serif;
   --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
   --max:1200px; --measure:64ch; --r:4px;
@@ -32,7 +32,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1
 a{color:inherit}
 :focus-visible{outline:2px solid var(--ember);outline-offset:3px}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(16px,4vw,44px)}
-h1,h2,h3{font-family:var(--f-display);font-weight:350;font-variation-settings:"SOFT" 100;text-wrap:balance;line-height:1.08;margin:0;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--f-display);font-weight:350;text-wrap:balance;line-height:1.08;margin:0;letter-spacing:-.01em}
 p{margin:0}
 .label{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
 .muted{color:var(--muted)}
@@ -47,7 +47,7 @@ p{margin:0}
 header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
 .nav{display:flex;align-items:center;gap:22px;min-height:70px}
 .brand{text-decoration:none;display:flex;align-items:baseline;gap:.5em;line-height:1}
-.brand b{font-family:var(--f-display);font-weight:400;font-size:1.35rem;font-variation-settings:"SOFT" 100}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:1.35rem}
 .brand i{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:1.35rem;color:var(--ember)}
 .menu{display:flex;gap:2px;margin-left:auto;align-items:center}
 .menu > a,.menu .dd > button{font:500 .95rem var(--f-body);color:var(--ink);text-decoration:none;background:none;border:0;padding:.6em .85em;border-radius:6px;cursor:pointer}
@@ -89,8 +89,9 @@ section{padding-block:clamp(64px,9vw,120px)}
 .door .label{color:#CFE0C8}
 .door h2{font-size:clamp(2rem,3.6vw,3.1rem);margin:10px 0 12px}
 .door p{max-width:40ch;color:#E5DFD3}
-.door ul{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.door li{font-size:.82rem;border:1px solid rgba(243,238,228,.4);border-radius:999px;padding:.3em .8em}
+.door .incl{margin-top:18px;font-size:.88rem;color:#D9D2C4;max-width:44ch}
+.door .incl b{font-family:var(--f-mono);font-weight:400;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#CFE0C8;margin-right:.6em}
+.door .go{display:inline-flex;align-items:center;gap:.5em;margin-top:20px;font-weight:600;font-size:.95rem;color:#F3EEE4;border-bottom:1px solid rgba(243,238,228,.5);padding-bottom:2px;align-self:flex-start}
 @media (hover:hover) and (min-width:861px){ .doors:hover .door{flex-grow:.85} .doors .door:hover{flex-grow:1.4} .door:hover img{transform:scale(1.04)} }
 @media (max-width:860px){ .doors{flex-direction:column;min-height:0} .door{min-height:420px} }
 
@@ -306,6 +307,35 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
 .pill a{text-decoration:none;background:var(--raise);color:var(--ink);padding:.35em .8em;border-radius:999px}
 .pill button{background:none;border:0;color:var(--muted);cursor:pointer;font-size:1rem;padding:0 .3em}
 
+/* fortnightly tooltip */
+.fn{position:relative;text-decoration:underline dotted;text-decoration-color:var(--muted);text-underline-offset:.22em;cursor:help;outline-offset:2px}
+.fn::after{content:"Every two weeks";position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%) translateY(4px);white-space:nowrap;font:500 .76rem/1 var(--f-body);letter-spacing:0;text-transform:none;font-style:normal;background:var(--ink);color:var(--bg);padding:.55em .75em;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:20}
+.fn:hover::after,.fn:focus::after{opacity:1;transform:translateX(-50%) translateY(0)}
+/* wanderment chapters */
+.chapters{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--rule)}
+.chapters li{display:grid;grid-template-columns:132px minmax(0,1fr);gap:4px 18px;padding-block:16px;border-bottom:1px solid var(--rule)}
+.chapters .y{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);padding-top:.35em;grid-row:span 2}
+.chapters li.now .y{color:var(--ember)}
+.chapters b{font-family:var(--f-display);font-weight:400;font-size:1.2rem}
+.chapters .route{color:var(--muted);font-size:.92rem}
+@media (max-width:600px){ .chapters li{grid-template-columns:1fr} .chapters .y{grid-row:auto} }
+/* life ⊃ consciousness */
+.nest{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:28px;align-items:center}
+.rings{position:relative;width:100%;max-width:260px;aspect-ratio:1/1;border-radius:50%;border:1px solid var(--sage);background:color-mix(in srgb,var(--sage) 8%,transparent)}
+.rings .lc{position:absolute;top:13%;left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.rings .in{position:absolute;left:24%;right:24%;top:32%;bottom:16%;border-radius:50%;background:color-mix(in srgb,var(--ember) 18%,transparent);border:1px solid var(--ember);display:grid;place-items:center;text-align:center;padding:10px}
+.rings .in span{font-family:var(--f-display);font-size:.98rem;line-height:1.2;color:var(--ink)}
+@media (max-width:600px){ .nest{grid-template-columns:1fr} .rings{max-width:220px} }
+/* meditation */
+.tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px}
+.track{display:grid;gap:6px;text-decoration:none;border:1px solid var(--rule);border-radius:var(--r);padding:20px;background:var(--surface)}
+.track:hover{border-color:var(--ember)}
+.track b{font-family:var(--f-display);font-weight:400;font-size:1.3rem}
+.track span{font-size:.85rem;color:var(--muted)}
+.post-loading{color:var(--muted);font-family:var(--f-body);font-size:1rem}
+.article img{max-width:100%;height:auto;border-radius:var(--r)}
+.article figure{margin:0}
+.article figcaption{font-family:var(--f-body);font-size:.85rem;color:var(--muted);margin-top:6px}
 @keyframes rise{from{opacity:.001;transform:translateY(12px)}to{opacity:1;transform:none}}
 .enter{animation:rise .55s ease both}
 .hero h1,.hero .sub,.hero .actions{animation:rise .9s ease both}
@@ -324,8 +354,9 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
         </div></div>
       <div class="dd" data-dd="being"><button aria-expanded="false" data-group="being">Consciousness ▾</button>
         <div class="dd-panel" hidden>
-          <a href="#consciousness-coaching">Consciousness Coaching<small>The one who is living the life</small></a>
-          <a href="#life-coaching">Life Coaching<small>The life itself</small></a>
+          <a href="#life-coaching">Life Coaching<small>Whatever life brings</small></a>
+          <a href="#consciousness-coaching">Consciousness Coaching<small>A focused path within life coaching</small></a>
+          <a href="#meditation">Meditation<small>Guided meditations and practice</small></a>
         </div></div>
       <a href="#writing">Writing</a>
       <a href="#about">About</a>
@@ -335,7 +366,7 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
   </div>
   <div class="wrap mobile" id="mobileNav" hidden>
     <span class="label grp">Leadership</span><a href="#executive-coaching">Executive Coaching</a><a href="#organizations">For Organizations</a>
-    <span class="label grp">Consciousness</span><a href="#consciousness-coaching">Consciousness Coaching</a><a href="#life-coaching">Life Coaching</a>
+    <span class="label grp">Consciousness</span><a href="#life-coaching">Life Coaching</a><a href="#consciousness-coaching">Consciousness Coaching</a><a href="#meditation">Meditation</a>
     <span class="label grp">More</span><a href="#writing">Writing</a><a href="#resources">Library</a><a href="#about">About</a><a href="#contact">Begin a conversation</a>
   </div>
 </header>
@@ -346,7 +377,7 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
   <div class="fgrid">
     <div><a class="brand" href="#home"><b>Arete</b><i>Pursuits</i></a><p class="tag">Accelerating the evolution of human consciousness, one leader at a time.</p></div>
     <div><h4>Leadership</h4><ul><li><a href="#executive-coaching">Executive Coaching</a></li><li><a href="#organizations">For Organizations</a></li><li><a href="#organizations">DiSC &amp; 360 Feedback</a></li></ul></div>
-    <div><h4>Consciousness</h4><ul><li><a href="#consciousness-coaching">Consciousness Coaching</a></li><li><a href="#life-coaching">Life Coaching</a></li><li><a href="https://teliodosis.com" target="_blank" rel="noopener">Teliodosis ↗</a></li></ul></div>
+    <div><h4>Consciousness</h4><ul><li><a href="#life-coaching">Life Coaching</a></li><li><a href="#consciousness-coaching">Consciousness Coaching</a></li><li><a href="#meditation">Meditation</a></li><li><a href="#post-refining-teliodosis">Teliodosis</a></li></ul></div>
     <div><h4>Stay close</h4><ul><li><a href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Subscribe on Substack ↗</a></li><li><a href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">LinkedIn newsletter ↗</a></li><li><a href="#writing">Writing</a></li><li><a href="#resources">Library</a></li><li><a href="#contact">Contact</a></li></ul></div>
   </div>
   <div class="fine"><span>© 2026 Arete Pursuits · Josh Dietrich, PCC</span><span><a href="#privacy-policy" style="color:inherit">Privacy</a> · <a href="#terms-and-conditions" style="color:inherit">Terms</a></span></div>
@@ -698,17 +729,17 @@ const SHELF = [
 
 
 const NAMED=[
- ['Josh’s coaching presence is gold standard, full stop. I feel fortunate to have found him when I was not even looking.','Mary Elizabeth Parks'],
- ['Josh takes a very personalized approach to coaching and mentorship. His approach expanded my perspective and pushed me to have more of a growth mindset.','Nick Larche']
+ ['Josh’s coaching presence is gold standard, full stop. I feel fortunate to have found him when I was not even looking.','Consciousness Coachee'],
+ ['Josh takes a very personalized approach to coaching and mentorship. His approach expanded my perspective and pushed me to have more of a growth mindset.','VP, Human Resources']
 ];
 const CLIENTS=[['Amazon','amazon.png'],['Paylocity','paylocity.png'],['LendingTree','lendingtree.png'],['Ellucian','ellucian.png'],['NICE','nice.png'],['Washington and Lee University','wl.jpg'],['Unanet','unanet.jpg'],['National Pharmaceutical Council','npc.png']];
 
 /* ---------- pieces ---------- */
 const threshold=(title='Every path here starts with a conversation.')=>`<section class="threshold"><div class="wrap inner">
-<div><div class="label">The threshold</div><h2 style="margin-top:14px">${title}</h2><p class="muted" style="margin-top:14px;max-width:44ch">Twenty-five minutes, no preparation needed. Pick the door that fits, or just pick a time.</p></div>
+<div><div class="label">Let’s talk</div><h2 style="margin-top:14px">${title}</h2><p class="muted" style="margin-top:14px;max-width:46ch">Twenty-five minutes, no preparation needed. Start with whatever is closest to what’s on your mind, and we’ll find the rest together.</p></div>
 <div class="opts">
- <a class="opt" href="${CAL}" target="_blank" rel="noopener"><div><b>Leadership conversation</b><br><span>Executive coaching, workshops, teams</span></div><i>→</i></a>
- <a class="opt" href="${CAL_C}" target="_blank" rel="noopener"><div><b>Consciousness discovery call</b><br><span>Consciousness or life coaching</span></div><i>→</i></a>
+ <a class="opt" href="${CAL}" target="_blank" rel="noopener"><div><b>Leadership</b><br><span>Executive coaching, workshops, and teams</span></div><i>→</i></a>
+ <a class="opt" href="${CAL_C}" target="_blank" rel="noopener"><div><b>Life &amp; consciousness</b><br><span>Life coaching, consciousness coaching, and meditation</span></div><i>→</i></a>
 </div></div></section>`;
 const phead=(label,title,lede,crumb)=>`<div class="phead"><div class="wrap">${crumb?`<div class="crumbs">${crumb}</div>`:''}<div class="label" style="margin-top:${crumb?14:0}px">${label}</div><h1>${title}</h1>${lede?`<p class="lede">${lede}</p>`:''}</div></div>`;
 const cols=(lbl,inner)=>`<div class="cols"><div class="label">${lbl}</div><div class="prose">${inner}</div></div>`;
@@ -720,27 +751,26 @@ pages.home=()=>`
 <div class="wrap inner">
  <div class="label" style="color:#CFE0C8">Arete Pursuits · Josh Dietrich, PCC</div>
  <h1 style="margin-top:18px">Accelerating the evolution of human <em>consciousness</em>.</h1>
- <p class="sub">One leader, one human, one conversation at a time. Executive coaching for the work you lead, and consciousness coaching for the life you are living.</p>
+ <p class="sub">One leader, one human, one conversation at a time. Executive coaching for the work you lead, and life and consciousness coaching for the life you are living.</p>
  <div class="actions"><a class="btn btn-ember" href="#executive-coaching">For leaders <span>→</span></a><a class="btn btn-line" href="#consciousness-coaching">For the inner journey <span>→</span></a></div>
  <div class="credit">SANTA FE, NEW MEXICO · PHOTO: JOSH DIETRICH</div>
 </div></section>
 
 <section><div class="wrap">
- <div class="label" style="margin-bottom:22px">Two doors · same coach</div>
+ <div class="label" style="margin-bottom:22px">Doing · Being</div>
  <div class="doors">
-  <a class="door" href="#executive-coaching"><img src="img/p-change-of-plans.jpg" alt=""><span class="label">Doing</span><h2>Leadership</h2><p>Radically accelerating leadership growth for executives and the organizations they serve. Grounded in neuroscience, ontological coaching, and three decades in the executive chair.</p><ul><li>Executive coaching</li><li>Workshops</li><li>DiSC</li><li>360 feedback</li></ul></a>
-  <a class="door" href="#consciousness-coaching"><img src="img/p-gentleness.jpg" alt="" style="object-position:22% 45%"><span class="label">Being</span><h2>Consciousness</h2><p>For people who have achieved much of what they set out to do and sense there is more to who they are. Awareness, presence, and the quiet work of becoming.</p><ul><li>Consciousness coaching</li><li>Life coaching</li><li>Meditation</li></ul></a>
+  <a class="door" href="#executive-coaching"><img src="img/p-change-of-plans.jpg" alt=""><span class="label">Doing</span><h2>Leadership</h2><p>Radically accelerating leadership growth for executives and the organizations they serve. Grounded in neuroscience, ontological coaching, and three decades in the executive chair.</p><p class="incl"><b>Includes</b>Executive coaching · Workshops · DiSC · 360 feedback</p><span class="go">Explore leadership →</span></a>
+  <a class="door" href="#consciousness-coaching"><img src="img/p-gentleness.jpg" alt="" style="object-position:22% 45%"><span class="label">Being</span><h2>Consciousness</h2><p>Life coaching for whatever life brings, and consciousness coaching for those who sense there is more to who they are. Awareness, presence, and the quiet work of becoming.</p><p class="incl"><b>Includes</b>Life coaching · Consciousness coaching · Meditation</p><span class="go">Explore consciousness →</span></a>
  </div>
 </div></section>
 
 <section class="rt"><div class="wrap thesis">
- <div><div class="label">Why two doors</div><h2 style="margin-top:16px">Most people arrive through leadership. Many stay for everything else.</h2>
- <div class="coin"><span class="w">teliodosis</span><span class="ph">/ tel·ee·oh·DOH·sis /</span><p>A word I coined for a way of living where doing and being are integrated, and purposeful action flows from presence.</p><p style="margin-top:10px"><a class="tl-link" href="https://teliodosis.com" target="_blank" rel="noopener">Read more at teliodosis.com ↗</a></p></div></div>
+ <div><div class="label">Why both</div><h2 style="margin-top:16px">Most people arrive through leadership. Many stay for everything else.</h2>
+ <div class="coin"><span class="w">teliodosis</span><span class="ph">/ tel·ee·oh·DOH·sis /</span><p>A word I coined for the integration of doing and being: purposeful action that flows from presence.</p><p style="margin-top:10px"><a class="tl-link" href="#post-refining-teliodosis">Read “Refining Teliodosis”</a></p></div></div>
  <div class="body">
   <p>Executive coaching asks how you lead. Sooner or later it also asks who is doing the leading. The answer to that second question is where the most durable growth happens.</p>
   <p>I spent thirty years as a technology executive and still bring that experience to every engagement. I also spend my days in meditation teacher training, on silent retreat, and on the road, and I bring that too.</p>
-  <p>You don’t have to choose a door in advance. Plenty of clients begin with delegation and strategic thinking and end up somewhere they didn’t expect.</p>
-  <p><a class="tl-link" href="#post-same-coach-wider-door">Same coach, wider door</a></p>
+  <p>You don’t need to know in advance which kind of coaching you need. Plenty of clients begin with delegation and strategic thinking and end up somewhere they didn’t expect.</p>
  </div>
 </div></section>
 
@@ -754,15 +784,14 @@ pages.home=()=>`
 </div></section>
 
 <section class="rt"><div class="wrap road">
- <div><div class="label">Field notes</div><h2 style="font-size:clamp(2rem,4vw,3.2rem);margin-top:16px">Coaching from the road.</h2>
- <p class="muted" style="margin-top:16px;max-width:42ch">Since late 2024 I have lived a month or so at a time wherever life calls me, coaching on Zoom as always and writing every week about what the road is teaching me.</p>
- <ul class="stops" style="margin-top:28px">
-  <li><span class="y">Nov 2024</span><span>Left Virginia after five decades</span></li>
-  <li><span class="y">2025–26</span><span>A year in Santa Fe, New Mexico</span></li>
-  <li><span class="y">Jun 2026</span><span>Fairfax, California</span></li>
-  <li><span class="y">Jul 2026</span><span>Ashburn, Virginia · West Chester, Pennsylvania</span></li>
-  <li class="now"><span class="y">Now</span><span>Somewhere new. <a class="tl-link" href="#writing">Read the latest</a></span></li>
- </ul></div>
+ <div><div class="label">Tales of Wanderment</div><h2 style="font-size:clamp(2rem,4vw,3.2rem);margin-top:16px">Coaching from the road.</h2>
+ <p class="muted" style="margin-top:16px;max-width:44ch">Since November 2024 I have lived a few weeks to a few months at a time wherever life calls me. Coaching carries on over Zoom, on the same schedule, and every week I write about what the road is teaching me.</p>
+ <ol class="chapters">
+  <li><span class="y">Nov 2024 – Apr 2025</span><b>The first loop</b><span class="route">Bethany Beach · West Chester · Asheville · Hot Springs · Dallas · Austin · Albuquerque · Phoenix · Sedona · Taos · Denver · Colorado Springs</span></li>
+  <li><span class="y">Apr 2025 – May 2026</span><b>A year in the Land of Enchantment</b><span class="route">Santa Fe, New Mexico</span></li>
+  <li class="now"><span class="y">Jun 2026 – now</span><b>Untethered</b><span class="route">Fairfax · Mt. Shasta · Ashburn · West Chester · Denver</span></li>
+ </ol>
+ <p style="margin-top:18px"><a class="tl-link" href="#post-walkabout-update">The full story of the first loop</a></p></div>
  <div class="cards" style="grid-template-columns:1fr">${POSTS.slice(0,2).map(card).join('')}</div>
 </div></section>
 ${threshold()}`;
@@ -771,17 +800,16 @@ pages['executive-coaching']=()=>phead('Leadership · Doing','Executive <em>Coach
 ${cols('At a glance',`<div class="facts"><div><b>6</b><span>months</span></div><div><b>13</b><span>fortnightly sessions</span></div><div><b>2</b><span>assessments: Everything DiSC and the Leadership Circle Profile 360</span></div><div><b>1</b><span>written closeout report</span></div></div>`)}
 ${cols('Why coaching',`<p>You learn in the flow of work, not the classroom. Coaching gives you a confidential, reflective space to work on real situations as they happen, so new ways of leading take hold while the stakes are real.</p><p>Research consistently links coaching to stronger emotional intelligence, communication, and adaptability. In my experience the bigger gift is simpler: most leaders already have the answers they need. Coaching helps them get out of their own way.</p>`)}
 ${cols('How it unfolds',`<ol class="steps">
-<li><div><b>Launch session</b><span>We meet, set a recurring schedule, and talk through your 360 questions.</span></div></li>
-<li><div><b>Vision first</b><span>You draft a vision of the leader you want to become, three sentences or fewer, in the present tense, before any feedback arrives. We move toward what you want, not away from what is broken.</span></div></li>
-<li><div><b>Assessments</b><span>Everything DiSC for your communication style. The Leadership Circle Profile 360 for what you do and the thinking underneath it.</span></div></li>
+<li><div><b>Launch session</b><span>We get to know each other, set a recurring schedule, and prepare to launch your assessments.</span></div></li>
+<li><div><b>Vision and goals</b><span>We begin with a vision of the leader you want to become. Richard Boyatzis’s research shows that lasting change comes from moving toward a future we genuinely want, not away from a gap someone else has named. Your goals grow from that vision, so the work stays yours.</span></div></li>
+<li><div><b>Assessments</b><span>Everything DiSC for your communication style, and the Leadership Circle Profile 360 for how others experience your leadership.</span></div></li>
 <li><div><b>Debriefs</b><span>We work through both sets of results together and design an awareness practice you carry into your week.</span></div></li>
-<li><div><b>Goals</b><span>Three to five areas, grown from your vision. A learning agenda, not a performance plan.</span></div></li>
 <li><div><b>Fortnightly coaching</b><span>You bring real situations. I bring questions, frameworks, and three decades of leadership experience when they help.</span></div></li>
 <li><div><b>Closeout</b><span>A final session and a written closeout report, with the option to extend.</span></div></li></ol>`)}
-${cols('Confidentiality',`<ul><li>What you say stays in the session.</li><li>Your organization hears only that we met.</li><li>Anything beyond that is shared only with your approval.</li><li>Your assessment results belong to you.</li></ul>`)}
-${cols('The 360',`<p>The Leadership Circle Profile measures what you do as a leader and connects it to the habits of thought that drive it, which is where durable change tends to happen.</p><div class="facts"><div><b>15+</b><span>reviewers invited, for about ten responses</span></div><div><b>3</b><span>minimum responses before an anonymous group is shown</span></div><div><b>2</b><span>weeks to collect. I send the reminders</span></div></div><p>Your boss and your boss’s boss are reported on their own. Everyone else is anonymous.</p>`)}
-${cols('What I ask of you',`<ol><li>Bring real situations, not status updates.</li><li>Tell me when something is not working between us.</li><li>48 hours’ notice to cancel, and the same from me.</li></ol>`)}
-${cols('AI in our work',`<p>I use AI on my notes, your 360, and session prep, and I stay responsible for all of it. If you’d like transcripts of our sessions, you can have them. When you use AI between sessions, use your organization’s approved tool.</p>`)}
+${cols('My coaching style',`<p>I don’t have a one-size-fits-all style. Every client arrives with different needs, and we shape the relationship together.</p><p>By default, I show up as a coach. I stay curious, ask powerful questions, and trust that you are whole, resourceful, and creative. More often than not, you already have the answer and simply need the space to find it.</p><p>When it would help, and you are open to it, I shift into mentoring and share what I learned in three decades of leadership, offered as perspective rather than prescription. Sometimes I’ll pull up a workshop and teach a framework. I keep consulting out of our sessions, and I’m not a therapist; when therapy is what someone needs, I help them find it.</p><p>Any topic is fair game. A challenge at home often shapes how you show up at work, and the line between executive coaching and life coaching tends to fall away after a few sessions.</p><p><a class="tl-link" href="#post-coaching-discovery">Read more in “Coaching Discovery”</a></p>`)}
+${cols('Confidentiality',`<p>Confidentiality is critical in any coaching relationship. What you say stays in our sessions, your organization hears only that we met, and nothing more is shared without your approval. Your assessment results belong to you.</p>`)}
+${cols('The Leadership Circle Profile',`<p>Every executive coaching engagement includes a 360 using the Leadership Circle Profile™, an industry-leading assessment I am certified to deliver.</p><p>Most 360s stop at behavior. The LCP connects a well-researched set of leadership competencies to the habits of thought that drive them, so you see not only how others experience you but the assumptions underneath. Its single circular graph brings the key themes to the surface in minutes rather than hours, and creates a foundation for change that lasts.</p><p>The LCP is also available on its own, with three debrief sessions and a development plan.</p><p><a class="tl-link" href="https://leadershipcircle.com/leadership-assessment-tools/leadership-circle-profile/" target="_blank" rel="noopener">Learn more about the Leadership Circle Profile ↗</a></p>`)}
+${cols('AI in our work',`<p>I use AI to support my work: on my notes, on your 360 results, and in preparing for our sessions. I use professional-grade tools that keep your information confidential, and I remain fully responsible for everything they touch.</p><p>Many clients ask for transcripts of our sessions to use with their own AI tools, and I’m happy to provide them.</p>`)}
 </div>${threshold('Ready to grow faster than the job alone will teach you?')}`;
 
 pages.organizations=()=>phead('Leadership · Doing','For <em>Organizations</em>','Workshops, assessments, and integration sessions for HR, talent, and executive teams.','<a href="#home">Home</a> / Leadership')+`<div class="wrap" style="padding-block:48px">
@@ -794,8 +822,10 @@ pages.organizations=()=>phead('Leadership · Doing','For <em>Organizations</em>'
 <div class="ws">${WORKSHOPS.map(([t,tag,d])=>{const hot=['Effective Delegation','Mastering Feedback','The Neuroscience of Stress Management','Strengthening Strategic Thinking'].includes(t);return `<article class="w"><span class="tag ${hot?'hot':''}">${hot?'Most requested · ':''}${tag}</span><h3>${t}</h3><p>${d}</p></article>`}).join('')}</div>
 </div>${threshold('Building leaders across a team? Let’s design it together.')}`;
 
-pages['consciousness-coaching']=()=>phead('Consciousness · Being','Consciousness <em>Coaching</em>','Life coaching works on the life. Consciousness coaching works on the one who is living it.','<a href="#home">Home</a> / Consciousness')+`<div class="wrap">
-${cols('What it is',`<p>Most coaching helps you change what you do. This work looks at where you are doing it from: the awareness behind your choices, your reactions, and the stories you tell about yourself.</p><p>As awareness widens, things that felt like fixed facts about you start to look like habits you can hold more lightly. Insight arrives on its own schedule. Action begins to change without so much forcing. I call the destination <a class="tl-link" href="https://teliodosis.com" target="_blank" rel="noopener">teliodosis</a>: doing that flows from being.</p>`)}
+pages['consciousness-coaching']=()=>phead('Consciousness · Being','Consciousness <em>Coaching</em>','A focused kind of life coaching. Life coaching works on the life; consciousness coaching works on the one who is living it.','<a href="#home">Home</a> / Consciousness')+`<div class="wrap">
+${cols('What it is',`<p>Most coaching helps you change what you do. This work looks at where you are doing it from: the awareness behind your choices, your reactions, and the stories you tell about yourself.</p><p>As awareness widens, things that felt like fixed facts about you start to look like habits you can hold more lightly. Insight arrives on its own schedule, and action changes without so much forcing. I call this way of living <a class="tl-link" href="#post-refining-teliodosis">teliodosis</a>: the integration of doing and being.</p>`)}
+${cols('Part of life coaching',`<div class="nest"><div class="rings" role="img" aria-label="Consciousness coaching sits inside the wider circle of life coaching"><span class="lc">Life coaching</span><div class="in"><span>Consciousness coaching</span></div></div>
+<div class="prose"><p>Life coaching is a wide space. Almost anything in a life can come into it: work, health, purpose, relationships, transitions.</p><p>Consciousness coaching is a focused path within that space, for people drawn to awareness, presence, and meaning. You never have to choose one up front, and many clients move between the two as the work unfolds.</p><p><a class="tl-link" href="#life-coaching">About life coaching</a></p></div></div>`)}
 ${cols('You might be here if',`<ul>
 <li>You have achieved much of what you set out to achieve, and you are quietly asking what it was for.</li>
 <li>A meditation practice has opened something you want to understand rather than just enjoy.</li>
@@ -809,7 +839,8 @@ ${cols('The path',`<p>The Institute of Noetic Sciences maps how consciousness te
  <div class="stn"><div class="dot">3</div><h3>A practice</h3><p>Going deep with one that resonates.</p><div class="off"><b>Off-ramp</b>Mistaking the practice for the point.</div></div>
  <div class="stn"><div class="dot">4</div><h3>Life as practice</h3><p>Presence in ordinary moments.</p><div class="off"><b>Off-ramp</b>Growth that becomes about me.</div></div>
  <div class="stn"><div class="dot">5</div><h3>I to We</h3><p>Growth that turns toward others.</p><div class="off"><b>Off-ramp</b>Sliding from we back to me.</div></div>
-</div>`)}
+</div>
+<p>I wrote about this model and my own place on it in <a class="tl-link" href="#post-elevating-consciousness">“Elevating Consciousness.”</a></p>`)}
 ${cols('How we work',`<p>The foundation is the same as all my coaching: confidential, client-led, and held to the ICF Code of Ethics. On top of it, we draw on whatever serves you:</p>
 <ul><li><b>Contemplative practice.</b> Meditation in session when it helps, informed by my two-year teacher training in nondual meditation.</li>
 <li><b>The body.</b> Somatic awareness, noticing what you know before you can say it.</li>
@@ -817,16 +848,11 @@ ${cols('How we work',`<p>The foundation is the same as all my coaching: confiden
 <li><b>The brain.</b> The neuroscience of the two hemispheres and the brain’s task and default networks, for those who like to know why.</li>
 <li><b>Inquiry.</b> For people drawn to it, direct looking into the nature of awareness itself.</li></ul>
 <p>No belief system is required. For most of my life I called myself a child of modernity, and I still bring the engineer with me. Skeptics are welcome.</p>`)}
-${cols('Life or consciousness?',`<div class="tablewrap"><table class="vs"><thead><tr><th></th><th>Life coaching</th><th>Consciousness coaching</th></tr></thead><tbody>
-<tr><td>Works on</td><td>Your goals, habits, balance, and career</td><td>Your awareness, identity, presence, and meaning</td></tr>
-<tr><td>Central question</td><td>What do I want to change?</td><td>Who is it that wants to change?</td></tr>
-<tr><td>Feels like</td><td>Building a life that works</td><td>Living from a different place</td></tr>
-<tr><td>Often leads to</td><td>Consciousness coaching</td><td>A life that works, as a side effect</td></tr></tbody></table></div><p class="muted">Many people need a little of both. We’ll find the balance together.</p>`)}
-${cols('Format',`<p>We start with a free discovery conversation to see whether this is the right work and whether I am the right guide. Engagements typically run six months of 50-minute sessions, every two weeks or monthly.</p>`)}
+${cols('Format',`<p>Like all my life coaching, consciousness coaching is typically a six-month engagement of 50-minute sessions. Some clients choose to meet fortnightly, others monthly.</p><p>We start with a free discovery conversation to see whether this is the right work and whether I am the right guide.</p>`)}
 </div>${threshold('Curious whether this is your next step?')}`;
 
-pages['life-coaching']=()=>phead('Consciousness · Being','Life <em>Coaching</em>','A confidential thought partner for the practical work of building a life that works.','<a href="#home">Home</a> / Consciousness')+`<div class="wrap">
-${cols('What it is',`<p>Life coaching blends proven strategies from the corporate world with a holistic approach to personal growth. It is practical and forward-moving: we name what you want and build the habits, structures, and courage to get there.</p><p>If your questions are more about who you are than what you do, <a class="tl-link" href="#consciousness-coaching">consciousness coaching</a> may fit better. Many people move between the two.</p>`)}
+pages['life-coaching']=()=>phead('Consciousness · Being','Life <em>Coaching</em>','A confidential thought partner for whatever life brings.','<a href="#home">Home</a> / Consciousness')+`<div class="wrap">
+${cols('What it is',`<p>Life coaching is a wide space, and almost anything can come into it. It blends proven strategies from the corporate world with a holistic approach to personal growth: we name what you want and build the habits, structures, and courage to get there.</p><p>For people drawn to awareness, presence, and meaning, <a class="tl-link" href="#consciousness-coaching">consciousness coaching</a> is a more focused path within life coaching.</p>`)}
 ${cols('Common areas',`<ul>
 <li><a class="tl-link" href="#post-work-life-balance-is-a-myth"><b>Work/life balance.</b></a> Harmonize your professional aspirations with your personal life so both flourish.</li>
 <li><a class="tl-link" href="#post-life-is-calling"><b>Purpose.</b></a> Tap into your passions and talents and align your actions with your calling.</li>
@@ -834,26 +860,40 @@ ${cols('Common areas',`<ul>
 <li><a class="tl-link" href="#post-gooooooooooooooooooooooals"><b>Goals.</b></a> Set ambitious objectives and conquer them step by step.</li>
 <li><a class="tl-link" href="#post-transitions"><b>Transitions.</b></a> New job, new career, new city.</li>
 <li><a class="tl-link" href="#writing~health"><b>Health habits.</b></a> Sleep, brain health, running, nutrition, and meditation.</li></ul>`)}
-${cols('Format',`<p>A six-month package of 50-minute sessions: thirteen sessions fortnightly, or six monthly.</p>`)}
+${cols('Format',`<p>Typically a six-month engagement of 50-minute sessions. Some clients choose to meet fortnightly, others monthly.</p>`)}
 </div>${threshold()}`;
 
+pages.meditation=()=>phead('Consciousness · Being','<em>Meditation</em>','An avid meditator for more than a decade, I am beginning to support others on their own meditation journeys.','<a href="#home">Home</a> / Consciousness')+`<div class="wrap">
+${cols('My practice',`<p>I have meditated daily for more than ten years, usually in silence. In December 2025 I spent a week in silent retreat at Upaya Zen Center, and I am now in a two-year teacher training in nondual meditation.</p><p>Meditation already finds its way into my coaching when it serves the client. Increasingly, I am offering it on its own.</p><p><a class="tl-link" href="#post-the-best-week-of-my-life">Read “The Best Week of My Life”</a></p>`)}
+${cols('Guided meditations',`<p>A few meditations I have recorded and published. They are free to use.</p><div class="tracks">
+ <a class="track" href="https://insighttimer.com/josh00203/guided-meditations/decision-meditation" target="_blank" rel="noopener"><span class="label">Insight Timer · 11 min</span><b>Decision Meditation</b><span>For when you’re weighing a choice and want to hear more than your thinking mind.</span></a>
+ <a class="track" href="https://insighttimer.com/josh00203/guided-meditations/future-self-meditation_8" target="_blank" rel="noopener"><span class="label">Insight Timer · 7 min</span><b>Future Self Meditation</b><span>A visit with the person you are becoming.</span></a>
+ <a class="track" href="https://youtu.be/UdrOeuSR0jI" target="_blank" rel="noopener"><span class="label">YouTube</span><b>Centering Meditation</b><span>From “Unplug Yourself,” a short practice to return to center.</span></a>
+</div>`)}
+${cols('Explore together',`<p>Whether you are just beginning or deepening a practice you already have, I would love to hear what you are looking for. Reach out and we can explore whether meditating together would help.</p>`)}
+</div>${threshold('Interested in exploring meditation together?')}`;
+
 pages.about=()=>`<div class="phead"><div class="wrap ab-hero">
- <div><div class="label">About</div><h1 style="margin-top:16px"><span>Coach. Leader.</span><span>Learner. Father.</span><span>Runner. Alchemist.</span></h1>
- <p class="lede">I’m Josh. I spent thirty years leading technology teams, and the last five helping leaders, and humans, grow faster than they thought they could.</p></div>
+ <div><div class="label">About</div><h1 style="margin-top:16px">I help leaders, and humans, grow faster than they thought they <em>could</em>.</h1>
+ <p class="lede">I spent thirty years in technology leadership, from writing code to leading a global engineering organization of more than 500 people and a product portfolio of more than $500 million. Since 2021 I have coached more than 200 leaders across 2,000 hours, combining that experience with training in ontological coaching, neuroscience, and contemplative practice.</p></div>
  <img src="img/josh.jpg" alt="Josh Dietrich">
 </div></div>
 <div class="wrap">
-${cols('The short version',`<p>I coach senior leaders across technology, education, healthcare, and finance. I hold a certification in Ontological Coaching from the Newfield Network, I am a Certified NeuroTransformational Coach through BEabove Leadership, and I am a Professional Certified Coach with the International Coaching Federation.</p><p>Some clients want a confidential thought partner who stays present and curious. Others want an extended mind who also mentors from three decades in the executive chair. I can be either, and I’ll ask which you need.</p>`)}
+${cols('The short version',`<p>I coach senior leaders across technology, education, healthcare, financial services, and beyond. I am a Professional Certified Coach with the International Coaching Federation, a Newfield Network graduate in ontological coaching, and a Certified NeuroTransformational Coach through BEabove Leadership.</p><p>Some clients want a confidential thought partner who stays present and curious. Others want an extended mind who also mentors from three decades in the executive chair. I can be either, and I’ll ask which you need.</p>`)}
 ${cols('How I got here',`<ul class="tline">
-<li><span class="y">1993</span><div><b>Software developer</b><span>Fresh out of William &amp; Mary, determined to be a “Renaissance programmer.”</span></div></li>
-<li><span class="y">1993–2021</span><div><b>Technology executive</b><span>Engineering, product management, sales, and customer success, much of it in higher-education technology.</span></div></li>
-<li><span class="y">2021</span><div><b>Arete Pursuits</b><span>I left the executive trail to coach full time. Within five months I had a waiting list.</span></div></li>
-<li><span class="y">Nov 2024</span><div><b>Walkabout</b><span>After five decades in Virginia, I set out to discover where I want to put down roots, or whether I need to.</span></div></li>
+<li><span class="y">1989–1993</span><div><b>William &amp; Mary</b><span>A degree in computer science and philosophy, two threads that still run through my work.</span></div></li>
+<li><span class="y">1993–1998</span><div><b>Software developer</b><span>Writing code for higher education at Datatel, determined to be a “Renaissance programmer.”</span></div></li>
+<li><span class="y">1998–2015</span><div><b>Engineering leadership</b><span>Manager, director, and vice president of software development at Datatel, then senior vice president at Ellucian, leading a global organization of more than 500.</span></div></li>
+<li><span class="y">2015–2021</span><div><b>Customer engagement and product</b><span>Vice president roles leading customer engagement and then product management for a $500M+ portfolio. Mentoring other leaders was always my favorite part of the job.</span></div></li>
+<li><span class="y">2021–present</span><div><b>Executive coach</b><span>I left the executive trail to coach full time. Within five months I had a waiting list.</span></div></li>
+<li><span class="y">2022</span><div><b>Newfield Network</b><span>Certification in ontological coaching: how language, emotion, and the body shape the way we lead and live.</span></div></li>
+<li><span class="y">2023</span><div><b>BEabove Leadership</b><span>Certified NeuroTransformational Coach, bringing neuroscience and consciousness into my coaching.</span></div></li>
+<li><span class="y">Nov 2024</span><div><b>Wanderment</b><span>After five decades in Virginia, I set out to discover where I want to put down roots, or whether I need to.</span></div></li>
 <li><span class="y">Dec 2025</span><div><b>Silence</b><span>My first in-person retreat: a week of silent meditation at Upaya Zen Center. I called it the best week of my life.</span></div></li>
 <li><span class="y">2026–27</span><div><b>Teacher training</b><span>A two-year teacher training in nondual meditation with Jonathan Gustin.</span></div></li>
-<li><span class="y">Now</span><div><b>On the road</b><span>Living a month or so at a time wherever I’m called, and coaching from wherever that is.</span></div></li></ul>`)}
-${cols('Why the road',`<p>Living without a fixed home has stripped away a lot of what I used to think I needed. It has also made me a better coach. Every month brings new people, new land, and new lessons, and I write about them every week in <a class="tl-link" href="#writing">Tales of Wanderment</a>.</p><p>For clients, nothing changes: we meet on Zoom, on the same schedule, wherever I am. If you’re near my next waystation, I would love to meet in person.</p>`)}
-${cols('Elsewhere',`<p><a class="tl-link" href="https://www.linkedin.com/in/joshuadietrich/" target="_blank" rel="noopener">LinkedIn ↗</a> · <a class="tl-link" href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Substack ↗</a> · <a class="tl-link" href="https://teliodosis.com" target="_blank" rel="noopener">teliodosis.com ↗</a></p>`)}
+<li><span class="y">Now</span><div><b>On the road</b><span>Living a few weeks to a few months at a time wherever I’m called, and coaching from wherever that is.</span></div></li></ul>`)}
+${cols('Why the road',`<p>Living without a fixed home has stripped away a lot of what I used to think I needed. It has also made me a better coach. Every few weeks bring new people, new land, and new lessons, and I write about them in my weekly Tales of Wanderment.</p><p>For clients, nothing changes: we meet on Zoom, on the same schedule, wherever I am. If you’re near my next waystation, I would love to meet in person.</p>`)}
+${cols('Elsewhere',`<p><a class="tl-link" href="https://www.linkedin.com/in/joshuadietrich/" target="_blank" rel="noopener">LinkedIn ↗</a> · <a class="tl-link" href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Substack ↗</a></p>`)}
 </div>${threshold()}`;
 
 pages.resources=()=>phead('Library','Books, programs <em>&amp;</em> meditations','Clients often ask me for recommendations. These are my favorites, loosely sorted to help you find your way in.')+`<div class="wrap" style="padding-block:40px 72px"><div class="shelf">${SHELF.map(([g,items])=>`<div class="grp"><h3>${g}</h3><ul>${items.map(([t,a,u])=>`<li><a href="${u}" target="_blank" rel="noopener"><b>${t}</b><span>${a}</span></a></li>`).join('')}</ul></div>`).join('')}</div><p class="muted" style="margin-top:32px;font-size:.88rem">Arete Pursuits may receive compensation for purchases made through links on this page.</p></div>`;
@@ -881,16 +921,55 @@ ${fil?'':`<a class="feature" href="#post-${f.s}"><div class="ph"><img src="img/p
 <div id="archive" style="padding-bottom:72px">${list()}</div></div>`;};
 
 function post(slug){const i=POSTS.findIndex(p=>p.s===slug);if(i<0)return pages.writing();const p=POSTS[i],nw=POSTS[i-1],od=POSTS[i+1];
- const body=BODY[slug]||`${EX[slug]?`<p>${esc(EX[slug])}</p>`:''}<p class="note">This concept carries full text for the two newest posts only. All ${POSTS.length} posts move over at cutover. <a href="${LIVE}/${slug}/" target="_blank" rel="noopener">Read this one on the current site ↗</a></p>`;
+ const body=BODY[slug]||`<div id="postbody" data-slug="${slug}"><p class="post-loading">Loading the full post…</p></div>`;
  return `<div class="wrap"><div class="post-head"><div class="crumbs"><a href="#writing">Writing</a> / ${p.c.map(c=>`<a href="#writing~${slugify(c)}">${esc(c)}</a>`).join(', ')}</div><h1>${esc(p.t)}</h1><div class="meta"><span>${fmt(p.d)}</span><span>Josh Dietrich</span></div></div>
- ${IMG.has(slug)?`<div class="post-hero"><img src="img/p-${slug}.jpg" alt=""></div>`:''}<article class="article">${body}</article>
- <aside class="bio"><img src="img/josh.jpg" alt=""><div><p>I’m an executive coach and consciousness coach with software executive roots. I write every week about leading, being, and life on the road.</p><div class="links"><a class="tl-link" href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Subscribe on Substack</a><a class="tl-link" href="#contact">Begin a conversation</a></div></div></aside>
+ <div class="post-hero" id="posthero"${IMG.has(slug)?'':' hidden'}>${IMG.has(slug)?`<img src="img/p-${slug}.jpg" alt="">`:''}</div><article class="article">${body}</article>
+ <aside class="bio"><img src="img/josh.jpg" alt=""><div><p>I’m an executive coach and consciousness coach with software executive roots. I write every week about leading, being, and life on the road.</p><div class="links"><a class="tl-link" href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Subscribe on Substack</a><a class="tl-link" href="#contact">Start a conversation</a></div></div></aside>
  <nav class="pn" aria-label="More posts">${od?`<a href="#post-${od.s}"><span>← OLDER</span><b>${esc(od.t)}</b></a>`:'<span></span>'}${nw?`<a href="#post-${nw.s}"><span>NEWER →</span><b>${esc(nw.t)}</b></a>`:'<span></span>'}</nav></div>`;}
+
+/* Full post text comes live from the current WordPress site for this preview. */
+const WP='https://aretepursuits.com/wp-json/wp/v2/posts';
+const postCache={};
+function cleanPost(html){
+ const d=document.createElement('div'); d.innerHTML=html;
+ d.querySelectorAll('script,style,iframe,form,noscript').forEach(e=>e.remove());
+ const kids=[...d.children]; const cut=kids.findIndex(k=>/^\s*(I am an executive|I’m an executive|I'm an executive|If you would like to learn more, schedule|Want to comment\?)/i.test(k.textContent));
+ if(cut>=0) kids.slice(cut).forEach(k=>k.remove());
+ while(d.lastElementChild && (/^[\s\-–—_*]*$/.test(d.lastElementChild.textContent) && !d.lastElementChild.querySelector('img') || d.lastElementChild.tagName==='HR')) d.lastElementChild.remove();
+ d.querySelectorAll('a[href]').forEach(a=>{const h=a.getAttribute('href');const m=h.match(/^https?:\/\/(?:www\.)?aretepursuits\.com\/(?:blog\/(?:f\/)?)?([a-z0-9-]+)\/?$/i);
+  if(m && POSTS.some(p=>p.s===m[1])){a.setAttribute('href','#post-'+m[1]);a.removeAttribute('target');}
+  else if(/^https?:/.test(h)){a.target='_blank';a.rel='noopener';}});
+ d.querySelectorAll('img').forEach(im=>{im.removeAttribute('srcset');im.removeAttribute('sizes');im.loading='lazy';im.removeAttribute('width');im.removeAttribute('height');});
+ d.querySelectorAll('[style]').forEach(e=>e.removeAttribute('style'));
+ d.querySelectorAll('[class]').forEach(e=>e.removeAttribute('class'));
+ return d.innerHTML;
+}
+async function loadPost(){
+ const box=document.getElementById('postbody'); if(!box) return; const slug=box.dataset.slug;
+ const show=(d)=>{if(!document.body.contains(box))return; box.outerHTML=d.html; const hero=document.getElementById('posthero'); if(hero&&hero.hidden&&d.img){hero.innerHTML=`<img src="${d.img}" alt="">`;hero.hidden=false;} enhance();};
+ if(postCache[slug]) return show(postCache[slug]);
+ try{
+  const r=await fetch(`${WP}?slug=${encodeURIComponent(slug)}&_embed=wp:featuredmedia&_fields=content,_links,_embedded`);
+  const j=await r.json(); if(!j[0]) throw new Error('missing');
+  const m=j[0]._embedded?.['wp:featuredmedia']?.[0];
+  postCache[slug]={html:cleanPost(j[0].content.rendered), img:m?((m.media_details?.sizes?.large||{}).source_url||m.source_url):''};
+  show(postCache[slug]);
+ }catch(e){
+  box.innerHTML=`${EX[slug]?`<p>${esc(EX[slug])}</p>`:''}<p class="note">The full text loads from the current website, which this view can’t reach. <a href="${LIVE}/${slug}/" target="_blank" rel="noopener">Read this post on the current site ↗</a></p>`;
+ }
+}
+
+/* Hover definition for “fortnightly” */
+function enhance(){
+ const w=document.createTreeWalker(app,NodeFilter.SHOW_TEXT,{acceptNode:n=>/fortnightly/i.test(n.nodeValue)&&!n.parentElement.closest('a,.fn,script,style,textarea,input,h1')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});
+ const nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+ nodes.forEach(n=>{const f=document.createDocumentFragment();n.nodeValue.split(/(fortnightly)/i).forEach((part,i)=>{if(i%2){const s=document.createElement('span');s.className='fn';s.tabIndex=0;s.textContent=part;s.setAttribute('aria-label',part+' (every two weeks)');f.appendChild(s);}else if(part)f.appendChild(document.createTextNode(part));});n.replaceWith(f);});
+}
 
 /* router */
 const app=document.getElementById('app');
-const GROUP={'executive-coaching':'lead',organizations:'lead','consciousness-coaching':'being','life-coaching':'being'};
-const live=r=>({home:'/', 'executive-coaching':'/services/executive-coaching/', organizations:'/services/leadership-workshops/','consciousness-coaching':'/services/life-coaching/','life-coaching':'/services/life-coaching/',writing:'/blog/',about:'/about/',resources:'/resources/',contact:'/contact/','privacy-policy':'/privacy-policy/','terms-and-conditions':'/terms-and-conditions/'}[r] || (r.startsWith('post-')?'/'+r.slice(5)+'/':'/'));
+const GROUP={'executive-coaching':'lead',organizations:'lead','consciousness-coaching':'being','life-coaching':'being',meditation:'being'};
+const live=r=>({home:'/', 'executive-coaching':'/services/executive-coaching/', organizations:'/services/leadership-workshops/','consciousness-coaching':'/services/life-coaching/','life-coaching':'/services/life-coaching/',meditation:'/resources/',writing:'/blog/',about:'/about/',resources:'/resources/',contact:'/contact/','privacy-policy':'/privacy-policy/','terms-and-conditions':'/terms-and-conditions/'}[r] || (r.startsWith('post-')?'/'+r.slice(5)+'/':'/'));
 function render(){let r=decodeURIComponent(location.hash.slice(1))||'home';let h;
  if(r==='blog')r='writing';
  if(r.startsWith('post-'))h=post(r.slice(5));
@@ -900,7 +979,7 @@ function render(){let r=decodeURIComponent(location.hash.slice(1))||'home';let h
  document.querySelectorAll('.menu > a').forEach(a=>{const on=a.getAttribute('href')==='#'+r||(r.startsWith('post-')&&a.getAttribute('href')==='#writing');on?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current');});
  document.querySelectorAll('.dd > button').forEach(b=>b.classList.toggle('on',GROUP[r]===b.dataset.group));
  document.getElementById('liveLink').href=LIVE+live(r);
- closeAll(); mobile.hidden=true; burger.setAttribute('aria-expanded','false'); burger.textContent='Menu';
+ enhance(); loadPost(); closeAll(); mobile.hidden=true; burger.setAttribute('aria-expanded','false'); burger.textContent='Menu';
  if(location.hash.includes('~')){const t=document.getElementById('toolbar');if(t)t.scrollIntoView();}else window.scrollTo(0,0);}
 function refresh(){const a=document.getElementById('archive');if(!a){render();return;}a.innerHTML=list();document.querySelectorAll('[data-cat]').forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.cat||null)===cat)));}
 app.addEventListener('click',e=>{const ch=e.target.closest('[data-cat]');if(ch){const c=ch.dataset.cat||null;const was=!(cat||q);cat=(cat===c)?null:c;if(was!==!(cat||q)){render();const t=document.getElementById('toolbar');if(t)t.scrollIntoView();}else refresh();return;}
