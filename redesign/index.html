@@ -653,6 +653,10 @@ const BODY = {
 <p>Next, I am headed to West Chester, Pennsylvania, to stay with my mother and stepfather for a month or so. To my friends and colleagues in that area, please reach out if you’d like to connect!</p>`
 };
 
+const NAMED = [
+ ['Josh’s coaching presence is gold standard, full stop. I feel fortunate to have found him when I was not even looking.','Consciousness Coachee'],
+ ['Josh takes a very personalized approach to coaching and mentorship. His approach expanded my perspective and pushed me to have more of a growth mindset.','VP, Human Resources']
+];
 const TESTI = [
  ['I wish I had started this two years ago! I feel like I’ve been living my life without the operating manual.','Chief Client Officer'],
  ['I always look forward to my coaching sessions with Josh. His energy, preparedness, and passion are contagious, and he genuinely cares about your growth and improvement. He learns how to engage quickly with his coachees and his style is one that pushes you to be the best version of yourself without beating you up or kicking you while down. His approach is simple and often gets you to uncover that, a lot of times, you already have the answer; you just need to get out of your own way.','EVP, Sales'],
@@ -721,7 +725,7 @@ pages.home = () => `
 </div></section>
 
 <div class="clients"><div class="wrap"><div class="lbl">Some of Josh’s clients</div><div class="logo-row">
- ${[['Amazon','amazon.png'],['Paylocity','paylocity.png'],['Ellucian','ellucian.png'],['Unanet','unanet.jpg'],['Washington and Lee University','wl.jpg'],['Howard Community College','howard.jpg'],['Macomb Community College','macomb.jpg'],['UDig','udig.jpg'],['Doctums','doctums.jpg']].map(([n,k])=>`<img src="img/c-${k}" alt="${n}">`).join('')}
+ ${[['Amazon','amazon.png'],['Paylocity','paylocity.png'],['LendingTree','lendingtree.png'],['Ellucian','ellucian.png'],['NICE','nice.png'],['Washington and Lee University','wl.jpg'],['Unanet','unanet.jpg'],['National Pharmaceutical Council','npc.png']].map(([n,k])=>`<img src="img/c-${k}" alt="${n}">`).join('')}
 </div></div></div>
 
 <section><div class="wrap arete">
@@ -735,11 +739,11 @@ pages.home = () => `
   <div class="eyebrow" style="margin-bottom:18px">What clients are saying</div>
   <p class="tq-feature">“When people comment on this kinder, gentler version of me, I tell them, ‘It’s the Josh Effect.’”</p>
   <div class="tq-feature-by">AVP, Information Technology</div>
-  <div class="tq-grid">${TESTI.map(([q,r])=>`<figure class="tq"><p>“${q}”</p><cite>${r}</cite></figure>`).join('')}</div>
+  <div class="tq-grid">${NAMED.concat(TESTI.slice(0,4)).map(([q,r])=>`<figure class="tq"><p>“${q.length>260?q.slice(0,q.lastIndexOf(' ',250))+'…':q}”</p><cite>${r}</cite></figure>`).join('')}</div>
 </div></section>
 
 <section class="rule-top"><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">Knowledge center</div><h2>Latest from the blog</h2></div>
+  <div class="sec-head"><div class="eyebrow">From the blog</div><h2>Latest writing</h2></div>
   <div class="cards">${POSTS.slice(0,3).map(cardHTML).join('')}</div>
   <p style="margin-top:36px"><a class="btn btn-ghost" href="#blog">Read all ${POSTS.length} posts <span class="arr">→</span></a></p>
 </div></section>
@@ -838,7 +842,7 @@ function blogList(){
 pages.blog = () => {
   const f = POSTS[0];
   const filtering = blogCat || blogQ;
-  return phead('Knowledge center','The Arete Pursuits blog',`Weekly writing on leadership, coaching, neuroscience and consciousness since 2021. Also published on LinkedIn and Substack.`) + `
+  return phead('Writing','The Arete Pursuits blog',`Weekly writing on leadership, coaching, neuroscience and consciousness since 2021. Also published on LinkedIn and Substack.`) + `
 <div class="wrap">
 ${filtering?'':`<a class="feature" href="#post-${f.s}"><div class="ph"><img src="img/p-${f.s}.jpg" alt=""></div><div><div class="meta"><span>Latest · ${fmt(f.d)}</span><span>·</span><span class="c">${f.c.join(', ')}</span></div><h2>${esc(f.t)}</h2><p class="muted">${esc(EX[f.s])}</p></div></a>
 <section style="padding-block:48px"><div class="cards">${POSTS.slice(1,13).map(cardHTML).join('')}</div></section>`}
