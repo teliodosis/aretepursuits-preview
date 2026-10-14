@@ -1,7 +1,0 @@
-name: probe
-on: workflow_dispatch
-jobs:
-  probe:
-    runs-on: ubuntu-latest
-    steps:
-      - run: curl -sf -o /dev/null "https://aretepursuits.com/wp-json/wp/v2/posts?per_page=1"
