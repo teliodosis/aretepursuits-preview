@@ -374,6 +374,7 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
 .latest{margin-top:clamp(32px,5vw,56px)}
 .latest .row{grid-template-columns:110px minmax(0,1fr) auto}
 @media (max-width:780px){ .latest .row{grid-template-columns:90px minmax(0,1fr)} }
+.names img[alt^="Washington"]{max-width:240px;height:36px}
 .pill .hopt{display:flex;gap:4px}
 .pill .hopt button{font:600 .8rem var(--f-body);width:28px;height:28px;border-radius:50%;border:1px solid var(--rule);background:var(--bg);color:var(--ink);padding:0}
 .pill .hopt button[aria-pressed="true"]{background:var(--ember);border-color:var(--ember);color:var(--on-accent)}
@@ -769,7 +770,7 @@ const NAMED=[
  ['Josh’s coaching presence is gold standard, full stop. I feel fortunate to have found him when I was not even looking.','Consciousness Coachee'],
  ['Josh takes a very personalized approach to coaching and mentorship. His approach expanded my perspective and pushed me to have more of a growth mindset.','VP, Human Resources']
 ];
-const CLIENTS=[['Amazon','amazon.png'],['Paylocity','paylocity.png'],['LendingTree','lendingtree.png'],['Ellucian','ellucian.png'],['NICE','nice.png'],['Washington and Lee University','wl.jpg'],['Unanet','unanet.jpg'],['National Pharmaceutical Council','npc.png']];
+const CLIENTS=[['Amazon','amazon.png'],['Paylocity','paylocity.png'],['LendingTree','lendingtree.png'],['Ellucian','ellucian.png'],['NICE','nice.png'],['Washington and Lee University','wl.png'],['Unanet','unanet.jpg'],['National Pharmaceutical Council','npc.png']];
 
 /* ---------- pieces ---------- */
 const threshold=(title='Every path here starts with a conversation.',first='lead',o={})=>`<section class="threshold ${o.cls||''}"${o.id?` id="${o.id}"`:''}><div class="wrap inner">
@@ -791,10 +792,10 @@ const card=p=>`<a class="card" href="#post-${p.s}"><div class="ph">${IMG.has(p.s
 
 const HEROES=[
  ['Grow as a leader. Wake up to who you <em>are</em>.','Coaching for leaders who want to grow faster than the job alone will teach them, and for anyone ready to meet themselves more fully.'],
- ['Lead with more of who you <em>are</em>.','Executive coaching for the work you lead. Life and consciousness coaching for the life you’re living. Both start with the same conversation.'],
- ['Become the leader, and the person, you’re <em>capable</em> of being.','Thirty years as a technology leader and more than a decade of meditation practice, in service of your growth at work and within.'],
+ ['The work you lead. The life you’re <em>living</em>.','Coaching for both, from someone who spent thirty years leading and more than a decade looking inward.'],
+ ['Lead well. Live <em>awake</em>.','Executive coaching to help you grow as a leader. Life and consciousness coaching to help you wake up to who you are.'],
  ['Radically accelerate your growth, at work and <em>within</em>.','Coaching for how you lead and for who you are becoming, one conversation at a time.'],
- ['The work you lead. The life you’re <em>living</em>.','Coaching for both, from someone who spent thirty years leading and more than a decade looking inward.']
+ ['Two kinds of growth. One <em>conversation</em>.','Growing as a leader and waking up as a person tend to feed each other. Wherever you’re starting from, we begin with twenty-five minutes and no pitch.']
 ];
 let HI=0; try{const v=+localStorage.getItem('ap-hero');if(v>=0&&v<HEROES.length)HI=v;}catch(_){}
 const OUT={
@@ -815,7 +816,6 @@ pages.home=()=>`
 </div></section>
 <div class="proof"><div class="wrap"><div class="stat"><b>30 years</b><span>in technology leadership</span></div><div class="stat"><b>2,000+</b><span>coaching hours</span></div><div class="stat"><b>200+</b><span>leaders coached</span></div><div class="stat"><b>PCC</b><span>Professional Certified Coach<br>International Coaching Federation</span></div></div></div>
 
-${threshold('Every path starts with a 25-minute conversation.','lead',{id:'start',cls:'start',label:'Start here',sub:'No preparation and no pitch. Bring whatever is on your mind: a team that isn’t clicking, a decision you keep circling, or a sense that there’s more to you than your job title. We’ll figure out together whether coaching would help, and which kind.'})}
 
 <section class="rt" id="paths"><div class="wrap">
  <div class="label">Two kinds of growth</div>
@@ -863,7 +863,7 @@ ${threshold('Every path starts with a 25-minute conversation.','lead',{id:'start
  </div>
  <div class="latest"><div class="label" style="margin-bottom:8px">Latest writing</div>${POSTS.slice(0,4).map(p=>`<a class="row" href="#post-${p.s}"><span class="d">${fmt(p.d)}</span><span class="t">${esc(p.t)}</span><span class="k">${esc(p.c.slice(0,2).join(' · '))}</span></a>`).join('')}<p style="margin-top:16px"><a class="tl-link" href="#writing">All writing</a></p></div>
 </div></section>
-${threshold('Wherever you are starting from, start with a conversation.')}`;
+${threshold('Wherever you are starting from, start with a conversation.','lead',{id:'start'})}`;
 
 pages['executive-coaching']=()=>phead('Leadership · Growing up','Executive <em>Coaching</em>','A six-month engagement for senior leaders who want to grow faster than the job alone will teach them.','<a href="#home">Home</a> / Leadership')+`<div class="wrap">
 ${cols('At a glance',`<div class="facts"><div><b>6</b><span>months</span></div><div><b>13</b><span>fortnightly sessions</span></div><div><b>2</b><span>assessments: Everything DiSC and the Leadership Circle Profile 360</span></div><div><b>1</b><span>written closeout report</span></div></div>`)}
