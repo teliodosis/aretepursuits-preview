@@ -420,7 +420,7 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
   <div class="fine"><span>© 2026 Arete Pursuits · Josh Dietrich, Professional Certified Coach (PCC)</span><span><a href="#privacy-policy" style="color:inherit">Privacy</a> · <a href="#terms-and-conditions" style="color:inherit">Terms</a></span></div>
 </div></footer>
 
-<div class="pill" id="pill"><b>Headline</b><span class="hopt" id="hopt" role="group" aria-label="Headline options"></span><a id="liveLink" href="https://aretepursuits.com/" target="_blank" rel="noopener">Current site ↗</a><button id="pillX" aria-label="Hide review controls">×</button></div>
+<div class="pill" id="pill"><b>Preview</b><a id="liveLink" href="https://aretepursuits.com/" target="_blank" rel="noopener">Current site ↗</a><button id="pillX" aria-label="Hide review controls">×</button></div>
 
 <script>
 const LIVE='https://aretepursuits.com';
@@ -797,7 +797,7 @@ const HEROES=[
  ['Radically accelerate your growth, at work and <em>within</em>.','Coaching for how you lead and for who you are becoming, one conversation at a time.'],
  ['Two kinds of growth. One <em>conversation</em>.','Growing as a leader and waking up as a person tend to feed each other. Wherever you’re starting from, we begin with twenty-five minutes and no pitch.']
 ];
-let HI=0; try{const v=+localStorage.getItem('ap-hero');if(v>=0&&v<HEROES.length)HI=v;}catch(_){}
+const HI=0;
 const OUT={
  lead:['You stop doing the work and start leading it.','Hard conversations get easier, with your team, your peers, and your boss.','You make time to think strategically instead of reacting to the day.','You see how others experience you, and change what matters most.','The people around you notice the difference.'],
  being:['You react less and respond more.','Old stories about who you are start to loosen their grip.','Decisions get clearer when you listen to more than your thinking mind.','Ordinary days hold more ease, and more joy.','You feel more at home in yourself, wherever you are.'],
@@ -978,7 +978,7 @@ ${cols('Why the road',`<p>Living without a fixed home has stripped away a lot of
 ${cols('Elsewhere',`<p><a class="tl-link" href="https://www.linkedin.com/in/joshuadietrich/" target="_blank" rel="noopener">LinkedIn ↗</a> · <a class="tl-link" href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Substack ↗</a></p>`)}
 </div>${threshold()}`;
 
-pages.resources=()=>phead('Library','Books, programs <em>&amp;</em> meditations','Clients often ask me for recommendations. These are my favorites, loosely sorted to help you find your way in.')+`<div class="wrap" style="padding-block:40px 72px"><div class="shelf">${SHELF.map(([g,items])=>`<div class="grp"><h3>${g}</h3>${items.length?`<ul>${items.map(([t,a,u])=>`<li><a href="${u}" target="_blank" rel="noopener"><b>${t}</b><span>${a}</span></a></li>`).join('')}</ul>`:'<p class="muted" style="font-style:italic">Coming soon</p>'}</div>`).join('')}</div><p class="muted" style="margin-top:32px;font-size:.88rem">Arete Pursuits may receive compensation for purchases made through links on this page.</p></div>`;
+pages.resources=()=>phead('Library','Books, programs <em>&amp;</em> meditations','Clients often ask me for recommendations. These are my favorites, loosely sorted to help you find your way in.')+`<div class="wrap" style="padding-block:40px 72px"><div class="shelf">${SHELF.filter(([g,items])=>items.length).map(([g,items])=>`<div class="grp"><h3>${g}</h3>${items.length?`<ul>${items.map(([t,a,u])=>`<li><a href="${u}" target="_blank" rel="noopener"><b>${t}</b><span>${a}</span></a></li>`).join('')}</ul>`:'<p class="muted" style="font-style:italic">Coming soon</p>'}</div>`).join('')}</div><p class="muted" style="margin-top:32px;font-size:.88rem">Arete Pursuits may receive compensation for purchases made through links on this page.</p></div>`;
 
 pages.contact=()=>phead('Begin','Begin a <em>conversation</em>','Twenty-five minutes. No preparation. Choose the call that fits, or just write.')+`<div class="wrap"><div class="ways">
  <div class="way"><span class="label">Leadership</span><h3>Executive coaching &amp; teams</h3><p class="muted">For leaders and the people who develop them.</p><a class="btn btn-ember" style="justify-self:start" href="${CAL}" target="_blank" rel="noopener">Schedule →</a></div>
@@ -1089,11 +1089,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll();});
 const burger=document.getElementById('burger'),mobile=document.getElementById('mobileNav');
 burger.addEventListener('click',()=>{const o=mobile.hidden;mobile.hidden=!o;burger.setAttribute('aria-expanded',String(o));burger.textContent=o?'Close':'Menu';});
 document.getElementById('pillX').addEventListener('click',()=>document.getElementById('pill').hidden=true);
-const hopt=document.getElementById('hopt');
-function drawHopt(){hopt.innerHTML=HEROES.map((_,i)=>`<button data-h="${i}" aria-pressed="${i===HI}" title="Headline option ${i+1}">${i+1}</button>`).join('');}
-hopt.addEventListener('click',e=>{const b=e.target.closest('[data-h]');if(!b)return;HI=+b.dataset.h;try{localStorage.setItem('ap-hero',HI);}catch(_){}
- drawHopt();const h=document.getElementById('heroH');if(h){h.innerHTML=HEROES[HI][0];document.getElementById('heroS').textContent=HEROES[HI][1];}else location.hash='#home';});
-drawHopt();
 app.addEventListener('click',e=>{const j=e.target.closest('[data-jump]');if(!j)return;const t=document.getElementById(j.dataset.jump);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});
 window.addEventListener('hashchange',render);
 render();
