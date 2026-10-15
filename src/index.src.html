@@ -367,7 +367,13 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
 .changes li:last-child,.outcomes li:last-child{border-bottom:0}
 .changes li::before,.outcomes li::before{content:"→";color:var(--ember)}
 @media (max-width:860px){ .changes{grid-template-columns:1fr} }
-.latest{margin-top:clamp(32px,5vw,56px)}
+.latest{margin-top:clamp(40px,6vw,72px)}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px}
+.tiles .card h3{font-size:1.2rem}
+.tiles .card .ex{font-size:.92rem}
+@media (max-width:1000px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.tiles{gap:22px 14px}.tiles .card .ex{display:none}.tiles .card h3{font-size:1.05rem}.tiles .card .meta .c{display:none}}
+.chapters li.ahead b{font-style:italic;color:var(--muted)}
 .latest .row{grid-template-columns:110px minmax(0,1fr) auto}
 @media (max-width:780px){ .latest .row{grid-template-columns:90px minmax(0,1fr)} }
 .names img[alt^="Washington"]{max-width:240px;height:36px}
@@ -429,7 +435,7 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
     <div><h4>Consciousness</h4><ul><li><a href="#life-coaching">Life Coaching</a></li><li><a href="#consciousness-coaching">Consciousness Coaching</a></li><li><a href="#meditation">Meditation</a></li><li><a href="#post-refining-teliodosis">Teliodosis</a></li></ul></div>
     <div><h4>Stay close</h4><ul><li><a href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Subscribe on Substack ↗</a></li><li><a href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">LinkedIn newsletter ↗</a></li><li><a href="#writing">Writing</a></li><li><a href="#resources">Library</a></li><li><a href="#contact">Contact</a></li></ul></div>
   </div>
-  <div class="fine"><span>© 2026 Arete Pursuits · Josh Dietrich, Professional Certified Coach (PCC)</span><span><a href="#privacy-policy" style="color:inherit">Privacy</a> · <a href="#terms-and-conditions" style="color:inherit">Terms</a></span></div>
+  <div class="fine"><span>© 2026 Arete Pursuits · Josh Dietrich, Professional Certified Coach (PCC)</span><span><a href="#privacy-policy" style="color:inherit">Privacy</a></span></div>
 </div></footer>
 
 <div class="pill" id="pill"><b>Preview</b><a id="liveLink" href="https://aretepursuits.com/" target="_blank" rel="noopener">Current site ↗</a><button id="pillX" aria-label="Hide review controls">×</button></div>
@@ -510,7 +516,7 @@ pages.home=()=>`
  <div class="label" style="margin-bottom:20px">In their words</div>
  <p class="quote-big">“It’s the Josh Effect.”</p>
  <div class="qby">An AVP of Information Technology, explaining the kinder, gentler version of themselves that people kept noticing</div>
- <div class="qgrid">${NAMED.map(([q,r])=>`<figure class="q"><p>“${q}”</p><cite>${r}</cite></figure>`).join('')}${TESTI.slice(0,5).map(([q,r])=>`<figure class="q"><p>“${q.length>260?q.slice(0,q.lastIndexOf(' ',250))+'…':q}”</p><cite>${r}</cite></figure>`).join('')}</div>
+ <div class="qgrid">${NAMED.map(([q,r])=>`<figure class="q"><p>“${q}”</p><cite>${r}</cite></figure>`).join('')}${TESTI.slice(0,5).map(([q,r,ex])=>`<figure class="q"><p>“${ex||(q.length>260?q.slice(0,q.lastIndexOf(' ',250))+'…':q)}”</p><cite>${r}</cite></figure>`).join('')}</div>
 </div></section>
 
 <div class="wrap"><div class="names"><div class="label lbl">Leaders I’ve worked with come from</div>${CLIENTS.map(([n,k])=>`<img src="img/c-${k}" alt="${n}">`).join('')}</div></div>
@@ -520,7 +526,7 @@ pages.home=()=>`
  <div class="coin"><span class="w">teliodosis</span><span class="ph">/ tel·ee·oh·DOH·sis /</span><p>A word I coined for the integration of doing and being: purposeful action that flows from presence.</p><p style="margin-top:10px"><a class="tl-link" href="#post-refining-teliodosis">Read “Refining Teliodosis”</a></p></div></div>
  <div class="body">
   <p>The philosopher Ken Wilber describes two kinds of human development. Growing up is the slow maturing of how we think, relate, and lead. Waking up is the direct recognition of the awareness we already are. Each can happen without the other, and each goes further with the other.</p>
-  <p>Executive coaching is mostly growing up. Sooner or later it also asks who is doing the leading, and that question is where waking up begins. I spent thirty years as a technology executive and bring that to every engagement. I am also in a two-year teacher training in nondual meditation, and I bring that too.</p>
+  <p>Executive coaching is mostly growing up. Sooner or later it also asks who is doing the leading, and that question is where waking up begins. I spent thirty years as a technology executive, and that experience is in every engagement. So is my own waking up: more than a decade of daily meditation and a steady deepening into the awareness this work points toward.</p>
   <p>You don’t need to know in advance which kind of coaching you need. Plenty of clients begin with delegation and strategic thinking and end up somewhere they didn’t expect.</p>
  </div>
 </div></section>
@@ -528,15 +534,16 @@ pages.home=()=>`
 <section class="rt"><div class="wrap">
  <div class="road">
   <div><div class="label">Tales of Wanderment</div><h2 style="font-size:clamp(2rem,4vw,3.2rem);margin-top:16px">Coaching from the road.</h2>
-  <p class="muted" style="margin-top:16px;max-width:44ch">Since November 2024 I have lived a few weeks to a few months at a time wherever life calls me. Coaching carries on over Zoom, on the same schedule, and I write about what the road is teaching me.</p>
+  <p class="muted" style="margin-top:16px;max-width:44ch">In November 2024 I became a digital nomad, traveling the US and coaching over Zoom on the same schedule. Living lightly, a few weeks or months at a time, has become part of my own waking up: each new place loosens another idea of who I am. I write about what the road is teaching me regularly.</p>
   <p style="margin-top:18px"><a class="tl-link" href="#post-walkabout-update">The full story of the first loop</a></p></div>
   <ol class="chapters">
-   <li><span class="y">Nov 2024 – Apr 2025</span><b>The first loop</b><span class="route">Bethany Beach · West Chester · Asheville · Hot Springs · Dallas · Austin · Albuquerque · Phoenix · Sedona · Taos · Denver · Colorado Springs</span></li>
+   <li><span class="y">Nov 2024 – Apr 2025</span><b>The first loop</b><span class="route">Bethany Beach · West Chester · Asheville · Dallas · Austin · Albuquerque · Phoenix · Sedona · Taos · Denver · Greeley · Colorado Springs</span></li>
    <li><span class="y">Apr 2025 – May 2026</span><b>A year in the Land of Enchantment</b><span class="route">Santa Fe, New Mexico</span></li>
-   <li class="now"><span class="y">Jun 2026 – now</span><b>Untethered</b><span class="route">Fairfax · Mt. Shasta · Ashburn · West Chester · Denver</span></li>
+   <li class="now"><span class="y">Jun 2026 – now</span><b>Untethered</b><span class="route">Fairfax (CA) · Ashburn · West Chester · Bethany Beach · Denver</span></li>
+   <li class="ahead"><span class="y">Tomorrow and beyond</span><b>Unwritten</b></li>
   </ol>
  </div>
- <div class="latest"><div class="label" style="margin-bottom:8px">Latest writing</div>${POSTS.slice(0,4).map(p=>`<a class="row" href="#post-${p.s}"><span class="d">${fmt(p.d)}</span><span class="t">${esc(p.t)}</span><span class="k">${esc(p.c.slice(0,2).join(' · '))}</span></a>`).join('')}<p style="margin-top:16px"><a class="tl-link" href="#writing">All writing</a></p></div>
+ <div class="latest"><div class="label" style="margin-bottom:22px">Latest writing</div><div class="tiles">${POSTS.slice(0,4).map(card).join('')}</div><p style="margin-top:28px"><a class="tl-link" href="#writing">All writing</a></p></div>
 </div></section>
 ${threshold('Wherever you are starting from, start with a conversation.','lead',{id:'start'})}`;
 
@@ -662,7 +669,7 @@ pages.contact=()=>phead('Begin','Begin a <em>conversation</em>','Twenty-five min
  <div class="way"><span class="label">Email</span><span class="val">josh@aretepursuits.com</span><button class="copy" data-copy="josh@aretepursuits.com">Copy address</button><span class="label" style="margin-top:12px">Phone</span><span class="val">+1 703 431 8025</span><button class="copy" data-copy="+1 703 431 8025">Copy number</button></div>
 </div></div>`;
 const legal=n=>()=>phead('Legal',n,'')+`<div class="wrap" style="padding-block:48px 80px"><p class="note">The current ${n.toLowerCase()} moves over word for word at cutover.</p></div>`;
-pages['privacy-policy']=legal('Privacy Policy'); pages['terms-and-conditions']=legal('Terms and Conditions');
+pages['privacy-policy']=legal('Privacy Policy');
 
 /* writing */
 let cat=null,q='';

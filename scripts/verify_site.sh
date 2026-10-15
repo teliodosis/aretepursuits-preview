@@ -5,7 +5,7 @@ mkdir -p reports; out=reports/verify.txt; : > $out
 python3 - "$BASE" > /tmp/urls.txt <<'PY'
 import json,sys,re
 P=json.load(open('content/posts.json'))
-for u in ['/','/services/executive-coaching/','/services/organizations/','/services/consciousness-coaching/','/services/life-coaching/','/meditation/','/blog/','/about/','/resources/','/contact/','/privacy-policy/','/terms-and-conditions/','/feed.xml','/sitemap.xml','/robots.txt','/og/default.jpg']: print(u)
+for u in ['/','/services/executive-coaching/','/services/organizations/','/services/consciousness-coaching/','/services/life-coaching/','/meditation/','/blog/','/about/','/resources/','/contact/','/privacy-policy/','/feed.xml','/sitemap.xml','/robots.txt','/og/default.jpg']: print(u)
 for p in P: print('/'+p['slug']+'/')
 for c in json.load(open('content/categories.json')):
     if c['count']: print('/category/'+{'walkabout':'wanderment'}.get(c['slug'],c['slug'])+'/')

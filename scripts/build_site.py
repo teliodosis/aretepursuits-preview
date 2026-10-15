@@ -43,7 +43,7 @@ for old, new in CAT_RENAME.items(): CAT_BY_JS[slugify(new)] = slugify(new)
 ROUTES = {'home': '/', 'executive-coaching': '/services/executive-coaching/', 'organizations': '/services/organizations/',
           'consciousness-coaching': '/services/consciousness-coaching/', 'life-coaching': '/services/life-coaching/',
           'meditation': '/meditation/', 'writing': '/blog/', 'blog': '/blog/', 'about': '/about/', 'resources': '/resources/',
-          'contact': '/contact/', 'privacy-policy': '/privacy-policy/', 'terms-and-conditions': '/terms-and-conditions/'}
+          'contact': '/contact/', 'privacy-policy': '/privacy-policy/'}
 
 def original(u): return re.sub(r'-(\d+)x(\d+)(\.[A-Za-z]+)$', r'\3', u)
 def media_for(u):
@@ -283,7 +283,7 @@ for p in P:
     write(f'/{s}/', page(f'/{s}/', f'{p["t"]} | Arete Pursuits', EX[s] or p['t'], body, kind='post', og=og, ogtype='article', extra_head=extra))
 
 # legal
-for slug, name in [('privacy-policy', 'Privacy Policy'), ('terms-and-conditions', 'Terms and Conditions')]:
+for slug, name in [('privacy-policy', 'Privacy Policy')]:  # Terms page dropped Oct 15 (old PDF conflicted with the MSA)
     own = os.path.join(ROOT, f'content/{slug}.html')  # site-owned text (approved by Josh) replaces the WordPress page
     content = open(own, encoding='utf-8').read() if os.path.exists(own) else clean(pages_wp[slug]['content']['rendered'])
     if slug == 'terms-and-conditions':
@@ -311,7 +311,7 @@ open(os.path.join(OUT, 'favicon.svg'), 'w').write('<svg xmlns="http://www.w3.org
 def rfc822(d): return format_datetime(datetime.fromisoformat(d).replace(hour=12, tzinfo=timezone.utc))
 items = ''.join(f'''<item><title>{H.escape(p["t"])}</title><link>{SITE}/{p["s"]}/</link><guid isPermaLink="true">{SITE}/{p["s"]}/</guid><pubDate>{rfc822(p["d"])}</pubDate>{"".join(f"<category>{H.escape(c)}</category>" for c in p["c"])}<description>{H.escape(EX[p["s"]])}</description>{f'<enclosure url="{SITE}{AUDIO[p["s"]]["src"]}" length="{AUDIO[p["s"]]["bytes"]}" type="audio/mpeg"/>' if p["s"] in AUDIO else ""}<content:encoded><![CDATA[{BODY[p["s"]].replace("]]>", "]]&gt;").replace('src="/', f'src="{SITE}/').replace('href="/', f'href="{SITE}/')}]]></content:encoded></item>''' for p in P[:30])
 open(os.path.join(OUT, 'feed.xml'), 'w', encoding='utf-8').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arete Pursuits</title><link>{SITE}/</link><atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/><description>Writing by Josh Dietrich on leadership, consciousness, and life on the road.</description><language>en-us</language><lastBuildDate>{rfc822(P[0]["d"])}</lastBuildDate>{items}</channel></rss>\n')
-urls = [ROUTES[k] for k in META] + ['/privacy-policy/', '/terms-and-conditions/'] + [f'/category/{s}/' for n, s in CAT_SLUG.items() if 'cat:' + n in R]
+urls = [ROUTES[k] for k in META] + ['/privacy-policy/'] + [f'/category/{s}/' for n, s in CAT_SLUG.items() if 'cat:' + n in R]
 sm = ''.join(f'<url><loc>{SITE}{u}</loc></url>' for u in dict.fromkeys(urls)) + ''.join(f'<url><loc>{SITE}/{p["s"]}/</loc><lastmod>{p["d"]}</lastmod></url>' for p in P)
 open(os.path.join(OUT, 'sitemap.xml'), 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
 open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
