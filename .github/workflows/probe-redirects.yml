@@ -14,4 +14,4 @@ jobs:
           git pull -q --rebase
           git add content
           git diff --cached --quiet || git commit -q -m "Record legacy redirects"
-          git push
+          git pull -q --rebase && git push

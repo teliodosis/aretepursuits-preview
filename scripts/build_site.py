@@ -57,6 +57,8 @@ def clean(raw):
                 a['href'] = mm['path'] if mm else path
             else:
                 s = re.match(r'^/(?:blog/(?:f/)?)?([a-z0-9-]+)/?$', path)
+                LEG = {'/services/leadership-workshops/': '/services/organizations/', '/services/disc-facilitation/': '/services/organizations/', '/services/360-feedback/': '/services/organizations/'}
+                path = LEG.get(path if path.endswith('/') else path + '/', path)
                 a['href'] = f'/{s.group(1)}/' if s and s.group(1) in SLUGS else path + (m.group(2) or '')
             for k in ('target', 'rel'): a.attrs.pop(k, None)
         elif h.startswith('http'):
@@ -157,6 +159,7 @@ def page(path, title, desc, body, kind='page', og=DEFAULT_OG, ogtype='website', 
 .article iframe{{width:100%;height:auto;aspect-ratio:16/9;border:0;border-radius:var(--r)}}
 .article video{{width:100%;height:auto;border-radius:var(--r)}}
 [hidden]{{display:none!important}}
+body{{margin:0}}img{{max-width:100%;height:auto}}
 </style>
 </head>
 <body data-kind="{kind}">
