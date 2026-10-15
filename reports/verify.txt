@@ -14,5 +14,9 @@ REDIR /blog/f/gentleness -> 301 https://site.aretepursuits-preview.pages.dev/gen
 REDIR /blog/gentleness -> 301 https://site.aretepursuits-preview.pages.dev/gentleness/
 REDIR /blog/page/3/ -> 301 https://site.aretepursuits-preview.pages.dev/blog/
 REDIR /executive-coaching -> 301 https://site.aretepursuits-preview.pages.dev/services/executive-coaching/
+REDIR /blog/f/clearing-the-fog -> 301 https://site.aretepursuits-preview.pages.dev/f-clearing-the-fog/
+REDIR /blog/f/the-heros-journey -> 301 https://site.aretepursuits-preview.pages.dev/459-2/
+REDIR /blog/f/it%E2%80%99s-called-breakfast-for-a-reason -> 301 https://site.aretepursuits-preview.pages.dev/its-called-breakfast-for-a-reason/
+REDIR /blog/f/the-hero-ignored -> 301 https://site.aretepursuits-preview.pages.dev/the-hero-ignored/
 REDIR /nonexistent-page-xyz/ -> 404 
 HEADERS / content-type: text/html; charset=utf-8  x-content-type-options: nosniff  x-robots-tag: noindex, nofollow  
