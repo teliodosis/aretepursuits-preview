@@ -1,0 +1,20 @@
+name: qa-external
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: site, path: _site }
+      - run: python3 scripts/qa_external.py https://site.aretepursuits-preview.pages.dev _site
+      - run: curl -sL -A "Mozilla/5.0" -o reports/live-home.html https://aretepursuits.com/ && curl -sL -A "Mozilla/5.0" -o reports/live-blog.html https://aretepursuits.com/blog/
+      - run: |
+          git config user.name "content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports
+          git diff --cached --quiet || git commit -q -m "QA reports"
+          git pull -q --rebase && git push
