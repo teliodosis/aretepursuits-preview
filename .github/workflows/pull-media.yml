@@ -16,4 +16,4 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add media content
           git diff --cached --quiet || git commit -q -m "Pull and resize WordPress media"
-          git push
+          git pull -q --rebase && git push

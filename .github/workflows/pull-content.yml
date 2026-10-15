@@ -13,4 +13,4 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add content
           git diff --cached --quiet || git commit -m "Pull WordPress content"
-          git push
+          git pull -q --rebase && git push
