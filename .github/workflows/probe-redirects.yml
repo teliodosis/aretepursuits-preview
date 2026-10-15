@@ -14,7 +14,6 @@ jobs:
       - run: |
           git config user.name "content-bot"
           git config user.email "actions@users.noreply.github.com"
-          git pull -q --rebase
           git add content
           git diff --cached --quiet || git commit -q -m "Record legacy redirects"
           git pull -q --rebase && git push
