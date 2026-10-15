@@ -507,7 +507,7 @@ pages.home=()=>`
  <div class="label" style="margin-bottom:20px">In their words</div>
  <p class="quote-big">“It’s the Josh Effect.”</p>
  <div class="qby">An AVP of Information Technology, explaining the kinder, gentler version of themselves that people kept noticing</div>
- <div class="qgrid">${NAMED.map(([q,r])=>`<figure class="q"><p>“${q}”</p><cite>${r}</cite></figure>`).join('')}${TESTI.slice(0,4).map(([q,r])=>`<figure class="q"><p>“${q.length>260?q.slice(0,q.lastIndexOf(' ',250))+'…':q}”</p><cite>${r}</cite></figure>`).join('')}</div>
+ <div class="qgrid">${NAMED.map(([q,r])=>`<figure class="q"><p>“${q}”</p><cite>${r}</cite></figure>`).join('')}${TESTI.slice(0,5).map(([q,r])=>`<figure class="q"><p>“${q.length>260?q.slice(0,q.lastIndexOf(' ',250))+'…':q}”</p><cite>${r}</cite></figure>`).join('')}</div>
 </div></section>
 
 <div class="wrap"><div class="names"><div class="label lbl">Leaders I’ve worked with come from</div>${CLIENTS.map(([n,k])=>`<img src="img/c-${k}" alt="${n}">`).join('')}</div></div>

@@ -283,12 +283,13 @@ for p in P:
 
 # legal
 for slug, name in [('privacy-policy', 'Privacy Policy'), ('terms-and-conditions', 'Terms and Conditions')]:
-    content = clean(pages_wp[slug]['content']['rendered'])
+    own = os.path.join(ROOT, f'content/{slug}.html')  # site-owned text (approved by Josh) replaces the WordPress page
+    content = open(own, encoding='utf-8').read() if os.path.exists(own) else clean(pages_wp[slug]['content']['rendered'])
     if slug == 'terms-and-conditions':
         pdf = re.search(r'href="(/wp-content/uploads/[^"]+\.pdf)"', content)
         content = f'<p>The Arete Pursuits Terms and Conditions are available as a PDF.</p><p><a class="btn btn-line" href="{pdf.group(1)}">Read the Terms and Conditions (PDF)</a></p>' if pdf else content
     body = R['__legalhead:' + name] + f'<div class="wrap" style="padding-bottom:80px"><article class="article">{content}</article></div>'
-    write(f'/{slug}/', page(f'/{slug}/', f'{name} | Arete Pursuits', f'{name} for aretepursuits.com.', body))
+    write(f'/{slug}/', page(f'/{slug}/', f'{name} | Arete Pursuits', (f'How aretepursuits.com handles your information: no cookies, cookieless analytics, and what happens when you contact Josh.' if slug == 'privacy-policy' else f'{name} for aretepursuits.com.'), body))
 
 # 404
 body404 = R['__phead404'] + '<div class="wrap" style="padding-block:40px 90px"><p>Try the <a class="tl-link" href="/">home page</a>, browse <a class="tl-link" href="/blog/">all writing</a>, or <a class="tl-link" href="/contact/">get in touch</a>.</p></div>'
