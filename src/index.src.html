@@ -371,6 +371,18 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
 .pill .hopt{display:flex;gap:4px}
 .pill .hopt button{font:600 .8rem var(--f-body);width:28px;height:28px;border-radius:50%;border:1px solid var(--rule);background:var(--bg);color:var(--ink);padding:0}
 .pill .hopt button[aria-pressed="true"]{background:var(--ember);border-color:var(--ember);color:var(--on-accent)}
+.listen{max-width:var(--measure);margin:22px 0 26px;display:flex;align-items:center;gap:14px;padding:10px 14px 10px 10px;border:1px solid var(--rule);border-radius:999px;background:var(--surface)}
+.listen .pp{width:42px;height:42px;border-radius:50%;background:var(--ember);color:var(--on-accent);border:0;display:grid;place-items:center;cursor:pointer;flex:none}
+.listen .pp svg{width:16px;height:16px;fill:currentColor}
+.listen .mid{flex:1;min-width:0;display:grid;gap:2px}
+.listen .lab{font-size:.88rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.listen .row{display:flex;align-items:center;gap:10px}
+.listen input[type=range]{flex:1;min-width:40px;accent-color:var(--ember);height:4px}
+.listen .t{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.listen .sp,.listen .x{border:1px solid var(--rule);background:none;color:var(--ink);border-radius:999px;font:600 .75rem var(--f-body);padding:.35em .65em;cursor:pointer;flex:none}
+.listen .x{border:0;font-size:1.1rem;padding:.1em .35em;color:var(--muted)}
+.listen-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;width:min(680px,calc(100% - 24px));margin:0;box-shadow:0 18px 40px -16px rgba(0,0,0,.55)}
+@media (max-width:520px){ .listen .sp{display:none} .listen .t{font-size:.72rem} }
 </style>
 
 <header class="site">
@@ -510,7 +522,7 @@ pages.home=()=>`
 <section class="rt"><div class="wrap">
  <div class="road">
   <div><div class="label">Tales of Wanderment</div><h2 style="font-size:clamp(2rem,4vw,3.2rem);margin-top:16px">Coaching from the road.</h2>
-  <p class="muted" style="margin-top:16px;max-width:44ch">Since November 2024 I have lived a few weeks to a few months at a time wherever life calls me. Coaching carries on over Zoom, on the same schedule, and every week I write about what the road is teaching me.</p>
+  <p class="muted" style="margin-top:16px;max-width:44ch">Since November 2024 I have lived a few weeks to a few months at a time wherever life calls me. Coaching carries on over Zoom, on the same schedule, and I write about what the road is teaching me.</p>
   <p style="margin-top:18px"><a class="tl-link" href="#post-walkabout-update">The full story of the first loop</a></p></div>
   <ol class="chapters">
    <li><span class="y">Nov 2024 – Apr 2025</span><b>The first loop</b><span class="route">Bethany Beach · West Chester · Asheville · Hot Springs · Dallas · Austin · Albuquerque · Phoenix · Sedona · Taos · Denver · Colorado Springs</span></li>
@@ -632,7 +644,7 @@ ${cols('How I got here',`<ul class="tline">
 <li><span class="y">Nov 2024</span><div><b>Wanderment</b><span>After five decades in Virginia, I set out to discover where I want to put down roots, or whether I need to.</span></div></li>
 <li><span class="y">2026–27</span><div><b>Nondual Meditation</b><span>A two-year teacher training in nondual meditation with Jonathan Gustin.</span></div></li>
 <li><span class="y">Now</span><div><b>On the road</b><span>Living a few weeks to a few months at a time wherever I’m called, and coaching from wherever that is.</span></div></li></ul>`)}
-${cols('Why the road',`<p>Living without a fixed home has stripped away a lot of what I used to think I needed. It has also made me a better coach. Every few weeks bring new people, new land, and new lessons, and I write about them in my weekly Tales of Wanderment.</p><p>For clients, nothing changes: we meet on Zoom, on the same schedule, wherever I am. If you’re near my next waystation, I would love to meet in person.</p>`)}
+${cols('Why the road',`<p>Living without a fixed home has stripped away a lot of what I used to think I needed. It has also made me a better coach. Every few weeks bring new people, new land, and new lessons, and I write about them in my Tales of Wanderment.</p><p>For clients, nothing changes: we meet on Zoom, on the same schedule, wherever I am. If you’re near my next waystation, I would love to meet in person.</p>`)}
 ${cols('Elsewhere',`<p><a class="tl-link" href="https://www.linkedin.com/in/joshuadietrich/" target="_blank" rel="noopener">LinkedIn ↗</a> · <a class="tl-link" href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Substack ↗</a></p>`)}
 </div>${threshold()}`;
 
@@ -653,7 +665,7 @@ function list(){const qq=q.trim().toLowerCase();const L=POSTS.filter(p=>(!cat||p
  if(!L.length)return `<p class="empty">No posts match “${esc(q)}”. Try another word or clear the topic.</p>`;
  const Y={};L.forEach(p=>(Y[p.d.slice(0,4)]||=[]).push(p));
  return Object.keys(Y).sort((a,b)=>b-a).map(y=>`<div class="year"><h3>${y}<small>${Y[y].length} post${Y[y].length>1?'s':''}</small></h3><div>${Y[y].map(p=>`<a class="row" href="#post-${p.s}"><span class="d">${fmt(p.d).replace(/, \d{4}$/,'')}</span><span class="t">${esc(p.t)}</span><span class="k">${esc(p.c.slice(0,2).join(' · '))}</span></a>`).join('')}</div></div>`).join('');}
-pages.writing=()=>{const f=POSTS[0],fil=cat||q;return phead('Writing','Field notes on leading <em>&amp;</em> being','Weekly since 2021: leadership, neuroscience, consciousness, and tales from the road. Subscribe on Substack to get each one in your inbox.')+`<div class="wrap">
+pages.writing=()=>{const f=POSTS[0],fil=cat||q;return phead('Writing','Field notes on leading <em>&amp;</em> being','Field notes since 2021 on leadership, neuroscience, consciousness, and tales from the road. Subscribe on <a class="tl-link" href="https://teliodosis.substack.com/subscribe" target="_blank" rel="noopener">Substack</a> or <a class="tl-link" href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">LinkedIn</a> to get new posts.')+`<div class="wrap">
 ${fil?'':`<a class="feature" href="#post-${f.s}"><div class="ph"><img src="img/p-${f.s}.jpg" alt=""></div><div><div class="meta"><span>Latest · ${fmt(f.d)}</span><span class="c">${f.c.join(', ')}</span></div><h2>${esc(f.t)}</h2><p class="muted">${esc(EX[f.s])}</p></div></a>
 <section style="padding-block:48px"><div class="cards">${POSTS.slice(1,13).map(card).join('')}</div></section>`}
 <div class="toolbar" id="toolbar"><label class="search"><span class="muted" aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Search ${POSTS.length} posts" value="${esc(q)}" aria-label="Search posts"></label>
@@ -672,7 +684,7 @@ function post(slug){const i=POSTS.findIndex(p=>p.s===slug);if(i<0)return pages.w
  return `<div class="wrap"><div class="post-head"><div class="crumbs"><a href="#writing">Writing</a> / ${p.c.map(c=>`<a href="#writing~${slugify(c)}">${esc(c)}</a>`).join(', ')}</div><h1>${esc(p.t)}</h1><div class="meta"><span>${fmt(p.d)}</span><span>Josh Dietrich</span></div></div>
  <div class="post-hero" id="posthero"${IMG.has(slug)?'':' hidden'}>${IMG.has(slug)?`<img src="img/p-${slug}.jpg" alt="">`:''}</div><article class="article">${body}</article>
  ${nextStep(p)}
- <aside class="bio"><img src="img/josh.jpg" alt=""><div><p>I’m an executive, life, and consciousness coach with software executive roots. I write every week about leading, being, and life on the road.</p><div class="links"><a class="tl-link" href="https://teliodosis.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a><a class="tl-link" href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">Subscribe on LinkedIn</a><a class="tl-link" href="#contact">Start a conversation</a></div></div></aside>
+ <aside class="bio"><img src="img/josh.jpg" alt=""><div><p>I’m an executive, life, and consciousness coach with software executive roots. I write about leading, being, and life on the road.</p><div class="links"><a class="tl-link" href="https://teliodosis.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a><a class="tl-link" href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">Subscribe on LinkedIn</a><a class="tl-link" href="#contact">Start a conversation</a></div></div></aside>
  <nav class="pn" aria-label="More posts">${od?`<a href="#post-${od.s}"><span>← OLDER</span><b>${esc(od.t)}</b></a>`:'<span></span>'}${nw?`<a href="#post-${nw.s}"><span>NEWER →</span><b>${esc(nw.t)}</b></a>`:'<span></span>'}</nav></div>`;}
 
 /* Full post text comes live from the current WordPress site for this preview. */

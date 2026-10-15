@@ -53,6 +53,41 @@
     });
   }
 
+
+  /* narration player: inline at the top of the post, follows you as a bar once you scroll past */
+  var top = document.querySelector('[data-listen]');
+  if (top) {
+    var audio = new Audio(); audio.preload = 'none'; audio.src = top.dataset.src;
+    var PLAY = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>';
+    var PAUSE = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5h3v11H4zM9 2.5h3v11H9z"/></svg>';
+    var bar = top.cloneNode(true); bar.classList.add('listen-bar'); bar.hidden = true; bar.removeAttribute('data-listen');
+    var x = document.createElement('button'); x.className = 'x'; x.type = 'button'; x.setAttribute('aria-label', 'Close player'); x.textContent = '×'; bar.appendChild(x);
+    document.body.appendChild(bar);
+    var uis = [top, bar], speeds = [1, 1.25, 1.5, 2, 0.75], si = 0, closed = false, topVisible = true, total = +top.dataset.dur || 0;
+    function fmt(t) { t = Math.max(0, Math.round(t || 0)); return Math.floor(t / 60) + ':' + String(t % 60).padStart(2, '0'); }
+    function sync() {
+      var d = isFinite(audio.duration) && audio.duration ? audio.duration : total;
+      uis.forEach(function (u) {
+        var pp = u.querySelector('.pp'); pp.innerHTML = audio.paused ? PLAY : PAUSE; pp.setAttribute('aria-label', audio.paused ? 'Play narration' : 'Pause narration');
+        var r = u.querySelector('input'); r.max = Math.round(d); if (!r.dragging) r.value = Math.round(audio.currentTime);
+        u.querySelector('.t').textContent = fmt(audio.currentTime) + ' / ' + fmt(d);
+        u.querySelector('.sp').textContent = speeds[si] + '×';
+      });
+      bar.hidden = closed || topVisible || (audio.paused && audio.currentTime === 0);
+    }
+    uis.forEach(function (u) {
+      u.querySelector('.pp').addEventListener('click', function () { closed = false; if (audio.paused) audio.play(); else audio.pause(); });
+      var r = u.querySelector('input');
+      r.addEventListener('input', function () { r.dragging = true; u.querySelector('.t').textContent = fmt(r.value) + ' / ' + fmt(total); });
+      r.addEventListener('change', function () { r.dragging = false; audio.currentTime = +r.value; sync(); });
+      u.querySelector('.sp').addEventListener('click', function () { si = (si + 1) % speeds.length; audio.playbackRate = speeds[si]; sync(); });
+    });
+    x.addEventListener('click', function () { audio.pause(); closed = true; sync(); });
+    ['play', 'pause', 'timeupdate', 'loadedmetadata', 'ended'].forEach(function (ev) { audio.addEventListener(ev, sync); });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { topVisible = es[0].isIntersecting; sync(); }).observe(top);
+    if ('mediaSession' in navigator) navigator.mediaSession.metadata = new MediaMetadata({ title: top.dataset.title, artist: 'Josh Dietrich', album: 'Arete Pursuits' });
+    sync();
+  }
   /* search the writing archive */
   var q = document.getElementById('q'), arch = document.getElementById('archive');
   if (q && arch) {

@@ -28,6 +28,7 @@ posts = sorted(posts, key=lambda p: p['date'], reverse=True)
 pages_wp = {p['slug']: p for p in J('content/pages.json')}
 cats_wp = {c['id']: (H.unescape(c['name']), c['slug']) for c in J('content/categories.json')}
 mmap = J('content/media-map.json')
+AUDIO = J('content/audio.json') if os.path.exists(os.path.join(ROOT, 'content/audio.json')) else {}
 SLUGS = {p['slug'] for p in posts}
 slugify = lambda s: re.sub(r'^-|-$', '', re.sub(r'[^a-z0-9]+', '-', s.lower()))
 CAT_SLUG = {name: slug for name, slug in cats_wp.values()}            # display name -> WP slug
@@ -223,7 +224,7 @@ META = {
  'about': ('About Josh Dietrich | Arete Pursuits', 'Thirty years in technology leadership, more than 2,000 coaching hours, and training in ontological coaching, neuroscience, and nondual meditation.'),
  'resources': ('Library: Books, Programs & Meditations | Arete Pursuits', 'Books, programs, and meditations Josh recommends most often to clients, loosely sorted to help you find your way in.'),
  'contact': ('Begin a Conversation | Arete Pursuits', 'Schedule a free 25-minute conversation about executive, life, or consciousness coaching, or get in touch by email or phone.'),
- 'writing': ('Writing | Arete Pursuits', 'Weekly writing since 2021 on leadership, neuroscience, consciousness, and life on the road.'),
+ 'writing': ('Writing | Arete Pursuits', 'Writing since 2021 on leadership, neuroscience, consciousness, and life on the road.'),
 }
 LD_HOME = '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Arete Pursuits", "url": SITE, "email": "josh@aretepursuits.com", "telephone": "+1-703-431-8025", "founder": {"@type": "Person", "name": "Josh Dietrich", "jobTitle": "Executive, life, and consciousness coach"}, "sameAs": ["https://www.linkedin.com/in/joshuadietrich/", "https://substack.com/@teliodosis"]}) + '</script>\n'
 
@@ -243,14 +244,21 @@ for name, slug in sorted(CAT_SLUG.items()):
     k = 'cat:' + name
     if k not in R: continue
     n = sum(1 for p in P if name in p['c'])
-    write(f'/category/{slug}/', page(f'/category/{slug}/', f'{name} | Writing | Arete Pursuits', f'{n} posts on {name.lower()} from Josh Dietrich’s weekly writing on leadership, consciousness, and life on the road.', chips(R[k], name)))
+    write(f'/category/{slug}/', page(f'/category/{slug}/', f'{name} | Writing | Arete Pursuits', f'{n} posts on {name.lower()} from Josh Dietrich’s writing on leadership, consciousness, and life on the road.', chips(R[k], name)))
 
 # posts
 for p in P:
     s = p['s']; body = R['post:' + s]
     if s in FEAT: body = body.replace(f'src="img/p-{s}.jpg"', f'src="{FEAT[s]}"', 1)
+    if s in AUDIO:
+        a = AUDIO[s]; mins = max(1, round(a['seconds'] / 60))
+        player = (f'<div class="listen" data-listen data-src="{a["src"]}" data-dur="{a["seconds"]}" data-title="{H.escape(p["t"])}">'
+                  '<button class="pp" type="button" aria-label="Play narration"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></button>'
+                  f'<div class="mid"><div class="lab">Listen · {mins} min · narrated by Josh</div><div class="row"><input type="range" min="0" max="{a["seconds"]}" value="0" step="1" aria-label="Seek"><span class="t">0:00 / {a["seconds"]//60}:{a["seconds"]%60:02d}</span></div></div>'
+                  '<button class="sp" type="button" aria-label="Playback speed">1×</button></div>')
+        body = body.replace('<div class="post-hero"', player + '\n <div class="post-hero"', 1)
     og = f'/og/{s}.jpg' if s in IMG else DEFAULT_OG
-    ld = '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "BlogPosting", "headline": p['t'], "datePublished": p['d'], "author": {"@type": "Person", "name": "Josh Dietrich"}, "image": SITE + og, "url": f"{SITE}/{s}/"}) + '</script>\n'
+    ld = '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "BlogPosting", "headline": p['t'], "datePublished": p['d'], "author": {"@type": "Person", "name": "Josh Dietrich"}, "image": SITE + og, "url": f"{SITE}/{s}/", **({"audio": {"@type": "AudioObject", "contentUrl": SITE + AUDIO[s]["src"], "encodingFormat": "audio/mpeg"}} if s in AUDIO else {})}) + '</script>\n'
     extra = ld + f'<meta property="article:published_time" content="{p["d"]}">\n'
     write(f'/{s}/', page(f'/{s}/', f'{p["t"]} | Arete Pursuits', EX[s] or p['t'], body, kind='post', og=og, ogtype='article', extra_head=extra))
 
@@ -272,6 +280,7 @@ shutil.copytree(os.path.join(ROOT, 'baseline/img'), os.path.join(OUT, 'img'))
 shutil.copytree(os.path.join(ROOT, 'media/wp-content'), os.path.join(OUT, 'wp-content'))
 shutil.copytree(os.path.join(ROOT, 'media/og'), os.path.join(OUT, 'og'), dirs_exist_ok=True)
 shutil.copytree(os.path.join(ROOT, 'media/thumbs'), os.path.join(OUT, 'thumbs'))
+if os.path.isdir(os.path.join(ROOT, 'media/audio')): shutil.copytree(os.path.join(ROOT, 'media/audio'), os.path.join(OUT, 'audio'))
 shutil.copy(os.path.join(ROOT, 'scripts/site.js'), os.path.join(OUT, 'site.js'))
 from PIL import Image, ImageOps
 ImageOps.fit(Image.open(os.path.join(ROOT, 'baseline/img/p-meditations-on-ogha-pooge.jpg')).convert('RGB'), (1200, 630), Image.LANCZOS).save(os.path.join(OUT, 'og/default.jpg'), 'JPEG', quality=84)
@@ -279,8 +288,8 @@ open(os.path.join(OUT, 'favicon.svg'), 'w').write('<svg xmlns="http://www.w3.org
 
 # ---------- feed, sitemap, robots, headers, redirects ----------
 def rfc822(d): return format_datetime(datetime.fromisoformat(d).replace(hour=12, tzinfo=timezone.utc))
-items = ''.join(f'''<item><title>{H.escape(p["t"])}</title><link>{SITE}/{p["s"]}/</link><guid isPermaLink="true">{SITE}/{p["s"]}/</guid><pubDate>{rfc822(p["d"])}</pubDate>{"".join(f"<category>{H.escape(c)}</category>" for c in p["c"])}<description>{H.escape(EX[p["s"]])}</description><content:encoded><![CDATA[{BODY[p["s"]].replace("]]>", "]]&gt;").replace('src="/', f'src="{SITE}/').replace('href="/', f'href="{SITE}/')}]]></content:encoded></item>''' for p in P[:30])
-open(os.path.join(OUT, 'feed.xml'), 'w', encoding='utf-8').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arete Pursuits</title><link>{SITE}/</link><atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/><description>Weekly writing by Josh Dietrich on leadership, consciousness, and life on the road.</description><language>en-us</language><lastBuildDate>{rfc822(P[0]["d"])}</lastBuildDate>{items}</channel></rss>\n')
+items = ''.join(f'''<item><title>{H.escape(p["t"])}</title><link>{SITE}/{p["s"]}/</link><guid isPermaLink="true">{SITE}/{p["s"]}/</guid><pubDate>{rfc822(p["d"])}</pubDate>{"".join(f"<category>{H.escape(c)}</category>" for c in p["c"])}<description>{H.escape(EX[p["s"]])}</description>{f'<enclosure url="{SITE}{AUDIO[p["s"]]["src"]}" length="{AUDIO[p["s"]]["bytes"]}" type="audio/mpeg"/>' if p["s"] in AUDIO else ""}<content:encoded><![CDATA[{BODY[p["s"]].replace("]]>", "]]&gt;").replace('src="/', f'src="{SITE}/').replace('href="/', f'href="{SITE}/')}]]></content:encoded></item>''' for p in P[:30])
+open(os.path.join(OUT, 'feed.xml'), 'w', encoding='utf-8').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arete Pursuits</title><link>{SITE}/</link><atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/><description>Writing by Josh Dietrich on leadership, consciousness, and life on the road.</description><language>en-us</language><lastBuildDate>{rfc822(P[0]["d"])}</lastBuildDate>{items}</channel></rss>\n')
 urls = [ROUTES[k] for k in META] + ['/privacy-policy/', '/terms-and-conditions/'] + [f'/category/{s}/' for n, s in CAT_SLUG.items() if 'cat:' + n in R]
 sm = ''.join(f'<url><loc>{SITE}{u}</loc></url>' for u in dict.fromkeys(urls)) + ''.join(f'<url><loc>{SITE}/{p["s"]}/</loc><lastmod>{p["d"]}</lastmod></url>' for p in P)
 open(os.path.join(OUT, 'sitemap.xml'), 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
