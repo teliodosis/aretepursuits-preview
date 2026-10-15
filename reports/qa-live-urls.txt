@@ -1,0 +1,2 @@
+live sitemap URLs: 260
+all live sitemap URLs resolve on the new site

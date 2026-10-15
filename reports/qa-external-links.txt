@@ -1,0 +1,264 @@
+external links checked: 607; problems: 263
+0	https://us.vibram.com/shop/shop-all-products/mens-fivefingers/running/v-run-mens-M31_2.html?dwvar_M31__2_color=Black%20%2F%20Yellow	1 page(s): /the-best-technology-available/
+0	https://www.netpromoter.com/know/	1 page(s): /my-first-year/
+401	https://www.wsj.com/lifestyle/careers/companies-worker-management-feedback-feedforward-hr-9758d6a7	1 page(s): /missing-conversations/
+403	https://betterhumans.pub/how-to-set-up-your-iphone-for-productivity-focus-and-your-own-longevity-bb27a68cc3d8	1 page(s): /finding-focus/
+403	https://bookshop.org/p/books/the-science-of-enlightenment-how-meditation-works-shinzen-young/9832669?ean=9781683642121&next=t	1 page(s): /elevating-consciousness/
+403	https://chat.openai.com/auth/login	1 page(s): /what-ai-can-teach-us-about-ni/
+403	https://medium.com/swlh/lessons-from-essentialism-the-disciplined-pursuit-of-less-by-greg-mckeown-416f49cc6a2d	1 page(s): /doing-less/
+403	https://regenerativeimpact.substack.com/p/embracing-freewriting-as-a-writer	1 page(s): /running-with-the-turtles/
+403	https://regenerativeimpact.substack.com/p/exploring-liberation	1 page(s): /be-a-raven/
+403	https://substack.com/@teliodosis	260 page(s): /, /11-101/, /2025-highlights/, /384-2/
+403	https://teliodosis.substack.com/subscribe	248 page(s): /11-101/, /2025-highlights/, /384-2/, /412-2/
+403	https://www.alltrails.com/trail/us/new-mexico/devisadero-loop-trail	1 page(s): /building-teams/
+403	https://www.andrewholecek.com/dream-yoga-book/	1 page(s): /lucid-dreaming/
+403	https://www.blinkist.com/	1 page(s): /life-is-calling/
+403	https://www.calm.com/	1 page(s): /meditation-has-gone-mainstream/
+403	https://www.gartner.com/en/research/methodologies/gartner-hype-cycle	1 page(s): /when-the-world-changes-overnight/
+403	https://www.mensjournal.com/health-fitness/run-like-a-kenyan/	2 page(s): /remembering-jack-2/, /remembering-jack/
+403	https://www.nytimes.com/2024/06/02/business/life-coach-debt-savings.html	1 page(s): /credentials-matter/
+403	https://www.reddit.com/r/NatureIsFuckingLit/comments/1fk198s/timelapse_shows_how_much_plants_actually_move/	1 page(s): /change-of-plans/
+404	https://a.co/d/09LM1Qg1	1 page(s): /untethered-and-tethered/
+404	https://a.co/d/7fr5tSk	1 page(s): /an-abundance-of-gratitude/
+404	https://a.co/d/iIoUaJG	1 page(s): /an-abundance-of-gratitude/
+404	https://a.co/d/isx1Agi	1 page(s): /an-abundance-of-gratitude/
+404	https://app.cal.com/giada-centofanti/30min	1 page(s): /work-life-balance-is-a-myth/
+404	https://chatgpt.com/g/g-6fbqTuevR-blog-josh	1 page(s): /the-gift-of-time/
+404	https://chatgpt.com/g/g-6fbqTuevR-the-aretist	1 page(s): /colorado/
+404	https://chatgpt.com/g/g-V53OUTwcG-the-council-of-joshes	1 page(s): /building-your-council/
+404	https://designingyour.life/the-book/	1 page(s): /brain-energy/
+404	https://fonts.googleapis.com	260 page(s): /, /11-101/, /2025-highlights/, /384-2/
+404	https://fonts.gstatic.com	260 page(s): /, /11-101/, /2025-highlights/, /384-2/
+404	https://leaders25.com/	1 page(s): /a-story-of-presence/
+404	https://newfieldnetwork.com/our-story-and-team/	2 page(s): /delegation-102/, /put-on-your-white-belt/
+404	https://newfieldnetwork.com/our-team-and-coaches/	1 page(s): /by-request/
+404	https://tartanterrors.com/go/events/6035677?feature_id=1041952&occurrence_id=716637444&popup=1	1 page(s): /public-speaking/
+404	https://www.heroic.us/optimize/coach?fpr=aretepursuits	1 page(s): /living-heroically/
+404	https://www.heroic.us/optimize/letsgo?fpr=aretepursuits	1 page(s): /living-heroically/
+404	https://www.heroic.us/optimize/luminary-sessions/live-coaching-with-dr-christopher-palmer	1 page(s): /brain-energy/
+404	https://www.heroic.us/optimize/mastery?fpr=aretepursuits	1 page(s): /living-heroically/
+404	https://www.heroic.us/optimize/pn	1 page(s): /life-is-calling/
+404	https://www.linkedin.com/pulse/authenticity-josh-dietrich-vmzne/	1 page(s): /management-fundamentals/
+404	https://www.nike.com/t/air-zoom-alphafly-next-flyknit-ekiden-mens-road-racing-shoes-fNntgL/CI9925-800	1 page(s): /the-best-technology-available/
+404	https://www.texas-connection.org/2024-annual-conference	1 page(s): /leading-through-coaching/
+404	https://www.thinbook.com/shop/p/the-thin-book-of-trust-v2	1 page(s): /understanding-trust/
+429	https://www.linkedin.com/in/ACoAAAJVh5oBzihWVmVHQp9XjWMSowrTo3RkylA?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAJVh5oBzihWVmVHQp9XjWMSowrTo3RkylA	1 page(s): /the-story-of-doug/
+429	https://www.linkedin.com/in/ACoAAAOa-vMBO9jvYVQFvLW18qjx4ljgSyJYx4s?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAOa-vMBO9jvYVQFvLW18qjx4ljgSyJYx4s	12 page(s): /be-a-raven/, /credentials-matter/, /doing-less/, /embracing-intuition/
+429	https://www.linkedin.com/in/ACoAAAqSKvcBMzxynixf0Pl8tA_jINGLxCMwD3c?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAqSKvcBMzxynixf0Pl8tA_jINGLxCMwD3c	1 page(s): /listening-to-the-universe-part-2/
+429	https://www.linkedin.com/in/ACoAABeb1ksB_kKSgUNhmgzBH2enJhzAMMIBcTY?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAABeb1ksB_kKSgUNhmgzBH2enJhzAMMIBcTY	1 page(s): /achieving-and-awakened-awareness/
+429	https://www.linkedin.com/in/ACoAAE7U2mcB_YEylJm8wMRWA-VEKz-ELBKm3YU?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAE7U2mcB_YEylJm8wMRWA-VEKz-ELBKm3YU	1 page(s): /welcome-josh-enjoy-your-stay/
+429	https://www.linkedin.com/in/alexander-love-21ab209/	1 page(s): /on-the-path/
+429	https://www.linkedin.com/in/brenebrown/	1 page(s): /feedback-is-a-gift/
+429	https://www.linkedin.com/in/brianknotts?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAi1GEB7WFOaAuOTAMcIcDYAjbZREBUCSg	2 page(s): /cultivating-wonder/, /rethinking-retirement/
+429	https://www.linkedin.com/in/carly-kay?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACGWFPABWQTvEOsnn7go-Q8b6vVW7R4j6_Q	1 page(s): /listening-to-the-universe-part-2/
+429	https://www.linkedin.com/in/carolharrisfike/	1 page(s): /on-the-path/
+429	https://www.linkedin.com/in/charlesfeltman?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAqaugB40aoVjpPQD1uzdg72Ojg5YmIiEw	1 page(s): /understanding-trust/
+429	https://www.linkedin.com/in/croftedwards/	1 page(s): /on-the-path/
+429	https://www.linkedin.com/in/deanneprymek/	1 page(s): /on-the-path/
+429	https://www.linkedin.com/in/giadacentofanti?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAGHJVoBKCyPmjNAMSt_4yYyha9gzMY7gng	4 page(s): /be-a-raven/, /best-of-2024/, /listening-to-the-universe-part-2/, /summer-reading/
+429	https://www.linkedin.com/in/harrykidder?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAACF11sB09O5FkWSruCU2sF-0x9PK8oi7y4	1 page(s): /social-connections/
+429	https://www.linkedin.com/in/heroicbrian/	1 page(s): /brain-energy/
+429	https://www.linkedin.com/in/heroicbrian?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAFSTUBoypsmRgHcGcAFyZkMOqR5cBqWts	2 page(s): /arete/, /what-should-i-do/
+429	https://www.linkedin.com/in/ilaedgar?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAR4cMB1zAwsRPh4GvcoioBcLnger-iNIY	1 page(s): /understanding-trust/
+429	https://www.linkedin.com/in/janekerschner/	1 page(s): /on-the-path/
+429	https://www.linkedin.com/in/jeffdavison1/	1 page(s): /unexpected-success/
+429	https://www.linkedin.com/in/jjbartels?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAABzyZIBygGopNVdNH9xYreNcVNsiwNYdqM	1 page(s): /when-the-world-changes-overnight/
+429	https://www.linkedin.com/in/joelsackett?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAABgXKsBLmII7NVDvU-G1-TtWzxdDEMQCXs	1 page(s): /desktop-detox/
+429	https://www.linkedin.com/in/joseph-street?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAE2SVoBdgtMEtuROPj6-mGhZLDkIV2N4Jk	1 page(s): /listening-to-the-universe-part-3/
+429	https://www.linkedin.com/in/joshuadietrich/	2 page(s): /about/, /coaching-discovery/
+429	https://www.linkedin.com/in/julio-olalla-566a6633/	2 page(s): /feedback-is-a-gift/, /on-the-path/
+429	https://www.linkedin.com/in/karibranjord?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAACY1UcB9OQHBGP61H029uvrT2OyKjiJDWk	2 page(s): /desktop-detox/, /public-speaking/
+429	https://www.linkedin.com/in/katrin-charlton?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAABiCA8BKQrSb8U6Ydz5hrGiaOVT4F1osr0	1 page(s): /listening-to-the-universe-part-2/
+429	https://www.linkedin.com/in/kimberlydietrichwestrich?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAADLaxsBiecfOAsxW1oDvaG0yiImAdsCob4	1 page(s): /459-2/
+429	https://www.linkedin.com/in/kyrankennedy/	1 page(s): /feedback-is-a-gift/
+429	https://www.linkedin.com/in/kyrankennedy?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAB2ITIBD_8193kVz0k1ERe55mnGMsRhhF4	1 page(s): /public-speaking/
+429	https://www.linkedin.com/in/lauren-moffatt?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAHzqpEB6Hil9AE2vY8eyUmtxw6nNOm1WYU	1 page(s): /listening-to-the-universe-part-2/
+429	https://www.linkedin.com/in/linda-l-fischer-a8a8a910/	1 page(s): /on-the-path/
+429	https://www.linkedin.com/in/lisa-feldman-barrett?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADMyr6cB0xJmZqVXTdnTmhEGO7cRQdOa3bQ	1 page(s): /public-speaking/
+429	https://www.linkedin.com/in/mciverjoe?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAACvzzABPiq0uUi1niwBxVOBkJFRX3ixJes	1 page(s): /thus-spoke-taylor/
+429	https://www.linkedin.com/in/murphyliz/	1 page(s): /feedback-is-a-gift/
+429	https://www.linkedin.com/in/murphyliz?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAElr0kB3TKptKsgZIf7c3FMB3zD64eu2wc	1 page(s): /public-speaking/
+429	https://www.linkedin.com/in/neal-taylor?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAEsTJkB0OCLDOnlCZtYzVoqv4rGiY1kX8o	1 page(s): /listening-to-the-universe-part-2/
+429	https://www.linkedin.com/in/rajasaravanan/	1 page(s): /feedback-is-a-gift/
+429	https://www.linkedin.com/in/rlayton?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAjWO0BfwUUJSfCCqGaZi918mbX8Kf9Fqo	2 page(s): /desktop-detox/, /thus-spoke-taylor/
+429	https://www.linkedin.com/in/rogernierenberg?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAL3_OoBZZvhF7oA01EokgBC5eXrjG7x4eI	1 page(s): /a-story-of-presence/
+429	https://www.linkedin.com/in/rosemarymoorefiander?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAG20IwBHTqNLg_6cUw5Yp1epJqYiouQIhY	1 page(s): /listening-to-the-universe-part-2/
+429	https://www.linkedin.com/in/scotteblin?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAABbAb8BDcSFDfHd7StUN-7KDmo1si7Cp3I	1 page(s): /mirror-mirror/
+429	https://www.linkedin.com/in/sky-nelson-isaacs?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAACqQpQBnfFqdoKPfr64gGQBn1KeJfWYADw	1 page(s): /synchronicity/
+429	https://www.linkedin.com/in/tim-musselman?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAABoEVMB-QxgTNy-kmh7giNA8axCbRLAoxM	1 page(s): /learning-to-read/
+429	https://www.linkedin.com/in/ursula-pottinga?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAdnJEBX_QvBZu5FMo3A0MnCH7doyHQJ_M	6 page(s): /be-a-raven/, /credentials-matter/, /listening-to-the-universe-part-2/, /my-second-year/
+429	https://www.linkedin.com/in/veronica-love-m-ac-dipl-ac-pcc-19152394/	1 page(s): /on-the-path/
+429	https://www.linkedin.com/in/yiorgosboudouris?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAo7LogBMAf6L8UQeNZxZV656RL4aesQeuk	1 page(s): /unlocking-opportunities-how-to-strengthen-your-linkedin-profile/
+429	https://www.linkedin.com/pulse/carpe-diem-josh-dietrich-pcc-ncc/	6 page(s): /carpe-septimana/, /focus-pocus/, /how-to-do-your-taxes/, /productivity-anthology/
+429	https://www.linkedin.com/pulse/carpe-septimana-josh-dietrich-pcc-ncc	9 page(s): /desktop-detox/, /embodying-your-values/, /how-to-do-your-taxes/, /life-accounts/
+429	https://www.linkedin.com/pulse/change-plans-josh-dietrich-9wkxc/	1 page(s): /leading-without-authority/
+429	https://www.linkedin.com/pulse/clearing-fog-josh-dietrich-pcc-ncc/	9 page(s): /best-of-2023/, /celebrating-three-years/, /golden-mean/, /my-second-year/
+429	https://www.linkedin.com/pulse/coaching-discovery-josh-dietrich-dbjbe/	2 page(s): /credentials-matter/, /leading-through-coaching/
+429	https://www.linkedin.com/pulse/coaching-ontologically-josh-dietrich-pcc-ncc/	11 page(s): /best-of-2023/, /by-request/, /coaching-discovery/, /desktop-detox/
+429	https://www.linkedin.com/pulse/colorado-josh-dietrich-ntgze	2 page(s): /2025-highlights/, /walkabout-update/
+429	https://www.linkedin.com/pulse/conquering-your-calendar-josh-dietrich-pcc-ncc	6 page(s): /creating-space/, /focus-pocus/, /productivity-anthology/, /strengthening-strategic/
+429	https://www.linkedin.com/pulse/council-joshes-josh-dietrich-nqdfe/	4 page(s): /building-your-council/, /colorado/, /the-unwinding-of-an-athlete/, /walkabout-update/
+429	https://www.linkedin.com/pulse/courageous-conversations-josh-dietrich-8xqge	3 page(s): /management-fundamentals/, /summer-reading/, /understanding-trust/
+429	https://www.linkedin.com/pulse/creating-space-josh-dietrich-pcc-ncc-pe2nc/	3 page(s): /best-of-2023/, /happy-new-year/, /unlocking-opportunities-how-to-strengthen-your-linkedin-profile/
+429	https://www.linkedin.com/pulse/cultivating-wonder-josh-dietrich-pcc-cntc-ncc-zh49e/	11 page(s): /a-story-of-presence/, /an-abundance-of-gratitude/, /dragonfly/, /elevating-consciousness/
+429	https://www.linkedin.com/pulse/cut-me-some-slack-josh-dietrich-acc-ncc/	4 page(s): /desktop-detox/, /productivity-anthology/, /top-ten-blog-posts-of-2022/, /your-personal-board-of-directors/
+429	https://www.linkedin.com/pulse/decisions-josh-dietrich/	2 page(s): /on-hiring/, /the-wisdom-in-your-body/
+429	https://www.linkedin.com/pulse/delegation-101-josh-dietrich	2 page(s): /management-fundamentals/, /taking-initiative/
+429	https://www.linkedin.com/pulse/delegation-101-josh-dietrich/	2 page(s): /by-request/, /your-360-feedback/
+429	https://www.linkedin.com/pulse/delegation-101-josh-dietrich/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3Bw%2F2rawGuQaOY3v5lCGLVRA%3D%3D	1 page(s): /from-operational-to-strategic/
+429	https://www.linkedin.com/pulse/delegation-102-josh-dietrich	7 page(s): /384-2/, /coaching-ontologically/, /i-do-declare/, /management-fundamentals/
+429	https://www.linkedin.com/pulse/delegation-102-josh-dietrich/	1 page(s): /we-are-always-growing/
+429	https://www.linkedin.com/pulse/desktop-detox-josh-dietrich-pcc-ncc	1 page(s): /creating-space/
+429	https://www.linkedin.com/pulse/desktop-detox-josh-dietrich-pcc-ncc/	1 page(s): /productivity-anthology/
+429	https://www.linkedin.com/pulse/discovering-our-strengths-josh-dietrich	8 page(s): /a-funny-thing-happened-on-vacation/, /authenticity/, /be-a-raven/, /learning-to-read/
+429	https://www.linkedin.com/pulse/do-i-say-josh-dietrich/	3 page(s): /a-funny-thing-happened-on-vacation/, /cut-me-some-slack/, /your-360-feedback/
+429	https://www.linkedin.com/pulse/do-josh-dietrich-pcc-ncc/	2 page(s): /how-to-do-your-taxes/, /productivity-anthology/
+429	https://www.linkedin.com/pulse/doing-less-josh-dietrich-pcc-cntc-ncc-sipde	2 page(s): /best-of-2024/, /more-doing-less/
+429	https://www.linkedin.com/pulse/doing-less-josh-dietrich-pcc-cntc-ncc-sipde/	2 page(s): /exploring-integration/, /summer-reading/
+429	https://www.linkedin.com/pulse/elevating-consciousness-josh-dietrich-x39ue/	1 page(s): /lucid-dreaming/
+429	https://www.linkedin.com/pulse/embodying-your-values-josh-dietrich-pcc-ncc	12 page(s): /arete/, /authenticity/, /best-of-2023/, /building-your-council/
+429	https://www.linkedin.com/pulse/embracing-intuition-josh-dietrich-bcpoe	13 page(s): /a-love-story/, /a-story-of-presence/, /achieving-and-awakened-awareness/, /best-of-2024/
+429	https://www.linkedin.com/pulse/enemies-delegation-josh-dietrich	2 page(s): /management-fundamentals/, /taking-initiative/
+429	https://www.linkedin.com/pulse/enemies-delegation-josh-dietrich/	1 page(s): /taking-initiative/
+429	https://www.linkedin.com/pulse/expanding-awareness-josh-dietrich-pcc-ncc/	1 page(s): /what-ai-can-teach-us-about-ni/
+429	https://www.linkedin.com/pulse/exploring-integration-josh-dietrich-2zfze/	5 page(s): /achieving-and-awakened-awareness/, /as-measured-by/, /refining-teliodosis/, /tales-from-the-road/
+429	https://www.linkedin.com/pulse/face-to-face-josh-dietrich-acc-ncc/	3 page(s): /listening-to-the-universe-part-3/, /management-fundamentals/, /missing-conversations/
+429	https://www.linkedin.com/pulse/fathers-day-gratitude-josh-dietrich/	1 page(s): /more-of-what-you-love/
+429	https://www.linkedin.com/pulse/feedback-gift-josh-dietrich-acc-ncc	6 page(s): /384-2/, /building-teams/, /management-fundamentals/, /raising-awareness/
+429	https://www.linkedin.com/pulse/feedback-gift-josh-dietrich-acc-ncc/	1 page(s): /authenticity/
+429	https://www.linkedin.com/pulse/flashlights-floodlights-josh-dietrich-pcc-ncc/	1 page(s): /listening-to-the-universe-part-2/
+429	https://www.linkedin.com/pulse/focus-pocus-josh-dietrich-pcc-ncc/	4 page(s): /creating-space/, /desktop-detox/, /missing-conversations/, /productivity-anthology/
+429	https://www.linkedin.com/pulse/from-operational-strategic-josh-dietrich-i2jwe/	2 page(s): /2025-highlights/, /management-fundamentals/
+429	https://www.linkedin.com/pulse/from-subject-object-josh-dietrich-pcc-ncc-nebfc/	4 page(s): /just-a-little-patience/, /openness/, /transformation/, /your-future-self/
+429	https://www.linkedin.com/pulse/funny-thing-happened-vacation-josh-dietrich-e81ye/	1 page(s): /dragonfly/
+429	https://www.linkedin.com/pulse/gem-within-executive-presence-josh-dietrich-satfc/	1 page(s): /unnesting/
+429	https://www.linkedin.com/pulse/go-tour-josh-dietrich	4 page(s): /feedback-is-a-gift/, /gooooooooooooooooooooooals/, /strengthening-strategic/, /your-first-90-days/
+429	https://www.linkedin.com/pulse/go-tour-josh-dietrich/	2 page(s): /onstage-and-backstage/, /top-ten-blog-posts-of-2022/
+429	https://www.linkedin.com/pulse/golden-mean-josh-dietrich-pcc-ncc/	4 page(s): /exploring-integration/, /from-subject-to-object/, /listening-to-the-universe-part-2/, /your-first-90-days/
+429	https://www.linkedin.com/pulse/gooooooooooooooooooooooals-josh-dietrich-pcc-ncc/	14 page(s): /as-measured-by/, /be-a-liver/, /carpe-diem/, /carpe-septimana/
+429	https://www.linkedin.com/pulse/great-leaders-speak-last-josh-dietrich-yqpje/	4 page(s): /beneficial-communication/, /best-of-2024/, /building-teams/, /management-fundamentals/
+429	https://www.linkedin.com/pulse/happy-new-year-josh-dietrich-pcc-ncc-fyyhc/	4 page(s): /best-of-2023/, /doing-less/, /listening-to-the-universe-part-2/, /unlocking-opportunities-how-to-strengthen-your-linkedin-profile/
+429	https://www.linkedin.com/pulse/heros-journey-josh-dietrich-pcc-ncc/	3 page(s): /journal-of-awareness/, /missing-conversations/, /my-second-year/
+429	https://www.linkedin.com/pulse/hiring-josh-dietrich-pcc-ncc	1 page(s): /management-fundamentals/
+429	https://www.linkedin.com/pulse/how-do-your-taxes-josh-dietrich-rrnke	1 page(s): /productivity-anthology/
+429	https://www.linkedin.com/pulse/how-you-josh-dietrich/	3 page(s): /be-a-raven/, /i-do-declare/, /top-ten-blog-posts-of-2022/
+429	https://www.linkedin.com/pulse/i-do-declare-josh-dietrich-acc-ncc/	4 page(s): /384-2/, /beneficial-communication/, /coaching-ontologically/, /missing-conversations/
+429	https://www.linkedin.com/pulse/i-dont-know-how-put-josh-dietrich	3 page(s): /brain-energy/, /f-clearing-the-fog/, /lucid-dreaming/
+429	https://www.linkedin.com/pulse/its-called-breakfast-reason-josh-dietrich-pcc-ncc/	1 page(s): /brain-energy/
+429	https://www.linkedin.com/pulse/journal-awareness-josh-dietrich-pcc-ncc	7 page(s): /best-of-2023/, /happy-new-year/, /life-accounts/, /missing-conversations/
+429	https://www.linkedin.com/pulse/just-facts-josh-dietrich-acc-ncc	7 page(s): /384-2/, /beneficial-communication/, /coaching-ontologically/, /i-do-declare/
+429	https://www.linkedin.com/pulse/just-little-patience-josh-dietrich-tcxce/	2 page(s): /achieving-and-awakened-awareness/, /waiting/
+429	https://www.linkedin.com/pulse/leading-love-josh-dietrich-tbkze/	2 page(s): /2025-highlights/, /meditations-on-ogha-pooge/
+429	https://www.linkedin.com/pulse/leading-through-coaching-josh-dietrich-qeeve/	3 page(s): /by-request/, /management-fundamentals/, /reliability/
+429	https://www.linkedin.com/pulse/lets-move-josh-dietrich-pcc-ncc/	3 page(s): /f-clearing-the-fog/, /missing-conversations/, /the-wisdom-in-your-body/
+429	https://www.linkedin.com/pulse/life-accounts-josh-dietrich-pcc-cntc-ncc-skh4e	3 page(s): /as-measured-by/, /celebrating-three-years/, /summer-thinking/
+429	https://www.linkedin.com/pulse/life-calling-josh-dietrich-acc-ncc/	10 page(s): /brain-energy/, /coaching-discovery/, /embodying-your-values/, /life-accounts/
+429	https://www.linkedin.com/pulse/listening-universe-josh-dietrich-pcc-ncc	3 page(s): /arete/, /my-second-year/, /work-life-balance-is-a-myth/
+429	https://www.linkedin.com/pulse/listening-universe-josh-dietrich-pcc-ncc/	2 page(s): /listening-to-the-universe-part-2/, /listening-to-the-universe-part-3/
+429	https://www.linkedin.com/pulse/listening-universe-part-2-josh-dietrich-pcc-cntc-ncc-jkoue/	5 page(s): /celebrating-three-years/, /coaching-discovery/, /leading-through-coaching/, /the-wisdom-in-your-body/
+429	https://www.linkedin.com/pulse/listening-universe-part-3-josh-dietrich-frqfe	3 page(s): /best-of-2024/, /celebrating-three-years/, /transformation/
+429	https://www.linkedin.com/pulse/listening-universe-part-3-josh-dietrich-frqfe/	2 page(s): /authenticity/, /great-leaders-speak-last/
+429	https://www.linkedin.com/pulse/liver-josh-dietrich-vbrae	1 page(s): /summer-reading/
+429	https://www.linkedin.com/pulse/living-heroically-josh-dietrich-pcc-ncc	6 page(s): /459-2/, /arete/, /building-resilience/, /f-clearing-the-fog/
+429	https://www.linkedin.com/pulse/love-reading-josh-dietrich/	2 page(s): /lucid-dreaming/, /who-are-your-heroes/
+429	https://www.linkedin.com/pulse/love-story-josh-dietrich-awdye/	2 page(s): /2025-highlights/, /meditations-on-ogha-pooge/
+429	https://www.linkedin.com/pulse/magical-meetings-josh-dietrich-pcc-ncc/	2 page(s): /best-of-2023/, /productivity-anthology/
+429	https://www.linkedin.com/pulse/management-fundamentals-josh-dietrich-9oxme/	1 page(s): /2025-highlights/
+429	https://www.linkedin.com/pulse/managing-managers-josh-dietrich-pcc-ncc/	1 page(s): /management-fundamentals/
+429	https://www.linkedin.com/pulse/master-his-emissary-josh-dietrich-vdfye/	1 page(s): /2025-highlights/
+429	https://www.linkedin.com/pulse/meaningful-conversations-josh-dietrich-6weoe/	3 page(s): /management-fundamentals/, /social-connections/, /two-ears-one-mouth-one-brain/
+429	https://www.linkedin.com/pulse/measured-josh-dietrich-wzzpe/	2 page(s): /celebrating-three-years/, /management-fundamentals/
+429	https://www.linkedin.com/pulse/meditation-has-gone-mainstream-josh-dietrich-pcc-ncc/	5 page(s): /f-clearing-the-fog/, /presence/, /refining-teliodosis/, /the-gem-within-executive-presence/
+429	https://www.linkedin.com/pulse/meditations-ogha-pooge-josh-dietrich-n13rc/	1 page(s): /welcoming/
+429	https://www.linkedin.com/pulse/mirage-mountain-biker-josh-dietrich-9rlne/	3 page(s): /lucid-dreaming/, /unnesting/, /zero-based-living/
+429	https://www.linkedin.com/pulse/mirror-josh-dietrich-1aw6e/	2 page(s): /the-gem-within-executive-presence/, /two-ears-one-mouth-one-brain/
+429	https://www.linkedin.com/pulse/missing-conversations-josh-dietrich-pcc-ncc/	3 page(s): /management-fundamentals/, /the-gift-of-time/, /understanding-trust/
+429	https://www.linkedin.com/pulse/more-doing-less-josh-dietrich-pcc-cntc-ncc-lz76c/	3 page(s): /best-of-2024/, /cultivating-wonder/, /summer-reading/
+429	https://www.linkedin.com/pulse/more-what-you-love-josh-dietrich-acc-ncc/	1 page(s): /management-fundamentals/
+429	https://www.linkedin.com/pulse/mothers-day-gratitude-josh-dietrich/	1 page(s): /tales-from-the-road/
+429	https://www.linkedin.com/pulse/my-first-year-josh-dietrich-acc-ncc/	3 page(s): /coaching-discovery/, /my-second-year/, /top-ten-blog-posts-of-2022/
+429	https://www.linkedin.com/pulse/my-second-year-josh-dietrich-pcc-ncc-irnue/	2 page(s): /best-of-2023/, /coaching-discovery/
+429	https://www.linkedin.com/pulse/navigating-troubled-waters-josh-dietrich-npyne/	2 page(s): /2025-highlights/, /integrity/
+429	https://www.linkedin.com/pulse/neuroplasticity-josh-dietrich-77hee/	11 page(s): /acknowledge-honour-release/, /celebrating-three-years/, /credentials-matter/, /leading-with-love/
+429	https://www.linkedin.com/pulse/neuroscience-doing-being-josh-dietrich-zglye/	9 page(s): /achieving-and-awakened-awareness/, /acknowledge-honour-release/, /celebrating-three-years/, /learning-to-read/
+429	https://www.linkedin.com/pulse/never-grow-up-josh-dietrich-pcc-ncc/	1 page(s): /thus-spoke-taylor/
+429	https://www.linkedin.com/pulse/new-manager-feeling-unsure-josh-dietrich-ridde/	1 page(s): /management-fundamentals/
+429	https://www.linkedin.com/pulse/onstage-backstage-josh-dietrich/	1 page(s): /management-fundamentals/
+429	https://www.linkedin.com/pulse/openness-josh-dietrich-eb2ce/	1 page(s): /elevating-consciousness/
+429	https://www.linkedin.com/pulse/overcoming-overwhelm-josh-dietrich/	5 page(s): /doing-less/, /productivity-anthology/, /to-do-or-not-to-do/, /top-ten-blog-posts-of-2022/
+429	https://www.linkedin.com/pulse/overcoming-procrastination-josh-dietrich/	5 page(s): /coaching-ontologically/, /focus-pocus/, /golden-mean/, /how-to-do-your-taxes/
+429	https://www.linkedin.com/pulse/path-josh-dietrich/	6 page(s): /459-2/, /credentials-matter/, /meditations-on-ogha-pooge/, /my-first-year/
+429	https://www.linkedin.com/pulse/please-shorten-your-meetings-josh-dietrich/	3 page(s): /conquering-your-calendar/, /magical-meetings/, /top-ten-blog-posts-of-2022/
+429	https://www.linkedin.com/pulse/presence-josh-dietrich-2ipxe/	9 page(s): /a-story-of-presence/, /achieving-and-awakened-awareness/, /beneficial-communication/, /elevating-consciousness/
+429	https://www.linkedin.com/pulse/prince-kohaku-josh-dietrich-pcc-ncc-vcvtc/	6 page(s): /best-of-2023/, /leading-without-authority/, /meditations-on-ogha-pooge/, /presence/
+429	https://www.linkedin.com/pulse/productivity-anthology-josh-dietrich-pcc-ncc/	7 page(s): /achieving-and-awakened-awareness/, /best-of-2023/, /by-request/, /doing-less/
+429	https://www.linkedin.com/pulse/promises-josh-dietrich-pcc-ncc/	1 page(s): /coaching-ontologically/
+429	https://www.linkedin.com/pulse/promote-yourself-josh-dietrich-pcc-ncc/	5 page(s): /412-2/, /best-of-2023/, /what-ai-can-teach-us-about-ni/, /when-the-world-changes-overnight/
+429	https://www.linkedin.com/pulse/put-your-white-belt-josh-dietrich/	2 page(s): /412-2/, /management-fundamentals/
+429	https://www.linkedin.com/pulse/raising-awareness-josh-dietrich-pcc-ncc/	2 page(s): /a-funny-thing-happened-on-vacation/, /elevating-consciousness/
+429	https://www.linkedin.com/pulse/raven-josh-dietrich-lgbpe/	3 page(s): /a-historic-week/, /meaningful-conversations/, /tales-from-the-road/
+429	https://www.linkedin.com/pulse/refining-teliodosis-josh-dietrich-ikeje/	6 page(s): /achieving-and-awakened-awareness/, /integrity/, /learning-to-read/, /mastery/
+429	https://www.linkedin.com/pulse/remembering-jack-josh-dietrich/	2 page(s): /meaningful-conversations/, /top-ten-blog-posts-of-2022/
+429	https://www.linkedin.com/pulse/reorienting-josh-dietrich-dvb0e/	1 page(s): /the-gift-of-time/
+429	https://www.linkedin.com/pulse/request-josh-dietrich-v38ze/	4 page(s): /best-of-2024/, /from-operational-to-strategic/, /management-fundamentals/, /reliability/
+429	https://www.linkedin.com/pulse/rest-josh-dietrich-x1dqe/	1 page(s): /2025-highlights/
+429	https://www.linkedin.com/pulse/rethinking-retirement-josh-dietrich-eekve/	1 page(s): /best-of-2024/
+429	https://www.linkedin.com/pulse/rider-elephant-josh-dietrich/	1 page(s): /what-ai-can-teach-us-about-ni/
+429	https://www.linkedin.com/pulse/rome-wasnt-built-day-josh-dietrich/	1 page(s): /acknowledge-honour-release/
+429	https://www.linkedin.com/pulse/running-bunnies-josh-dietrich/	1 page(s): /running-with-the-turtles/
+429	https://www.linkedin.com/pulse/running-turtles-josh-dietrich-weyae/	3 page(s): /building-your-council/, /just-a-little-patience/, /the-unwinding-of-an-athlete/
+429	https://www.linkedin.com/pulse/shared-background-obviousness-josh-dietrich-pcc-ncc-w3fvc/	1 page(s): /by-request/
+429	https://www.linkedin.com/pulse/shifting-perspectives-josh-dietrich/	9 page(s): /beneficial-communication/, /coaching-ontologically/, /running-with-the-turtles/, /top-ten-blog-posts-of-2022/
+429	https://www.linkedin.com/pulse/so-emotional-josh-dietrich-pcc-ncc/	3 page(s): /coaching-ontologically/, /untethered-and-tethered/, /what-ai-can-teach-us-about-ni/
+429	https://www.linkedin.com/pulse/social-connections-josh-dietrich-znq8e/	1 page(s): /achieving-and-awakened-awareness/
+429	https://www.linkedin.com/pulse/stillness-josh-dietrich-q5kze/	1 page(s): /walkabout-update/
+429	https://www.linkedin.com/pulse/story-doug-josh-dietrich-gzhse/	1 page(s): /2025-highlights/
+429	https://www.linkedin.com/pulse/strengthening-connections-josh-dietrich/	5 page(s): /by-request/, /gooooooooooooooooooooooals/, /leading-without-authority/, /management-fundamentals/
+429	https://www.linkedin.com/pulse/strengthening-strategic-josh-dietrich-qvi3e/	2 page(s): /from-operational-to-strategic/, /management-fundamentals/
+429	https://www.linkedin.com/pulse/summer-reading-josh-dietrich-jjzre/	1 page(s): /summer-thinking/
+429	https://www.linkedin.com/pulse/synchronicity-josh-dietrich-j612e/	4 page(s): /achieving-and-awakened-awareness/, /elevating-consciousness/, /magical-gateways/, /navigating-troubled-waters/
+429	https://www.linkedin.com/pulse/take-break-josh-dietrich/	1 page(s): /conquering-your-calendar/
+429	https://www.linkedin.com/pulse/taking-initiative-josh-dietrich-acc-ncc/	1 page(s): /management-fundamentals/
+429	https://www.linkedin.com/pulse/tale-two-paths-josh-dietrich-pcc-ncc/	4 page(s): /management-fundamentals/, /missing-conversations/, /my-second-year/, /reliability/
+429	https://www.linkedin.com/pulse/tales-from-road-josh-dietrich-n52ue/	1 page(s): /walkabout-update/
+429	https://www.linkedin.com/pulse/teliodosis-josh-dietrich-pcc-ncc	16 page(s): /arete/, /as-measured-by/, /be-a-liver-2/, /be-a-liver/
+429	https://www.linkedin.com/pulse/teliodosis-josh-dietrich-pcc-ncc/	3 page(s): /best-of-2023/, /cultivating-wonder/, /listening-to-the-universe-part-3/
+429	https://www.linkedin.com/pulse/thus-spoke-taylor-josh-dietrich-ayv8e/	4 page(s): /be-a-liver-2/, /be-a-liver/, /be-a-raven/, /best-of-2024/
+429	https://www.linkedin.com/pulse/top-ten-blog-posts-2022-josh-dietrich-pcc-ncc	2 page(s): /2025-highlights/, /to-do-or-not-to-do/
+429	https://www.linkedin.com/pulse/transformation-josh-dietrich-kysne/	2 page(s): /anchor-points/, /dragonfly/
+429	https://www.linkedin.com/pulse/two-ears-one-mouth-brain-josh-dietrich-e021e/	1 page(s): /management-fundamentals/
+429	https://www.linkedin.com/pulse/understanding-trust-josh-dietrich-h1she/	6 page(s): /authenticity/, /building-teams/, /integrity/, /leading-through-coaching/
+429	https://www.linkedin.com/pulse/unnesting-josh-dietrich-byqgc/	4 page(s): /meditations-on-ogha-pooge/, /the-pendulum/, /untethered-and-tethered/, /welcoming/
+429	https://www.linkedin.com/pulse/unwinding-athlete-josh-dietrich-gjd7e/	4 page(s): /elevating-consciousness/, /mastery/, /meditations-on-ogha-pooge/, /unnesting/
+429	https://www.linkedin.com/pulse/valuing-every-voice-josh-dietrich-pcc-ncc	1 page(s): /magical-meetings/
+429	https://www.linkedin.com/pulse/walkabout-update-josh-dietrich-onibc/	4 page(s): /2025-highlights/, /ten-hours/, /the-master-and-his-emissary/, /unnesting/
+429	https://www.linkedin.com/pulse/walking-josh-dietrich-q9u5e/	6 page(s): /best-of-2024/, /colorado/, /more-of-less/, /reorienting/
+429	https://www.linkedin.com/pulse/we-always-growing-josh-dietrich-pcc-ncc	4 page(s): /from-subject-to-object/, /growing-up-again/, /my-service-shift/, /never-grow-up/
+429	https://www.linkedin.com/pulse/we-can-do-hard-things-josh-dietrich-acc-ncc/	12 page(s): /achieving-and-awakened-awareness/, /coaching-ontologically/, /expanding-awareness/, /just-the-facts/
+429	https://www.linkedin.com/pulse/welcome-josh-enjoy-your-stay-josh-dietrich-1oyue/	1 page(s): /meditations-on-ogha-pooge/
+429	https://www.linkedin.com/pulse/what-should-i-do-josh-dietrich-pcc-ncc/	1 page(s): /more-doing-less/
+429	https://www.linkedin.com/pulse/who-your-heroes-josh-dietrich-acc-ncc/	2 page(s): /lucid-dreaming/, /prince-kohaku/
+429	https://www.linkedin.com/pulse/wisdom-your-body-josh-dietrich-5zare/	2 page(s): /achieving-and-awakened-awareness/, /navigating-troubled-waters/
+429	https://www.linkedin.com/pulse/work-life-balance-myth-josh-dietrich-pcc-cntc-ncc-kurae	3 page(s): /a-funny-thing-happened-on-vacation/, /anchor-points/, /best-of-2024/
+429	https://www.linkedin.com/pulse/work-life-balance-myth-josh-dietrich-pcc-cntc-ncc-kurae/	2 page(s): /exploring-integration/, /summer-reading/
+429	https://www.linkedin.com/pulse/your-360-feedback-josh-dietrich-acc-ncc/	1 page(s): /management-fundamentals/
+429	https://www.linkedin.com/pulse/your-first-90-days-josh-dietrich-2gxie/	2 page(s): /management-fundamentals/, /reorienting/
+429	https://www.linkedin.com/pulse/your-future-self-josh-dietrich-pcc-ncc-tkthc/	4 page(s): /doing-less/, /listening-to-the-universe-part-3/, /summer-thinking/, /the-council-of-joshes/
+429	https://www.linkedin.com/pulse/your-personal-board-directors-josh-dietrich-acc-ncc/	2 page(s): /face-to-face/, /the-council-of-joshes/
+429	https://www.linkedin.com/pulse/youre-leader-you-think-josh-dietrich-pcc-ncc	2 page(s): /celebrating-three-years/, /your-first-90-days/
+429	https://www.linkedin.com/pulse/youre-leader-you-think-josh-dietrich-pcc-ncc/	2 page(s): /anchor-points/, /best-of-2023/
+429	https://www.linkedin.com/pulse/zen-art-feedback-josh-dietrich-acc-ncc/	6 page(s): /a-tale-of-two-paths/, /building-teams/, /face-to-face/, /management-fundamentals/
+429	https://www.linkedin.com/pulse/zones-engagement-josh-dietrich-vxxmc/	1 page(s): /fiercely-loyal/
+503	https://amzn.to/3yp9omC	1 page(s): /its-the-most-wonderful-time-of-the-year/
+999	https://www.linkedin.com/company/newfield-network/	4 page(s): /coaching-discovery/, /embracing-intuition/, /strengthening-strategic/, /the-wisdom-in-your-body/
+999	https://www.linkedin.com/in/ACoAAA2bvpAB80Ol4iFjXp2V1z4Q18RZIUeCfFM?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAA2bvpAB80Ol4iFjXp2V1z4Q18RZIUeCfFM	1 page(s): /beneficial-communication/
+999	https://www.linkedin.com/in/ACoAAA3Y9GoBMwRQXkkoljhtxs_4-eBzd_xAaB4?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAA3Y9GoBMwRQXkkoljhtxs_4-eBzd_xAaB4	1 page(s): /beneficial-communication/
+999	https://www.linkedin.com/in/ACoAAA6i9-MBWd9C47MyCGPYpRxhKmN81t8VsK0?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAA6i9-MBWd9C47MyCGPYpRxhKmN81t8VsK0	1 page(s): /the-story-of-doug/
+999	https://www.linkedin.com/in/ACoAAAAGy64B0P9wWqpymMnPpew8n-CM98ufP8o?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAGy64B0P9wWqpymMnPpew8n-CM98ufP8o	1 page(s): /the-wisdom-in-your-body/
+999	https://www.linkedin.com/in/ACoAAAALB8kBS0kDZ_CExiq8lpk5dqTFHaGYe-U?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAALB8kBS0kDZ_CExiq8lpk5dqTFHaGYe-U	1 page(s): /fiercely-loyal/
+999	https://www.linkedin.com/in/ACoAAAAhKREBtt1eNPXIHL_65KNcmCk3WYjxzoo?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAhKREBtt1eNPXIHL_65KNcmCk3WYjxzoo	1 page(s): /listening-to-the-universe-part-2/
+999	https://www.linkedin.com/in/ACoAAAAlyrwB4zztyvjC8NuutUVTIsihm4JDtIo?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAlyrwB4zztyvjC8NuutUVTIsihm4JDtIo	1 page(s): /your-future-self/
+999	https://www.linkedin.com/in/ACoAAAAqKuAB595VPGyG9rJvYMs9ndgSuGRTAxE?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAqKuAB595VPGyG9rJvYMs9ndgSuGRTAxE	1 page(s): /journal-of-awareness/
+999	https://www.linkedin.com/in/ACoAAABBrHsBwvkR1fn62r-X_mtdffQ1NObNz3k?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAABBrHsBwvkR1fn62r-X_mtdffQ1NObNz3k	1 page(s): /listening-to-the-universe-part-3/
+999	https://www.linkedin.com/in/ACoAAAEawRIBksbUR4UdKia7L5_httKs6Ub2uBg?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAEawRIBksbUR4UdKia7L5_httKs6Ub2uBg	1 page(s): /social-connections/
+999	https://www.linkedin.com/in/ACoAAAHn5l4BGKi4iBzg2pe_YnDANzn1bmzCWQM?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAHn5l4BGKi4iBzg2pe_YnDANzn1bmzCWQM	1 page(s): /the-story-of-doug/
