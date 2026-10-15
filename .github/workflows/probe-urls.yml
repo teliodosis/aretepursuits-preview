@@ -1,0 +1,24 @@
+name: probe-urls
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 - <<'PY'
+          import json, subprocess
+          out = []
+          for u in json.load(open('content/probe-urls.json')):
+              r = subprocess.run(['curl', '-s', '-L', '-o', '/dev/null', '-m', '25', '-A', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36', '-w', '%{http_code} %{content_type} %{url_effective}', u], capture_output=True, text=True)
+              out.append(r.stdout + '\t' + u)
+          open('reports/probe-urls.txt', 'w').write('\n'.join(out) + '\n')
+          PY
+      - run: |
+          git config user.name "content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports
+          git diff --cached --quiet || git commit -q -m "Probe URLs"
+          git pull -q --rebase && git push
