@@ -1,0 +1,476 @@
+/schedule/25 301 https://calendly.com/aretepursuits/25min
+/schedule/50 301 https://calendly.com/aretepursuits/50min
+/schedule/80 301 https://calendly.com/aretepursuits/80min
+/schedule/blog 301 https://calendly.com/aretepursuits/25min
+/schedule/website 301 https://calendly.com/aretepursuits/25min
+/schedule/doctums 301 https://calendly.com/aretepursuits/25min
+/schedule/discovery 301 https://calendly.com/aretepursuits/25min
+/schedule/session 301 https://calendly.com/aretepursuits/session
+/schedule/session100 301 https://calendly.com/aretepursuits/session100
+/schedule/session200 301 https://calendly.com/aretepursuits/session200
+/schedule/individual 301 https://calendly.com/aretepursuits/coaching-session-individual
+/schedule/disc 301 https://calendly.com/aretepursuits/disc-debrief
+/schedule/consciousness 301 https://calendly.com/aretepursuits/consciousness
+/schedule/coaching-friends-family 301 https://calendly.com/aretepursuits/coaching-friends-family
+/five-behaviors 301 https://aretepursuits.com/
+/everything-disc 301 https://aretepursuits.com/disc-facilitation
+/productivity-boot-camp 301 https://aretepursuits.com/
+/productivity-mastery 404 
+/corporate-coaching 301 https://aretepursuits.com/executive-coaching
+/412-2/teliodosis 301 https://aretepursuits.com/412-2
+/465-2/ 301 https://aretepursuits.com/golden-mean/
+/root 301 https://aretepursuits.com/
+/blog/f.rss 301 https://aretepursuits.com/blog/feed
+/services/ 200 
+/executive-coaching 301 https://aretepursuits.com/services/executive-coaching/
+/disc-facilitation 301 https://aretepursuits.com/services/disc-facilitation/
+/leadership-workshops 301 https://aretepursuits.com/services/leadership-workshops/
+/life-coaching 301 https://aretepursuits.com/services/life-coaching/
+/360-feedback 301 https://aretepursuits.com/services/360-feedback/
+/?page_id=57 301 https://aretepursuits.com/services/life-coaching/
+/?page_id=62 301 https://aretepursuits.com/services/leadership-workshops/
+/?page_id=80 301 https://aretepursuits.com/contact/
+/?page_id=86 301 https://aretepursuits.com/services/executive-coaching/
+/?page_id=87 301 https://aretepursuits.com/resources/
+/?page_id=88 301 https://aretepursuits.com/about/
+/?page_id=89 301 https://aretepursuits.com/blog/
+/?page_id=90 301 https://aretepursuits.com/services/disc-facilitation/
+/?page_id=91 301 https://aretepursuits.com/services/360-feedback/
+/blog/feed/ 200 
+/feed/ 200 
+/blog/f/waiting 404 
+/blog/waiting 301 https://aretepursuits.com/waiting/
+/blog/f/gentleness 404 
+/blog/gentleness 301 https://aretepursuits.com/gentleness/
+/blog/f/leading-without-authority 404 
+/blog/leading-without-authority 301 https://aretepursuits.com/leading-without-authority/
+/blog/f/change-of-plans 404 
+/blog/change-of-plans 301 https://aretepursuits.com/change-of-plans/
+/blog/f/allowing-everything-to-be-as-it-is 404 
+/blog/allowing-everything-to-be-as-it-is 301 https://aretepursuits.com/allowing-everything-to-be-as-it-is/
+/blog/f/untethered-and-tethered 404 
+/blog/untethered-and-tethered 301 https://aretepursuits.com/untethered-and-tethered/
+/blog/f/the-pendulum 404 
+/blog/the-pendulum 301 https://aretepursuits.com/the-pendulum/
+/blog/f/welcoming 404 
+/blog/welcoming 301 https://aretepursuits.com/welcoming/
+/blog/f/meditations-on-ogha-pooge 404 
+/blog/meditations-on-ogha-pooge 301 https://aretepursuits.com/meditations-on-ogha-pooge/
+/blog/f/unnesting 404 
+/blog/unnesting 301 https://aretepursuits.com/unnesting/
+/blog/f/the-gem-within-executive-presence 404 
+/blog/the-gem-within-executive-presence 301 https://aretepursuits.com/the-gem-within-executive-presence/
+/blog/f/growing-up-again 404 
+/blog/growing-up-again 301 https://aretepursuits.com/growing-up-again/
+/blog/f/more-of-less 404 
+/blog/more-of-less 301 https://aretepursuits.com/more-of-less/
+/blog/f/same-coach-wider-door 404 
+/blog/same-coach-wider-door 301 https://aretepursuits.com/same-coach-wider-door/
+/blog/f/fiercely-loyal 404 
+/blog/fiercely-loyal 301 https://aretepursuits.com/fiercely-loyal/
+/blog/f/zones-of-engagement 404 
+/blog/zones-of-engagement 301 https://aretepursuits.com/zones-of-engagement/
+/blog/f/acknowledge-honour-release 404 
+/blog/acknowledge-honour-release 301 https://aretepursuits.com/acknowledge-honour-release/
+/blog/f/ten-hours 404 
+/blog/ten-hours 301 https://aretepursuits.com/ten-hours/
+/blog/f/learning-to-read 404 
+/blog/learning-to-read 301 https://aretepursuits.com/learning-to-read/
+/blog/f/my-service-shift 404 
+/blog/my-service-shift 301 https://aretepursuits.com/my-service-shift/
+/blog/f/be-a-liver-2 404 
+/blog/be-a-liver-2 301 https://aretepursuits.com/be-a-liver-2/
+/blog/f/restoring-empathy 404 
+/blog/restoring-empathy 301 https://aretepursuits.com/restoring-empathy/
+/blog/f/zero-based-living 404 
+/blog/zero-based-living 301 https://aretepursuits.com/zero-based-living/
+/blog/f/2025-highlights 404 
+/blog/2025-highlights 301 https://aretepursuits.com/2025-highlights/
+/blog/f/the-best-week-of-my-life 404 
+/blog/the-best-week-of-my-life 301 https://aretepursuits.com/the-best-week-of-my-life/
+/blog/f/vision 404 
+/blog/vision 301 https://aretepursuits.com/vision/
+/blog/f/spreading-joy 404 
+/blog/spreading-joy 301 https://aretepursuits.com/spreading-joy/
+/blog/f/welcome-josh-enjoy-your-stay 404 
+/blog/welcome-josh-enjoy-your-stay 301 https://aretepursuits.com/welcome-josh-enjoy-your-stay/
+/blog/f/leading-with-love 404 
+/blog/leading-with-love 301 https://aretepursuits.com/leading-with-love/
+/blog/f/when-the-world-changes-overnight 404 
+/blog/when-the-world-changes-overnight 301 https://aretepursuits.com/when-the-world-changes-overnight/
+/blog/f/appreciating-your-value 404 
+/blog/appreciating-your-value 429 
+/blog/f/the-story-of-doug 429 
+/blog/the-story-of-doug 429 
+/blog/f/lucid-dreaming 429 
+/blog/lucid-dreaming 429 
+/blog/f/the-mirage-of-the-mountain-biker 429 
+/blog/the-mirage-of-the-mountain-biker 429 
+/blog/f/a-love-story 429 
+/blog/a-love-story 429 
+/blog/f/magical-gateways 429 
+/blog/magical-gateways 429 
+/blog/f/reliability 429 
+/blog/reliability 429 
+/blog/f/the-master-and-his-emissary 429 
+/blog/the-master-and-his-emissary 429 
+/blog/f/rest 429 
+/blog/rest 429 
+/blog/f/elevating-consciousness 429 
+/blog/elevating-consciousness 429 
+/blog/f/the-box 429 
+/blog/the-box 429 
+/blog/f/walkabout-update 429 
+/blog/walkabout-update 429 
+/blog/f/stillness 429 
+/blog/stillness 301 https://aretepursuits.com/stillness/
+/blog/f/mastery 404 
+/blog/mastery 429 
+/blog/f/public-speaking 429 
+/blog/public-speaking 429 
+/blog/f/colorado 429 
+/blog/colorado 429 
+/blog/f/building-teams 429 
+/blog/building-teams 429 
+/blog/f/integrity 429 
+/blog/integrity 429 
+/blog/f/the-gift-of-time 429 
+/blog/the-gift-of-time 429 
+/blog/f/anchor-points 429 
+/blog/anchor-points 429 
+/blog/f/openness 429 
+/blog/openness 429 
+/blog/f/management-fundamentals 429 
+/blog/management-fundamentals 429 
+/blog/f/from-operational-to-strategic 429 
+/blog/from-operational-to-strategic 429 
+/blog/f/navigating-troubled-waters 429 
+/blog/navigating-troubled-waters 429 
+/blog/f/achieving-and-awakened-awareness 429 
+/blog/achieving-and-awakened-awareness 429 
+/blog/f/building-your-council 429 
+/blog/building-your-council 429 
+/blog/f/reorienting 429 
+/blog/reorienting 429 
+/blog/f/synchronicity 429 
+/blog/synchronicity 429 
+/blog/f/best-of-2024 429 
+/blog/best-of-2024 429 
+/blog/f/tales-from-the-road 429 
+/blog/tales-from-the-road 429 
+/blog/f/new-manager-feeling-unsure 429 
+/blog/new-manager-feeling-unsure 429 
+/blog/f/rethinking-retirement 429 
+/blog/rethinking-retirement 429 
+/blog/f/an-abundance-of-gratitude 429 
+/blog/an-abundance-of-gratitude 429 
+/blog/f/walking-about 429 
+/blog/walking-about 429 
+/blog/f/strengthening-strategic 429 
+/blog/strengthening-strategic 429 
+/blog/f/a-historic-week 429 
+/blog/a-historic-week 429 
+/blog/f/a-story-of-presence 429 
+/blog/a-story-of-presence 429 
+/blog/f/the-unwinding-of-an-athlete 429 
+/blog/the-unwinding-of-an-athlete 429 
+/blog/f/by-request 429 
+/blog/by-request 429 
+/blog/f/celebrating-three-years 429 
+/blog/celebrating-three-years 429 
+/blog/f/two-ears-one-mouth-one-brain 429 
+/blog/two-ears-one-mouth-one-brain 429 
+/blog/f/the-council-of-joshes 429 
+/blog/the-council-of-joshes 429 
+/blog/f/just-a-little-patience 429 
+/blog/just-a-little-patience 429 
+/blog/f/your-first-90-days 429 
+/blog/your-first-90-days 429 
+/blog/f/the-neuroscience-of-doing-and-being 429 
+/blog/the-neuroscience-of-doing-and-being 301 https://aretepursuits.com/the-neuroscience-of-doing-and-being/
+/blog/f/dragonfly 429 
+/blog/dragonfly 429 
+/blog/f/refining-teliodosis 429 
+/blog/refining-teliodosis 429 
+/blog/f/social-connections 429 
+/blog/social-connections 429 
+/blog/f/credentials-matter 404 
+/blog/credentials-matter 429 
+/blog/f/meaningful-conversations 429 
+/blog/meaningful-conversations 429 
+/blog/f/as-measured-by 429 
+/blog/as-measured-by 429 
+/blog/f/neuroplasticity 429 
+/blog/neuroplasticity 429 
+/blog/f/summer-thinking 429 
+/blog/summer-thinking 429 
+/blog/f/summer-reading 429 
+/blog/summer-reading 429 
+/blog/f/exploring-integration 429 
+/blog/exploring-integration 429 
+/blog/f/running-with-the-turtles 429 
+/blog/running-with-the-turtles 429 
+/blog/f/a-funny-thing-happened-on-vacation 429 
+/blog/a-funny-thing-happened-on-vacation 429 
+/blog/f/transformation 429 
+/blog/transformation 429 
+/blog/f/mirror-mirror 429 
+/blog/mirror-mirror 429 
+/blog/f/be-a-raven 429 
+/blog/be-a-raven 429 
+/blog/f/leading-through-coaching 429 
+/blog/leading-through-coaching 429 
+/blog/f/be-a-liver 429 
+/blog/be-a-liver 429 
+/blog/f/thus-spoke-taylor 429 
+/blog/thus-spoke-taylor 429 
+/blog/f/authenticity 404 
+/blog/authenticity 429 
+/blog/f/beneficial-communication 429 
+/blog/beneficial-communication 429 
+/blog/f/the-wisdom-in-your-body 429 
+/blog/the-wisdom-in-your-body 429 
+/blog/f/presence 429 
+/blog/presence 429 
+/blog/f/great-leaders-speak-last 429 
+/blog/great-leaders-speak-last 429 
+/blog/f/understanding-trust 429 
+/blog/understanding-trust 429 
+/blog/f/listening-to-the-universe-part-3 429 
+/blog/listening-to-the-universe-part-3 429 
+/blog/f/coaching-discovery 429 
+/blog/coaching-discovery 429 
+/blog/f/courageous-conversations 429 
+/blog/courageous-conversations 429 
+/blog/f/how-to-do-your-taxes 429 
+/blog/how-to-do-your-taxes 429 
+/blog/f/embracing-intuition 429 
+/blog/embracing-intuition 429 
+/blog/f/life-accounts 429 
+/blog/life-accounts 429 
+/blog/f/cultivating-wonder 429 
+/blog/cultivating-wonder 429 
+/blog/f/work-life-balance-is-a-myth 429 
+/blog/work-life-balance-is-a-myth 429 
+/blog/f/more-doing-less 429 
+/blog/more-doing-less 429 
+/blog/f/doing-less 429 
+/blog/doing-less 429 
+/blog/f/best-of-2023 429 
+/blog/best-of-2023 429 
+/blog/f/listening-to-the-universe-part-2 429 
+/blog/listening-to-the-universe-part-2 429 
+/blog/f/unlocking-opportunities-how-to-strengthen-your-linkedin-profile 429 
+/blog/unlocking-opportunities-how-to-strengthen-your-linkedin-profile 429 
+/blog/f/happy-new-year 429 
+/blog/happy-new-year 429 
+/blog/f/arete 429 
+/blog/arete 429 
+/blog/f/creating-space 429 
+/blog/creating-space 429 
+/blog/f/shared-background-of-obviousness 429 
+/blog/shared-background-of-obviousness 429 
+/blog/f/prince-kohaku 429 
+/blog/prince-kohaku 429 
+/blog/f/your-future-self 429 
+/blog/your-future-self 429 
+/blog/f/from-subject-to-object 429 
+/blog/from-subject-to-object 429 
+/blog/f/my-second-year 429 
+/blog/my-second-year 429 
+/blog/f/never-grow-up 429 
+/blog/never-grow-up 429 
+/blog/f/missing-conversations 429 
+/blog/missing-conversations 429 
+/blog/f/we-are-always-growing 429 
+/blog/we-are-always-growing 429 
+/blog/f/golden-mean 429 
+/blog/golden-mean 429 
+/blog/f/what-should-i-do 429 
+/blog/what-should-i-do 429 
+/blog/f/journal-of-awareness 429 
+/blog/journal-of-awareness 429 
+/blog/f/459-2 429 
+/blog/459-2 429 
+/blog/f/transitions 429 
+/blog/transitions 429 
+/blog/f/on-hiring 429 
+/blog/on-hiring 429 
+/blog/f/managing-managers 429 
+/blog/managing-managers 429 
+/blog/f/what-ai-can-teach-us-about-ni 429 
+/blog/what-ai-can-teach-us-about-ni 429 
+/blog/f/f-clearing-the-fog 429 
+/blog/f-clearing-the-fog 429 
+/blog/f/flashlights-and-floodlights 429 
+/blog/flashlights-and-floodlights 429 
+/blog/f/productivity-anthology 429 
+/blog/productivity-anthology 429 
+/blog/f/this-space-intentionally-left-blank 429 
+/blog/this-space-intentionally-left-blank 429 
+/blog/f/embodying-your-values 429 
+/blog/embodying-your-values 429 
+/blog/f/magical-meetings 429 
+/blog/magical-meetings 429 
+/blog/f/meditation-has-gone-mainstream 429 
+/blog/meditation-has-gone-mainstream 429 
+/blog/f/youre-not-the-leader-you-think-you-are 429 
+/blog/youre-not-the-leader-you-think-you-are 429 
+/blog/f/building-resilience 429 
+/blog/building-resilience 429 
+/blog/f/living-heroically 429 
+/blog/living-heroically 429 
+/blog/f/expanding-awareness 429 
+/blog/expanding-awareness 429 
+/blog/f/brain-energy 429 
+/blog/brain-energy 429 
+/blog/f/raising-awareness 429 
+/blog/raising-awareness 429 
+/blog/f/lets-move 429 
+/blog/lets-move 429 
+/blog/f/remembering-jack-2 429 
+/blog/remembering-jack-2 429 
+/blog/f/desktop-detox 429 
+/blog/desktop-detox 429 
+/blog/f/focus-pocus 429 
+/blog/focus-pocus 429 
+/blog/f/coaching-ontologically 429 
+/blog/coaching-ontologically 429 
+/blog/f/listening-to-the-universe 429 
+/blog/listening-to-the-universe 429 
+/blog/f/412-2 429 
+/blog/412-2 429 
+/blog/f/conquering-your-calendar 429 
+/blog/conquering-your-calendar 429 
+/blog/f/building-bridges 429 
+/blog/building-bridges 429 
+/blog/f/a-tale-of-two-paths 429 
+/blog/a-tale-of-two-paths 429 
+/blog/f/valuing-every-voice 429 
+/blog/valuing-every-voice 429 
+/blog/f/so-emotional 429 
+/blog/so-emotional 429 
+/blog/f/promote-yourself 429 
+/blog/promote-yourself 429 
+/blog/f/to-do-or-not-to-do 429 
+/blog/to-do-or-not-to-do 429 
+/blog/f/carpe-septimana 429 
+/blog/carpe-septimana 429 
+/blog/f/carpe-diem 429 
+/blog/carpe-diem 429 
+/blog/f/its-called-breakfast-for-a-reason 429 
+/blog/its-called-breakfast-for-a-reason 429 
+/blog/f/top-ten-blog-posts-of-2022 429 
+/blog/top-ten-blog-posts-of-2022 429 
+/blog/f/all-you-need-is-love 429 
+/blog/all-you-need-is-love 429 
+/blog/f/gooooooooooooooooooooooals 429 
+/blog/gooooooooooooooooooooooals 429 
+/blog/f/384-2 429 
+/blog/384-2 429 
+/blog/f/i-do-declare 429 
+/blog/i-do-declare 429 
+/blog/f/just-the-facts 429 
+/blog/just-the-facts 429 
+/blog/f/we-can-do-hard-things 429 
+/blog/we-can-do-hard-things 429 
+/blog/f/who-are-your-heroes 429 
+/blog/who-are-your-heroes 429 
+/blog/f/face-to-face 429 
+/blog/face-to-face 429 
+/blog/f/your-personal-board-of-directors 429 
+/blog/your-personal-board-of-directors 429 
+/blog/f/my-first-year 429 
+/blog/my-first-year 429 
+/blog/f/more-of-what-you-love 429 
+/blog/more-of-what-you-love 429 
+/blog/f/your-360-feedback 429 
+/blog/your-360-feedback 429 
+/blog/f/zen-and-the-art-of-feedback 429 
+/blog/zen-and-the-art-of-feedback 429 
+/blog/f/feedback-is-a-gift 429 
+/blog/feedback-is-a-gift 429 
+/blog/f/life-is-calling 429 
+/blog/life-is-calling 429 
+/blog/f/taking-initiative 429 
+/blog/taking-initiative 429 
+/blog/f/cut-me-some-slack 429 
+/blog/cut-me-some-slack 429 
+/blog/f/onstage-and-backstage 429 
+/blog/onstage-and-backstage 429 
+/blog/f/on-the-path 429 
+/blog/on-the-path 429 
+/blog/f/go-on-tour 429 
+/blog/go-on-tour 429 
+/blog/f/11-101 429 
+/blog/11-101 429 
+/blog/f/decisions-decisions 429 
+/blog/decisions-decisions 429 
+/blog/f/shifting-perspectives 429 
+/blog/shifting-perspectives 429 
+/blog/f/do-as-i-say-not-as-i-do 429 
+/blog/do-as-i-say-not-as-i-do 429 
+/blog/f/overcoming-procrastination 429 
+/blog/overcoming-procrastination 429 
+/blog/f/overcoming-overwhelm 429 
+/blog/overcoming-overwhelm 429 
+/blog/f/fathers-day-gratitude 429 
+/blog/fathers-day-gratitude 429 
+/blog/f/running-with-the-bunnies 429 
+/blog/running-with-the-bunnies 429 
+/blog/f/how-are-you 429 
+/blog/how-are-you 429 
+/blog/f/the-rider-and-the-elephant 429 
+/blog/the-rider-and-the-elephant 429 
+/blog/f/strengthening-connections 429 
+/blog/strengthening-connections 429 
+/blog/f/please-shorten-your-meetings 429 
+/blog/please-shorten-your-meetings 429 
+/blog/f/paying-attention 429 
+/blog/paying-attention 429 
+/blog/f/remembering-jack 429 
+/blog/remembering-jack 429 
+/blog/f/discovering-our-strengths 429 
+/blog/discovering-our-strengths 429 
+/blog/f/delegation-102 429 
+/blog/delegation-102 429 
+/blog/f/delegation-101 301 https://aretepursuits.com/blog/delegation-101
+/blog/delegation-101 301 https://aretepursuits.com/delegation-101/
+/blog/f/the-enemies-of-delegation 301 https://aretepursuits.com/blog/the-enemies-of-delegation
+/blog/the-enemies-of-delegation 301 https://aretepursuits.com/the-enemies-of-delegation/
+/blog/f/unexpected-success 301 https://aretepursuits.com/blog/unexpected-success
+/blog/unexpected-success 301 https://aretepursuits.com/unexpected-success/
+/blog/f/i-dont-know-how-to-put-this 404 
+/blog/i-dont-know-how-to-put-this 429 
+/blog/f/mothers-day-gratitude 429 
+/blog/mothers-day-gratitude 429 
+/blog/f/unplug-yourself 429 
+/blog/unplug-yourself 429 
+/blog/f/the-best-technology-available 429 
+/blog/the-best-technology-available 429 
+/blog/f/finding-focus 429 
+/blog/finding-focus 429 
+/blog/f/put-on-your-white-belt 429 
+/blog/put-on-your-white-belt 429 
+/blog/f/meeting-maximization 429 
+/blog/meeting-maximization 429 
+/blog/f/calendar-construction 429 
+/blog/calendar-construction 429 
+/blog/f/the-week-ahead 429 
+/blog/the-week-ahead 429 
+/blog/f/whats-your-plan-for-today 429 
+/blog/whats-your-plan-for-today 429 
+/blog/f/rome-wasnt-built-in-a-day 429 
+/blog/rome-wasnt-built-in-a-day 429 
+/blog/f/for-the-love-of-reading 429 
+/blog/for-the-love-of-reading 429 
+/blog/f/its-the-most-wonderful-time-of-the-year 429 
+/blog/its-the-most-wonderful-time-of-the-year 429 
+/blog/f/the-elements-of-trust 429 
+/blog/the-elements-of-trust 429 
+/blog/f/just-breathe 429 
+/blog/just-breathe 429 
+/blog/f/the-case-for-fortnightly 429 
+/blog/the-case-for-fortnightly 429 
+/blog/f/my-most-memorable-team 429 
+/blog/my-most-memorable-team 429 
