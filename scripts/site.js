@@ -99,5 +99,6 @@
       empty.hidden = shown > 0; empty.textContent = 'No posts match “' + q.value + '”. Try another word.';
       var top = document.getElementById('toptier'); if (top) top.hidden = !!v;
     });
+    var pre = new URLSearchParams(location.search).get('q'); if (pre) { q.value = pre; q.dispatchEvent(new Event('input')); }
   }
 })();

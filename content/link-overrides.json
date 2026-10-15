@@ -1,4 +1,22 @@
 {
- "_note": "Exact old link -> new link, applied to every post. Practice.do links are handled in build_site.py (the platform shut down).",
- "https://youtu.be/e0mR-i1DUhQ?si=v8A5I_eC6t63VMix": "https://insighttimer.com/josh00203/guided-meditations/future-self-meditation_8"
+ "_note": "Exact old link -> new link (null = dead with no replacement: keep the words, drop the link). Applied to every post. Practice.do links are handled in build_site.py.",
+ "https://youtu.be/e0mR-i1DUhQ?si=v8A5I_eC6t63VMix": "https://insighttimer.com/josh00203/guided-meditations/future-self-meditation_8",
+ "https://tartanterrors.com/go/events/6035677?feature_id=1041952&occurrence_id=716637444&popup=1": null,
+ "https://chatgpt.com/g/g-6fbqTuevR-the-aretist": null,
+ "https://chatgpt.com/g/g-6fbqTuevR-blog-josh": null,
+ "https://chatgpt.com/g/g-V53OUTwcG-the-council-of-joshes": null,
+ "https://www.linkedin.com/pulse/authenticity-josh-dietrich-vmzne/": "/authenticity/",
+ "https://leaders25.com/": null,
+ "https://newfieldnetwork.com/our-team-and-coaches/": "https://newfieldnetwork.com/",
+ "https://newfieldnetwork.com/our-story-and-team/": "https://newfieldnetwork.com/",
+ "https://www.texas-connection.org/2024-annual-conference": null,
+ "https://www.thinbook.com/shop/p/the-thin-book-of-trust-v2": "https://amzn.to/3W2RfIn",
+ "https://app.cal.com/giada-centofanti/30min": "https://www.caretoimpact.com/",
+ "https://www.heroic.us/optimize/letsgo?fpr=aretepursuits": "https://www.heroic.us/?fpr=aretepursuits",
+ "https://www.heroic.us/optimize/coach?fpr=aretepursuits": "https://www.heroic.us/?fpr=aretepursuits",
+ "https://www.heroic.us/optimize/mastery?fpr=aretepursuits": "https://www.heroic.us/?fpr=aretepursuits",
+ "https://www.heroic.us/optimize/luminary-sessions/live-coaching-with-dr-christopher-palmer": "https://www.heroic.us/",
+ "https://www.heroic.us/optimize/pn": "https://www.heroic.us/?fpr=aretepursuits",
+ "https://designingyour.life/the-book/": "https://amzn.to/3C68amJ",
+ "https://www.nike.com/t/air-zoom-alphafly-next-flyknit-ekiden-mens-road-racing-shoes-fNntgL/CI9925-800": null
 }

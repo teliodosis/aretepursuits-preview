@@ -371,6 +371,9 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
 .pill .hopt{display:flex;gap:4px}
 .pill .hopt button{font:600 .8rem var(--f-body);width:28px;height:28px;border-radius:50%;border:1px solid var(--rule);background:var(--bg);color:var(--ink);padding:0}
 .pill .hopt button[aria-pressed="true"]{background:var(--ember);border-color:var(--ember);color:var(--on-accent)}
+.post-head h1,.article h1,.article h2,.article h3{overflow-wrap:anywhere}
+.article{overflow-wrap:break-word;grid-template-columns:minmax(0,1fr)}
+.article table{display:block;max-width:100%;overflow-x:auto}
 .listen{max-width:var(--measure);margin:22px 0 26px;display:flex;align-items:center;gap:14px;padding:10px 14px 10px 10px;border:1px solid var(--rule);border-radius:999px;background:var(--surface)}
 .listen .pp{width:42px;height:42px;border-radius:50%;background:var(--ember);color:var(--on-accent);border:0;display:grid;place-items:center;cursor:pointer;flex:none}
 .listen .pp svg{width:16px;height:16px;fill:currentColor}
@@ -673,7 +676,7 @@ ${fil?'':`<a class="feature" href="#post-${f.s}"><div class="ph"><img src="img/p
 <div id="archive" style="padding-bottom:72px">${list()}</div></div>`;};
 
 const LEAD_CATS=['Management','Teams','Delegation','Executive Presence','Strategic Thinking','Communication','Trust','Productivity','Goals','Career','Coaching','AI','Neuroscience'];
-const BEING_CATS=['Consciousness','Mindfulness','Awareness','Spirituality','Walkabout','Growth','Emotions','Perspectives','Health','Joy','Gratitude','Life Planning','Somatics','Learning'];
+const BEING_CATS=['Wanderment','Consciousness','Mindfulness','Awareness','Spirituality','Walkabout','Growth','Emotions','Perspectives','Health','Joy','Gratitude','Life Planning','Somatics','Learning'];
 function nextStep(p){
  const l=p.c.filter(c=>LEAD_CATS.includes(c)).length, b=p.c.filter(c=>BEING_CATS.includes(c)).length;
  if(b>l) return `<div class="next"><span class="label">Where this could lead</span><p>If this stirred something, life and consciousness coaching is a space to explore it further, at your own pace.</p><div class="row2"><a class="btn btn-ember" href="${CAL_C}" target="_blank" rel="noopener">Schedule a conversation <span>→</span></a><a class="tl-link" href="#life-coaching">About life &amp; consciousness coaching</a></div></div>`;

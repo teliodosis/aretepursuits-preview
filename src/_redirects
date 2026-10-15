@@ -35,8 +35,15 @@
 /465-2                            /golden-mean/                      301
 /writing                          /blog/                             301
 /library                          /resources/                        301
+/productivity-mastery             /services/organizations/           301
+/category/walkabout               /category/wanderment/              301
 
-# Feeds
+# Feeds and sitemaps
+/wp-sitemap.xml                   /sitemap.xml                       301
+/sitemap_index.xml                /sitemap.xml                       301
+/wp-sitemap-*                     /sitemap.xml                       301
+/category/:cat/feed               /feed.xml                          301
+/:slug/feed                       /feed.xml                          301
 /feed                             /feed.xml                          301
 /blog/feed                        /feed.xml                          301
 /blog/f.rss                       /feed.xml                          301

@@ -32,8 +32,11 @@ LINK_OVERRIDES = {k: v for k, v in J('content/link-overrides.json').items() if n
 AUDIO = J('content/audio.json') if os.path.exists(os.path.join(ROOT, 'content/audio.json')) else {}
 SLUGS = {p['slug'] for p in posts}
 slugify = lambda s: re.sub(r'^-|-$', '', re.sub(r'[^a-z0-9]+', '-', s.lower()))
+CAT_RENAME = {'Walkabout': 'Wanderment'}  # Josh no longer uses 'walkabout'; old URL redirects
 CAT_SLUG = {name: slug for name, slug in cats_wp.values()}            # display name -> WP slug
+for old, new in CAT_RENAME.items(): CAT_SLUG[new] = slugify(new)
 CAT_BY_JS = {slugify(name): slug for name, slug in cats_wp.values()}  # JS slugify(name) -> WP slug
+for old, new in CAT_RENAME.items(): CAT_BY_JS[slugify(new)] = slugify(new)
 
 
 ROUTES = {'home': '/', 'executive-coaching': '/services/executive-coaching/', 'organizations': '/services/organizations/',
@@ -65,7 +68,11 @@ def clean(raw):
         if last.name == 'hr' or (not last.get_text(strip=True).strip('-–—_* ') and not last.find(['img', 'video', 'iframe'])): last.decompose()
         else: break
     for a in soup.find_all('a', href=True):
-        h = LINK_OVERRIDES.get(a['href'].strip(), a['href'].strip()); a['href'] = h
+        h = a['href'].strip()
+        if h in LINK_OVERRIDES:
+            if LINK_OVERRIDES[h] is None: a.unwrap(); continue   # dead link with no replacement: keep the words
+            h = LINK_OVERRIDES[h]
+        a['href'] = h
         if 'practice.do' in h:  # Practice (coaching platform) shut down
             if '/josh-dietrich/book/' in h: a['href'] = '/schedule/blog'
             elif re.search(r'practice\.do/(me/)?josh-dietrich/?$', h): a['href'] = '/contact/'
@@ -96,6 +103,8 @@ def clean(raw):
         if v.get('src'):
             mm = media_for(v['src'])
             if mm: v['src'] = mm['path']
+    for f in soup.find_all('iframe', src=True):  # privacy-enhanced YouTube embeds (no cookies until played)
+        f['src'] = f['src'].replace('://www.youtube.com/embed/', '://www.youtube-nocookie.com/embed/').replace('://youtube.com/embed/', '://www.youtube-nocookie.com/embed/')
     for v in soup.find_all('video'): v['controls'] = ''; v['playsinline'] = ''; v['preload'] = 'metadata'
     for t in soup.find_all(True):
         for k in ('style', 'class', 'id'):
@@ -130,6 +139,7 @@ for p in posts:
             ensure_cards(s, p['featured']); IMG.append(s); FEAT[s] = p['featured']
         continue
     names = [cats_wp[c][0] for c in p['categories'] if c in cats_wp and cats_wp[c][0] != 'Uncategorized']
+    names = [CAT_RENAME.get(n, n) for n in names]
     P.append({'d': p['date'][:10], 's': s, 't': H.unescape(p['title']['rendered']), 'c': names})
     EX[s] = text(p['excerpt']['rendered'], 240)
     BODY[s] = clean(p['content']['rendered'])
@@ -232,6 +242,9 @@ META = {
  'contact': ('Begin a Conversation | Arete Pursuits', 'Schedule a free 25-minute conversation about executive, life, or consciousness coaching, or get in touch by email or phone.'),
  'writing': ('Writing | Arete Pursuits', 'Writing since 2021 on leadership, neuroscience, consciousness, and life on the road.'),
 }
+PAGE_IDS = {57: '/services/life-coaching/', 62: '/services/organizations/', 80: '/contact/', 86: '/services/executive-coaching/', 87: '/resources/', 88: '/about/', 89: '/blog/', 90: '/services/organizations/', 91: '/services/organizations/'}
+LEGACY_ROUTER = ('<script>(function(){var q=new URLSearchParams(location.search),m=' + json.dumps({**{str(k): v for k, v in PAGE_IDS.items()}, **{'p' + str(p['id']): '/' + p['slug'] + '/' for p in posts if 'id' in p}}, separators=(',', ':'))
+                 + ',t=q.get("page_id")?m[q.get("page_id")]:q.get("p")?m["p"+q.get("p")]:q.get("s")?"/blog/?q="+encodeURIComponent(q.get("s")):null;if(t)location.replace(t);})();</script>\n')
 LD_HOME = '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Arete Pursuits", "url": SITE, "email": "josh@aretepursuits.com", "telephone": "+1-703-431-8025", "founder": {"@type": "Person", "name": "Josh Dietrich", "jobTitle": "Executive, life, and consciousness coach"}, "sameAs": ["https://www.linkedin.com/in/joshuadietrich/", "https://substack.com/@teliodosis"]}) + '</script>\n'
 
 for key, (title, desc) in META.items():
@@ -243,7 +256,7 @@ for key, (title, desc) in META.items():
             j = body.find('</section>', i) + len('</section>')
             body = body[:i] + '<div id="toptier">' + body[i:j] + '</div>' + body[j:]
         body = body.replace(f'src="img/p-{P[0]["s"]}.jpg"', f'src="{FEAT.get(P[0]["s"], "")}"')
-    write(ROUTES[key], page(ROUTES[key], title, desc, body, extra_head=LD_HOME if key == 'home' else ''))
+    write(ROUTES[key], page(ROUTES[key], title, desc, body, extra_head=(LEGACY_ROUTER + LD_HOME) if key == 'home' else ''))
 
 # categories
 for name, slug in sorted(CAT_SLUG.items()):

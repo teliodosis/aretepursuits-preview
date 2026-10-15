@@ -2577,7 +2577,11 @@
   "w": 1600,
   "h": 1200
  },
- "https://aretepursuits.com/wp-content/uploads/2024/01/image-1.png": null,
+ "https://aretepursuits.com/wp-content/uploads/2024/01/image-1.png": {
+  "path": "/wp-content/uploads/2024/01/image-1.jpg",
+  "w": 1000,
+  "h": 583
+ },
  "https://aretepursuits.com/wp-content/uploads/2026/05/image-4-225x300.jpeg": {
   "path": "/wp-content/uploads/2026/05/image-4.jpeg",
   "w": 1600,
