@@ -1,4 +1,5 @@
-pages checked 262, failures 0
+PAGE 301 /category/walkabout/
+pages checked 262, failures 1
 REDIR /schedule/25 -> 301 https://calendly.com/aretepursuits/25min
 REDIR /schedule/website -> 301 https://calendly.com/aretepursuits/25min
 REDIR /schedule/consciousness -> 301 https://calendly.com/aretepursuits/consciousness
@@ -18,5 +19,9 @@ REDIR /blog/f/clearing-the-fog -> 301 https://site.aretepursuits-preview.pages.d
 REDIR /blog/f/the-heros-journey -> 301 https://site.aretepursuits-preview.pages.dev/459-2/
 REDIR /blog/f/it%E2%80%99s-called-breakfast-for-a-reason -> 301 https://site.aretepursuits-preview.pages.dev/its-called-breakfast-for-a-reason/
 REDIR /blog/f/the-hero-ignored -> 301 https://site.aretepursuits-preview.pages.dev/the-hero-ignored/
+REDIR /wp-sitemap.xml -> 301 https://site.aretepursuits-preview.pages.dev/sitemap.xml
+REDIR /category/walkabout/ -> 301 https://site.aretepursuits-preview.pages.dev/category/wanderment/
+REDIR /productivity-mastery -> 301 https://site.aretepursuits-preview.pages.dev/services/organizations/
+REDIR /gentleness/feed/ -> 301 https://site.aretepursuits-preview.pages.dev/feed.xml
 REDIR /nonexistent-page-xyz/ -> 404 
 HEADERS / content-type: text/html; charset=utf-8  x-content-type-options: nosniff  x-robots-tag: noindex, nofollow  
