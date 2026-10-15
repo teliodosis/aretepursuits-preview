@@ -8,7 +8,7 @@ P=json.load(open('content/posts.json'))
 for u in ['/','/services/executive-coaching/','/services/organizations/','/services/consciousness-coaching/','/services/life-coaching/','/meditation/','/blog/','/about/','/resources/','/contact/','/privacy-policy/','/terms-and-conditions/','/feed.xml','/sitemap.xml','/robots.txt','/og/default.jpg']: print(u)
 for p in P: print('/'+p['slug']+'/')
 for c in json.load(open('content/categories.json')):
-    if c['count']: print('/category/'+c['slug']+'/')
+    if c['count']: print('/category/'+{'walkabout':'wanderment'}.get(c['slug'],c['slug'])+'/')
 PY
 fail=0
 while read u; do c=$(curl -s -o /dev/null -w "%{http_code}" "$BASE$u"); [ "$c" != "200" ] && { echo "PAGE $c $u" >> $out; fail=$((fail+1)); }; done < /tmp/urls.txt
