@@ -28,6 +28,7 @@ posts = sorted(posts, key=lambda p: p['date'], reverse=True)
 pages_wp = {p['slug']: p for p in J('content/pages.json')}
 cats_wp = {c['id']: (H.unescape(c['name']), c['slug']) for c in J('content/categories.json')}
 mmap = J('content/media-map.json')
+LINK_OVERRIDES = {k: v for k, v in J('content/link-overrides.json').items() if not k.startswith('_')} if os.path.exists(os.path.join(ROOT, 'content/link-overrides.json')) else {}
 AUDIO = J('content/audio.json') if os.path.exists(os.path.join(ROOT, 'content/audio.json')) else {}
 SLUGS = {p['slug'] for p in posts}
 slugify = lambda s: re.sub(r'^-|-$', '', re.sub(r'[^a-z0-9]+', '-', s.lower()))
@@ -64,7 +65,12 @@ def clean(raw):
         if last.name == 'hr' or (not last.get_text(strip=True).strip('-–—_* ') and not last.find(['img', 'video', 'iframe'])): last.decompose()
         else: break
     for a in soup.find_all('a', href=True):
-        h = a['href'].strip()
+        h = LINK_OVERRIDES.get(a['href'].strip(), a['href'].strip()); a['href'] = h
+        if 'practice.do' in h:  # Practice (coaching platform) shut down
+            if '/josh-dietrich/book/' in h: a['href'] = '/schedule/blog'
+            elif re.search(r'practice\.do/(me/)?josh-dietrich/?$', h): a['href'] = '/contact/'
+            else: a.unwrap()
+            continue
         m = re.match(r'^https?://(?:www\.)?aretepursuits\.com(/[^#?]*)?([?#].*)?$', h)
         if m:
             path = m.group(1) or '/'
