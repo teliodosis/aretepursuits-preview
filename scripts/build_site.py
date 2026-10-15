@@ -248,7 +248,13 @@ sm = ''.join(f'<url><loc>{SITE}{u}</loc></url>' for u in dict.fromkeys(urls)) + 
 open(os.path.join(OUT, 'sitemap.xml'), 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
 open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
 open(os.path.join(OUT, '_headers'), 'w').write('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/wp-content/*\n  Cache-Control: public, max-age=31536000, immutable\n/thumbs/*\n  Cache-Control: public, max-age=604800\n/og/*\n  Cache-Control: public, max-age=604800\n')
-shutil.copy(os.path.join(ROOT, 'src/_redirects'), os.path.join(OUT, '_redirects'))
+rules = []
+for line in open(os.path.join(ROOT, 'src/_redirects')):
+    rules.append(line.rstrip('\n'))
+    parts = line.split()
+    if parts and not line.startswith('#') and not parts[0].endswith('/') and '*' not in parts[0] and '.' not in parts[0].rsplit('/', 1)[-1]:
+        rules.append(line.replace(parts[0], parts[0] + '/', 1).rstrip('\n'))  # same rule with a trailing slash
+open(os.path.join(OUT, '_redirects'), 'w').write('\n'.join(rules) + '\n')
 if os.environ.get('REVIEW'):  # review deploys stay out of search engines until cutover
     open(os.path.join(OUT, 'robots.txt'), 'w').write('User-agent: *\nDisallow: /\n')
     with open(os.path.join(OUT, '_headers'), 'a') as f: f.write('/*\n  X-Robots-Tag: noindex, nofollow\n')
