@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: curl -sSfL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36" -o "${{ inputs.dest }}" "${{ inputs.url }}" && ls -la "${{ inputs.dest }}"
+      - run: mkdir -p "$(dirname "${{ inputs.dest }}")" && curl -sSfL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36" -o "${{ inputs.dest }}" "${{ inputs.url }}" && ls -la "${{ inputs.dest }}"
       - name: Keep only the redirect rules from a Redirection export
         if: endsWith(inputs.dest, 'redirection-export.json')
         run: |
