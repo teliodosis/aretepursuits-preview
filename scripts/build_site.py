@@ -249,5 +249,8 @@ open(os.path.join(OUT, 'sitemap.xml'), 'w').write(f'<?xml version="1.0" encoding
 open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
 open(os.path.join(OUT, '_headers'), 'w').write('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/wp-content/*\n  Cache-Control: public, max-age=31536000, immutable\n/thumbs/*\n  Cache-Control: public, max-age=604800\n/og/*\n  Cache-Control: public, max-age=604800\n')
 shutil.copy(os.path.join(ROOT, 'src/_redirects'), os.path.join(OUT, '_redirects'))
+if os.environ.get('REVIEW'):  # review deploys stay out of search engines until cutover
+    open(os.path.join(OUT, 'robots.txt'), 'w').write('User-agent: *\nDisallow: /\n')
+    with open(os.path.join(OUT, '_headers'), 'a') as f: f.write('/*\n  X-Robots-Tag: noindex, nofollow\n')
 n_files = sum(len(f) for _, _, f in os.walk(OUT))
 print('built', OUT, 'files', n_files, 'posts', len(P))
