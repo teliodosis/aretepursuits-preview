@@ -13,7 +13,18 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(ROOT, 'dist')
 SITE = 'https://aretepursuits.com'
 J = lambda p: json.load(open(os.path.join(ROOT, p), encoding='utf-8'))
-posts = sorted(J('content/posts.json'), key=lambda p: p['date'], reverse=True)
+from zoneinfo import ZoneInfo
+NOW = datetime.now(ZoneInfo('America/New_York')).replace(tzinfo=None)
+legacy = J('content/posts.json')
+NEW = []  # posts published after the move off WordPress: content/new-posts/<slug>.json
+nd = os.path.join(ROOT, 'content/new-posts')
+for f in sorted(os.listdir(nd)) if os.path.isdir(nd) else []:
+    if f.endswith('.json'): NEW.append(json.load(open(os.path.join(nd, f), encoding='utf-8')))
+for n in NEW:  # shape them like WordPress posts so one code path handles both
+    n['_new'] = True; n.setdefault('categories', [])
+posts = [p for p in legacy if p['slug'] not in {n['slug'] for n in NEW}] + NEW
+posts = [p for p in posts if datetime.fromisoformat(p['date'][:19]) <= NOW]   # scheduled posts wait for their time
+posts = sorted(posts, key=lambda p: p['date'], reverse=True)
 pages_wp = {p['slug']: p for p in J('content/pages.json')}
 cats_wp = {c['id']: (H.unescape(c['name']), c['slug']) for c in J('content/categories.json')}
 mmap = J('content/media-map.json')
@@ -21,6 +32,7 @@ SLUGS = {p['slug'] for p in posts}
 slugify = lambda s: re.sub(r'^-|-$', '', re.sub(r'[^a-z0-9]+', '-', s.lower()))
 CAT_SLUG = {name: slug for name, slug in cats_wp.values()}            # display name -> WP slug
 CAT_BY_JS = {slugify(name): slug for name, slug in cats_wp.values()}  # JS slugify(name) -> WP slug
+
 
 ROUTES = {'home': '/', 'executive-coaching': '/services/executive-coaching/', 'organizations': '/services/organizations/',
           'consciousness-coaching': '/services/consciousness-coaching/', 'life-coaching': '/services/life-coaching/',
@@ -86,11 +98,27 @@ def text(raw, n=None):
     if n and len(t) > n: t = t[:t.rfind(' ', 0, n)].rstrip(',;:') + '…'
     return t
 
+def ensure_cards(slug, featured):
+    """Social card (1200x630) and thumbnail (720w) for a new post's featured image (path under media/)."""
+    from PIL import Image, ImageOps
+    srcp = os.path.join(ROOT, 'media', featured.lstrip('/'))
+    og, th = os.path.join(ROOT, 'media/og', slug + '.jpg'), os.path.join(ROOT, 'media/thumbs', slug + '.jpg')
+    if os.path.exists(og) and os.path.exists(th): return
+    im = Image.open(srcp).convert('RGB')
+    ImageOps.fit(im, (1200, 630), Image.LANCZOS).save(og, 'JPEG', quality=82, optimize=True)
+    t = im.copy(); t.thumbnail((720, 720)); t.save(th, 'JPEG', quality=80, optimize=True, progressive=True)
+
 # ---------- data for the renderer ----------
 os.makedirs(os.path.join(ROOT, 'build'), exist_ok=True)
 P, EX, BODY, IMG, FEAT = [], {}, {}, [], {}
 for p in posts:
     s = p['slug']
+    if p.get('_new'):
+        P.append({'d': p['date'][:10], 's': s, 't': p['title'], 'c': p['categories']})
+        EX[s] = p.get('excerpt', ''); BODY[s] = p['body']
+        if p.get('featured'):
+            ensure_cards(s, p['featured']); IMG.append(s); FEAT[s] = p['featured']
+        continue
     names = [cats_wp[c][0] for c in p['categories'] if c in cats_wp and cats_wp[c][0] != 'Uncategorized']
     P.append({'d': p['date'][:10], 's': s, 't': H.unescape(p['title']['rendered']), 'c': names})
     EX[s] = text(p['excerpt']['rendered'], 240)
@@ -101,6 +129,10 @@ for p in posts:
 json.dump({'posts': P, 'ex': EX, 'body': BODY, 'img': IMG}, open(os.path.join(ROOT, 'build/data.json'), 'w'))
 subprocess.run(['node', os.path.join(ROOT, 'scripts/render.js')], check=True)
 R = json.load(open(os.path.join(ROOT, 'build/rendered.json')))
+
+for p in P:
+    for c in p['c']:
+        if c not in CAT_SLUG: CAT_SLUG[c] = slugify(c); CAT_BY_JS[slugify(c)] = slugify(c)
 
 # ---------- shell pieces from the source ----------
 src = open(os.path.join(ROOT, 'src/index.src.html'), encoding='utf-8').read()
