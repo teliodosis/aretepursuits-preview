@@ -1,0 +1,2029 @@
+{
+ "keys": [
+  "errors_404",
+  "groups",
+  "logs",
+  "plugin",
+  "redirects",
+  "settings"
+ ],
+ "redirects": [
+  {
+   "url": "/everything-disc",
+   "match_url": "/everything-disc",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/disc-facilitation"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/corporate-coaching",
+   "match_url": "/corporate-coaching",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/executive-coaching"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/root",
+   "match_url": "/root",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/",
+   "match_url": "/blog/f",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/11-101",
+   "match_url": "/blog/f/11-101",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/11-101"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/all-you-need-is-love",
+   "match_url": "/blog/f/all-you-need-is-love",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/all-you-need-is-love"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/arete",
+   "match_url": "/blog/f/arete",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/arete"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/a-tale-of-two-paths",
+   "match_url": "/blog/f/a-tale-of-two-paths",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/a-tale-of-two-paths"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/brain-energy",
+   "match_url": "/blog/f/brain-energy",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/brain-energy"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/building-bridges",
+   "match_url": "/blog/f/building-bridges",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/building-bridges"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/building-resilience",
+   "match_url": "/blog/f/building-resilience",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/building-resilience"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/calendar-construction",
+   "match_url": "/blog/f/calendar-construction",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/calendar-construction"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/carpe-diem",
+   "match_url": "/blog/f/carpe-diem",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/carpe-diem"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/carpe-septimana",
+   "match_url": "/blog/f/carpe-septimana",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/carpe-septimana"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/clearing-the-fog",
+   "match_url": "/blog/f/clearing-the-fog",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/clearing-the-fog"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/coaching-ontologically",
+   "match_url": "/blog/f/coaching-ontologically",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/coaching-ontologically"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/conquering-your-calendar",
+   "match_url": "/blog/f/conquering-your-calendar",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/conquering-your-calendar"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/creating-space",
+   "match_url": "/blog/f/creating-space",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/creating-space"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/cut-me-some-slack",
+   "match_url": "/blog/f/cut-me-some-slack",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/cut-me-some-slack"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/decisions-decisions",
+   "match_url": "/blog/f/decisions-decisions",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/decisions-decisions"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/delegation-101",
+   "match_url": "/blog/f/delegation-101",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/delegation-101"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/delegation-102",
+   "match_url": "/blog/f/delegation-102",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/delegation-102"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/desktop-detox",
+   "match_url": "/blog/f/desktop-detox",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/desktop-detox"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/discovering-our-strengths",
+   "match_url": "/blog/f/discovering-our-strengths",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/discovering-our-strengths"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/do-as-i-say-not-as-i-do",
+   "match_url": "/blog/f/do-as-i-say-not-as-i-do",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/do-as-i-say-not-as-i-do"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/embodying-your-values",
+   "match_url": "/blog/f/embodying-your-values",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/embodying-your-values"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/expanding-awareness",
+   "match_url": "/blog/f/expanding-awareness",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/expanding-awareness"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/face-to-face",
+   "match_url": "/blog/f/face-to-face",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/face-to-face"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/fathers-day-gratitude",
+   "match_url": "/blog/f/fathers-day-gratitude",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/fathers-day-gratitude"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/feedback-is-a-gift",
+   "match_url": "/blog/f/feedback-is-a-gift",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/feedback-is-a-gift"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/finding-focus",
+   "match_url": "/blog/f/finding-focus",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/finding-focus"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/flashlights-and-floodlights",
+   "match_url": "/blog/f/flashlights-and-floodlights",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/flashlights-and-floodlights"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/focus-pocus",
+   "match_url": "/blog/f/focus-pocus",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/focus-pocus"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/for-the-love-of-reading",
+   "match_url": "/blog/f/for-the-love-of-reading",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/for-the-love-of-reading"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/from-subject-to-object",
+   "match_url": "/blog/f/from-subject-to-object",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/from-subject-to-object"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/go-on-tour",
+   "match_url": "/blog/f/go-on-tour",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/go-on-tour"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/gooooooooooooooooooooooals",
+   "match_url": "/blog/f/gooooooooooooooooooooooals",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/gooooooooooooooooooooooals"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/happy-new-year",
+   "match_url": "/blog/f/happy-new-year",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/happy-new-year"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/how-are-you",
+   "match_url": "/blog/f/how-are-you",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/how-are-you"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/i-do-declare",
+   "match_url": "/blog/f/i-do-declare",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/i-do-declare"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/",
+   "match_url": "/",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": null,
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/",
+   "match_url": "/",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": null,
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/",
+   "match_url": "/",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": null,
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/journal-of-awareness",
+   "match_url": "/blog/f/journal-of-awareness",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/journal-of-awareness"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/just-breathe",
+   "match_url": "/blog/f/just-breathe",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/just-breathe"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/just-the-facts",
+   "match_url": "/blog/f/just-the-facts",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/just-the-facts"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/lets-move",
+   "match_url": "/blog/f/lets-move",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/lets-move"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/life-is-calling",
+   "match_url": "/blog/f/life-is-calling",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/life-is-calling"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/listening-to-the-universe",
+   "match_url": "/blog/f/listening-to-the-universe",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/listening-to-the-universe"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/listening-to-the-universe-part-2",
+   "match_url": "/blog/f/listening-to-the-universe-part-2",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/listening-to-the-universe-part-2"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/living-heroically",
+   "match_url": "/blog/f/living-heroically",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/living-heroically"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/magical-meetings",
+   "match_url": "/blog/f/magical-meetings",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/magical-meetings"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/managing-managers",
+   "match_url": "/blog/f/managing-managers",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/managing-managers"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/meditation-has-gone-mainstream",
+   "match_url": "/blog/f/meditation-has-gone-mainstream",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/meditation-has-gone-mainstream"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/meeting-maximization",
+   "match_url": "/blog/f/meeting-maximization",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/meeting-maximization"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/missing-conversations",
+   "match_url": "/blog/f/missing-conversations",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/missing-conversations"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/more-of-what-you-love",
+   "match_url": "/blog/f/more-of-what-you-love",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/more-of-what-you-love"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/mothers-day-gratitude",
+   "match_url": "/blog/f/mothers-day-gratitude",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/mothers-day-gratitude"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/my-first-year",
+   "match_url": "/blog/f/my-first-year",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/my-first-year"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/my-most-memorable-team",
+   "match_url": "/blog/f/my-most-memorable-team",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/my-most-memorable-team"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/my-second-year",
+   "match_url": "/blog/f/my-second-year",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/my-second-year"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/never-grow-up",
+   "match_url": "/blog/f/never-grow-up",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/never-grow-up"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/on-hiring",
+   "match_url": "/blog/f/on-hiring",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/on-hiring"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/onstage-and-backstage",
+   "match_url": "/blog/f/onstage-and-backstage",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/onstage-and-backstage"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/on-the-path",
+   "match_url": "/blog/f/on-the-path",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/on-the-path"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/overcoming-overwhelm",
+   "match_url": "/blog/f/overcoming-overwhelm",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/overcoming-overwhelm"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/overcoming-procrastination",
+   "match_url": "/blog/f/overcoming-procrastination",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/overcoming-procrastination"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/paying-attention",
+   "match_url": "/blog/f/paying-attention",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/paying-attention"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/please-shorten-your-meetings",
+   "match_url": "/blog/f/please-shorten-your-meetings",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/please-shorten-your-meetings"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/prince-kohaku",
+   "match_url": "/blog/f/prince-kohaku",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/prince-kohaku"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/productivity-anthology",
+   "match_url": "/blog/f/productivity-anthology",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/productivity-anthology"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/promises-promises",
+   "match_url": "/blog/f/promises-promises",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/promises-promises"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/promote-yourself",
+   "match_url": "/blog/f/promote-yourself",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/promote-yourself"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/put-on-your-white-belt",
+   "match_url": "/blog/f/put-on-your-white-belt",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/put-on-your-white-belt"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/raising-awareness",
+   "match_url": "/blog/f/raising-awareness",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/raising-awareness"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/remembering-jack",
+   "match_url": "/blog/f/remembering-jack",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/remembering-jack"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/remembering-jack-1",
+   "match_url": "/blog/f/remembering-jack-1",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/remembering-jack-1"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/rome-wasnt-built-in-a-day",
+   "match_url": "/blog/f/rome-wasnt-built-in-a-day",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/rome-wasnt-built-in-a-day"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/running-with-the-bunnies",
+   "match_url": "/blog/f/running-with-the-bunnies",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/running-with-the-bunnies"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/shared-background-of-obviousness",
+   "match_url": "/blog/f/shared-background-of-obviousness",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/shared-background-of-obviousness"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/shifting-perspectives",
+   "match_url": "/blog/f/shifting-perspectives",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/shifting-perspectives"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/so-emotional",
+   "match_url": "/blog/f/so-emotional",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/so-emotional"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/strengthening-connections",
+   "match_url": "/blog/f/strengthening-connections",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/strengthening-connections"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/take-a-break",
+   "match_url": "/blog/f/take-a-break",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/take-a-break"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/taking-initiative",
+   "match_url": "/blog/f/taking-initiative",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/taking-initiative"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/teliodosis",
+   "match_url": "/blog/f/teliodosis",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/teliodosis"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/the-best-technology-available",
+   "match_url": "/blog/f/the-best-technology-available",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/the-best-technology-available"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/the-case-for-fortnightly",
+   "match_url": "/blog/f/the-case-for-fortnightly",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/the-case-for-fortnightly"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/the-elements-of-trust",
+   "match_url": "/blog/f/the-elements-of-trust",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/the-elements-of-trust"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/the-enemies-of-delegation",
+   "match_url": "/blog/f/the-enemies-of-delegation",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/the-enemies-of-delegation"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/the-golden-mean",
+   "match_url": "/blog/f/the-golden-mean",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/the-golden-mean"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/the-heros-journey",
+   "match_url": "/blog/f/the-heros-journey",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/the-heros-journey"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/the-rider-and-the-elephant",
+   "match_url": "/blog/f/the-rider-and-the-elephant",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/the-rider-and-the-elephant"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/the-week-ahead",
+   "match_url": "/blog/f/the-week-ahead",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/the-week-ahead"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/this-space-intentionally-left-blank",
+   "match_url": "/blog/f/this-space-intentionally-left-blank",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/this-space-intentionally-left-blank"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/to-do-or-not-to-do",
+   "match_url": "/blog/f/to-do-or-not-to-do",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/to-do-or-not-to-do"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/top-ten-blog-posts-of-2022",
+   "match_url": "/blog/f/top-ten-blog-posts-of-2022",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/top-ten-blog-posts-of-2022"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/transitions",
+   "match_url": "/blog/f/transitions",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/transitions"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/unexpected-success",
+   "match_url": "/blog/f/unexpected-success",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/unexpected-success"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/unlocking-opportunities-how-to-strengthen-your-linkedin-profile",
+   "match_url": "/blog/f/unlocking-opportunities-how-to-strengthen-your-linkedin-profile",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/unlocking-opportunities-how-to-strengthen-your-linkedin-profile"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/unplug-yourself",
+   "match_url": "/blog/f/unplug-yourself",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/unplug-yourself"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/valuing-every-voice",
+   "match_url": "/blog/f/valuing-every-voice",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/valuing-every-voice"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/we-are-always-growing",
+   "match_url": "/blog/f/we-are-always-growing",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/we-are-always-growing"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/we-can-do-hard-things",
+   "match_url": "/blog/f/we-can-do-hard-things",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/we-can-do-hard-things"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/what-ai-can-teach-us-about-ni",
+   "match_url": "/blog/f/what-ai-can-teach-us-about-ni",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/what-ai-can-teach-us-about-ni"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/what-should-i-do",
+   "match_url": "/blog/f/what-should-i-do",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/what-should-i-do"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/whats-your-plan-for-today",
+   "match_url": "/blog/f/whats-your-plan-for-today",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/whats-your-plan-for-today"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/who-are-your-heroes",
+   "match_url": "/blog/f/who-are-your-heroes",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/who-are-your-heroes"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/",
+   "match_url": "/",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": null,
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/your-360-feedback",
+   "match_url": "/blog/f/your-360-feedback",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/your-360-feedback"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/your-future-self",
+   "match_url": "/blog/f/your-future-self",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/your-future-self"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/your-personal-board-of-directors",
+   "match_url": "/blog/f/your-personal-board-of-directors",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/your-personal-board-of-directors"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/zen-and-the-art-of-feedback",
+   "match_url": "/blog/f/zen-and-the-art-of-feedback",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/zen-and-the-art-of-feedback"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/465-2/",
+   "match_url": "/465-2",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/golden-mean/"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f/it\u2019s-called-breakfast-for-a-reason",
+   "match_url": "/blog/f/it%e2%80%99s-called-breakfast-for-a-reason",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/its-called-breakfast-for-a-reason/"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f.rss",
+   "match_url": "/blog/f.rss",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog/feed"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/blog/f",
+   "match_url": "/blog/f",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/blog"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/corporate-coaching",
+   "match_url": "/corporate-coaching",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/services/executive-coaching/"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/productivity-boot-camp",
+   "match_url": "/productivity-boot-camp",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/five-behaviors",
+   "match_url": "/five-behaviors",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/412-2/teliodosis",
+   "match_url": "/412-2/teliodosis",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "/412-2"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/25",
+   "match_url": "/schedule/25",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/25min"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/50",
+   "match_url": "/schedule/50",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/50min"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/80",
+   "match_url": "/schedule/80",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/80min"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/session",
+   "match_url": "/schedule/session",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/session"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/discovery",
+   "match_url": "/schedule/discovery",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/25min"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/doctums",
+   "match_url": "/schedule/doctums",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/25min"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/website",
+   "match_url": "/schedule/website",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/25min"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/blog",
+   "match_url": "/schedule/blog",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/25min"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/coaching-friends-family",
+   "match_url": "/schedule/coaching-friends-family",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/coaching-friends-family"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/session100",
+   "match_url": "/schedule/session100",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/session100"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/disc",
+   "match_url": "/schedule/disc",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/disc-debrief"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/session200",
+   "match_url": "/schedule/session200",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/session200"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/individual",
+   "match_url": "/schedule/individual",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/coaching-session-individual"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  },
+  {
+   "url": "/schedule/consciousness",
+   "match_url": "/schedule/consciousness",
+   "match_type": "url",
+   "regex": false,
+   "action_type": "url",
+   "action_code": 301,
+   "action_data": {
+    "url": "https://calendly.com/aretepursuits/consciousness"
+   },
+   "status": null,
+   "last_count": null,
+   "group_id": 1,
+   "title": ""
+  }
+ ]
+}
