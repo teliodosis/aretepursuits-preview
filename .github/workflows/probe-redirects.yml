@@ -1,5 +1,8 @@
 name: probe-redirects
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      paths: { required: false, default: '' }
 permissions:
   contents: write
 jobs:
@@ -7,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: bash scripts/probe_redirects.sh
+      - run: PROBE_PATHS="${{ inputs.paths }}" bash scripts/probe_redirects.sh
       - run: |
           git config user.name "content-bot"
           git config user.email "actions@users.noreply.github.com"
