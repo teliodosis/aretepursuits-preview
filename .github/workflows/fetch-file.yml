@@ -1,0 +1,20 @@
+name: fetch-file
+on:
+  workflow_dispatch:
+    inputs:
+      url: { required: true }
+      dest: { required: true }
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: curl -sSfL -o "${{ inputs.dest }}" "${{ inputs.url }}" && ls -la "${{ inputs.dest }}"
+      - run: |
+          git config user.name "content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "${{ inputs.dest }}"
+          git diff --cached --quiet || git commit -q -m "Fetch ${{ inputs.dest }}"
+          git pull -q --rebase && git push
