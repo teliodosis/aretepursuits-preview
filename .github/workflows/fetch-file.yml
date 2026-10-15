@@ -12,6 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: curl -sSfL -o "${{ inputs.dest }}" "${{ inputs.url }}" && ls -la "${{ inputs.dest }}"
+      - name: Keep only the redirect rules from a Redirection export
+        if: endsWith(inputs.dest, 'redirection-export.json')
+        run: |
+          python3 - "${{ inputs.dest }}" <<'PY'
+          import json, sys
+          d = json.load(open(sys.argv[1]))
+          keep = [{k: r.get(k) for k in ('url', 'match_url', 'match_type', 'regex', 'action_type', 'action_code', 'action_data', 'status', 'last_count', 'group_id', 'title')} for r in d.get('redirects', [])]
+          json.dump({'keys': sorted(d.keys()), 'redirects': keep}, open(sys.argv[1], 'w'), indent=1)
+          print(len(keep), 'redirects kept; top-level keys', sorted(d.keys()))
+          PY
       - run: |
           git config user.name "content-bot"
           git config user.email "actions@users.noreply.github.com"
