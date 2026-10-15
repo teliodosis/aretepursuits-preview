@@ -47,5 +47,21 @@
 /page/*                           /blog/                             301
 /author/*                         /about/                            301
 /category/:cat/page/*             /category/:cat/                    301
+# Old-platform posts whose address changed (from the Redirection export; live sends most of these to a 404 today)
+/blog/f                           /blog/                             301
+/blog/f/clearing-the-fog          /f-clearing-the-fog/               301
+/blog/f/promises-promises         /384-2/                            301
+/blog/f/remembering-jack-1        /remembering-jack-2/               301
+/blog/f/take-a-break              /blog/                             301
+/blog/f/teliodosis                /412-2/                            301
+/blog/f/the-golden-mean           /golden-mean/                      301
+/blog/f/the-heros-journey         /459-2/                            301
+/blog/f/it’s-called-breakfast-for-a-reason /its-called-breakfast-for-a-reason/ 301
+/blog/f/it%E2%80%99s-called-breakfast-for-a-reason /its-called-breakfast-for-a-reason/ 301
+/blog/teliodosis                  /412-2/                            301
+/blog/clearing-the-fog            /f-clearing-the-fog/               301
+/blog/promises-promises           /384-2/                            301
+/blog/the-golden-mean             /golden-mean/                      301
+/blog/the-heros-journey           /459-2/                            301
 /blog/f/:slug                     /:slug/                            301
 /blog/:slug                       /:slug/                            301
