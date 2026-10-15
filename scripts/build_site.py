@@ -216,7 +216,7 @@ META = {
  'home': ('Arete Pursuits | Executive, Life & Consciousness Coaching | Josh Dietrich, PCC',
           'Executive coaching for leaders who want to grow faster than the job alone will teach them, and life and consciousness coaching for anyone ready to meet themselves more fully.'),
  'executive-coaching': ('Executive Coaching | Arete Pursuits', 'A six-month executive coaching engagement with Everything DiSC and the Leadership Circle Profile 360, from a coach with thirty years in technology leadership.'),
- 'organizations': ('Leadership Workshops, DiSC & 360s for Organizations | Arete Pursuits', 'Leadership workshops, Everything DiSC team sessions, Leadership Circle 360s, and new leader integration for HR, talent, and executive teams.'),
+ 'organizations': ('Leadership Workshops, DiSC & 360s for Organizations | Arete Pursuits', 'Leadership workshops, Everything DiSC team sessions, and Leadership Circle 360s for HR, talent, and executive teams.'),
  'consciousness-coaching': ('Consciousness Coaching | Arete Pursuits', 'A focused kind of life coaching for people drawn to awareness, presence, and meaning, informed by nondual meditation, ontological coaching, and neuroscience.'),
  'life-coaching': ('Life Coaching | Arete Pursuits', 'A confidential thought partner for whatever life brings: purpose, transitions, productivity, health habits, and work/life balance.'),
  'meditation': ('Meditation | Arete Pursuits', 'Nondual meditation explained in plain language, free guided meditations, and an invitation to explore meditating together.'),

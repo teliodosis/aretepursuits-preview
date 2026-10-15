@@ -380,7 +380,7 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
       <div class="dd" data-dd="lead"><button aria-expanded="false" data-group="lead">Leadership ▾</button>
         <div class="dd-panel" hidden>
           <a href="#executive-coaching">Executive Coaching<small>Six months, 13 sessions, two assessments</small></a>
-          <a href="#organizations">For Organizations<small>Workshops, DiSC, 360s, new leaders</small></a>
+          <a href="#organizations">For Organizations<small>Workshops, DiSC, and 360s</small></a>
         </div></div>
       <div class="dd" data-dd="being"><button aria-expanded="false" data-group="being">Consciousness ▾</button>
         <div class="dd-panel" hidden>
@@ -389,6 +389,7 @@ footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
           <a href="#meditation">Meditation<small>Guided meditations and practice</small></a>
         </div></div>
       <a href="#writing">Writing</a>
+      <a href="#resources">Library</a>
       <a href="#about">About</a>
     </nav>
     <a class="btn btn-ember" href="#contact">Begin a conversation</a>
@@ -541,15 +542,15 @@ ${cols('AI in our work',`<p>I use AI to support my work: on my notes, on your 36
 ${cols('In their words',quotes('exec'))}
 </div>${threshold('Ready to grow faster than the job alone will teach you?')}`;
 
-pages.organizations=()=>phead('Leadership · Growing up','For <em>Organizations</em>','Workshops, assessments, and integration sessions for HR, talent, and executive teams.','<a href="#home">Home</a> / Leadership')+`<div class="wrap" style="padding-block:48px">
+pages.organizations=()=>phead('Leadership · Growing up','For <em>Organizations</em>','Workshops and assessments for HR, talent, and executive teams.','<a href="#home">Home</a> / Leadership')+`<div class="wrap" style="padding-block:48px">
 <div class="offer">
  <div class="of"><span class="label">Team</span><h3>Everything DiSC Workshop</h3><p>Three hours, virtual, for a leadership team of up to 15 (I have facilitated groups as large as 50). Genuine team building that leaves everyone with a shared language for communication, plus the Catalyst platform’s view of how each style meets every colleague’s. Additional reports are available on request, including Management, Work of Leaders, Sales, and Productive Conflict.</p></div>
- <div class="of"><span class="label">Transition</span><h3>New Leader Integration</h3><p>A two-hour facilitated session that accelerates a new leader’s first weeks with an existing team, surfacing questions and expectations on both sides early.</p></div>
+ <div class="of"><span class="label">Team</span><h3>Leadership Workshops</h3><p>Ninety-minute interactive working sessions for up to 25 participants, virtual or in person, on delegation, feedback, strategic thinking, stress, and more. <a class="tl-link" href="/services/organizations/#workshops">See all workshops</a></p></div>
  <div class="of"><span class="label">Individual</span><h3>Everything DiSC for one</h3><p>The Everything DiSC assessment, your results on the Catalyst platform, and a 50-minute session on how to use them to strengthen your communication and relationships.</p></div>
  <div class="of"><span class="label">Individual</span><h3>Leadership Circle 360</h3><p>Available outside a full coaching engagement, with three debrief sessions with a certified LCP practitioner and a development plan. Unlimited reviewers.</p></div>
 </div>
-<div class="cols" style="margin-top:28px"><div class="label">Leadership workshops</div><div class="prose"><p>Ninety-minute interactive working sessions for up to 25 participants, virtual or in person. Participants apply each concept to a real situation they are carrying. The two neuroscience sessions draw on BEabove Leadership’s NeuroTransformational material, which I am certified to deliver.</p></div></div>
-<div class="ws">${WORKSHOPS.map(([t,tag,d])=>{const hot=['Effective Delegation','Mastering Feedback','The Neuroscience of Stress Management','Strengthening Strategic Thinking'].includes(t);return `<article class="w"><span class="tag ${hot?'hot':''}">${hot?'Most requested · ':''}${tag}</span><h3>${t}</h3><p>${d}</p></article>`}).join('')}</div>
+<div class="cols" id="workshops" style="margin-top:28px;scroll-margin-top:90px"><div class="label">Leadership workshops</div><div class="prose"><p>Ninety-minute interactive working sessions for up to 25 participants, virtual or in person. Participants apply each concept to a real situation they are carrying. The neuroscience sessions draw on BEabove Leadership’s NeuroTransformational material, which I am certified to deliver.</p></div></div>
+<div class="ws">${(()=>{const POP=['The Neuroscience of Stress Management','Strengthening Strategic Thinking','Effective Delegation','Mastering Feedback'];const rank=t=>{const i=POP.indexOf(t);return i<0?99:i};return WORKSHOPS.map((w,i)=>[w,i]).sort((a,b)=>rank(a[0][0])-rank(b[0][0])||a[1]-b[1]).map(([[t,tag,d]])=>{const hot=POP.includes(t);return `<article class="w"><div><span class="tag">${tag}</span>${hot?'<span class="tag hot"> · Popular</span>':''}</div><h3>${t}</h3><p>${d}</p></article>`}).join('')})()}</div>
 <div class="cols" style="margin-top:28px"><div class="label">Sponsoring coaching</div><div class="prose">${SPONSORS}<p><a class="tl-link" href="#executive-coaching">About executive coaching</a></p></div></div>
 <div class="cols"><div class="label">In their words</div><div class="prose">${quotes('org')}</div></div>
 </div>${threshold('Building leaders across a team? Let’s design it together.')}`;
@@ -671,7 +672,7 @@ function post(slug){const i=POSTS.findIndex(p=>p.s===slug);if(i<0)return pages.w
  return `<div class="wrap"><div class="post-head"><div class="crumbs"><a href="#writing">Writing</a> / ${p.c.map(c=>`<a href="#writing~${slugify(c)}">${esc(c)}</a>`).join(', ')}</div><h1>${esc(p.t)}</h1><div class="meta"><span>${fmt(p.d)}</span><span>Josh Dietrich</span></div></div>
  <div class="post-hero" id="posthero"${IMG.has(slug)?'':' hidden'}>${IMG.has(slug)?`<img src="img/p-${slug}.jpg" alt="">`:''}</div><article class="article">${body}</article>
  ${nextStep(p)}
- <aside class="bio"><img src="img/josh.jpg" alt=""><div><p>I’m an executive, life, and consciousness coach with software executive roots. I write every week about leading, being, and life on the road.</p><div class="links"><a class="tl-link" href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Subscribe on Substack</a><a class="tl-link" href="#contact">Start a conversation</a></div></div></aside>
+ <aside class="bio"><img src="img/josh.jpg" alt=""><div><p>I’m an executive, life, and consciousness coach with software executive roots. I write every week about leading, being, and life on the road.</p><div class="links"><a class="tl-link" href="https://teliodosis.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a><a class="tl-link" href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">Subscribe on LinkedIn</a><a class="tl-link" href="#contact">Start a conversation</a></div></div></aside>
  <nav class="pn" aria-label="More posts">${od?`<a href="#post-${od.s}"><span>← OLDER</span><b>${esc(od.t)}</b></a>`:'<span></span>'}${nw?`<a href="#post-${nw.s}"><span>NEWER →</span><b>${esc(nw.t)}</b></a>`:'<span></span>'}</nav></div>`;}
 
 /* Full post text comes live from the current WordPress site for this preview. */
