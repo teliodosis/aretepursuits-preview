@@ -44,15 +44,18 @@ def media_for(u):
     u = u.split('?')[0].replace('://www.', '://')
     return mmap.get(u) or mmap.get(original(u))
 
-SIG = re.compile(r"^\s*(I am an executive|I’m an executive|I'm an executive|If you would like to learn more, schedule|Want to comment\?)", re.I)
+SIG = re.compile(r"^\s*(I am an executive|I’m an executive|I'm an executive|If you would like to learn more, schedule|Want to comment\?|You can subscribe and comment)", re.I)
 def clean(raw):
     soup = BeautifulSoup(raw, 'html.parser')
     for t in soup(['script', 'style', 'form', 'noscript']): t.decompose()
+    # Drop the closing signature lines (they appear on every post) but keep anything after them, like footnotes.
     kids = [k for k in soup.children if getattr(k, 'name', None)]
     for i, k in enumerate(kids):
-        if SIG.match(k.get_text()):
-            for x in kids[i:]: x.decompose()
-            break
+        if k.name in ('p', 'div') and SIG.match(k.get_text()):
+            j = i - 1
+            while j >= 0 and (kids[j].name == 'hr' or not kids[j].get_text(strip=True)) and not kids[j].find(['img', 'video', 'iframe']):
+                kids[j].decompose(); j -= 1
+            k.decompose()
     while True:
         kids = [k for k in soup.children if getattr(k, 'name', None)]
         if not kids: break
