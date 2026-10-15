@@ -13,7 +13,7 @@ PY
 fail=0
 while read u; do c=$(curl -s -o /dev/null -w "%{http_code}" "$BASE$u"); [ "$c" != "200" ] && { echo "PAGE $c $u" >> $out; fail=$((fail+1)); }; done < /tmp/urls.txt
 echo "pages checked $(wc -l < /tmp/urls.txt), failures $fail" >> $out
-for u in /schedule/25 /schedule/website /schedule/consciousness /schedule/session /services/leadership-workshops/ /services/disc-facilitation/ /services/360-feedback/ /everything-disc /five-behaviors /feed/ /blog/feed/ /blog/f/gentleness /blog/gentleness /blog/page/3/ /executive-coaching /blog/f/clearing-the-fog /blog/f/the-heros-journey /blog/f/it%E2%80%99s-called-breakfast-for-a-reason /blog/f/the-hero-ignored /nonexistent-page-xyz/; do
+for u in /schedule/25 /schedule/website /schedule/consciousness /schedule/session /services/leadership-workshops/ /services/disc-facilitation/ /services/360-feedback/ /everything-disc /five-behaviors /feed/ /blog/feed/ /blog/f/gentleness /blog/gentleness /blog/page/3/ /executive-coaching /blog/f/clearing-the-fog /blog/f/the-heros-journey /blog/f/it%E2%80%99s-called-breakfast-for-a-reason /blog/f/the-hero-ignored /wp-sitemap.xml /category/walkabout/ /productivity-mastery /gentleness/feed/ /nonexistent-page-xyz/; do
   echo "REDIR $u -> $(curl -s -o /dev/null -w "%{http_code} %{redirect_url}" "$BASE$u")" >> $out
 done
 echo "HEADERS / $(curl -sI "$BASE/" | grep -i -E 'x-robots|content-type' | tr '\r\n' '  ')" >> $out
