@@ -1,0 +1,9 @@
+/blog/f/clearing-the-fog 301 https://aretepursuits.com/blog/clearing-the-fog FINAL 404 https://aretepursuits.com/blog/clearing-the-fog
+/blog/f/promises-promises 301 https://aretepursuits.com/blog/promises-promises FINAL 404 https://aretepursuits.com/blog/promises-promises
+/blog/f/remembering-jack-1 301 https://aretepursuits.com/blog/remembering-jack-1 FINAL 404 https://aretepursuits.com/blog/remembering-jack-1
+/blog/f/take-a-break 301 https://aretepursuits.com/blog/take-a-break FINAL 404 https://aretepursuits.com/blog/take-a-break
+/blog/f/teliodosis 301 https://aretepursuits.com/blog/teliodosis FINAL 200 https://aretepursuits.com/412-2/
+/blog/f/the-golden-mean 301 https://aretepursuits.com/blog/the-golden-mean FINAL 404 https://aretepursuits.com/blog/the-golden-mean
+/blog/f/the-heros-journey 301 https://aretepursuits.com/blog/the-heros-journey FINAL 404 https://aretepursuits.com/blog/the-heros-journey
+/blog/f/it%E2%80%99s-called-breakfast-for-a-reason 301 https://aretepursuits.com/its-called-breakfast-for-a-reason/ FINAL 200 https://aretepursuits.com/its-called-breakfast-for-a-reason/
+/blog/f/ 301 https://aretepursuits.com/blog/ FINAL 200 https://aretepursuits.com/blog/
