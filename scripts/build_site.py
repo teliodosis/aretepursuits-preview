@@ -28,6 +28,7 @@ posts = sorted(posts, key=lambda p: p['date'], reverse=True)
 pages_wp = {p['slug']: p for p in J('content/pages.json')}
 cats_wp = {c['id']: (H.unescape(c['name']), c['slug']) for c in J('content/categories.json')}
 mmap = J('content/media-map.json')
+TITLE_OVERRIDES = {k: v for k, v in J('content/title-overrides.json').items() if not k.startswith('_')} if os.path.exists(os.path.join(ROOT, 'content/title-overrides.json')) else {}
 LINK_OVERRIDES = {k: v for k, v in J('content/link-overrides.json').items() if not k.startswith('_')} if os.path.exists(os.path.join(ROOT, 'content/link-overrides.json')) else {}
 AUDIO = J('content/audio.json') if os.path.exists(os.path.join(ROOT, 'content/audio.json')) else {}
 SLUGS = {p['slug'] for p in posts}
@@ -140,7 +141,7 @@ for p in posts:
         continue
     names = [cats_wp[c][0] for c in p['categories'] if c in cats_wp and cats_wp[c][0] != 'Uncategorized']
     names = [CAT_RENAME.get(n, n) for n in names]
-    P.append({'d': p['date'][:10], 's': s, 't': H.unescape(p['title']['rendered']), 'c': names})
+    P.append({'d': p['date'][:10], 's': s, 't': TITLE_OVERRIDES.get(s, H.unescape(p['title']['rendered'])), 'c': names})
     EX[s] = text(p['excerpt']['rendered'], 240)
     BODY[s] = clean(p['content']['rendered'])
     f = p.get('featured'); mm = f and media_for(f['url'])
