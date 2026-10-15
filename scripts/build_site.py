@@ -257,6 +257,9 @@ for p in P:
 # legal
 for slug, name in [('privacy-policy', 'Privacy Policy'), ('terms-and-conditions', 'Terms and Conditions')]:
     content = clean(pages_wp[slug]['content']['rendered'])
+    if slug == 'terms-and-conditions':
+        pdf = re.search(r'href="(/wp-content/uploads/[^"]+\.pdf)"', content)
+        content = f'<p>The Arete Pursuits Terms and Conditions are available as a PDF.</p><p><a class="btn btn-line" href="{pdf.group(1)}">Read the Terms and Conditions (PDF)</a></p>' if pdf else content
     body = R['__legalhead:' + name] + f'<div class="wrap" style="padding-bottom:80px"><article class="article">{content}</article></div>'
     write(f'/{slug}/', page(f'/{slug}/', f'{name} | Arete Pursuits', f'{name} for aretepursuits.com.', body))
 
