@@ -1,0 +1,49 @@
+# Scheduling links (email signature, proposals, old posts)
+/schedule/25                      https://calendly.com/aretepursuits/25min 301
+/schedule/blog                    https://calendly.com/aretepursuits/25min 301
+/schedule/website                 https://calendly.com/aretepursuits/25min 301
+/schedule/doctums                 https://calendly.com/aretepursuits/25min 301
+/schedule/discovery               https://calendly.com/aretepursuits/25min 301
+/schedule/50                      https://calendly.com/aretepursuits/50min 301
+/schedule/80                      https://calendly.com/aretepursuits/80min 301
+/schedule/session                 https://calendly.com/aretepursuits/session 301
+/schedule/session100              https://calendly.com/aretepursuits/session100 301
+/schedule/session200              https://calendly.com/aretepursuits/session200 301
+/schedule/individual              https://calendly.com/aretepursuits/coaching-session-individual 301
+/schedule/disc                    https://calendly.com/aretepursuits/disc-debrief 301
+/schedule/consciousness           https://calendly.com/aretepursuits/consciousness 301
+/schedule/coaching-friends-family https://calendly.com/aretepursuits/coaching-friends-family 301
+
+# Old service pages
+/services                         /                                  301
+/services/leadership-workshops    /services/organizations/           301
+/services/disc-facilitation       /services/organizations/           301
+/services/360-feedback            /services/organizations/           301
+/executive-coaching               /services/executive-coaching/      301
+/life-coaching                    /services/life-coaching/           301
+/leadership-workshops             /services/organizations/           301
+/disc-facilitation                /services/organizations/           301
+/everything-disc                  /services/organizations/           301
+/360-feedback                     /services/organizations/           301
+/consciousness-coaching           /services/consciousness-coaching/  301
+/organizations                    /services/organizations/           301
+/five-behaviors                   /                                  301
+/productivity-boot-camp           /                                  301
+/root                             /                                  301
+/465-2                            /golden-mean/                      301
+/writing                          /blog/                             301
+/library                          /resources/                        301
+
+# Feeds
+/feed                             /feed.xml                          301
+/blog/feed                        /feed.xml                          301
+/blog/f.rss                       /feed.xml                          301
+/comments/feed                    /feed.xml                          301
+
+# Archives and legacy blog paths
+/blog/page/*                      /blog/                             301
+/page/*                           /blog/                             301
+/author/*                         /about/                            301
+/category/:cat/page/*             /category/:cat/                    301
+/blog/f/:slug                     /:slug/                            301
+/blog/:slug                       /:slug/                            301

@@ -1,5 +1,5 @@
 """Download every upload referenced by posts/pages, resize for the web, write media/ + content/media-map.json."""
-import json, os, re, subprocess, time, urllib.request, io
+import json, os, re, subprocess, time, urllib.request, urllib.parse, io
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image, ImageOps
 UA = {'User-Agent': 'Mozilla/5.0 (aretepursuits migration)'}
@@ -14,7 +14,7 @@ def original(u):
 def fetch(u):
     for a in range(4):
         try:
-            with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=120) as r: return r.read()
+            with urllib.request.urlopen(urllib.request.Request(urllib.parse.quote(u, safe=':/%?=&'), headers=UA), timeout=120) as r: return r.read()
         except Exception as e:
             if getattr(e, 'code', None) == 404: return None
             time.sleep(2 * (a + 1))
@@ -22,6 +22,13 @@ def fetch(u):
 mp = {}
 def rel(u): return u.split('/wp-content/uploads/', 1)[1]
 def handle(orig):
+    path0 = 'media/wp-content/uploads/' + rel(orig)
+    for cand in (path0, path0.rsplit('.', 1)[0] + '.jpg' if path0.lower().endswith('.png') else None, path0[:-4] + '.mp4' if path0.endswith('.mov') else None):
+        if cand and os.path.exists(cand):
+            try:
+                im = Image.open(cand); return orig, {'path': '/' + cand[len('media/'):], 'w': im.width, 'h': im.height}
+            except Exception:
+                return orig, {'path': '/' + cand[len('media/'):]}
     data = fetch(orig); src = orig
     if data is None:
         cands = [r for r in refs if original(r) == orig]
