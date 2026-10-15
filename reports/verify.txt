@@ -1,0 +1,18 @@
+pages checked 262, failures 0
+REDIR /schedule/25 -> 301 https://calendly.com/aretepursuits/25min
+REDIR /schedule/website -> 301 https://calendly.com/aretepursuits/25min
+REDIR /schedule/consciousness -> 301 https://calendly.com/aretepursuits/consciousness
+REDIR /schedule/session -> 301 https://calendly.com/aretepursuits/session
+REDIR /services/leadership-workshops/ -> 404 
+REDIR /services/disc-facilitation/ -> 404 
+REDIR /services/360-feedback/ -> 404 
+REDIR /everything-disc -> 301 https://site.aretepursuits-preview.pages.dev/services/organizations/
+REDIR /five-behaviors -> 301 https://site.aretepursuits-preview.pages.dev/
+REDIR /feed/ -> 404 
+REDIR /blog/feed/ -> 404 
+REDIR /blog/f/gentleness -> 301 https://site.aretepursuits-preview.pages.dev/gentleness/
+REDIR /blog/gentleness -> 301 https://site.aretepursuits-preview.pages.dev/gentleness/
+REDIR /blog/page/3/ -> 301 https://site.aretepursuits-preview.pages.dev/blog/
+REDIR /executive-coaching -> 301 https://site.aretepursuits-preview.pages.dev/services/executive-coaching/
+REDIR /nonexistent-page-xyz/ -> 404 
+HEADERS / content-type: text/html; charset=utf-8  x-content-type-options: nosniff  x-robots-tag: noindex, nofollow  
