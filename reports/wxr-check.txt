@@ -1,0 +1,27 @@
+bytes 4440078
+ends with </rss>: True
+site: Executive Coaching - Arete Pursuits | https://aretepursuits.com
+wxr version: 1.2
+items 721
+  attachment           inherit    475
+  post                 publish    218
+  page                 publish    12
+  wp_navigation        publish    6
+  wp_template          publish    4
+  wp_template_part     publish    2
+  custom_css           publish    1
+  mc4wp-form           publish    1
+  page                 draft      1
+  wp_global_styles     publish    1
+newest published posts:
+   2026-10-12 09:00:00 Waiting | waiting
+   2026-08-10 09:00:00 Gentleness | gentleness
+   2026-08-03 09:00:00 Leading Without Authority | leading-without-authority
+   2026-07-15 09:00:00 Change of Plans | change-of-plans
+   2026-07-06 09:00:00 Allowing Everything to Be as It Is | allowing-everything-to-be-as-it-is
+posts not yet published (scheduled/draft/private):
+published posts with empty body: 0
+published pages: 12 | Privacy Policy, Life Coaching, Leadership Workshops, Contact us, Executive Coaching, Resources, About, Blog, DiSC Facilitation, 360 Feedback, Services, Terms and Conditions
+published posts in export: 218 | in new site from WordPress: 218
+in export but not on new site: []
+on new site but not in export: []
