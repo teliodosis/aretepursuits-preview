@@ -1,15 +1,22 @@
-DNS snapshot for aretepursuits.com taken 2026-10-16T01:01:38Z
+DNS snapshot for aretepursuits.com taken 2026-10-16T01:02:27Z
 Authoritative nameservers:
+ns02.squarespacedns.com.
+ns01.squarespacedns.com.
+dns3.p08.nsone.net.
+dns4.p08.nsone.net.
+ns04.squarespacedns.com.
 ns03.squarespacedns.com.
 dns1.p08.nsone.net.
-dns4.p08.nsone.net.
-ns02.squarespacedns.com.
-dns3.p08.nsone.net.
-ns01.squarespacedns.com.
-ns04.squarespacedns.com.
 dns2.p08.nsone.net.
 SOA:
 dns1.p01.nsone.net. hostmaster.nsone.net. 1708111837 43200 7200 1209600 3600
+DNSSEC at the .com registry (DS record; empty means DNSSEC is off):
+48553 13 2 16F3FCFE43CEBD01731F0C68B0FADD42A2C2A8B401BDC6D6F65FE2CF D9EAFFC4
+48553 13 2 16F3FCFE43CEBD01731F0C68B0FADD42A2C2A8B401BDC6D6F65FE2CF D9EAFFC4
+DNSKEY at the current DNS host:
+257 3 13 t+4DPP+MFZ0Cr7gAXiDYv6HTyXzq/O2
+256 3 13 3u9onSaqbxIlglXMHjh5Plcah8n2pXj
+256 3 13 CrxVm10e2wWA5gnIp0KcQI4xfGOdLAp
 == aretepursuits.com A
 aretepursuits.com.	14400	IN	A	141.193.213.10
 aretepursuits.com.	14400	IN	A	141.193.213.11
@@ -95,12 +102,12 @@ schedule.aretepursuits.com. 3600 IN	NSEC	\000.schedule.aretepursuits.com. RRSIG 
 == Google public resolver view of key records
 aretepursuits.com.	14400	IN	A	141.193.213.11
 aretepursuits.com.	14400	IN	A	141.193.213.10
-aretepursuits.com.	14400	IN	MX	10 alt4.aspmx.l.google.com.
 aretepursuits.com.	14400	IN	MX	5 alt1.aspmx.l.google.com.
+aretepursuits.com.	14400	IN	MX	10 alt4.aspmx.l.google.com.
+aretepursuits.com.	14400	IN	MX	10 alt3.aspmx.l.google.com.
 aretepursuits.com.	14400	IN	MX	5 alt2.aspmx.l.google.com.
 aretepursuits.com.	14400	IN	MX	1 aspmx.l.google.com.
-aretepursuits.com.	14400	IN	MX	10 alt3.aspmx.l.google.com.
 aretepursuits.com.	14400	IN	TXT	"v=spf1 include:_spf.google.com ~all"
 www.aretepursuits.com.	14400	IN	CNAME	aretepursuits.com.
-aretepursuits.com.	14400	IN	A	141.193.213.10
 aretepursuits.com.	14400	IN	A	141.193.213.11
+aretepursuits.com.	14400	IN	A	141.193.213.10
