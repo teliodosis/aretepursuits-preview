@@ -1,22 +1,17 @@
-DNS snapshot for aretepursuits.com taken 2026-10-16T01:02:27Z
+DNS snapshot for aretepursuits.com taken 2026-10-16T01:05:48Z
 Authoritative nameservers:
 ns02.squarespacedns.com.
-ns01.squarespacedns.com.
 dns3.p08.nsone.net.
-dns4.p08.nsone.net.
-ns04.squarespacedns.com.
 ns03.squarespacedns.com.
-dns1.p08.nsone.net.
+dns4.p08.nsone.net.
 dns2.p08.nsone.net.
+dns1.p08.nsone.net.
+ns01.squarespacedns.com.
+ns04.squarespacedns.com.
 SOA:
-dns1.p01.nsone.net. hostmaster.nsone.net. 1708111837 43200 7200 1209600 3600
+dns1.p01.nsone.net. hostmaster.nsone.net. 1792112655 43200 7200 1209600 3600
 DNSSEC at the .com registry (DS record; empty means DNSSEC is off):
-48553 13 2 16F3FCFE43CEBD01731F0C68B0FADD42A2C2A8B401BDC6D6F65FE2CF D9EAFFC4
-48553 13 2 16F3FCFE43CEBD01731F0C68B0FADD42A2C2A8B401BDC6D6F65FE2CF D9EAFFC4
 DNSKEY at the current DNS host:
-257 3 13 t+4DPP+MFZ0Cr7gAXiDYv6HTyXzq/O2
-256 3 13 3u9onSaqbxIlglXMHjh5Plcah8n2pXj
-256 3 13 CrxVm10e2wWA5gnIp0KcQI4xfGOdLAp
 == aretepursuits.com A
 aretepursuits.com.	14400	IN	A	141.193.213.10
 aretepursuits.com.	14400	IN	A	141.193.213.11
@@ -41,73 +36,15 @@ aretepursuits.com.	14400	IN	MX	5 alt1.aspmx.l.google.com.
 aretepursuits.com.	14400	IN	MX	5 alt2.aspmx.l.google.com.
 aretepursuits.com.	14400	IN	TXT	"v=spf1 include:_spf.google.com ~all"
 www.aretepursuits.com.	14400	IN	CNAME	aretepursuits.com.
-www.aretepursuits.com.	3600	IN	NSEC	\000.www.aretepursuits.com. CNAME RRSIG NSEC
-== mail.aretepursuits.com
-mail.aretepursuits.com.	3600	IN	NSEC	\000.mail.aretepursuits.com. RRSIG NSEC TYPE128
-== email.aretepursuits.com
-email.aretepursuits.com. 3600	IN	NSEC	\000.email.aretepursuits.com. RRSIG NSEC TYPE128
-== webmail.aretepursuits.com
-webmail.aretepursuits.com. 3600	IN	NSEC	\000.webmail.aretepursuits.com. RRSIG NSEC TYPE128
-== ftp.aretepursuits.com
-ftp.aretepursuits.com.	3600	IN	NSEC	\000.ftp.aretepursuits.com. RRSIG NSEC TYPE128
-== blog.aretepursuits.com
-blog.aretepursuits.com.	3600	IN	NSEC	\000.blog.aretepursuits.com. RRSIG NSEC TYPE128
-== calendar.aretepursuits.com
-calendar.aretepursuits.com. 3600 IN	NSEC	\000.calendar.aretepursuits.com. RRSIG NSEC TYPE128
-== drive.aretepursuits.com
-drive.aretepursuits.com. 3600	IN	NSEC	\000.drive.aretepursuits.com. RRSIG NSEC TYPE128
-== docs.aretepursuits.com
-docs.aretepursuits.com.	3600	IN	NSEC	\000.docs.aretepursuits.com. RRSIG NSEC TYPE128
-== sites.aretepursuits.com
-sites.aretepursuits.com. 3600	IN	NSEC	\000.sites.aretepursuits.com. RRSIG NSEC TYPE128
-== autodiscover.aretepursuits.com
-autodiscover.aretepursuits.com.	3600 IN	NSEC	\000.autodiscover.aretepursuits.com. RRSIG NSEC TYPE128
-== autoconfig.aretepursuits.com
-autoconfig.aretepursuits.com. 3600 IN	NSEC	\000.autoconfig.aretepursuits.com. RRSIG NSEC TYPE128
 == _dmarc.aretepursuits.com
 _dmarc.aretepursuits.com. 14400	IN	TXT	"v=DMARC1; p=none;"
-_dmarc.aretepursuits.com. 3600	IN	NSEC	\000._dmarc.aretepursuits.com. TXT RRSIG NSEC
+_dmarc.aretepursuits.com. 3600	IN	HINFO	"RFC8482" ""
 == google._domainkey.aretepursuits.com
 google._domainkey.aretepursuits.com. 14400 IN TXT "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4lE43WWa9IKSjMAz1vihsPF3VvhtF5niwT+oB30g60ZECNaA2nm1Zkkhv95isQKiVWrCaWxzAdsTLFfHjdw/x3ADe1S5hjPQHFK93KWDQKtQ7Vq1teOICjVeVcpNNq+owfr2cZ3hzMFGke/HsCkaX9Xg4iPmSkILe3nF6Mkgay8c+L4CWLKS5H477lb5OsiSF" "Oq3Kzd7W4cmlrPAs1U+36i/P5ke+z0W8+Dx2pr30ixpJtYSw9hU58DBX65QAdb9yOcgJQ1GEys6htK8T8BxrWkr+3Tdtr8csyWEIKGGUn91kRskTZ6PiIT3s23gKyDK8pUjx3SUY30cBV1WiaEJBwIDAQAB"
-google._domainkey.aretepursuits.com. 3600 IN NSEC \000.google._domainkey.aretepursuits.com. TXT RRSIG NSEC
-== default._domainkey.aretepursuits.com
-default._domainkey.aretepursuits.com. 3600 IN NSEC \000.default._domainkey.aretepursuits.com. RRSIG NSEC TYPE128
-== k1._domainkey.aretepursuits.com
-k1._domainkey.aretepursuits.com. 3600 IN NSEC	\000.k1._domainkey.aretepursuits.com. RRSIG NSEC TYPE128
-== s1._domainkey.aretepursuits.com
-s1._domainkey.aretepursuits.com. 3600 IN NSEC	\000.s1._domainkey.aretepursuits.com. RRSIG NSEC TYPE128
-== s2._domainkey.aretepursuits.com
-s2._domainkey.aretepursuits.com. 3600 IN NSEC	\000.s2._domainkey.aretepursuits.com. RRSIG NSEC TYPE128
-== selector1._domainkey.aretepursuits.com
-selector1._domainkey.aretepursuits.com.	3600 IN	NSEC \000.selector1._domainkey.aretepursuits.com. RRSIG NSEC TYPE128
-== selector2._domainkey.aretepursuits.com
-selector2._domainkey.aretepursuits.com.	3600 IN	NSEC \000.selector2._domainkey.aretepursuits.com. RRSIG NSEC TYPE128
-== mailchimp.aretepursuits.com
-mailchimp.aretepursuits.com. 3600 IN	NSEC	\000.mailchimp.aretepursuits.com. RRSIG NSEC TYPE128
-== em.aretepursuits.com
-em.aretepursuits.com.	3600	IN	NSEC	\000.em.aretepursuits.com. RRSIG NSEC TYPE128
+google._domainkey.aretepursuits.com. 3600 IN HINFO "RFC8482" ""
 == _domainconnect.aretepursuits.com
 _domainconnect.aretepursuits.com. 14400	IN CNAME _domainconnect.domains.squarespace.com.
-_domainconnect.aretepursuits.com. 3600 IN NSEC	\000._domainconnect.aretepursuits.com. CNAME RRSIG NSEC
-== _acme-challenge.aretepursuits.com
-_acme-challenge.aretepursuits.com. 3600	IN NSEC	\000._acme-challenge.aretepursuits.com. RRSIG NSEC TYPE128
-== zoom.aretepursuits.com
-zoom.aretepursuits.com.	3600	IN	NSEC	\000.zoom.aretepursuits.com. RRSIG NSEC TYPE128
-== calendly.aretepursuits.com
-calendly.aretepursuits.com. 3600 IN	NSEC	\000.calendly.aretepursuits.com. RRSIG NSEC TYPE128
-== booking.aretepursuits.com
-booking.aretepursuits.com. 3600	IN	NSEC	\000.booking.aretepursuits.com. RRSIG NSEC TYPE128
-== schedule.aretepursuits.com
-schedule.aretepursuits.com. 3600 IN	NSEC	\000.schedule.aretepursuits.com. RRSIG NSEC TYPE128
 == Google public resolver view of key records
-aretepursuits.com.	14400	IN	A	141.193.213.11
-aretepursuits.com.	14400	IN	A	141.193.213.10
-aretepursuits.com.	14400	IN	MX	5 alt1.aspmx.l.google.com.
-aretepursuits.com.	14400	IN	MX	10 alt4.aspmx.l.google.com.
-aretepursuits.com.	14400	IN	MX	10 alt3.aspmx.l.google.com.
-aretepursuits.com.	14400	IN	MX	5 alt2.aspmx.l.google.com.
-aretepursuits.com.	14400	IN	MX	1 aspmx.l.google.com.
-aretepursuits.com.	14400	IN	TXT	"v=spf1 include:_spf.google.com ~all"
 www.aretepursuits.com.	14400	IN	CNAME	aretepursuits.com.
-aretepursuits.com.	14400	IN	A	141.193.213.11
 aretepursuits.com.	14400	IN	A	141.193.213.10
+aretepursuits.com.	14400	IN	A	141.193.213.11
