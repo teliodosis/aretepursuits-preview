@@ -1,0 +1,61 @@
+name: check-wxr
+# Downloads a WordPress export (WXR) and writes a summary to reports/wxr-check.txt.
+# The export itself is not committed.
+on:
+  workflow_dispatch:
+    inputs:
+      url: { required: true }
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: curl -sSfL -o /tmp/export.xml "${{ inputs.url }}" && ls -la /tmp/export.xml
+      - run: |
+          mkdir -p reports
+          python3 - /tmp/export.xml content/posts.json > reports/wxr-check.txt <<'PY'
+          import sys, json, collections, xml.etree.ElementTree as ET
+          raw = open(sys.argv[1], 'rb').read()
+          print('bytes', len(raw))
+          print('ends with </rss>:', raw.rstrip().endswith(b'</rss>'))
+          ns = {'wp': 'http://wordpress.org/export/1.2/', 'content': 'http://purl.org/rss/1.0/modules/content/'}
+          root = ET.fromstring(raw)
+          ch = root.find('channel')
+          print('site:', ch.findtext('title'), '|', ch.findtext('link'))
+          print('wxr version:', ch.findtext('wp:wxr_version', namespaces=ns))
+          items = ch.findall('item')
+          c = collections.Counter((i.findtext('wp:post_type', namespaces=ns), i.findtext('wp:status', namespaces=ns)) for i in items)
+          print('items', len(items))
+          for (t, s), n in sorted(c.items(), key=lambda x: -x[1]):
+              print(f'  {t:20} {s:10} {n}')
+          posts = [i for i in items if i.findtext('wp:post_type', namespaces=ns) == 'post' and i.findtext('wp:status', namespaces=ns) == 'publish']
+          posts.sort(key=lambda i: i.findtext('wp:post_date', namespaces=ns), reverse=True)
+          print('newest published posts:')
+          for i in posts[:5]:
+              print('  ', i.findtext('wp:post_date', namespaces=ns), i.findtext('title'), '|', i.findtext('wp:post_name', namespaces=ns))
+          other = [i for i in items if i.findtext('wp:post_type', namespaces=ns) == 'post' and i.findtext('wp:status', namespaces=ns) not in ('publish', 'trash')]
+          print('posts not yet published (scheduled/draft/private):')
+          for i in other:
+              print('  ', i.findtext('wp:status', namespaces=ns), i.findtext('wp:post_date', namespaces=ns), i.findtext('title'))
+          empty = sum(1 for i in posts if not (i.findtext('content:encoded', namespaces=ns) or '').strip())
+          print('published posts with empty body:', empty)
+          pages = [i.findtext('title') for i in items if i.findtext('wp:post_type', namespaces=ns) == 'page' and i.findtext('wp:status', namespaces=ns) == 'publish']
+          print('published pages:', len(pages), '|', ', '.join(pages))
+          try:
+              site = {p.get('slug') or p.get('s') for p in json.load(open(sys.argv[2]))}
+              exp = {i.findtext('wp:post_name', namespaces=ns) for i in posts}
+              print('published posts in export:', len(exp), '| in new site from WordPress:', len(site))
+              print('in export but not on new site:', sorted(exp - site)[:20])
+              print('on new site but not in export:', sorted(site - exp)[:20])
+          except Exception as e:
+              print('compare skipped:', e)
+          PY
+          cat reports/wxr-check.txt
+      - run: |
+          git config user.name "content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/wxr-check.txt
+          git diff --cached --quiet || git commit -q -m "WordPress export check"
+          git pull -q --rebase && git push
