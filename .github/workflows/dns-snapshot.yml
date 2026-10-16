@@ -1,0 +1,37 @@
+name: dns-snapshot
+# Records the current public DNS for aretepursuits.com into reports/dns-snapshot.txt,
+# so the records Cloudflare imports can be checked line by line before switching nameservers.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  snap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y -q dnsutils >/dev/null
+      - run: |
+          mkdir -p reports
+          D=aretepursuits.com
+          NS1=$(dig +short NS $D | head -1)
+          {
+            echo "DNS snapshot for $D taken $(date -u +%FT%TZ)"
+            echo "Authoritative nameservers:"; dig +short NS $D
+            echo "SOA:"; dig +short SOA $D
+            for t in A AAAA MX TXT CAA SRV; do echo "== $D $t"; dig +noall +answer @$NS1 $D $t; done
+            for h in www mail email webmail ftp blog calendar drive docs sites autodiscover autoconfig _dmarc google._domainkey default._domainkey k1._domainkey s1._domainkey s2._domainkey selector1._domainkey selector2._domainkey mailchimp em _domainconnect _acme-challenge zoom calendly booking schedule; do
+              out=$(dig +noall +answer @$NS1 $h.$D ANY; dig +noall +answer @$NS1 $h.$D A; dig +noall +answer @$NS1 $h.$D CNAME; dig +noall +answer @$NS1 $h.$D TXT; dig +noall +answer @$NS1 $h.$D MX)
+              [ -n "$out" ] && { echo "== $h.$D"; echo "$out" | sort -u; }
+            done
+            echo "== Google public resolver view of key records"
+            for t in A MX TXT; do dig +noall +answer @8.8.8.8 $D $t; done
+            dig +noall +answer @8.8.8.8 www.$D
+          } > reports/dns-snapshot.txt 2>&1
+          cat reports/dns-snapshot.txt
+      - run: |
+          git config user.name "content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/dns-snapshot.txt
+          git diff --cached --quiet || git commit -q -m "DNS snapshot"
+          git pull -q --rebase && git push
