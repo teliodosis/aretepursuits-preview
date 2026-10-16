@@ -19,6 +19,8 @@ jobs:
             echo "DNS snapshot for $D taken $(date -u +%FT%TZ)"
             echo "Authoritative nameservers:"; dig +short NS $D
             echo "SOA:"; dig +short SOA $D
+            echo "DNSSEC at the .com registry (DS record; empty means DNSSEC is off):"; dig +short DS $D @a.gtld-servers.net; dig +short DS $D @8.8.8.8
+            echo "DNSKEY at the current DNS host:"; dig +short DNSKEY $D @$NS1 | cut -c1-40
             for t in A AAAA MX TXT CAA SRV; do echo "== $D $t"; dig +noall +answer @$NS1 $D $t; done
             for h in www mail email webmail ftp blog calendar drive docs sites autodiscover autoconfig _dmarc google._domainkey default._domainkey k1._domainkey s1._domainkey s2._domainkey selector1._domainkey selector2._domainkey mailchimp em _domainconnect _acme-challenge zoom calendly booking schedule; do
               out=$(dig +noall +answer @$NS1 $h.$D ANY; dig +noall +answer @$NS1 $h.$D A; dig +noall +answer @$NS1 $h.$D CNAME; dig +noall +answer @$NS1 $h.$D TXT; dig +noall +answer @$NS1 $h.$D MX)
