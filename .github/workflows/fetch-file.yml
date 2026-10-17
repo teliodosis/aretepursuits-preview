@@ -12,6 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: mkdir -p "$(dirname "${{ inputs.dest }}")" && curl -sSfL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36" -o "${{ inputs.dest }}" "${{ inputs.url }}" && ls -la "${{ inputs.dest }}"
+      - name: Resize site images to at most 1600px wide
+        if: startsWith(inputs.dest, 'media/') && (endsWith(inputs.dest, '.jpg') || endsWith(inputs.dest, '.jpeg') || endsWith(inputs.dest, '.png'))
+        run: |
+          pip install -q pillow
+          python3 - "${{ inputs.dest }}" <<'PY2'
+          import sys
+          from PIL import Image
+          p = sys.argv[1]; im = Image.open(p)
+          if p.lower().endswith(('.jpg', '.jpeg')) and im.mode != 'RGB': im = im.convert('RGB')
+          if im.width > 1600: im = im.resize((1600, round(im.height * 1600 / im.width)), Image.LANCZOS)
+          im.save(p, quality=85, optimize=True) if p.lower().endswith(('.jpg', '.jpeg')) else im.save(p, optimize=True)
+          print('saved', p, im.size)
+          PY2
       - name: Keep only the redirect rules from a Redirection export
         if: endsWith(inputs.dest, 'redirection-export.json')
         run: |
