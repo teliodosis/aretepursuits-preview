@@ -323,6 +323,10 @@ for line in open(os.path.join(ROOT, 'src/_redirects')):
     if parts and not line.startswith('#') and not parts[0].endswith('/') and '*' not in parts[0] and '.' not in parts[0].rsplit('/', 1)[-1]:
         rules.append(line.replace(parts[0], parts[0] + '/', 1).rstrip('\n'))  # same rule with a trailing slash
 open(os.path.join(OUT, '_redirects'), 'w').write('\n'.join(rules) + '\n')
+# The pages.dev copies (aretepursuits.pages.dev, the review project, branch previews) stay out of search engines;
+# only aretepursuits.com is indexed.
+with open(os.path.join(OUT, '_headers'), 'a') as f:
+    f.write('\nhttps://:project.pages.dev/*\n  X-Robots-Tag: noindex\nhttps://:version.:project.pages.dev/*\n  X-Robots-Tag: noindex\n')
 if os.environ.get('REVIEW'):  # review deploys stay out of search engines until cutover
     open(os.path.join(OUT, 'robots.txt'), 'w').write('User-agent: *\nDisallow: /\n')
     with open(os.path.join(OUT, '_headers'), 'a') as f: f.write('/*\n  X-Robots-Tag: noindex, nofollow\n')

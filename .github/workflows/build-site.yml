@@ -13,7 +13,7 @@ permissions:
   contents: write
 concurrency: build-site
 env:
-  REVIEW: '1'   # remove at cutover so search engines can index the site
+  # REVIEW: '1' removed at cutover (Oct 17 2026) so search engines can index aretepursuits.com
 jobs:
   build:
     runs-on: ubuntu-latest
