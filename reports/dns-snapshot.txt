@@ -1,13 +1,13 @@
-DNS snapshot for aretepursuits.com taken 2026-10-16T01:05:48Z
+DNS snapshot for aretepursuits.com taken 2026-10-17T06:31:03Z
 Authoritative nameservers:
+ns03.squarespacedns.com.
 ns02.squarespacedns.com.
 dns3.p08.nsone.net.
-ns03.squarespacedns.com.
+ns01.squarespacedns.com.
+dns1.p08.nsone.net.
+ns04.squarespacedns.com.
 dns4.p08.nsone.net.
 dns2.p08.nsone.net.
-dns1.p08.nsone.net.
-ns01.squarespacedns.com.
-ns04.squarespacedns.com.
 SOA:
 dns1.p01.nsone.net. hostmaster.nsone.net. 1792112655 43200 7200 1209600 3600
 DNSSEC at the .com registry (DS record; empty means DNSSEC is off):
@@ -45,6 +45,14 @@ google._domainkey.aretepursuits.com. 3600 IN HINFO "RFC8482" ""
 == _domainconnect.aretepursuits.com
 _domainconnect.aretepursuits.com. 14400	IN CNAME _domainconnect.domains.squarespace.com.
 == Google public resolver view of key records
-www.aretepursuits.com.	14400	IN	CNAME	aretepursuits.com.
+aretepursuits.com.	14400	IN	A	141.193.213.11
+aretepursuits.com.	14400	IN	A	141.193.213.10
+aretepursuits.com.	12094	IN	MX	1 aspmx.l.google.com.
+aretepursuits.com.	12094	IN	MX	5 alt2.aspmx.l.google.com.
+aretepursuits.com.	12094	IN	MX	10 alt4.aspmx.l.google.com.
+aretepursuits.com.	12094	IN	MX	5 alt1.aspmx.l.google.com.
+aretepursuits.com.	12094	IN	MX	10 alt3.aspmx.l.google.com.
+aretepursuits.com.	14400	IN	TXT	"v=spf1 include:_spf.google.com ~all"
+www.aretepursuits.com.	12094	IN	CNAME	aretepursuits.com.
 aretepursuits.com.	14400	IN	A	141.193.213.10
 aretepursuits.com.	14400	IN	A	141.193.213.11
