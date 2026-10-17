@@ -1,12 +1,14 @@
-Records for aretepursuits.com as served by ridge.ns.cloudflare.com, 2026-10-17T06:50:18Z
+Records for aretepursuits.com as served by adel.ns.cloudflare.com, 2026-10-17T06:59:53Z
 Delegation at the .com registry:
 aretepursuits.com.	172800	IN	NS	adel.ns.cloudflare.com.
 aretepursuits.com.	172800	IN	NS	ridge.ns.cloudflare.com.
 DS at registry:
 == aretepursuits.com A
-aretepursuits.com.	300	IN	A	141.193.213.10
-aretepursuits.com.	300	IN	A	141.193.213.11
+aretepursuits.com.	300	IN	A	104.21.76.47
+aretepursuits.com.	300	IN	A	172.67.187.175
 == aretepursuits.com AAAA
+aretepursuits.com.	300	IN	AAAA	2606:4700:3033::ac43:bbaf
+aretepursuits.com.	300	IN	AAAA	2606:4700:3037::6815:4c2f
 == aretepursuits.com MX
 aretepursuits.com.	300	IN	MX	1 aspmx.l.google.com.
 aretepursuits.com.	300	IN	MX	10 alt3.aspmx.l.google.com.
