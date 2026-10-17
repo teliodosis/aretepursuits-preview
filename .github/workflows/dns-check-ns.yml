@@ -16,6 +16,8 @@ jobs:
           mkdir -p reports; D=aretepursuits.com; N="${{ inputs.ns }}"
           {
             echo "Records for $D as served by $N, $(date -u +%FT%TZ)"
+            echo "Delegation at the .com registry:"; dig +norec +noall +authority NS $D @a.gtld-servers.net | sort
+            echo "DS at registry:"; dig +short DS $D @a.gtld-servers.net
             for t in A AAAA MX TXT; do echo "== $D $t"; dig +noall +answer @$N $D $t | sort; done
             for h in www _dmarc google._domainkey k2._domainkey k3._domainkey _domainconnect; do echo "== $h"; dig +noall +answer @$N $h.$D ANY | sort; dig +noall +answer @$N $h.$D TXT | sort; dig +noall +answer @$N $h.$D CNAME | sort; done
           } > reports/dns-check-ns.txt 2>&1
