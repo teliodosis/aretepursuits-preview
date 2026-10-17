@@ -23,4 +23,4 @@ REDIR /category/walkabout/ -> 301 https://aretepursuits.com/category/wanderment/
 REDIR /productivity-mastery -> 301 https://aretepursuits.com/services/organizations/
 REDIR /gentleness/feed/ -> 301 https://aretepursuits.com/feed.xml
 REDIR /nonexistent-page-xyz/ -> 404 
-HEADERS / content-type: text/html; charset=utf-8  x-robots-tag: noindex, nofollow  x-content-type-options: nosniff  
+HEADERS / content-type: text/html; charset=utf-8  x-content-type-options: nosniff  
