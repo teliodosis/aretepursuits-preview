@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Writing | Arete Pursuits</title>
+<meta name="description" content="Writing since 2021 on leadership, neuroscience, consciousness, and life on the road.">
+<link rel="canonical" href="https://aretepursuits.com/blog/">
+<meta property="og:site_name" content="Arete Pursuits">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Writing | Arete Pursuits">
+<meta property="og:description" content="Writing since 2021 on leadership, neuroscience, consciousness, and life on the road.">
+<meta property="og:url" content="https://aretepursuits.com/blog/">
+<meta property="og:image" content="https://aretepursuits.com/og/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Arete Pursuits" href="/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..700;1,7..72,200..600&family=Albert+Sans:wght@400;500;600&display=swap">
+<style>
+/* Baseline (Oct 2026), built from Wider Door. Layout: "Two doors, one threshold" — dusk-dark first; a full-bleed photograph opens the site, two doors split below it, and every page ends at the same threshold (a conversation). */
+:root{
+  --bg:#0F1614; --surface:#16201D; --raise:#1C2824; --ink:#ECE6DA; --muted:#A3ACA5; --rule:#2A3632;
+  --ember:#E49A5B; --sage:#A6BC9F; --on-accent:#1A120B; --shade:rgba(8,12,11,.62);
+  --f-display:"Literata", "Iowan Old Style", Georgia, serif;
+  --f-body:"Albert Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"Albert Sans", "Segoe UI", system-ui, sans-serif;
+  --max:1200px; --measure:64ch; --r:4px;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#EFF1EC; --surface:#FFFFFF; --raise:#F7F8F4; --ink:#17201C; --muted:#5A6660; --rule:#D3D9D1;
+  --ember:#B2591F; --sage:#4D6A49; --on-accent:#FFFFFF; --shade:rgba(10,14,12,.55); color-scheme:light }}
+:root[data-theme="light"]{
+  --bg:#EFF1EC; --surface:#FFFFFF; --raise:#F7F8F4; --ink:#17201C; --muted:#5A6660; --rule:#D3D9D1;
+  --ember:#B2591F; --sage:#4D6A49; --on-accent:#FFFFFF; --shade:rgba(10,14,12,.55); color-scheme:light }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(16px,4vw,44px)}
+h1,h2,h3{font-family:var(--f-display);font-weight:350;text-wrap:balance;line-height:1.08;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.label{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:.6em;font:600 .95rem/1 var(--f-body);padding:1em 1.45em;border-radius:999px;text-decoration:none;border:1px solid transparent;transition:transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-ember{background:var(--ember);color:var(--on-accent)}
+.btn-line{border-color:currentColor;color:var(--ink)}
+.tl-link{color:var(--ink);text-decoration:underline;text-decoration-color:var(--ember);text-underline-offset:.22em;text-decoration-thickness:1.5px}
+.tl-link:hover{color:var(--ember)}
+
+/* header */
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.nav{display:flex;align-items:center;gap:22px;min-height:70px}
+.brand{text-decoration:none;display:flex;align-items:baseline;gap:.5em;line-height:1}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:1.35rem}
+.brand i{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:1.35rem;color:var(--ember)}
+.menu{display:flex;gap:2px;margin-left:auto;align-items:center}
+.menu > a,.menu .dd > button{font:500 .95rem var(--f-body);color:var(--ink);text-decoration:none;background:none;border:0;padding:.6em .85em;border-radius:6px;cursor:pointer}
+.menu > a:hover,.menu .dd > button:hover{background:var(--raise)}
+.menu [aria-current="page"],.menu .dd > button.on{color:var(--ember)}
+.dd{position:relative}
+.dd-panel{position:absolute;top:calc(100% + 10px);left:-10px;min-width:280px;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:8px;box-shadow:0 24px 50px -24px rgba(0,0,0,.6)}
+.dd-panel::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+.dd-panel a{display:block;padding:.65em .85em;border-radius:6px;text-decoration:none}
+.dd-panel a small{display:block;color:var(--muted);font-size:.82rem}
+.dd-panel a:hover{background:var(--raise)}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--rule);border-radius:8px;padding:.5em .75em;font:500 .9rem var(--f-body);color:var(--ink)}
+.mobile{border-top:1px solid var(--rule);padding-block:10px 18px;display:grid}
+.mobile a{padding:.5em 0;text-decoration:none;font-size:1.05rem}
+.mobile .grp{margin-top:8px}
+@media (max-width:940px){ .menu,.nav > .btn{display:none} .burger{display:inline-block} }
+
+section{padding-block:clamp(64px,9vw,120px)}
+.rt{border-top:1px solid var(--rule)}
+
+/* hero */
+.hero{position:relative;padding:0;min-height:min(78vh,720px);display:grid;align-items:end;overflow:hidden;color:#F3EEE4}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,11,.15) 0%,rgba(8,12,11,.25) 40%,rgba(8,12,11,.86) 100%)}
+.hero .inner{position:relative;z-index:1;padding-block:clamp(120px,18vw,220px) clamp(40px,6vw,72px)}
+.hero h1{font-size:clamp(2.6rem,7.4vw,6.4rem);font-weight:300;max-width:15ch;letter-spacing:-.025em}
+.hero h1 em{font-style:italic;color:#F0A867}
+.hero .sub{font-size:clamp(1.05rem,1.8vw,1.3rem);max-width:46ch;margin-top:22px;color:#E3DCCF}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .btn-line{color:#F3EEE4}
+.hero .credit{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;color:#C9C1B3;margin-top:40px;opacity:.85}
+
+/* doors */
+.doors{display:flex;gap:14px;min-height:520px}
+.door{position:relative;flex:1 1 0;min-width:0;border-radius:var(--r);overflow:hidden;text-decoration:none;color:#F3EEE4;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(22px,3vw,40px);transition:flex-grow .6s cubic-bezier(.2,.7,.2,1)}
+.door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.door::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,11,.05),rgba(8,12,11,.82) 70%)}
+.door > *:not(img){position:relative;z-index:1}
+.door .label{color:#CFE0C8}
+.door h2{font-size:clamp(2rem,3.6vw,3.1rem);margin:10px 0 12px}
+.door p{max-width:40ch;color:#E5DFD3}
+.door .incl{margin-top:18px;font-size:.88rem;color:#D9D2C4;max-width:44ch}
+.door .incl b{font-family:var(--f-mono);font-weight:400;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#CFE0C8;margin-right:.6em}
+.door .go{display:inline-flex;align-items:center;gap:.5em;margin-top:20px;font-weight:600;font-size:.95rem;color:#F3EEE4;border-bottom:1px solid rgba(243,238,228,.5);padding-bottom:2px;align-self:flex-start}
+@media (hover:hover) and (min-width:861px){ .doors:hover .door{flex-grow:.85} .doors .door:hover{flex-grow:1.4} .door:hover img{transform:scale(1.04)} }
+@media (max-width:860px){ .doors{flex-direction:column;min-height:0} .door{min-height:420px} }
+
+/* thesis */
+.thesis{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.thesis h2{font-size:clamp(2rem,4vw,3.3rem)}
+.thesis .body{display:grid;gap:18px;color:var(--muted);max-width:var(--measure)}
+.coin{border:1px solid var(--rule);border-radius:var(--r);padding:22px 24px;background:var(--surface);margin-top:28px}
+.coin .w{font-family:var(--f-display);font-style:italic;font-size:1.9rem}
+.coin .ph{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);margin-left:.6em}
+.coin p{margin-top:8px;color:var(--ink)}
+@media (max-width:820px){ .thesis{grid-template-columns:1fr} }
+
+/* clients */
+.names{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:center;padding-block:44px;border-block:1px solid var(--rule)}
+.names .lbl{width:100%;text-align:center;margin-bottom:6px}
+.names{background:#ECEAE3;border-radius:var(--r);border:0;padding-inline:24px}
+.names .lbl{color:#4D6A49}
+.names img{height:48px;width:auto;max-width:170px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.05);opacity:.8;transition:filter .3s,opacity .3s}
+.names img:hover{filter:none;opacity:1}
+.names .need{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;height:54px;padding:0 14px;border:1px dashed #9AA39C;border-radius:6px;font-family:var(--f-display);font-size:1.05rem;color:#2A332F;white-space:nowrap;line-height:1.1}
+.names .need small{font-family:var(--f-mono);font-size:.6rem;color:#6A746E;letter-spacing:.06em;margin-top:3px}
+.names span.n{font-family:var(--f-display);font-size:clamp(1.15rem,2vw,1.5rem);font-weight:350;color:var(--muted);white-space:nowrap}
+
+/* testimonials */
+.quote-big{font-family:var(--f-display);font-weight:300;font-style:italic;font-size:clamp(2.2rem,5.6vw,4.4rem);line-height:1.06;max-width:18ch}
+.qby{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:16px 0 56px}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:36px}
+.q{margin:0;padding-top:18px;border-top:1px solid var(--rule)}
+.q p{font-family:var(--f-display);font-size:1.15rem;line-height:1.5}
+.q cite{display:block;margin-top:12px;font-style:normal;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ember)}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:44px 28px}
+.card{text-decoration:none;display:grid;gap:12px;align-content:start}
+.card .ph{aspect-ratio:3/2;max-width:100%;border-radius:var(--r);overflow:hidden;background:var(--raise)}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.card:hover .ph img{transform:scale(1.04)}
+.card h3{font-size:1.5rem}
+.card:hover h3{color:var(--ember)}
+.meta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);display:flex;gap:.6em;flex-wrap:wrap;letter-spacing:.04em}
+.meta .c{color:var(--sage)}
+.card .ex{color:var(--muted);font-size:.96rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+/* waystations */
+.road{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px);align-items:start}
+.stops{list-style:none;margin:0;padding:0;border-left:1px solid var(--rule)}
+.stops li{position:relative;padding:0 0 18px 22px;display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px}
+.stops li::before{content:"";position:absolute;left:-5px;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1.5px solid var(--sage)}
+.stops li.now::before{background:var(--ember);border-color:var(--ember)}
+.stops .y{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);padding-top:.2em}
+@media (max-width:820px){ .road{grid-template-columns:1fr} .stops li{grid-template-columns:1fr;gap:2px} }
+
+/* threshold band */
+.threshold{background:var(--surface);border-top:1px solid var(--rule)}
+.threshold .inner{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:end}
+.threshold h2{font-size:clamp(2rem,4.4vw,3.6rem)}
+.threshold .opts{display:grid;gap:12px}
+.threshold .opt{display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none;border:1px solid var(--rule);border-radius:var(--r);padding:16px 18px;background:var(--bg)}
+.threshold .opt:hover{border-color:var(--ember)}
+.threshold .opt b{font-weight:600}
+.threshold .opt span{font-size:.88rem;color:var(--muted)}
+.threshold .opt i{font-style:normal;color:var(--ember);font-size:1.3rem}
+@media (max-width:820px){ .threshold .inner{grid-template-columns:1fr} }
+
+/* page head */
+.phead{padding-block:clamp(56px,8vw,104px) clamp(32px,4vw,52px);border-bottom:1px solid var(--rule)}
+.phead h1{font-size:clamp(2.6rem,6.4vw,5.2rem);margin-top:16px;max-width:18ch;font-weight:300}
+.phead h1 em{font-style:italic;color:var(--ember)}
+.phead .lede{font-family:var(--f-display);font-size:clamp(1.2rem,2.1vw,1.55rem);color:var(--muted);max-width:42ch;margin-top:20px;font-weight:350}
+.crumbs{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);letter-spacing:.04em}
+.crumbs a{color:var(--muted)}
+
+.cols{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:18px 56px;padding-block:48px;border-bottom:1px solid var(--rule)}
+.cols:last-child{border-bottom:0}
+.cols > .label{padding-top:.5em}
+.prose{max-width:var(--measure);display:grid;gap:1.05em}
+.prose h3{font-size:1.6rem;margin-top:.4em}
+.prose ul,.prose ol{margin:0;padding-left:1.15em;display:grid;gap:.55em}
+@media (max-width:780px){ .cols{grid-template-columns:1fr} }
+
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding-block:14px;border-top:1px solid var(--rule)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--f-mono);font-size:.8rem;color:var(--ember);padding-top:.25em}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+.facts div{background:var(--surface);padding:16px 18px}
+.facts b{display:block;font-family:var(--f-display);font-weight:350;font-size:1.7rem}
+.facts span{font-size:.85rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.85rem;padding:.38em .9em;border-radius:999px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;font-family:var(--f-body)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip .n{color:var(--muted);margin-left:.35em;font-family:var(--f-mono);font-size:.78em}
+.chip[aria-pressed="true"] .n{color:inherit;opacity:.7}
+
+/* consciousness path */
+.path{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:10px;position:relative}
+.path::before{content:"";position:absolute;left:0;right:0;top:15px;height:1px;background:linear-gradient(90deg,var(--sage),var(--ember))}
+.stn{position:relative;padding:0 14px 0 0}
+.stn .dot{width:31px;height:31px;border-radius:50%;background:var(--bg);border:1.5px solid var(--sage);display:grid;place-items:center;font-family:var(--f-mono);font-size:.72rem;color:var(--ink);position:relative}
+.stn:last-child .dot{border-color:var(--ember)}
+.stn h3{font-size:1.25rem;margin:14px 0 6px}
+.stn p{font-size:.92rem;color:var(--muted)}
+.stn .off{margin-top:10px;font-size:.82rem;color:var(--muted);border-top:1px dashed var(--rule);padding-top:8px}
+.stn .off b{font-family:var(--f-mono);font-weight:400;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ember);display:block}
+@media (max-width:900px){ .path{grid-template-columns:1fr;gap:22px} .path::before{left:15px;right:auto;top:0;bottom:0;width:1px;height:auto;background:linear-gradient(180deg,var(--sage),var(--ember))} .stn{padding:0 0 0 48px} .stn .dot{position:absolute;left:0;top:0} .stn h3{margin-top:2px} }
+
+.vs{width:100%;border-collapse:collapse;font-size:.98rem}
+.vs th,.vs td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.vs th{font-family:var(--f-mono);font-weight:400;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.vs td:first-child{color:var(--muted);width:24%}
+.vs td:nth-child(3){color:var(--ember)}
+.tablewrap{overflow-x:auto}
+
+/* about */
+.ab-hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr);gap:clamp(28px,5vw,72px);align-items:end}
+.ab-hero img{width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r);filter:saturate(.85)}
+.ab-hero h1 span{display:block}
+.ab-hero h1 span:nth-child(even){font-style:italic;color:var(--ember)}
+@media (max-width:820px){ .ab-hero{grid-template-columns:1fr} .ab-hero img{max-width:340px} }
+.tline{list-style:none;margin:0;padding:0;display:grid}
+.tline li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;padding-block:16px;border-top:1px solid var(--rule)}
+.tline .y{font-family:var(--f-mono);font-size:.8rem;color:var(--ember);padding-top:.3em}
+.tline b{font-family:var(--f-display);font-weight:400;font-size:1.25rem;display:block}
+.tline span{color:var(--muted)}
+@media (max-width:600px){ .tline li{grid-template-columns:1fr;gap:4px} }
+
+/* workshops */
+.ws{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:0 40px}
+.w{padding-block:24px;border-top:1px solid var(--rule);display:grid;gap:8px;align-content:start}
+.w h3{font-size:1.4rem}
+.w .tag{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
+.w .tag.hot{color:var(--ember)}
+.w p{color:var(--muted);font-size:.96rem}
+.offer{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px}
+.of{border:1px solid var(--rule);border-radius:var(--r);background:var(--surface);padding:24px;display:grid;gap:10px;align-content:start}
+.of h3{font-size:1.5rem}
+.of p{color:var(--muted);font-size:.96rem}
+
+/* writing */
+.feature{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;text-decoration:none;padding-block:44px;border-bottom:1px solid var(--rule)}
+.feature .ph{aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;max-width:100%}
+.feature .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.feature h2{font-size:clamp(2.2rem,4.4vw,3.6rem);margin-block:12px 14px;font-weight:300}
+.feature:hover h2{color:var(--ember)}
+@media (max-width:780px){ .feature{grid-template-columns:1fr} }
+.toolbar{display:grid;gap:16px;padding-block:28px;border-bottom:1px solid var(--rule)}
+.search{display:flex;align-items:center;gap:10px;border:1px solid var(--rule);background:var(--surface);border-radius:999px;padding:.55em 1em;max-width:440px}
+.search input{border:0;background:transparent;font:inherit;color:var(--ink);width:100%;outline:none}
+.year{display:grid;grid-template-columns:minmax(0,140px) minmax(0,1fr);gap:12px 40px;padding-block:28px;border-bottom:1px solid var(--rule)}
+.year h3{font-family:var(--f-mono);font-size:1.3rem;font-weight:400}
+.year h3 small{display:block;font-size:.72rem;color:var(--muted);margin-top:4px}
+.row{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:16px;padding-block:9px;border-bottom:1px dashed var(--rule);text-decoration:none;align-items:baseline}
+.row:last-child{border-bottom:0}
+.row .d{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+.row .t{font-family:var(--f-display);font-size:1.15rem;font-weight:350}
+.row:hover .t{color:var(--ember)}
+.row .k{font-size:.78rem;color:var(--muted);text-align:right}
+@media (max-width:780px){ .year{grid-template-columns:1fr} .row{grid-template-columns:60px minmax(0,1fr)} .row .k{display:none} }
+.empty{padding-block:40px;color:var(--muted)}
+
+/* post */
+.post-head{padding-block:clamp(44px,6vw,84px) 28px;max-width:880px}
+.post-head h1{font-size:clamp(2.5rem,6vw,4.6rem);margin-block:14px 18px;font-weight:300}
+.post-hero{max-width:1100px;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden}
+.post-hero img{width:100%;height:100%;object-fit:cover;display:block}
+.pfig{margin-top:clamp(28px,4vw,48px)}
+.pfig img{display:block;width:100%;aspect-ratio:2/1;object-fit:cover;object-position:30% 40%;border-radius:var(--r)}
+@media (max-width:700px){.pfig img{aspect-ratio:4/5;object-position:28% 30%}}
+.article{max-width:var(--measure);font-family:var(--f-display);font-weight:350;font-size:1.25rem;line-height:1.66;padding-block:44px;display:grid;gap:1.05em}
+.article h2{font-size:1.8rem;margin-top:.9em;font-weight:400}
+.article ul{margin:0;padding-left:1.1em;display:grid;gap:.45em}
+.article strong{font-weight:550}
+.article a{text-decoration-color:var(--ember);text-underline-offset:.2em}
+.article .practice{border-left:2px solid var(--ember);padding:4px 0 4px 20px;font-style:italic}
+.note{font-family:var(--f-body);font-size:.95rem;background:var(--surface);border:1px dashed var(--rule);border-radius:var(--r);padding:16px 18px;color:var(--muted)}
+.bio{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;align-items:start;max-width:var(--measure);padding:24px;border:1px solid var(--rule);border-radius:var(--r);background:var(--surface)}
+.bio img{width:72px;height:72px;border-radius:50%;object-fit:cover}
+.bio p{font-size:.98rem}
+.bio .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:.92rem}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-block:40px;max-width:880px}
+.pn a{text-decoration:none;display:grid;gap:4px}
+.pn a:last-child{text-align:right}
+.pn span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.pn b{font-family:var(--f-display);font-weight:400;font-size:1.25rem}
+.pn a:hover b{color:var(--ember)}
+
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:8px 40px}
+.shelf .grp{padding-block:24px;border-top:1px solid var(--rule)}
+.shelf h3{font-size:1.35rem;margin-bottom:10px}
+.shelf ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.shelf li a{text-decoration:none;display:block}
+.shelf li a b{font-family:var(--f-display);font-weight:400;font-size:1.1rem}
+.shelf li a:hover b{color:var(--ember)}
+.shelf li span{display:block;font-size:.85rem;color:var(--muted)}
+
+.ways{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px;padding-block:48px}
+.way{border:1px solid var(--rule);border-radius:var(--r);padding:24px;background:var(--surface);display:grid;gap:10px;align-content:start}
+.way h3{font-size:1.45rem}
+.way .val{font-family:var(--f-display);font-size:1.3rem;user-select:all;word-break:break-word}
+.copy{justify-self:start;font:500 .85rem var(--f-body);background:none;border:1px solid var(--rule);border-radius:999px;padding:.45em .9em;color:var(--ink);cursor:pointer}
+
+footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px}
+.fgrid h4{font-family:var(--f-mono);font-weight:400;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;color:var(--sage);margin:0 0 12px}
+.fgrid ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.95rem}
+.fgrid a{text-decoration:none;color:var(--muted)}
+.fgrid a:hover{color:var(--ink)}
+.fgrid .tag{font-family:var(--f-display);font-style:italic;font-size:1.25rem;margin-top:14px;max-width:24ch;font-weight:300}
+.fine{margin-top:44px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:860px){ .fgrid{grid-template-columns:1fr 1fr} .fgrid > :first-child{grid-column:1/-1} }
+
+.pill{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:.5em .6em .5em 1em;font-size:.82rem;box-shadow:0 12px 30px -16px rgba(0,0,0,.6)}
+.pill b{font-family:var(--f-mono);letter-spacing:.1em;text-transform:uppercase;font-size:.68rem;color:var(--ember);font-weight:400}
+.pill a{text-decoration:none;background:var(--raise);color:var(--ink);padding:.35em .8em;border-radius:999px}
+.pill button{background:none;border:0;color:var(--muted);cursor:pointer;font-size:1rem;padding:0 .3em}
+
+/* fortnightly tooltip */
+.fn{position:relative;text-decoration:underline dotted;text-decoration-color:var(--muted);text-underline-offset:.22em;cursor:help;outline-offset:2px}
+.fn::after{content:"Every two weeks";position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%) translateY(4px);white-space:nowrap;font:500 .76rem/1 var(--f-body);letter-spacing:0;text-transform:none;font-style:normal;background:var(--ink);color:var(--bg);padding:.55em .75em;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:20}
+.fn:hover::after,.fn:focus::after{opacity:1;transform:translateX(-50%) translateY(0)}
+/* wanderment chapters */
+.chapters{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--rule)}
+.chapters li{display:grid;grid-template-columns:132px minmax(0,1fr);gap:4px 18px;padding-block:16px;border-bottom:1px solid var(--rule)}
+.chapters .y{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);padding-top:.35em;grid-row:span 2}
+.chapters li.now .y{color:var(--ember)}
+.chapters b{font-family:var(--f-display);font-weight:400;font-size:1.2rem}
+.chapters .route{color:var(--muted);font-size:.92rem}
+@media (max-width:600px){ .chapters li{grid-template-columns:1fr} .chapters .y{grid-row:auto} }
+/* life ⊃ consciousness */
+.nest{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:28px;align-items:center}
+.rings{position:relative;width:100%;max-width:260px;aspect-ratio:1/1;border-radius:50%;border:1px solid var(--sage);background:color-mix(in srgb,var(--sage) 8%,transparent)}
+.rings .lc{position:absolute;top:13%;left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.rings .in{position:absolute;left:24%;right:24%;top:32%;bottom:16%;border-radius:50%;background:color-mix(in srgb,var(--ember) 18%,transparent);border:1px solid var(--ember);display:grid;place-items:center;text-align:center;padding:10px}
+.rings .in span{font-family:var(--f-display);font-size:.98rem;line-height:1.2;color:var(--ink)}
+@media (max-width:600px){ .nest{grid-template-columns:1fr} .rings{max-width:220px} }
+/* meditation */
+.tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px}
+.track{display:grid;gap:6px;text-decoration:none;border:1px solid var(--rule);border-radius:var(--r);padding:20px;background:var(--surface)}
+.track:hover{border-color:var(--ember)}
+.track b{font-family:var(--f-display);font-weight:400;font-size:1.3rem}
+.track span{font-size:.85rem;color:var(--muted)}
+.post-loading{color:var(--muted);font-family:var(--f-body);font-size:1rem}
+.article img{max-width:100%;height:auto;border-radius:var(--r)}
+.article figure{margin:0}
+.article figcaption{font-family:var(--f-body);font-size:.85rem;color:var(--muted);margin-top:6px}
+/* proof strip */
+.proof{border-bottom:1px solid var(--rule);background:var(--surface)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.proof div.stat{padding:22px 18px;border-left:1px solid var(--rule)}
+.proof div.stat:first-child{border-left:0;padding-left:0}
+.proof b{display:block;font-family:var(--f-display);font-weight:350;font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.1}
+.proof span{font-size:.85rem;color:var(--muted)}
+@media (max-width:760px){ .proof .wrap{grid-template-columns:1fr 1fr} .proof div.stat:nth-child(3){border-left:0;padding-left:0} .proof div.stat{border-top:1px solid var(--rule)} .proof div.stat:nth-child(-n+2){border-top:0} }
+/* testimonials on service pages */
+.pq{display:grid;gap:22px}
+.pq figure{margin:0;padding-left:18px;border-left:2px solid var(--ember)}
+.pq p{font-family:var(--f-display);font-size:1.15rem;line-height:1.5}
+.pq cite{display:block;margin-top:8px;font-style:normal;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+/* next step after posts */
+.next{max-width:var(--measure);margin-bottom:22px;padding:22px 24px;border:1px solid var(--rule);border-left:3px solid var(--ember);border-radius:var(--r);background:var(--surface);display:grid;gap:10px}
+.next p{font-size:1rem}
+.next .row2{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+@keyframes rise{from{opacity:.001;transform:translateY(12px)}to{opacity:1;transform:none}}
+.enter{animation:rise .55s ease both}
+.hero h1,.hero .sub,.hero .actions{animation:rise .9s ease both}
+.hero .sub{animation-delay:.12s}.hero .actions{animation-delay:.24s}
+@media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important} }
+/* baseline additions */
+.label{font-weight:500}
+.y,.d,.meta,.chapters .y,.tline .y,.crumbs{font-variant-numeric:tabular-nums}
+.threshold.start{background:var(--bg);border-top:0}
+.sec{font-size:clamp(2rem,4.4vw,3.4rem);margin-top:14px}
+.intro{max-width:60ch;margin:16px 0 34px;font-size:1.08rem}
+.changes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.changes > div{border:1px solid var(--rule);border-radius:var(--r);padding:22px clamp(18px,2.4vw,30px);background:var(--surface)}
+.changes ul,.outcomes{list-style:none;padding:0;margin:12px 0 0;display:grid}
+.changes li,.outcomes li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.changes li:last-child,.outcomes li:last-child{border-bottom:0}
+.changes li::before,.outcomes li::before{content:"→";color:var(--ember)}
+@media (max-width:860px){ .changes{grid-template-columns:1fr} }
+.latest{margin-top:clamp(40px,6vw,72px)}
+.wref{margin-top:10px;font-size:.92rem}
+.shelf li a.lref{display:block;font-size:.82rem;color:var(--ember);margin-top:2px;text-decoration:underline;text-underline-offset:2px}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px}
+.tiles .card h3{font-size:1.2rem}
+.tiles .card .ex{font-size:.92rem}
+@media (max-width:1000px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.tiles{gap:22px 14px}.tiles .card .ex{display:none}.tiles .card h3{font-size:1.05rem}.tiles .card .meta .c{display:none}}
+.chapters li.ahead b{font-style:italic;color:var(--muted)}
+.latest .row{grid-template-columns:110px minmax(0,1fr) auto}
+@media (max-width:780px){ .latest .row{grid-template-columns:90px minmax(0,1fr)} }
+.names img[alt^="Washington"]{max-width:240px;height:36px}
+.pill .hopt{display:flex;gap:4px}
+.pill .hopt button{font:600 .8rem var(--f-body);width:28px;height:28px;border-radius:50%;border:1px solid var(--rule);background:var(--bg);color:var(--ink);padding:0}
+.pill .hopt button[aria-pressed="true"]{background:var(--ember);border-color:var(--ember);color:var(--on-accent)}
+.post-head h1,.article h1,.article h2,.article h3{overflow-wrap:anywhere}
+.article{overflow-wrap:break-word;grid-template-columns:minmax(0,1fr)}
+.article table{display:block;max-width:100%;overflow-x:auto}
+.listen{max-width:var(--measure);margin:22px 0 26px;display:flex;align-items:center;gap:14px;padding:10px 14px 10px 10px;border:1px solid var(--rule);border-radius:999px;background:var(--surface)}
+.listen .pp{width:42px;height:42px;border-radius:50%;background:var(--ember);color:var(--on-accent);border:0;display:grid;place-items:center;cursor:pointer;flex:none}
+.listen .pp svg{width:16px;height:16px;fill:currentColor}
+.listen .mid{flex:1;min-width:0;display:grid;gap:2px}
+.listen .lab{font-size:.88rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.listen .row{display:flex;align-items:center;gap:10px}
+.listen input[type=range]{flex:1;min-width:40px;accent-color:var(--ember);height:4px}
+.listen .t{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.listen .sp,.listen .x{border:1px solid var(--rule);background:none;color:var(--ink);border-radius:999px;font:600 .75rem var(--f-body);padding:.35em .65em;cursor:pointer;flex:none}
+.listen .x{border:0;font-size:1.1rem;padding:.1em .35em;color:var(--muted)}
+.listen-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;width:min(680px,calc(100% - 24px));margin:0;box-shadow:0 18px 40px -16px rgba(0,0,0,.55)}
+@media (max-width:520px){ .listen .sp{display:none} .listen .t{font-size:.72rem} }
+
+.article iframe{width:100%;height:auto;aspect-ratio:16/9;border:0;border-radius:var(--r)}
+.article video{width:100%;height:auto;border-radius:var(--r)}
+[hidden]{display:none!important}
+body{margin:0}img{max-width:100%;height:auto}
+</style>
+</head>
+<body data-kind="page">
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Arete Pursuits home"><b>Arete</b><i>Pursuits</i></a>
+    <nav class="menu" aria-label="Main">
+      <div class="dd" data-dd="lead"><button aria-expanded="false" data-group="lead">Leadership ▾</button>
+        <div class="dd-panel" hidden>
+          <a href="/services/executive-coaching/">Executive Coaching<small>Six months, 13 sessions, two assessments</small></a>
+          <a href="/services/organizations/">For Organizations<small>Workshops, DiSC, and 360s</small></a>
+        </div></div>
+      <div class="dd" data-dd="being"><button aria-expanded="false" data-group="being">Consciousness ▾</button>
+        <div class="dd-panel" hidden>
+          <a href="/services/life-coaching/">Life Coaching<small>Whatever life brings</small></a>
+          <a href="/services/consciousness-coaching/">Consciousness Coaching<small>A focused path within life coaching</small></a>
+          <a href="/meditation/">Meditation<small>Guided meditations and practice</small></a>
+        </div></div>
+      <a href="/blog/">Writing</a>
+      <a href="/resources/">Library</a>
+      <a href="/about/">About</a>
+    </nav>
+    <a class="btn btn-ember" href="/contact/">Begin a conversation</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+  </div>
+  <div class="wrap mobile" id="mobileNav" hidden>
+    <span class="label grp">Leadership</span><a href="/services/executive-coaching/">Executive Coaching</a><a href="/services/organizations/">For Organizations</a>
+    <span class="label grp">Consciousness</span><a href="/services/life-coaching/">Life Coaching</a><a href="/services/consciousness-coaching/">Consciousness Coaching</a><a href="/meditation/">Meditation</a>
+    <span class="label grp">More</span><a href="/blog/">Writing</a><a href="/resources/">Library</a><a href="/about/">About</a><a href="/contact/">Begin a conversation</a>
+  </div>
+</header>
+
+<main id="app"><div class="enter"><div class="phead"><div class="wrap"><div class="label" style="margin-top:0px">Writing</div><h1>Field notes on leading <em>&amp;</em> being</h1><p class="lede">Field notes since 2021 on leadership, neuroscience, consciousness, and tales from the road. Subscribe on <a class="tl-link" href="https://teliodosis.substack.com/subscribe" target="_blank" rel="noopener">Substack</a> or <a class="tl-link" href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">LinkedIn</a> to get new posts.</p></div></div><div class="wrap">
+<div id="toptier"><a class="feature" href="/waiting/"><div class="ph"><img src="/wp-content/uploads/2026/10/Gemini_Generated_Image_fxrlzjfxrlzjfxrl.jpeg" alt=""></div><div><div class="meta"><span>Latest · Oct 12, 2026</span><span class="c">Consciousness, Growth, Mindfulness, Spirituality</span></div><h2>Waiting</h2><p class="muted">Sometimes the most productive thing you can do is refuse to build the plan. Some things need to steep before they can be served. Last week I traveled to Denver to attend the EDUCAUSE conference. It continues to serve as an anchor point for…</p></div></a>
+<section style="padding-block:48px"><div class="cards"><a class="card" href="/gentleness/"><div class="ph"><img src="/img/p-gentleness.jpg" alt="" loading="lazy"></div><div class="meta"><span>Aug 10, 2026</span><span class="c">Consciousness</span></div><h3>Gentleness</h3><p class="ex">Since arriving at my mother and stepfather’s home this weekend, I have regularly seen a Doe and two Fawns in the areas behind their home. One night this week, I went to bed early. When I awoke the next morning, my Mom told me that after I…</p></a><a class="card" href="/leading-without-authority/"><div class="ph"><img src="/img/p-leading-without-authority.jpg" alt="" loading="lazy"></div><div class="meta"><span>Aug 3, 2026</span><span class="c">Executive Presence</span></div><h3>Leading Without Authority</h3><p class="ex">Most of the leaders I work with are in senior roles, managing multiple teams, if not entire organizations. These leaders are accustomed to leading with authority, as the teams and leaders who report to them naturally recognize their role…</p></a><a class="card" href="/change-of-plans/"><div class="ph"><img src="/img/p-change-of-plans.jpg" alt="" loading="lazy"></div><div class="meta"><span>Jul 15, 2026</span><span class="c">Wanderment</span></div><h3>Change of Plans</h3><p class="ex">I’m six weeks into my return to nomadic life. It’s been a magical time for me, and I feel like the first arc is already coming to a close. I alluded to this at the end of last week’s post, and several of you reached out asking for an…</p></a><a class="card" href="/allowing-everything-to-be-as-it-is/"><div class="ph"><img src="/img/p-allowing-everything-to-be-as-it-is.jpg" alt="" loading="lazy"></div><div class="meta"><span>Jul 6, 2026</span><span class="c">Awareness</span></div><h3>Allowing Everything to Be as It Is</h3><p class="ex">A few weeks ago, we were honoured to have the renowned spiritual teacher Adyashanti in one of our meditation teacher training classes. Since the program started, I’ve been steeping in his wisdom, and I regret missing the opportunity to…</p></a><a class="card" href="/untethered-and-tethered/"><div class="ph"><img src="/img/p-untethered-and-tethered.jpg" alt="" loading="lazy"></div><div class="meta"><span>Jun 29, 2026</span><span class="c">Emotions</span></div><h3>Untethered. And Tethered.</h3><p class="ex">Two weeks ago, when I arrived in Fairfax, California, things felt different. As I’ve grown accustomed to doing, I leaned into the feeling to explore it. I made some intriguing discoveries that remind me, once again, of the power of…</p></a><a class="card" href="/the-pendulum/"><div class="ph"><img src="/img/p-the-pendulum.jpg" alt="" loading="lazy"></div><div class="meta"><span>Jun 15, 2026</span><span class="c">Awareness</span></div><h3>The Pendulum</h3><p class="ex">I traveled 1,100 miles over four days, and then shut everything off for another week of silent retreat. It was like crashing into a wall of water. Pendulum Swings Two weeks ago, I had my second silent meditation retreat. I chose this…</p></a><a class="card" href="/welcoming/"><div class="ph"><img src="/img/p-welcoming.jpg" alt="" loading="lazy"></div><div class="meta"><span>Jun 1, 2026</span><span class="c">Awareness</span></div><h3>Welcoming</h3><p class="ex">This has been a week of change. Exiting my home for the last time. Traveling from New Mexico to California. Embracing nomadic life more fully than before. As I paused mid-week to connect with a fellow meditation student, I received a…</p></a><a class="card" href="/meditations-on-ogha-pooge/"><div class="ph"><img src="/img/p-meditations-on-ogha-pooge.jpg" alt="" loading="lazy"></div><div class="meta"><span>May 26, 2026</span><span class="c">Wanderment</span></div><h3>Meditations on O’gha Po’oge</h3><p class="ex">This week marks the end of my year in Santa Fe. When I decided to settle here, it wasn’t because of the city or the people. It was the land. When I first crossed the border from Texas to New Mexico back in January 2025, a voice in my head…</p></a><a class="card" href="/unnesting/"><div class="ph"><img src="/img/p-unnesting.jpg" alt="" loading="lazy"></div><div class="meta"><span>May 18, 2026</span><span class="c">Awareness</span></div><h3>Unnesting</h3><p class="ex">A friend recently characterized this period of my life as a time of locomotion. I loved the imagery of a locomotive gathering steam, the way my April unfolded. By mid-month, it was full steam ahead. Now, I find myself very much in motion.…</p></a><a class="card" href="/the-gem-within-executive-presence/"><div class="ph"><img src="/img/p-the-gem-within-executive-presence.jpg" alt="" loading="lazy"></div><div class="meta"><span>Apr 27, 2026</span><span class="c">Executive Presence</span></div><h3>The Gem Within Executive Presence</h3><p class="ex">As I wrap up a week connecting with lifelong friends and colleagues at Ellucian Live, I sense more deeply than ever the richness of life that emerges when we are fully present. I’ve written about presence before, and two years later, I…</p></a><a class="card" href="/growing-up-again/"><div class="ph"><img src="/img/p-growing-up-again.jpg" alt="" loading="lazy"></div><div class="meta"><span>Apr 6, 2026</span><span class="c">Growth</span></div><h3>Growing Up, Again</h3><p class="ex">I wrote about adult development theory a few years ago. At the time, I still had a scientific bias. I looked at a model and felt it had to be justified with rigorous evidence for people to buy into it. The model made sense to me. It deeply…</p></a><a class="card" href="/more-of-less/"><div class="ph"><img src="/img/p-more-of-less.jpg" alt="" loading="lazy"></div><div class="meta"><span>Mar 30, 2026</span><span class="c">Awareness</span></div><h3>More or Less</h3><p class="ex">Recently, I caught up with a friend who is approaching that magical age of 50. Somewhere around this age, give or take 5-10 years, so many of us go through that phase we’ve unfortunately labeled a “midlife crisis.” I much prefer to think…</p></a></div></section></div>
+<div class="toolbar" id="toolbar"><label class="search"><span class="muted" aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Search 219 posts" value="" aria-label="Search posts"></label>
+<div class="chips" role="group" aria-label="Filter by topic"><a class="chip" href="/blog/" aria-current="page">All<span class="n">219</span></a><a class="chip" href="/category/management/">Management<span class="n">46</span></a><a class="chip" href="/category/mindfulness/">Mindfulness<span class="n">38</span></a><a class="chip" href="/category/awareness/">Awareness<span class="n">29</span></a><a class="chip" href="/category/growth/">Growth<span class="n">26</span></a><a class="chip" href="/category/productivity/">Productivity<span class="n">26</span></a><a class="chip" href="/category/perspectives/">Perspectives<span class="n">20</span></a><a class="chip" href="/category/teams/">Teams<span class="n">19</span></a><a class="chip" href="/category/health/">Health<span class="n">18</span></a><a class="chip" href="/category/coaching/">Coaching<span class="n">17</span></a><a class="chip" href="/category/life-planning/">life planning<span class="n">17</span></a><a class="chip" href="/category/executive-presence/">Executive Presence<span class="n">13</span></a><a class="chip" href="/category/gratitude/">Gratitude<span class="n">11</span></a><a class="chip" href="/category/learning/">Learning<span class="n">10</span></a><a class="chip" href="/category/trust/">Trust<span class="n">9</span></a><a class="chip" href="/category/neuroscience/">Neuroscience<span class="n">9</span></a><a class="chip" href="/category/delegation/">Delegation<span class="n">9</span></a><a class="chip" href="/category/wanderment/">Wanderment<span class="n">8</span></a><a class="chip" href="/category/communication/">Communication<span class="n">8</span></a><a class="chip" href="/category/consciousness/">Consciousness<span class="n">6</span></a><a class="chip" href="/category/goals/">Goals<span class="n">6</span></a><a class="chip" href="/category/spirituality/">Spirituality<span class="n">5</span></a><a class="chip" href="/category/career/">Career<span class="n">5</span></a><a class="chip" href="/category/emotions/">Emotions<span class="n">4</span></a><a class="chip" href="/category/strategic-thinking/">Strategic Thinking<span class="n">4</span></a><a class="chip" href="/category/ai/">AI<span class="n">2</span></a><a class="chip" href="/category/compilations/">Compilations<span class="n">2</span></a><a class="chip" href="/category/somatics/">Somatics<span class="n">2</span></a><a class="chip" href="/category/joy/">Joy<span class="n">1</span></a></div></div>
+<div id="archive" style="padding-bottom:72px"><div class="year"><h3>2026<small>23 posts</small></h3><div><a class="row" href="/waiting/"><span class="d">Oct 12</span><span class="t">Waiting</span><span class="k">Consciousness · Growth</span></a><a class="row" href="/gentleness/"><span class="d">Aug 10</span><span class="t">Gentleness</span><span class="k">Consciousness · Mindfulness</span></a><a class="row" href="/leading-without-authority/"><span class="d">Aug 3</span><span class="t">Leading Without Authority</span><span class="k">Executive Presence · Management</span></a><a class="row" href="/change-of-plans/"><span class="d">Jul 15</span><span class="t">Change of Plans</span><span class="k">Wanderment</span></a><a class="row" href="/allowing-everything-to-be-as-it-is/"><span class="d">Jul 6</span><span class="t">Allowing Everything to Be as It Is</span><span class="k">Awareness · Consciousness</span></a><a class="row" href="/untethered-and-tethered/"><span class="d">Jun 29</span><span class="t">Untethered. And Tethered.</span><span class="k">Emotions · Perspectives</span></a><a class="row" href="/the-pendulum/"><span class="d">Jun 15</span><span class="t">The Pendulum</span><span class="k">Awareness · Mindfulness</span></a><a class="row" href="/welcoming/"><span class="d">Jun 1</span><span class="t">Welcoming</span><span class="k">Awareness · Growth</span></a><a class="row" href="/meditations-on-ogha-pooge/"><span class="d">May 26</span><span class="t">Meditations on O’gha Po’oge</span><span class="k">Wanderment</span></a><a class="row" href="/unnesting/"><span class="d">May 18</span><span class="t">Unnesting</span><span class="k">Awareness · Consciousness</span></a><a class="row" href="/the-gem-within-executive-presence/"><span class="d">Apr 27</span><span class="t">The Gem Within Executive Presence</span><span class="k">Executive Presence · Mindfulness</span></a><a class="row" href="/growing-up-again/"><span class="d">Apr 6</span><span class="t">Growing Up, Again</span><span class="k">Growth</span></a><a class="row" href="/more-of-less/"><span class="d">Mar 30</span><span class="t">More or Less</span><span class="k">Awareness · Mindfulness</span></a><a class="row" href="/same-coach-wider-door/"><span class="d">Mar 23</span><span class="t">Same Coach, Wider Door</span><span class="k">Coaching · Consciousness</span></a><a class="row" href="/fiercely-loyal/"><span class="d">Mar 16</span><span class="t">Fiercely Loyal</span><span class="k">Awareness · Perspectives</span></a><a class="row" href="/zones-of-engagement/"><span class="d">Mar 2</span><span class="t">Zones of Engagement</span><span class="k">Growth · Learning</span></a><a class="row" href="/acknowledge-honour-release/"><span class="d">Feb 23</span><span class="t">Acknowledge. Honour. Release.</span><span class="k">Awareness · Growth</span></a><a class="row" href="/ten-hours/"><span class="d">Feb 16</span><span class="t">Ten Hours</span><span class="k">Health</span></a><a class="row" href="/learning-to-read/"><span class="d">Feb 2</span><span class="t">Learning to Read</span><span class="k">Awareness · Growth</span></a><a class="row" href="/my-service-shift/"><span class="d">Jan 26</span><span class="t">My Service Shift</span><span class="k">Awareness</span></a><a class="row" href="/be-a-liver-2/"><span class="d">Jan 19</span><span class="t">Be A Liver (2026)</span><span class="k">Mindfulness</span></a><a class="row" href="/restoring-empathy/"><span class="d">Jan 12</span><span class="t">Restoring Empathy</span><span class="k">Emotions</span></a><a class="row" href="/zero-based-living/"><span class="d">Jan 5</span><span class="t">Zero-Based Living</span><span class="k">life planning</span></a></div></div><div class="year"><h3>2025<small>35 posts</small></h3><div><a class="row" href="/2025-highlights/"><span class="d">Dec 22</span><span class="t">2025 Highlights</span><span class="k">Health</span></a><a class="row" href="/the-best-week-of-my-life/"><span class="d">Dec 15</span><span class="t">The Best Week of My Life</span><span class="k">Mindfulness · Spirituality</span></a><a class="row" href="/vision/"><span class="d">Dec 1</span><span class="t">Vision</span><span class="k">AI · Executive Presence</span></a><a class="row" href="/spreading-joy/"><span class="d">Nov 24</span><span class="t">Spreading Joy</span><span class="k">Joy</span></a><a class="row" href="/welcome-josh-enjoy-your-stay/"><span class="d">Nov 17</span><span class="t">Welcome Josh. Enjoy your stay.</span><span class="k">Health</span></a><a class="row" href="/leading-with-love/"><span class="d">Nov 10</span><span class="t">Leading With Love</span><span class="k">Executive Presence · Spirituality</span></a><a class="row" href="/when-the-world-changes-overnight/"><span class="d">Oct 6</span><span class="t">When the World Changes Overnight</span><span class="k">AI</span></a><a class="row" href="/appreciating-your-value/"><span class="d">Sep 29</span><span class="t">Appreciating Your Value</span><span class="k">Communication · Delegation</span></a><a class="row" href="/the-story-of-doug/"><span class="d">Sep 8</span><span class="t">The Story of Doug</span><span class="k">Management · Teams</span></a><a class="row" href="/lucid-dreaming/"><span class="d">Sep 2</span><span class="t">Lucid Dreaming</span><span class="k">Consciousness</span></a><a class="row" href="/the-mirage-of-the-mountain-biker/"><span class="d">Aug 25</span><span class="t">The Mirage of the Mountain Biker</span><span class="k">Neuroscience · Perspectives</span></a><a class="row" href="/a-love-story/"><span class="d">Aug 18</span><span class="t">A Love Story</span><span class="k">Wanderment</span></a><a class="row" href="/magical-gateways/"><span class="d">Aug 11</span><span class="t">Magical Gateways</span><span class="k">Spirituality</span></a><a class="row" href="/reliability/"><span class="d">Aug 4</span><span class="t">Reliability</span><span class="k">Delegation · Management</span></a><a class="row" href="/the-master-and-his-emissary/"><span class="d">Jun 16</span><span class="t">The Master and His Emissary</span><span class="k">Neuroscience</span></a><a class="row" href="/rest/"><span class="d">May 19</span><span class="t">Rest</span><span class="k">Health</span></a><a class="row" href="/elevating-consciousness/"><span class="d">May 12</span><span class="t">Elevating Consciousness</span><span class="k">Growth</span></a><a class="row" href="/the-box/"><span class="d">May 5</span><span class="t">The Box</span><span class="k">Strategic Thinking</span></a><a class="row" href="/walkabout-update/"><span class="d">Apr 28</span><span class="t">Walkabout Update</span><span class="k">Wanderment</span></a><a class="row" href="/stillness/"><span class="d">Apr 21</span><span class="t">Stillness</span><span class="k">Awareness · Executive Presence</span></a><a class="row" href="/mastery/"><span class="d">Apr 14</span><span class="t">Mastery</span><span class="k">Growth · Mindfulness</span></a><a class="row" href="/public-speaking/"><span class="d">Apr 7</span><span class="t">Public Speaking</span><span class="k">Executive Presence</span></a><a class="row" href="/colorado/"><span class="d">Mar 31</span><span class="t">Colorado</span><span class="k">Wanderment</span></a><a class="row" href="/building-teams/"><span class="d">Mar 24</span><span class="t">Building Teams</span><span class="k">Management · Teams</span></a><a class="row" href="/integrity/"><span class="d">Mar 17</span><span class="t">Integrity</span><span class="k">Executive Presence · Growth</span></a><a class="row" href="/the-gift-of-time/"><span class="d">Mar 10</span><span class="t">The Gift of Time</span><span class="k">Management · Productivity</span></a><a class="row" href="/anchor-points/"><span class="d">Mar 3</span><span class="t">Anchor Points</span><span class="k">Awareness · Growth</span></a><a class="row" href="/openness/"><span class="d">Feb 24</span><span class="t">Openness</span><span class="k">Awareness · Growth</span></a><a class="row" href="/management-fundamentals/"><span class="d">Feb 18</span><span class="t">Management Fundamentals</span><span class="k">Management</span></a><a class="row" href="/from-operational-to-strategic/"><span class="d">Feb 10</span><span class="t">From Operational to Strategic</span><span class="k">Strategic Thinking</span></a><a class="row" href="/navigating-troubled-waters/"><span class="d">Feb 3</span><span class="t">Navigating Troubled Waters</span><span class="k">Mindfulness · Perspectives</span></a><a class="row" href="/achieving-and-awakened-awareness/"><span class="d">Jan 27</span><span class="t">Achieving and Awakened Awareness</span><span class="k">Awareness · Growth</span></a><a class="row" href="/building-your-council/"><span class="d">Jan 21</span><span class="t">Building Your Council</span><span class="k">Awareness · Growth</span></a><a class="row" href="/reorienting/"><span class="d">Jan 13</span><span class="t">Reorienting</span><span class="k">Awareness · Mindfulness</span></a><a class="row" href="/synchronicity/"><span class="d">Jan 6</span><span class="t">Synchronicity</span><span class="k">life planning</span></a></div></div><div class="year"><h3>2024<small>52 posts</small></h3><div><a class="row" href="/best-of-2024/"><span class="d">Dec 23</span><span class="t">Best of 2024</span><span class="k">Compilations</span></a><a class="row" href="/tales-from-the-road/"><span class="d">Dec 16</span><span class="t">Tales From the Road</span><span class="k">Wanderment</span></a><a class="row" href="/new-manager-feeling-unsure/"><span class="d">Dec 9</span><span class="t">New Manager. Feeling Unsure.</span><span class="k">Career · Management</span></a><a class="row" href="/rethinking-retirement/"><span class="d">Dec 2</span><span class="t">Rethinking Retirement</span><span class="k">Career · life planning</span></a><a class="row" href="/an-abundance-of-gratitude/"><span class="d">Nov 25</span><span class="t">An Abundance of Gratitude</span><span class="k">Gratitude</span></a><a class="row" href="/walking-about/"><span class="d">Nov 18</span><span class="t">Walking About</span><span class="k">Awareness · Growth</span></a><a class="row" href="/strengthening-strategic/"><span class="d">Nov 12</span><span class="t">Strengthening Strategic</span><span class="k">Executive Presence · Strategic Thinking</span></a><a class="row" href="/a-historic-week/"><span class="d">Nov 4</span><span class="t">A Historic Week</span><span class="k">Communication</span></a><a class="row" href="/a-story-of-presence/"><span class="d">Oct 28</span><span class="t">A Story of Presence</span><span class="k">Awareness · Executive Presence</span></a><a class="row" href="/the-unwinding-of-an-athlete/"><span class="d">Oct 21</span><span class="t">The Unwinding of an Athlete</span><span class="k">Awareness · Growth</span></a><a class="row" href="/by-request/"><span class="d">Oct 14</span><span class="t">By Request</span><span class="k">Communication · Delegation</span></a><a class="row" href="/celebrating-three-years/"><span class="d">Oct 7</span><span class="t">Celebrating Three Years</span><span class="k">Coaching</span></a><a class="row" href="/two-ears-one-mouth-one-brain/"><span class="d">Sep 30</span><span class="t">Two Ears. One Mouth. One Brain.</span><span class="k">Communication</span></a><a class="row" href="/the-council-of-joshes/"><span class="d">Sep 23</span><span class="t">The Council of Joshes</span><span class="k">Awareness · Growth</span></a><a class="row" href="/just-a-little-patience/"><span class="d">Sep 16</span><span class="t">Just a Little Patience</span><span class="k">Awareness · Growth</span></a><a class="row" href="/your-first-90-days/"><span class="d">Sep 9</span><span class="t">Your First 90 Days</span><span class="k">Career</span></a><a class="row" href="/the-neuroscience-of-doing-and-being/"><span class="d">Sep 3</span><span class="t">The Neuroscience of Doing and Being</span><span class="k">Neuroscience</span></a><a class="row" href="/dragonfly/"><span class="d">Aug 26</span><span class="t">Dragonfly</span><span class="k">Health</span></a><a class="row" href="/refining-teliodosis/"><span class="d">Aug 19</span><span class="t">Refining Teliodosis</span><span class="k">Growth</span></a><a class="row" href="/social-connections/"><span class="d">Aug 12</span><span class="t">Social Connections</span><span class="k">Communication · Growth</span></a><a class="row" href="/credentials-matter/"><span class="d">Aug 5</span><span class="t">Credentials Matter</span><span class="k">Coaching</span></a><a class="row" href="/meaningful-conversations/"><span class="d">Jul 29</span><span class="t">Meaningful Conversations</span><span class="k">Communication</span></a><a class="row" href="/as-measured-by/"><span class="d">Jul 22</span><span class="t">As Measured By…</span><span class="k">Goals · Productivity</span></a><a class="row" href="/neuroplasticity/"><span class="d">Jul 15</span><span class="t">Neuroplasticity</span><span class="k">Neuroscience</span></a><a class="row" href="/summer-thinking/"><span class="d">Jul 8</span><span class="t">Summer Thinking</span><span class="k">Learning · life planning</span></a><a class="row" href="/summer-reading/"><span class="d">Jul 1</span><span class="t">Summer Reading</span><span class="k">Compilations</span></a><a class="row" href="/exploring-integration/"><span class="d">Jun 24</span><span class="t">Exploring Integration</span><span class="k">Awareness · Growth</span></a><a class="row" href="/running-with-the-turtles/"><span class="d">Jun 17</span><span class="t">Running With The Turtles</span><span class="k">Health</span></a><a class="row" href="/a-funny-thing-happened-on-vacation/"><span class="d">Jun 10</span><span class="t">A Funny Thing Happened on Vacation</span><span class="k">Health · life planning</span></a><a class="row" href="/transformation/"><span class="d">Jun 3</span><span class="t">Transformation</span><span class="k">Growth</span></a><a class="row" href="/mirror-mirror/"><span class="d">May 28</span><span class="t">Mirror, Mirror</span><span class="k">Awareness · Mindfulness</span></a><a class="row" href="/be-a-raven/"><span class="d">May 20</span><span class="t">Be A Raven</span><span class="k">Gratitude</span></a><a class="row" href="/leading-through-coaching/"><span class="d">May 13</span><span class="t">Leading Through Coaching</span><span class="k">Coaching</span></a><a class="row" href="/be-a-liver/"><span class="d">May 6</span><span class="t">Be A Liver</span><span class="k">Communication · Growth</span></a><a class="row" href="/thus-spoke-taylor/"><span class="d">Apr 29</span><span class="t">Thus Spoke Taylor</span><span class="k">Perspectives</span></a><a class="row" href="/authenticity/"><span class="d">Apr 22</span><span class="t">Authenticity</span><span class="k">Executive Presence · Management</span></a><a class="row" href="/beneficial-communication/"><span class="d">Apr 15</span><span class="t">Beneficial Communication</span><span class="k">Awareness · Communication</span></a><a class="row" href="/the-wisdom-in-your-body/"><span class="d">Apr 8</span><span class="t">The Wisdom In Your Body</span><span class="k">Somatics</span></a><a class="row" href="/presence/"><span class="d">Apr 1</span><span class="t">Presence</span><span class="k">Awareness · Coaching</span></a><a class="row" href="/great-leaders-speak-last/"><span class="d">Mar 25</span><span class="t">Great Leaders Speak Last</span><span class="k">Executive Presence · Management</span></a><a class="row" href="/understanding-trust/"><span class="d">Mar 18</span><span class="t">Understanding Trust</span><span class="k">Trust</span></a><a class="row" href="/listening-to-the-universe-part-3/"><span class="d">Mar 11</span><span class="t">Listening to the Universe, Part 3</span><span class="k">Coaching</span></a><a class="row" href="/coaching-discovery/"><span class="d">Mar 4</span><span class="t">Coaching Discovery</span><span class="k">Coaching</span></a><a class="row" href="/courageous-conversations/"><span class="d">Feb 26</span><span class="t">Courageous Conversations</span><span class="k">Management</span></a><a class="row" href="/how-to-do-your-taxes/"><span class="d">Feb 20</span><span class="t">How To Do Your Taxes</span><span class="k">Productivity</span></a><a class="row" href="/embracing-intuition/"><span class="d">Feb 12</span><span class="t">Embracing Intuition</span><span class="k">Neuroscience</span></a><a class="row" href="/life-accounts/"><span class="d">Feb 5</span><span class="t">Life Accounts</span><span class="k">life planning</span></a><a class="row" href="/cultivating-wonder/"><span class="d">Jan 29</span><span class="t">Cultivating Wonder</span><span class="k">Growth</span></a><a class="row" href="/work-life-balance-is-a-myth/"><span class="d">Jan 22</span><span class="t">Work-Life Balance is a Myth</span><span class="k">Health</span></a><a class="row" href="/more-doing-less/"><span class="d">Jan 12</span><span class="t">More Doing Less</span><span class="k">Productivity</span></a><a class="row" href="/doing-less/"><span class="d">Jan 8</span><span class="t">Doing Less</span><span class="k">Productivity</span></a><a class="row" href="/best-of-2023/"><span class="d">Jan 2</span><span class="t">Best of 2023</span><span class="k"></span></a></div></div><div class="year"><h3>2023<small>51 posts</small></h3><div><a class="row" href="/listening-to-the-universe-part-2/"><span class="d">Dec 18</span><span class="t">Listening to the Universe, Part 2</span><span class="k">Coaching</span></a><a class="row" href="/unlocking-opportunities-how-to-strengthen-your-linkedin-profile/"><span class="d">Dec 11</span><span class="t">Unlocking Opportunities: How to Strengthen Your LinkedIn Profile</span><span class="k">Career</span></a><a class="row" href="/happy-new-year/"><span class="d">Dec 4</span><span class="t">Happy New Year</span><span class="k">Goals</span></a><a class="row" href="/arete/"><span class="d">Nov 27</span><span class="t">Arete</span><span class="k">Growth</span></a><a class="row" href="/creating-space/"><span class="d">Nov 20</span><span class="t">Creating Space</span><span class="k">Mindfulness</span></a><a class="row" href="/shared-background-of-obviousness/"><span class="d">Nov 13</span><span class="t">Shared Background of Obviousness</span><span class="k">Management</span></a><a class="row" href="/prince-kohaku/"><span class="d">Nov 6</span><span class="t">Prince Kohaku</span><span class="k">Mindfulness</span></a><a class="row" href="/your-future-self/"><span class="d">Oct 30</span><span class="t">Your Future Self</span><span class="k">Awareness · Perspectives</span></a><a class="row" href="/from-subject-to-object/"><span class="d">Oct 23</span><span class="t">From Subject to Object</span><span class="k">Awareness</span></a><a class="row" href="/my-second-year/"><span class="d">Oct 16</span><span class="t">My Second Year</span><span class="k">Coaching</span></a><a class="row" href="/never-grow-up/"><span class="d">Oct 9</span><span class="t">Never Grow Up</span><span class="k">Learning</span></a><a class="row" href="/missing-conversations/"><span class="d">Oct 2</span><span class="t">Missing Conversations</span><span class="k">Teams</span></a><a class="row" href="/we-are-always-growing/"><span class="d">Sep 25</span><span class="t">We Are Always Growing</span><span class="k">Learning</span></a><a class="row" href="/golden-mean/"><span class="d">Sep 18</span><span class="t">The Golden Mean</span><span class="k">Mindfulness</span></a><a class="row" href="/what-should-i-do/"><span class="d">Sep 11</span><span class="t">What Should I Do?</span><span class="k">Productivity</span></a><a class="row" href="/journal-of-awareness/"><span class="d">Sep 5</span><span class="t">Journal of Awareness</span><span class="k">Awareness</span></a><a class="row" href="/459-2/"><span class="d">Aug 28</span><span class="t">The Hero’s Journey</span><span class="k">life planning</span></a><a class="row" href="/transitions/"><span class="d">Aug 21</span><span class="t">Transitions</span><span class="k">life planning</span></a><a class="row" href="/on-hiring/"><span class="d">Aug 21</span><span class="t">On Hiring</span><span class="k">Management</span></a><a class="row" href="/managing-managers/"><span class="d">Aug 7</span><span class="t">Managing Managers</span><span class="k">Management</span></a><a class="row" href="/what-ai-can-teach-us-about-ni/"><span class="d">Jul 31</span><span class="t">What AI Can Teach Us About NI</span><span class="k">Neuroscience</span></a><a class="row" href="/f-clearing-the-fog/"><span class="d">Jul 24</span><span class="t">Clearing the Fog</span><span class="k">Health</span></a><a class="row" href="/flashlights-and-floodlights/"><span class="d">Jul 17</span><span class="t">Flashlights and Floodlights</span><span class="k">Awareness</span></a><a class="row" href="/productivity-anthology/"><span class="d">Jul 10</span><span class="t">Productivity Anthology</span><span class="k">Productivity</span></a><a class="row" href="/this-space-intentionally-left-blank/"><span class="d">Jul 3</span><span class="t">This Space Intentionally Left Blank</span><span class="k">Health</span></a><a class="row" href="/embodying-your-values/"><span class="d">Jun 26</span><span class="t">Embodying Your Values</span><span class="k">life planning</span></a><a class="row" href="/magical-meetings/"><span class="d">Jun 20</span><span class="t">Magical Meetings</span><span class="k">Management · Productivity</span></a><a class="row" href="/meditation-has-gone-mainstream/"><span class="d">Jun 12</span><span class="t">Meditation Has Gone Mainstream</span><span class="k">Mindfulness</span></a><a class="row" href="/youre-not-the-leader-you-think-you-are/"><span class="d">Jun 5</span><span class="t">You’re Not The Leader You Think You Are</span><span class="k">Coaching · Management</span></a><a class="row" href="/building-resilience/"><span class="d">May 30</span><span class="t">Building Resilience</span><span class="k">Mindfulness</span></a><a class="row" href="/living-heroically/"><span class="d">May 22</span><span class="t">Living Heroically</span><span class="k">life planning</span></a><a class="row" href="/expanding-awareness/"><span class="d">May 15</span><span class="t">Expanding Awareness</span><span class="k">Awareness</span></a><a class="row" href="/brain-energy/"><span class="d">May 8</span><span class="t">Brain Energy</span><span class="k">Health</span></a><a class="row" href="/raising-awareness/"><span class="d">May 1</span><span class="t">Raising Awareness</span><span class="k">Growth · Mindfulness</span></a><a class="row" href="/lets-move/"><span class="d">Apr 24</span><span class="t">Let’s Move</span><span class="k">Coaching · Somatics</span></a><a class="row" href="/remembering-jack-2/"><span class="d">Apr 17</span><span class="t">Remembering Jack (2023)</span><span class="k">Gratitude</span></a><a class="row" href="/desktop-detox/"><span class="d">Apr 10</span><span class="t">Desktop Detox</span><span class="k">Management · Productivity</span></a><a class="row" href="/focus-pocus/"><span class="d">Apr 5</span><span class="t">Focus Pocus</span><span class="k">Management · Productivity</span></a><a class="row" href="/coaching-ontologically/"><span class="d">Mar 27</span><span class="t">Coaching Ontologically</span><span class="k">Coaching · Emotions</span></a><a class="row" href="/listening-to-the-universe/"><span class="d">Mar 20</span><span class="t">Listening to the Universe</span><span class="k">Learning · Mindfulness</span></a><a class="row" href="/412-2/"><span class="d">Mar 13</span><span class="t">Teliodosis</span><span class="k">Growth</span></a><a class="row" href="/conquering-your-calendar/"><span class="d">Mar 6</span><span class="t">Conquering Your Calendar</span><span class="k">Management · Productivity</span></a><a class="row" href="/building-bridges/"><span class="d">Feb 27</span><span class="t">Building Bridges</span><span class="k">Delegation · Management</span></a><a class="row" href="/a-tale-of-two-paths/"><span class="d">Feb 21</span><span class="t">A Tale of Two Paths</span><span class="k">Management</span></a><a class="row" href="/valuing-every-voice/"><span class="d">Feb 13</span><span class="t">Valuing Every Voice</span><span class="k">Management · Teams</span></a><a class="row" href="/so-emotional/"><span class="d">Feb 6</span><span class="t">So Emotional</span><span class="k">Emotions</span></a><a class="row" href="/promote-yourself/"><span class="d">Jan 30</span><span class="t">Promote Yourself</span><span class="k">Executive Presence</span></a><a class="row" href="/to-do-or-not-to-do/"><span class="d">Jan 23</span><span class="t">To Do, Or Not To Do</span><span class="k">Productivity</span></a><a class="row" href="/carpe-septimana/"><span class="d">Jan 16</span><span class="t">Carpe Septimana</span><span class="k">Productivity</span></a><a class="row" href="/carpe-diem/"><span class="d">Jan 9</span><span class="t">Carpe Diem</span><span class="k">Productivity</span></a><a class="row" href="/its-called-breakfast-for-a-reason/"><span class="d">Jan 2</span><span class="t">It’s Called Breakfast for a Reason</span><span class="k">Health</span></a></div></div><div class="year"><h3>2022<small>52 posts</small></h3><div><a class="row" href="/top-ten-blog-posts-of-2022/"><span class="d">Dec 26</span><span class="t">Top Ten Blog Posts of 2022</span><span class="k"></span></a><a class="row" href="/all-you-need-is-love/"><span class="d">Dec 19</span><span class="t">All You Need Is Love</span><span class="k">Gratitude · Mindfulness</span></a><a class="row" href="/gooooooooooooooooooooooals/"><span class="d">Dec 12</span><span class="t">Gooooooooooooooooooooooals!</span><span class="k">Goals · life planning</span></a><a class="row" href="/384-2/"><span class="d">Dec 5</span><span class="t">Promises, Promises</span><span class="k">Delegation · Management</span></a><a class="row" href="/i-do-declare/"><span class="d">Nov 28</span><span class="t">I Do Declare</span><span class="k">Management · Perspectives</span></a><a class="row" href="/just-the-facts/"><span class="d">Nov 21</span><span class="t">Just The Facts</span><span class="k">Management · Perspectives</span></a><a class="row" href="/we-can-do-hard-things/"><span class="d">Nov 14</span><span class="t">We Can Do Hard Things</span><span class="k">Learning</span></a><a class="row" href="/who-are-your-heroes/"><span class="d">Nov 7</span><span class="t">Who Are Your Heroes?</span><span class="k">Gratitude</span></a><a class="row" href="/face-to-face/"><span class="d">Oct 31</span><span class="t">Face-to-Face</span><span class="k">Management · Teams</span></a><a class="row" href="/your-personal-board-of-directors/"><span class="d">Oct 24</span><span class="t">Your Personal Board of Directors</span><span class="k">Goals · life planning</span></a><a class="row" href="/my-first-year/"><span class="d">Oct 17</span><span class="t">My First Year</span><span class="k">Coaching · Gratitude</span></a><a class="row" href="/more-of-what-you-love/"><span class="d">Oct 10</span><span class="t">More of What You Love</span><span class="k">life planning</span></a><a class="row" href="/your-360-feedback/"><span class="d">Oct 3</span><span class="t">Your 360 Feedback</span><span class="k">Management · Teams</span></a><a class="row" href="/zen-and-the-art-of-feedback/"><span class="d">Sep 26</span><span class="t">Zen and the Art of Feedback</span><span class="k">Coaching · Management</span></a><a class="row" href="/feedback-is-a-gift/"><span class="d">Sep 19</span><span class="t">Feedback is a Gift</span><span class="k">Coaching · Management</span></a><a class="row" href="/life-is-calling/"><span class="d">Sep 12</span><span class="t">Life is Calling</span><span class="k">life planning</span></a><a class="row" href="/taking-initiative/"><span class="d">Sep 6</span><span class="t">Taking Initiative</span><span class="k">Delegation · Management</span></a><a class="row" href="/cut-me-some-slack/"><span class="d">Aug 29</span><span class="t">Cut Me Some Slack</span><span class="k">Productivity</span></a><a class="row" href="/onstage-and-backstage/"><span class="d">Aug 22</span><span class="t">Onstage and Backstage</span><span class="k">Management</span></a><a class="row" href="/on-the-path/"><span class="d">Aug 15</span><span class="t">On the Path</span><span class="k">Coaching · Gratitude</span></a><a class="row" href="/go-on-tour/"><span class="d">Aug 8</span><span class="t">Go on Tour</span><span class="k">Management · Teams</span></a><a class="row" href="/11-101/"><span class="d">Aug 1</span><span class="t">1:1 101</span><span class="k">Management</span></a><a class="row" href="/decisions-decisions/"><span class="d">Jul 25</span><span class="t">Decisions, Decisions</span><span class="k">Management</span></a><a class="row" href="/shifting-perspectives/"><span class="d">Jul 18</span><span class="t">Shifting Perspectives</span><span class="k">Coaching · Perspectives</span></a><a class="row" href="/do-as-i-say-not-as-i-do/"><span class="d">Jul 11</span><span class="t">Do As I Say, Not As I Do</span><span class="k">Management</span></a><a class="row" href="/take-a-break/"><span class="d">Jul 5</span><span class="t">Take a Break</span><span class="k">Productivity · Health</span></a><a class="row" href="/overcoming-procrastination/"><span class="d">Jun 27</span><span class="t">Overcoming Procrastination</span><span class="k">Productivity</span></a><a class="row" href="/overcoming-overwhelm/"><span class="d">Jun 20</span><span class="t">Overcoming Overwhelm</span><span class="k">Productivity</span></a><a class="row" href="/fathers-day-gratitude/"><span class="d">Jun 13</span><span class="t">Father’s Day Gratitude</span><span class="k">Gratitude</span></a><a class="row" href="/running-with-the-bunnies/"><span class="d">Jun 6</span><span class="t">Running with the Bunnies</span><span class="k">Health</span></a><a class="row" href="/how-are-you/"><span class="d">May 30</span><span class="t">How Are You?</span><span class="k">Gratitude · Mindfulness</span></a><a class="row" href="/the-rider-and-the-elephant/"><span class="d">May 23</span><span class="t">The Rider and the Elephant</span><span class="k">Management · Teams</span></a><a class="row" href="/strengthening-connections/"><span class="d">May 16</span><span class="t">Strengthening Connections</span><span class="k">Management · Teams</span></a><a class="row" href="/please-shorten-your-meetings/"><span class="d">May 9</span><span class="t">Please Shorten Your Meetings</span><span class="k">Productivity</span></a><a class="row" href="/paying-attention/"><span class="d">Apr 25</span><span class="t">Paying Attention</span><span class="k">Mindfulness</span></a><a class="row" href="/remembering-jack/"><span class="d">Apr 18</span><span class="t">Remembering Jack</span><span class="k">Health</span></a><a class="row" href="/discovering-our-strengths/"><span class="d">Apr 11</span><span class="t">Discovering Our Strengths</span><span class="k">Management · Teams</span></a><a class="row" href="/delegation-102/"><span class="d">Apr 4</span><span class="t">Delegation 102</span><span class="k">Delegation · Management</span></a><a class="row" href="/delegation-101/"><span class="d">Mar 28</span><span class="t">Delegation 101</span><span class="k">Delegation · Management</span></a><a class="row" href="/the-enemies-of-delegation/"><span class="d">Mar 21</span><span class="t">The Enemies of Delegation</span><span class="k">Delegation · Management</span></a><a class="row" href="/unexpected-success/"><span class="d">Mar 14</span><span class="t">Unexpected Success</span><span class="k">Career · Gratitude</span></a><a class="row" href="/i-dont-know-how-to-put-this/"><span class="d">Mar 7</span><span class="t">I Don’t Know How to Put This…</span><span class="k">Health</span></a><a class="row" href="/mothers-day-gratitude/"><span class="d">Mar 2</span><span class="t">Mother’s Day Gratitude</span><span class="k">Gratitude</span></a><a class="row" href="/unplug-yourself/"><span class="d">Feb 28</span><span class="t">Unplug Yourself</span><span class="k">Mindfulness</span></a><a class="row" href="/the-best-technology-available/"><span class="d">Feb 21</span><span class="t">The Best Technology Available</span><span class="k">Learning</span></a><a class="row" href="/finding-focus/"><span class="d">Feb 7</span><span class="t">Finding Focus</span><span class="k">Mindfulness · Productivity</span></a><a class="row" href="/put-on-your-white-belt/"><span class="d">Feb 4</span><span class="t">Put On Your White Belt</span><span class="k">Learning</span></a><a class="row" href="/meeting-maximization/"><span class="d">Jan 31</span><span class="t">Meeting Maximization</span><span class="k">Productivity</span></a><a class="row" href="/calendar-construction/"><span class="d">Jan 24</span><span class="t">Calendar Construction</span><span class="k">Productivity</span></a><a class="row" href="/the-week-ahead/"><span class="d">Jan 17</span><span class="t">The Week Ahead</span><span class="k">Productivity</span></a><a class="row" href="/whats-your-plan-for-today/"><span class="d">Jan 10</span><span class="t">What’s Your Plan for Today?</span><span class="k">Productivity</span></a><a class="row" href="/rome-wasnt-built-in-a-day/"><span class="d">Jan 3</span><span class="t">Rome Wasn’t Built in a Day</span><span class="k">Goals</span></a></div></div><div class="year"><h3>2021<small>6 posts</small></h3><div><a class="row" href="/for-the-love-of-reading/"><span class="d">Dec 27</span><span class="t">For the Love of Reading</span><span class="k">Health</span></a><a class="row" href="/its-the-most-wonderful-time-of-the-year/"><span class="d">Dec 20</span><span class="t">It’s The Most Wonderful Time of the Year</span><span class="k">Goals</span></a><a class="row" href="/the-elements-of-trust/"><span class="d">Dec 13</span><span class="t">The Elements of Trust</span><span class="k">Trust</span></a><a class="row" href="/just-breathe/"><span class="d">Dec 6</span><span class="t">Just Breathe</span><span class="k">Mindfulness</span></a><a class="row" href="/the-case-for-fortnightly/"><span class="d">Nov 29</span><span class="t">The Case for Fortnightly</span><span class="k">Perspectives</span></a><a class="row" href="/my-most-memorable-team/"><span class="d">Nov 18</span><span class="t">My Most Memorable Team</span><span class="k">Management</span></a></div></div></div></div></div></main>
+<footer class="site"><div class="wrap">
+  <div class="fgrid">
+    <div><a class="brand" href="/"><b>Arete</b><i>Pursuits</i></a><p class="tag">Helping leaders, and humans, grow faster than they realized they could.</p></div>
+    <div><h4>Leadership</h4><ul><li><a href="/services/executive-coaching/">Executive Coaching</a></li><li><a href="/services/organizations/">For Organizations</a></li><li><a href="/services/organizations/">DiSC &amp; 360 Feedback</a></li></ul></div>
+    <div><h4>Consciousness</h4><ul><li><a href="/services/life-coaching/">Life Coaching</a></li><li><a href="/services/consciousness-coaching/">Consciousness Coaching</a></li><li><a href="/meditation/">Meditation</a></li><li><a href="/refining-teliodosis/">Teliodosis</a></li></ul></div>
+    <div><h4>Stay close</h4><ul><li><a href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Subscribe on Substack ↗</a></li><li><a href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">LinkedIn newsletter ↗</a></li><li><a href="/blog/">Writing</a></li><li><a href="/resources/">Library</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+  </div>
+  <div class="fine"><span>© 2026 Arete Pursuits · Josh Dietrich, Professional Certified Coach (PCC)</span><span><a href="/privacy-policy/" style="color:inherit">Privacy</a></span></div>
+</div></footer>
+<script src="/site.js" defer></script>
+</body>
+</html>
