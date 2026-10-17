@@ -1,0 +1,35 @@
+Records for aretepursuits.com as served by adel.ns.cloudflare.com, 2026-10-17T06:44:00Z
+== aretepursuits.com A
+aretepursuits.com.	300	IN	A	141.193.213.10
+aretepursuits.com.	300	IN	A	141.193.213.11
+== aretepursuits.com AAAA
+== aretepursuits.com MX
+aretepursuits.com.	300	IN	MX	1 aspmx.l.google.com.
+aretepursuits.com.	300	IN	MX	10 alt3.aspmx.l.google.com.
+aretepursuits.com.	300	IN	MX	10 alt4.aspmx.l.google.com.
+aretepursuits.com.	300	IN	MX	5 alt1.aspmx.l.google.com.
+aretepursuits.com.	300	IN	MX	5 alt2.aspmx.l.google.com.
+== aretepursuits.com TXT
+aretepursuits.com.	300	IN	TXT	"v=spf1 include:_spf.google.com ~all"
+== www
+www.aretepursuits.com.	3600	IN	HINFO	"RFC8482" ""
+aretepursuits.com.	300	IN	TXT	"v=spf1 include:_spf.google.com ~all"
+www.aretepursuits.com.	300	IN	CNAME	aretepursuits.com.
+www.aretepursuits.com.	300	IN	CNAME	aretepursuits.com.
+== _dmarc
+_dmarc.aretepursuits.com. 3600	IN	HINFO	"RFC8482" ""
+_dmarc.aretepursuits.com. 300	IN	TXT	"v=DMARC1; p=none;"
+== google._domainkey
+google._domainkey.aretepursuits.com. 3600 IN HINFO "RFC8482" ""
+google._domainkey.aretepursuits.com. 300 IN TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4lE43WWa9IKSjMAz1vihsPF3VvhtF5niwT+oB30g60ZECNaA2nm1Zkkhv95isQKiVWrCaWxzAdsTLFfHjdw/x3ADe1S5hjPQHFK93KWDQKtQ7Vq1teOICjVeVcpNNq+owfr2cZ3hzMFGke/HsCkaX9Xg4iPmSkILe3nF6Mkgay8c+L4CWLKS5H477lb5OsiSF" "Oq3Kzd7W4cmlrPAs1U+36i/P5ke+z0W8+Dx2pr30ixpJtYSw9hU58DBX65QAdb9yOcgJQ1GEys6htK8T8BxrWkr+3Tdtr8csyWEIKGGUn91kRskTZ6PiIT3s23gKyDK8pUjx3SUY30cBV1WiaEJBwIDAQAB"
+== k2._domainkey
+k2._domainkey.aretepursuits.com. 3600 IN HINFO	"RFC8482" ""
+k2._domainkey.aretepursuits.com. 300 IN	CNAME	dkim2.mcsv.net.
+k2._domainkey.aretepursuits.com. 300 IN	CNAME	dkim2.mcsv.net.
+== k3._domainkey
+k3._domainkey.aretepursuits.com. 3600 IN HINFO	"RFC8482" ""
+k3._domainkey.aretepursuits.com. 300 IN	CNAME	dkim3.mcsv.net.
+k3._domainkey.aretepursuits.com. 300 IN	CNAME	dkim3.mcsv.net.
+== _domainconnect
+_domainconnect.aretepursuits.com. 3600 IN HINFO	"RFC8482" ""
+_domainconnect.aretepursuits.com. 3600 IN TXT	"api.cloudflare.com/client/v4/dns/domainconnect"
