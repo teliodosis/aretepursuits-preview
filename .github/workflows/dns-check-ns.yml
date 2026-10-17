@@ -1,0 +1,26 @@
+name: dns-check-ns
+# Asks one specific nameserver (e.g. a Cloudflare one before activation) for aretepursuits.com's records.
+on:
+  workflow_dispatch:
+    inputs:
+      ns: { required: true }
+permissions:
+  contents: write
+jobs:
+  q:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y -q dnsutils >/dev/null
+      - run: |
+          mkdir -p reports; D=aretepursuits.com; N="${{ inputs.ns }}"
+          {
+            echo "Records for $D as served by $N, $(date -u +%FT%TZ)"
+            for t in A AAAA MX TXT; do echo "== $D $t"; dig +noall +answer @$N $D $t | sort; done
+            for h in www _dmarc google._domainkey k2._domainkey k3._domainkey _domainconnect; do echo "== $h"; dig +noall +answer @$N $h.$D ANY | sort; dig +noall +answer @$N $h.$D TXT | sort; dig +noall +answer @$N $h.$D CNAME | sort; done
+          } > reports/dns-check-ns.txt 2>&1
+          cat reports/dns-check-ns.txt
+      - run: |
+          git config user.name "content-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/dns-check-ns.txt; git diff --cached --quiet || git commit -q -m "DNS check against ${{ inputs.ns }}"
+          git pull -q --rebase && git push
