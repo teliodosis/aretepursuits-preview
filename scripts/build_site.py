@@ -30,6 +30,11 @@ cats_wp = {c['id']: (H.unescape(c['name']), c['slug']) for c in J('content/categ
 mmap = J('content/media-map.json')
 TITLE_OVERRIDES = {k: v for k, v in J('content/title-overrides.json').items() if not k.startswith('_')} if os.path.exists(os.path.join(ROOT, 'content/title-overrides.json')) else {}
 LINK_OVERRIDES = {k: v for k, v in J('content/link-overrides.json').items() if not k.startswith('_')} if os.path.exists(os.path.join(ROOT, 'content/link-overrides.json')) else {}
+_LI = J('content/linkedin-links.json') if os.path.exists(os.path.join(ROOT, 'content/linkedin-links.json')) else {}
+LI_MAP, LI_DROP = _LI.get('map', {}), _LI.get('drop', {})
+def li_key(h):  # loose match for LinkedIn URLs: no scheme, www, query, fragment or trailing slash
+    h = re.sub(r'^https?://', '', h.strip().lower()); h = re.sub(r'^www\.', '', h)
+    return h.split('?')[0].split('#')[0].rstrip('/')
 AUDIO = J('content/audio.json') if os.path.exists(os.path.join(ROOT, 'content/audio.json')) else {}
 SLUGS = {p['slug'] for p in posts}
 slugify = lambda s: re.sub(r'^-|-$', '', re.sub(r'[^a-z0-9]+', '-', s.lower()))
@@ -51,8 +56,13 @@ def media_for(u):
     return mmap.get(u) or mmap.get(original(u))
 
 SIG = re.compile(r"^\s*(I am an executive|I’m an executive|I'm an executive|If you would like to learn more, schedule|Want to comment\?|You can subscribe and comment)", re.I)
-def clean(raw):
+def clean(raw, slug=None):
     soup = BeautifulSoup(raw, 'html.parser')
+    for a in soup.find_all('a', href=True):  # self-links to this post's own LinkedIn version: drop the whole block
+        if 'linkedin.com' in a['href'] and li_key(a['href']) in LI_DROP.get(slug, ()):
+            top = a
+            while top.parent is not None and top.parent is not soup: top = top.parent
+            top.decompose()
     for t in soup(['script', 'style', 'form', 'noscript']): t.decompose()
     # Drop the closing signature lines (they appear on every post) but keep anything after them, like footnotes.
     kids = [k for k in soup.children if getattr(k, 'name', None)]
@@ -70,6 +80,7 @@ def clean(raw):
         else: break
     for a in soup.find_all('a', href=True):
         h = a['href'].strip()
+        if 'linkedin.com' in h and li_key(h) in LI_MAP: h = LI_MAP[li_key(h)]   # Josh's LinkedIn articles -> website versions
         if h in LINK_OVERRIDES:
             if LINK_OVERRIDES[h] is None: a.unwrap(); continue   # dead link with no replacement: keep the words
             h = LINK_OVERRIDES[h]
@@ -143,7 +154,7 @@ for p in posts:
     names = [CAT_RENAME.get(n, n) for n in names]
     P.append({'d': p['date'][:10], 's': s, 't': TITLE_OVERRIDES.get(s, H.unescape(p['title']['rendered'])), 'c': names})
     EX[s] = text(p['excerpt']['rendered'], 240)
-    BODY[s] = clean(p['content']['rendered'])
+    BODY[s] = clean(p['content']['rendered'], s)
     f = p.get('featured'); mm = f and media_for(f['url'])
     if mm and os.path.exists(os.path.join(ROOT, 'media/thumbs', s + '.jpg')):
         IMG.append(s); FEAT[s] = mm['path']
