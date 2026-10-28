@@ -31,7 +31,7 @@ mmap = J('content/media-map.json')
 TITLE_OVERRIDES = {k: v for k, v in J('content/title-overrides.json').items() if not k.startswith('_')} if os.path.exists(os.path.join(ROOT, 'content/title-overrides.json')) else {}
 LINK_OVERRIDES = {k: v for k, v in J('content/link-overrides.json').items() if not k.startswith('_')} if os.path.exists(os.path.join(ROOT, 'content/link-overrides.json')) else {}
 _LI = J('content/linkedin-links.json') if os.path.exists(os.path.join(ROOT, 'content/linkedin-links.json')) else {}
-LI_MAP, LI_DROP = _LI.get('map', {}), _LI.get('drop', {})
+LI_MAP, LI_DROP, LI_MENTIONS = _LI.get('map', {}), _LI.get('drop', {}), _LI.get('mentions', {})
 def li_key(h):  # loose match for LinkedIn URLs: no scheme, www, query, fragment or trailing slash
     h = re.sub(r'^https?://', '', h.strip().lower()); h = re.sub(r'^www\.', '', h)
     return h.split('?')[0].split('#')[0].rstrip('/')
@@ -81,6 +81,13 @@ def clean(raw, slug=None):
     for a in soup.find_all('a', href=True):
         h = a['href'].strip()
         if 'linkedin.com' in h and li_key(h) in LI_MAP: h = LI_MAP[li_key(h)]   # Josh's LinkedIn articles -> website versions
+        if re.search(r'linkedin\.com/(post|article)/edit/', h):   # editor mention links: fix by the person's name
+            name = ' '.join(a.get_text(' ', strip=True).split())
+            if name in LI_MENTIONS:
+                if LI_MENTIONS[name] is None:
+                    for u in a.find_all('u'): u.unwrap()   # no underline on a name that is no longer a link
+                    a.unwrap(); continue
+                h = LI_MENTIONS[name]
         if h in LINK_OVERRIDES:
             if LINK_OVERRIDES[h] is None: a.unwrap(); continue   # dead link with no replacement: keep the words
             h = LINK_OVERRIDES[h]

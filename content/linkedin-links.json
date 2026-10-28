@@ -171,5 +171,21 @@
   "all-you-need-is-love": [
    "linkedin.com/pulse/all-you-need-love-josh-dietrich-pcc-ncc"
   ]
+ },
+ "mentions_note": "Broken LinkedIn editor mention links (/post/edit/, /article/edit/), fixed by link text (Josh, Oct 28). null = keep the words, drop the link.",
+ "mentions": {
+  "Amishi Jha": "https://www.linkedin.com/in/amishi-jha-939022a/",
+  "Andrew Huberman": "https://www.linkedin.com/in/andrew-huberman/",
+  "Brené Brown": "https://www.linkedin.com/in/brenebrown/",
+  "Croft Edwards": "https://www.linkedin.com/in/croftedwards/",
+  "Giada Centofanti, CNTC": "https://www.linkedin.com/in/giadacentofanti/",
+  "Kimberly Westrich": "https://www.linkedin.com/in/kimberlydietrichwestrich/",
+  "Leadership Circle": "https://leadershipcircle.com/",
+  "Mark House": "https://www.linkedin.com/in/markkhouse/",
+  "Paulo André": "https://www.linkedin.com/in/paulorlandre/",
+  "Practice": null,
+  "Susan T. Connolly": "https://www.linkedin.com/in/susan-t-connolly/",
+  "Tom Reynolds": null,
+  "Ursula Pottinga, CPCC, PCC": "https://www.linkedin.com/in/ursula-pottinga/"
  }
 }
