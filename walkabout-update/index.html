@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Walkabout Update | Arete Pursuits</title>
+<meta name="description" content="I have been on a walkabout since last November. I’ve used this blog to provide periodic updates, offering the occasional nugget. Recently, several people have asked me to share a more detailed update on my journey. I’m shocked when I count…">
+<link rel="canonical" href="https://aretepursuits.com/walkabout-update/">
+<meta property="og:site_name" content="Arete Pursuits">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Walkabout Update | Arete Pursuits">
+<meta property="og:description" content="I have been on a walkabout since last November. I’ve used this blog to provide periodic updates, offering the occasional nugget. Recently, several people have asked me to share a more detailed update on my journey. I’m shocked when I count…">
+<meta property="og:url" content="https://aretepursuits.com/walkabout-update/">
+<meta property="og:image" content="https://aretepursuits.com/og/walkabout-update.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Arete Pursuits" href="/feed.xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Walkabout Update", "datePublished": "2025-04-28", "author": {"@type": "Person", "name": "Josh Dietrich"}, "image": "https://aretepursuits.com/og/walkabout-update.jpg", "url": "https://aretepursuits.com/walkabout-update/"}</script>
+<meta property="article:published_time" content="2025-04-28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..700;1,7..72,200..600&family=Albert+Sans:wght@400;500;600&display=swap">
+<style>
+/* Baseline (Oct 2026), built from Wider Door. Layout: "Two doors, one threshold" — dusk-dark first; a full-bleed photograph opens the site, two doors split below it, and every page ends at the same threshold (a conversation). */
+:root{
+  --bg:#0F1614; --surface:#16201D; --raise:#1C2824; --ink:#ECE6DA; --muted:#A3ACA5; --rule:#2A3632;
+  --ember:#E49A5B; --sage:#A6BC9F; --on-accent:#1A120B; --shade:rgba(8,12,11,.62);
+  --f-display:"Literata", "Iowan Old Style", Georgia, serif;
+  --f-body:"Albert Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"Albert Sans", "Segoe UI", system-ui, sans-serif;
+  --max:1200px; --measure:64ch; --r:4px;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#EFF1EC; --surface:#FFFFFF; --raise:#F7F8F4; --ink:#17201C; --muted:#5A6660; --rule:#D3D9D1;
+  --ember:#B2591F; --sage:#4D6A49; --on-accent:#FFFFFF; --shade:rgba(10,14,12,.55); color-scheme:light }}
+:root[data-theme="light"]{
+  --bg:#EFF1EC; --surface:#FFFFFF; --raise:#F7F8F4; --ink:#17201C; --muted:#5A6660; --rule:#D3D9D1;
+  --ember:#B2591F; --sage:#4D6A49; --on-accent:#FFFFFF; --shade:rgba(10,14,12,.55); color-scheme:light }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(16px,4vw,44px)}
+h1,h2,h3{font-family:var(--f-display);font-weight:350;text-wrap:balance;line-height:1.08;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.label{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:.6em;font:600 .95rem/1 var(--f-body);padding:1em 1.45em;border-radius:999px;text-decoration:none;border:1px solid transparent;transition:transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-ember{background:var(--ember);color:var(--on-accent)}
+.btn-line{border-color:currentColor;color:var(--ink)}
+.tl-link{color:var(--ink);text-decoration:underline;text-decoration-color:var(--ember);text-underline-offset:.22em;text-decoration-thickness:1.5px}
+.tl-link:hover{color:var(--ember)}
+
+/* header */
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.nav{display:flex;align-items:center;gap:22px;min-height:70px}
+.brand{text-decoration:none;display:flex;align-items:baseline;gap:.5em;line-height:1}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:1.35rem}
+.brand i{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:1.35rem;color:var(--ember)}
+.menu{display:flex;gap:2px;margin-left:auto;align-items:center}
+.menu > a,.menu .dd > button{font:500 .95rem var(--f-body);color:var(--ink);text-decoration:none;background:none;border:0;padding:.6em .85em;border-radius:6px;cursor:pointer}
+.menu > a:hover,.menu .dd > button:hover{background:var(--raise)}
+.menu [aria-current="page"],.menu .dd > button.on{color:var(--ember)}
+.dd{position:relative}
+.dd-panel{position:absolute;top:calc(100% + 10px);left:-10px;min-width:280px;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:8px;box-shadow:0 24px 50px -24px rgba(0,0,0,.6)}
+.dd-panel::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+.dd-panel a{display:block;padding:.65em .85em;border-radius:6px;text-decoration:none}
+.dd-panel a small{display:block;color:var(--muted);font-size:.82rem}
+.dd-panel a:hover{background:var(--raise)}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--rule);border-radius:8px;padding:.5em .75em;font:500 .9rem var(--f-body);color:var(--ink)}
+.mobile{border-top:1px solid var(--rule);padding-block:10px 18px;display:grid}
+.mobile a{padding:.5em 0;text-decoration:none;font-size:1.05rem}
+.mobile .grp{margin-top:8px}
+@media (max-width:940px){ .menu,.nav > .btn{display:none} .burger{display:inline-block} }
+
+section{padding-block:clamp(64px,9vw,120px)}
+.rt{border-top:1px solid var(--rule)}
+
+/* hero */
+.hero{position:relative;padding:0;min-height:min(78vh,720px);display:grid;align-items:end;overflow:hidden;color:#F3EEE4}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,11,.15) 0%,rgba(8,12,11,.25) 40%,rgba(8,12,11,.86) 100%)}
+.hero .inner{position:relative;z-index:1;padding-block:clamp(120px,18vw,220px) clamp(40px,6vw,72px)}
+.hero h1{font-size:clamp(2.6rem,7.4vw,6.4rem);font-weight:300;max-width:15ch;letter-spacing:-.025em}
+.hero h1 em{font-style:italic;color:#F0A867}
+.hero .sub{font-size:clamp(1.05rem,1.8vw,1.3rem);max-width:46ch;margin-top:22px;color:#E3DCCF}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .btn-line{color:#F3EEE4}
+.hero .credit{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;color:#C9C1B3;margin-top:40px;opacity:.85}
+
+/* doors */
+.doors{display:flex;gap:14px;min-height:520px}
+.door{position:relative;flex:1 1 0;min-width:0;border-radius:var(--r);overflow:hidden;text-decoration:none;color:#F3EEE4;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(22px,3vw,40px);transition:flex-grow .6s cubic-bezier(.2,.7,.2,1)}
+.door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.door::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,11,.05),rgba(8,12,11,.82) 70%)}
+.door > *:not(img){position:relative;z-index:1}
+.door .label{color:#CFE0C8}
+.door h2{font-size:clamp(2rem,3.6vw,3.1rem);margin:10px 0 12px}
+.door p{max-width:40ch;color:#E5DFD3}
+.door .incl{margin-top:18px;font-size:.88rem;color:#D9D2C4;max-width:44ch}
+.door .incl b{font-family:var(--f-mono);font-weight:400;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#CFE0C8;margin-right:.6em}
+.door .go{display:inline-flex;align-items:center;gap:.5em;margin-top:20px;font-weight:600;font-size:.95rem;color:#F3EEE4;border-bottom:1px solid rgba(243,238,228,.5);padding-bottom:2px;align-self:flex-start}
+@media (hover:hover) and (min-width:861px){ .doors:hover .door{flex-grow:.85} .doors .door:hover{flex-grow:1.4} .door:hover img{transform:scale(1.04)} }
+@media (max-width:860px){ .doors{flex-direction:column;min-height:0} .door{min-height:420px} }
+
+/* thesis */
+.thesis{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.thesis h2{font-size:clamp(2rem,4vw,3.3rem)}
+.thesis .body{display:grid;gap:18px;color:var(--muted);max-width:var(--measure)}
+.coin{border:1px solid var(--rule);border-radius:var(--r);padding:22px 24px;background:var(--surface);margin-top:28px}
+.coin .w{font-family:var(--f-display);font-style:italic;font-size:1.9rem}
+.coin .ph{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);margin-left:.6em}
+.coin p{margin-top:8px;color:var(--ink)}
+@media (max-width:820px){ .thesis{grid-template-columns:1fr} }
+
+/* clients */
+.names{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:center;padding-block:44px;border-block:1px solid var(--rule)}
+.names .lbl{width:100%;text-align:center;margin-bottom:6px}
+.names{background:#ECEAE3;border-radius:var(--r);border:0;padding-inline:24px}
+.names .lbl{color:#4D6A49}
+.names img{height:48px;width:auto;max-width:170px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.05);opacity:.8;transition:filter .3s,opacity .3s}
+.names img:hover{filter:none;opacity:1}
+.names .need{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;height:54px;padding:0 14px;border:1px dashed #9AA39C;border-radius:6px;font-family:var(--f-display);font-size:1.05rem;color:#2A332F;white-space:nowrap;line-height:1.1}
+.names .need small{font-family:var(--f-mono);font-size:.6rem;color:#6A746E;letter-spacing:.06em;margin-top:3px}
+.names span.n{font-family:var(--f-display);font-size:clamp(1.15rem,2vw,1.5rem);font-weight:350;color:var(--muted);white-space:nowrap}
+
+/* testimonials */
+.quote-big{font-family:var(--f-display);font-weight:300;font-style:italic;font-size:clamp(2.2rem,5.6vw,4.4rem);line-height:1.06;max-width:18ch}
+.qby{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:16px 0 56px}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:36px}
+.q{margin:0;padding-top:18px;border-top:1px solid var(--rule)}
+.q p{font-family:var(--f-display);font-size:1.15rem;line-height:1.5}
+.q cite{display:block;margin-top:12px;font-style:normal;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ember)}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:44px 28px}
+.card{text-decoration:none;display:grid;gap:12px;align-content:start}
+.card .ph{aspect-ratio:3/2;max-width:100%;border-radius:var(--r);overflow:hidden;background:var(--raise)}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.card:hover .ph img{transform:scale(1.04)}
+.card h3{font-size:1.5rem}
+.card:hover h3{color:var(--ember)}
+.meta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);display:flex;gap:.6em;flex-wrap:wrap;letter-spacing:.04em}
+.meta .c{color:var(--sage)}
+.card .ex{color:var(--muted);font-size:.96rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+/* waystations */
+.road{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px);align-items:start}
+.stops{list-style:none;margin:0;padding:0;border-left:1px solid var(--rule)}
+.stops li{position:relative;padding:0 0 18px 22px;display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px}
+.stops li::before{content:"";position:absolute;left:-5px;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1.5px solid var(--sage)}
+.stops li.now::before{background:var(--ember);border-color:var(--ember)}
+.stops .y{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);padding-top:.2em}
+@media (max-width:820px){ .road{grid-template-columns:1fr} .stops li{grid-template-columns:1fr;gap:2px} }
+
+/* threshold band */
+.threshold{background:var(--surface);border-top:1px solid var(--rule)}
+.threshold .inner{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:end}
+.threshold h2{font-size:clamp(2rem,4.4vw,3.6rem)}
+.threshold .opts{display:grid;gap:12px}
+.threshold .opt{display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none;border:1px solid var(--rule);border-radius:var(--r);padding:16px 18px;background:var(--bg)}
+.threshold .opt:hover{border-color:var(--ember)}
+.threshold .opt b{font-weight:600}
+.threshold .opt span{font-size:.88rem;color:var(--muted)}
+.threshold .opt i{font-style:normal;color:var(--ember);font-size:1.3rem}
+@media (max-width:820px){ .threshold .inner{grid-template-columns:1fr} }
+
+/* page head */
+.phead{padding-block:clamp(56px,8vw,104px) clamp(32px,4vw,52px);border-bottom:1px solid var(--rule)}
+.phead h1{font-size:clamp(2.6rem,6.4vw,5.2rem);margin-top:16px;max-width:18ch;font-weight:300}
+.phead h1 em{font-style:italic;color:var(--ember)}
+.phead .lede{font-family:var(--f-display);font-size:clamp(1.2rem,2.1vw,1.55rem);color:var(--muted);max-width:42ch;margin-top:20px;font-weight:350}
+.crumbs{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);letter-spacing:.04em}
+.crumbs a{color:var(--muted)}
+
+.cols{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:18px 56px;padding-block:48px;border-bottom:1px solid var(--rule)}
+.cols:last-child{border-bottom:0}
+.cols > .label{padding-top:.5em}
+.prose{max-width:var(--measure);display:grid;gap:1.05em}
+.prose h3{font-size:1.6rem;margin-top:.4em}
+.prose ul,.prose ol{margin:0;padding-left:1.15em;display:grid;gap:.55em}
+@media (max-width:780px){ .cols{grid-template-columns:1fr} }
+
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding-block:14px;border-top:1px solid var(--rule)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--f-mono);font-size:.8rem;color:var(--ember);padding-top:.25em}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+.facts div{background:var(--surface);padding:16px 18px}
+.facts b{display:block;font-family:var(--f-display);font-weight:350;font-size:1.7rem}
+.facts span{font-size:.85rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.85rem;padding:.38em .9em;border-radius:999px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;font-family:var(--f-body)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip .n{color:var(--muted);margin-left:.35em;font-family:var(--f-mono);font-size:.78em}
+.chip[aria-pressed="true"] .n{color:inherit;opacity:.7}
+
+/* consciousness path */
+.path{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:10px;position:relative}
+.path::before{content:"";position:absolute;left:0;right:0;top:15px;height:1px;background:linear-gradient(90deg,var(--sage),var(--ember))}
+.stn{position:relative;padding:0 14px 0 0}
+.stn .dot{width:31px;height:31px;border-radius:50%;background:var(--bg);border:1.5px solid var(--sage);display:grid;place-items:center;font-family:var(--f-mono);font-size:.72rem;color:var(--ink);position:relative}
+.stn:last-child .dot{border-color:var(--ember)}
+.stn h3{font-size:1.25rem;margin:14px 0 6px}
+.stn p{font-size:.92rem;color:var(--muted)}
+.stn .off{margin-top:10px;font-size:.82rem;color:var(--muted);border-top:1px dashed var(--rule);padding-top:8px}
+.stn .off b{font-family:var(--f-mono);font-weight:400;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ember);display:block}
+@media (max-width:900px){ .path{grid-template-columns:1fr;gap:22px} .path::before{left:15px;right:auto;top:0;bottom:0;width:1px;height:auto;background:linear-gradient(180deg,var(--sage),var(--ember))} .stn{padding:0 0 0 48px} .stn .dot{position:absolute;left:0;top:0} .stn h3{margin-top:2px} }
+
+.vs{width:100%;border-collapse:collapse;font-size:.98rem}
+.vs th,.vs td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.vs th{font-family:var(--f-mono);font-weight:400;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.vs td:first-child{color:var(--muted);width:24%}
+.vs td:nth-child(3){color:var(--ember)}
+.tablewrap{overflow-x:auto}
+
+/* about */
+.ab-hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr);gap:clamp(28px,5vw,72px);align-items:end}
+.ab-hero img{width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r);filter:saturate(.85)}
+.ab-hero h1 span{display:block}
+.ab-hero h1 span:nth-child(even){font-style:italic;color:var(--ember)}
+@media (max-width:820px){ .ab-hero{grid-template-columns:1fr} .ab-hero img{max-width:340px} }
+.tline{list-style:none;margin:0;padding:0;display:grid}
+.tline li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;padding-block:16px;border-top:1px solid var(--rule)}
+.tline .y{font-family:var(--f-mono);font-size:.8rem;color:var(--ember);padding-top:.3em}
+.tline b{font-family:var(--f-display);font-weight:400;font-size:1.25rem;display:block}
+.tline span{color:var(--muted)}
+@media (max-width:600px){ .tline li{grid-template-columns:1fr;gap:4px} }
+
+/* workshops */
+.ws{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:0 40px}
+.w{padding-block:24px;border-top:1px solid var(--rule);display:grid;gap:8px;align-content:start}
+.w h3{font-size:1.4rem}
+.w .tag{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
+.w .tag.hot{color:var(--ember)}
+.w p{color:var(--muted);font-size:.96rem}
+.offer{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px}
+.of{border:1px solid var(--rule);border-radius:var(--r);background:var(--surface);padding:24px;display:grid;gap:10px;align-content:start}
+.of h3{font-size:1.5rem}
+.of p{color:var(--muted);font-size:.96rem}
+
+/* writing */
+.feature{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;text-decoration:none;padding-block:44px;border-bottom:1px solid var(--rule)}
+.feature .ph{aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;max-width:100%}
+.feature .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.feature h2{font-size:clamp(2.2rem,4.4vw,3.6rem);margin-block:12px 14px;font-weight:300}
+.feature:hover h2{color:var(--ember)}
+@media (max-width:780px){ .feature{grid-template-columns:1fr} }
+.toolbar{display:grid;gap:16px;padding-block:28px;border-bottom:1px solid var(--rule)}
+.search{display:flex;align-items:center;gap:10px;border:1px solid var(--rule);background:var(--surface);border-radius:999px;padding:.55em 1em;max-width:440px}
+.search input{border:0;background:transparent;font:inherit;color:var(--ink);width:100%;outline:none}
+.year{display:grid;grid-template-columns:minmax(0,140px) minmax(0,1fr);gap:12px 40px;padding-block:28px;border-bottom:1px solid var(--rule)}
+.year h3{font-family:var(--f-mono);font-size:1.3rem;font-weight:400}
+.year h3 small{display:block;font-size:.72rem;color:var(--muted);margin-top:4px}
+.row{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:16px;padding-block:9px;border-bottom:1px dashed var(--rule);text-decoration:none;align-items:baseline}
+.row:last-child{border-bottom:0}
+.row .d{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+.row .t{font-family:var(--f-display);font-size:1.15rem;font-weight:350}
+.row:hover .t{color:var(--ember)}
+.row .k{font-size:.78rem;color:var(--muted);text-align:right}
+@media (max-width:780px){ .year{grid-template-columns:1fr} .row{grid-template-columns:60px minmax(0,1fr)} .row .k{display:none} }
+.empty{padding-block:40px;color:var(--muted)}
+
+/* post */
+.post-head{padding-block:clamp(44px,6vw,84px) 28px;max-width:880px}
+.post-head h1{font-size:clamp(2.5rem,6vw,4.6rem);margin-block:14px 18px;font-weight:300}
+.post-hero{max-width:1100px;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden}
+.post-hero img{width:100%;height:100%;object-fit:cover;display:block}
+.pfig{margin-top:clamp(28px,4vw,48px)}
+.pfig img{display:block;width:100%;aspect-ratio:2/1;object-fit:cover;object-position:30% 40%;border-radius:var(--r)}
+@media (max-width:700px){.pfig img{aspect-ratio:4/5;object-position:28% 30%}}
+.article{max-width:var(--measure);font-family:var(--f-display);font-weight:350;font-size:1.25rem;line-height:1.66;padding-block:44px;display:grid;gap:1.05em}
+.article h2{font-size:1.8rem;margin-top:.9em;font-weight:400}
+.article ul{margin:0;padding-left:1.1em;display:grid;gap:.45em}
+.article strong{font-weight:550}
+.article a{text-decoration-color:var(--ember);text-underline-offset:.2em}
+.article .practice{border-left:2px solid var(--ember);padding:4px 0 4px 20px;font-style:italic}
+.note{font-family:var(--f-body);font-size:.95rem;background:var(--surface);border:1px dashed var(--rule);border-radius:var(--r);padding:16px 18px;color:var(--muted)}
+.bio{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;align-items:start;max-width:var(--measure);padding:24px;border:1px solid var(--rule);border-radius:var(--r);background:var(--surface)}
+.bio img{width:72px;height:72px;border-radius:50%;object-fit:cover}
+.bio p{font-size:.98rem}
+.bio .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:.92rem}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-block:40px;max-width:880px}
+.pn a{text-decoration:none;display:grid;gap:4px}
+.pn a:last-child{text-align:right}
+.pn span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.pn b{font-family:var(--f-display);font-weight:400;font-size:1.25rem}
+.pn a:hover b{color:var(--ember)}
+
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:8px 40px}
+.shelf .grp{padding-block:24px;border-top:1px solid var(--rule)}
+.shelf h3{font-size:1.35rem;margin-bottom:10px}
+.shelf ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.shelf li a{text-decoration:none;display:block}
+.shelf li a b{font-family:var(--f-display);font-weight:400;font-size:1.1rem}
+.shelf li a:hover b{color:var(--ember)}
+.shelf li span{display:block;font-size:.85rem;color:var(--muted)}
+
+.ways{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px;padding-block:48px}
+.way{border:1px solid var(--rule);border-radius:var(--r);padding:24px;background:var(--surface);display:grid;gap:10px;align-content:start}
+.way h3{font-size:1.45rem}
+.way .val{font-family:var(--f-display);font-size:1.3rem;user-select:all;word-break:break-word}
+.copy{justify-self:start;font:500 .85rem var(--f-body);background:none;border:1px solid var(--rule);border-radius:999px;padding:.45em .9em;color:var(--ink);cursor:pointer}
+
+footer.site{border-top:1px solid var(--rule);padding-block:56px 40px}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px}
+.fgrid h4{font-family:var(--f-mono);font-weight:400;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;color:var(--sage);margin:0 0 12px}
+.fgrid ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.95rem}
+.fgrid a{text-decoration:none;color:var(--muted)}
+.fgrid a:hover{color:var(--ink)}
+.fgrid .tag{font-family:var(--f-display);font-style:italic;font-size:1.25rem;margin-top:14px;max-width:24ch;font-weight:300}
+.fine{margin-top:44px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:860px){ .fgrid{grid-template-columns:1fr 1fr} .fgrid > :first-child{grid-column:1/-1} }
+
+.pill{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:.5em .6em .5em 1em;font-size:.82rem;box-shadow:0 12px 30px -16px rgba(0,0,0,.6)}
+.pill b{font-family:var(--f-mono);letter-spacing:.1em;text-transform:uppercase;font-size:.68rem;color:var(--ember);font-weight:400}
+.pill a{text-decoration:none;background:var(--raise);color:var(--ink);padding:.35em .8em;border-radius:999px}
+.pill button{background:none;border:0;color:var(--muted);cursor:pointer;font-size:1rem;padding:0 .3em}
+
+/* fortnightly tooltip */
+.fn{position:relative;text-decoration:underline dotted;text-decoration-color:var(--muted);text-underline-offset:.22em;cursor:help;outline-offset:2px}
+.fn::after{content:"Every two weeks";position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%) translateY(4px);white-space:nowrap;font:500 .76rem/1 var(--f-body);letter-spacing:0;text-transform:none;font-style:normal;background:var(--ink);color:var(--bg);padding:.55em .75em;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:20}
+.fn:hover::after,.fn:focus::after{opacity:1;transform:translateX(-50%) translateY(0)}
+/* wanderment chapters */
+.chapters{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--rule)}
+.chapters li{display:grid;grid-template-columns:132px minmax(0,1fr);gap:4px 18px;padding-block:16px;border-bottom:1px solid var(--rule)}
+.chapters .y{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);padding-top:.35em;grid-row:span 2}
+.chapters li.now .y{color:var(--ember)}
+.chapters b{font-family:var(--f-display);font-weight:400;font-size:1.2rem}
+.chapters .route{color:var(--muted);font-size:.92rem}
+@media (max-width:600px){ .chapters li{grid-template-columns:1fr} .chapters .y{grid-row:auto} }
+/* life ⊃ consciousness */
+.nest{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:28px;align-items:center}
+.rings{position:relative;width:100%;max-width:260px;aspect-ratio:1/1;border-radius:50%;border:1px solid var(--sage);background:color-mix(in srgb,var(--sage) 8%,transparent)}
+.rings .lc{position:absolute;top:13%;left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.rings .in{position:absolute;left:24%;right:24%;top:32%;bottom:16%;border-radius:50%;background:color-mix(in srgb,var(--ember) 18%,transparent);border:1px solid var(--ember);display:grid;place-items:center;text-align:center;padding:10px}
+.rings .in span{font-family:var(--f-display);font-size:.98rem;line-height:1.2;color:var(--ink)}
+@media (max-width:600px){ .nest{grid-template-columns:1fr} .rings{max-width:220px} }
+/* meditation */
+.tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px}
+.track{display:grid;gap:6px;text-decoration:none;border:1px solid var(--rule);border-radius:var(--r);padding:20px;background:var(--surface)}
+.track:hover{border-color:var(--ember)}
+.track b{font-family:var(--f-display);font-weight:400;font-size:1.3rem}
+.track span{font-size:.85rem;color:var(--muted)}
+.post-loading{color:var(--muted);font-family:var(--f-body);font-size:1rem}
+.article img{max-width:100%;height:auto;border-radius:var(--r)}
+.article figure{margin:0}
+.article figcaption{font-family:var(--f-body);font-size:.85rem;color:var(--muted);margin-top:6px}
+/* proof strip */
+.proof{border-bottom:1px solid var(--rule);background:var(--surface)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.proof div.stat{padding:22px 18px;border-left:1px solid var(--rule)}
+.proof div.stat:first-child{border-left:0;padding-left:0}
+.proof b{display:block;font-family:var(--f-display);font-weight:350;font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.1}
+.proof span{font-size:.85rem;color:var(--muted)}
+@media (max-width:760px){ .proof .wrap{grid-template-columns:1fr 1fr} .proof div.stat:nth-child(3){border-left:0;padding-left:0} .proof div.stat{border-top:1px solid var(--rule)} .proof div.stat:nth-child(-n+2){border-top:0} }
+/* testimonials on service pages */
+.pq{display:grid;gap:22px}
+.pq figure{margin:0;padding-left:18px;border-left:2px solid var(--ember)}
+.pq p{font-family:var(--f-display);font-size:1.15rem;line-height:1.5}
+.pq cite{display:block;margin-top:8px;font-style:normal;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+/* next step after posts */
+.next{max-width:var(--measure);margin-bottom:22px;padding:22px 24px;border:1px solid var(--rule);border-left:3px solid var(--ember);border-radius:var(--r);background:var(--surface);display:grid;gap:10px}
+.next p{font-size:1rem}
+.next .row2{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+@keyframes rise{from{opacity:.001;transform:translateY(12px)}to{opacity:1;transform:none}}
+.enter{animation:rise .55s ease both}
+.hero h1,.hero .sub,.hero .actions{animation:rise .9s ease both}
+.hero .sub{animation-delay:.12s}.hero .actions{animation-delay:.24s}
+@media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important} }
+/* baseline additions */
+.label{font-weight:500}
+.y,.d,.meta,.chapters .y,.tline .y,.crumbs{font-variant-numeric:tabular-nums}
+.threshold.start{background:var(--bg);border-top:0}
+.sec{font-size:clamp(2rem,4.4vw,3.4rem);margin-top:14px}
+.intro{max-width:60ch;margin:16px 0 34px;font-size:1.08rem}
+.changes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.changes > div{border:1px solid var(--rule);border-radius:var(--r);padding:22px clamp(18px,2.4vw,30px);background:var(--surface)}
+.changes ul,.outcomes{list-style:none;padding:0;margin:12px 0 0;display:grid}
+.changes li,.outcomes li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.changes li:last-child,.outcomes li:last-child{border-bottom:0}
+.changes li::before,.outcomes li::before{content:"→";color:var(--ember)}
+@media (max-width:860px){ .changes{grid-template-columns:1fr} }
+.latest{margin-top:clamp(40px,6vw,72px)}
+.wref{margin-top:10px;font-size:.92rem}
+.shelf li a.lref{display:block;font-size:.82rem;color:var(--ember);margin-top:2px;text-decoration:underline;text-underline-offset:2px}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px}
+.tiles .card h3{font-size:1.2rem}
+.tiles .card .ex{font-size:.92rem}
+@media (max-width:1000px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.tiles{gap:22px 14px}.tiles .card .ex{display:none}.tiles .card h3{font-size:1.05rem}.tiles .card .meta .c{display:none}}
+.chapters li.ahead b{font-style:italic;color:var(--muted)}
+.latest .row{grid-template-columns:110px minmax(0,1fr) auto}
+@media (max-width:780px){ .latest .row{grid-template-columns:90px minmax(0,1fr)} }
+.names img[alt^="Washington"]{max-width:240px;height:36px}
+.pill .hopt{display:flex;gap:4px}
+.pill .hopt button{font:600 .8rem var(--f-body);width:28px;height:28px;border-radius:50%;border:1px solid var(--rule);background:var(--bg);color:var(--ink);padding:0}
+.pill .hopt button[aria-pressed="true"]{background:var(--ember);border-color:var(--ember);color:var(--on-accent)}
+.post-head h1,.article h1,.article h2,.article h3{overflow-wrap:anywhere}
+.article{overflow-wrap:break-word;grid-template-columns:minmax(0,1fr)}
+.article table{display:block;max-width:100%;overflow-x:auto}
+.listen{max-width:var(--measure);margin:22px 0 26px;display:flex;align-items:center;gap:14px;padding:10px 14px 10px 10px;border:1px solid var(--rule);border-radius:999px;background:var(--surface)}
+.listen .pp{width:42px;height:42px;border-radius:50%;background:var(--ember);color:var(--on-accent);border:0;display:grid;place-items:center;cursor:pointer;flex:none}
+.listen .pp svg{width:16px;height:16px;fill:currentColor}
+.listen .mid{flex:1;min-width:0;display:grid;gap:2px}
+.listen .lab{font-size:.88rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.listen .row{display:flex;align-items:center;gap:10px}
+.listen input[type=range]{flex:1;min-width:40px;accent-color:var(--ember);height:4px}
+.listen .t{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.listen .sp,.listen .x{border:1px solid var(--rule);background:none;color:var(--ink);border-radius:999px;font:600 .75rem var(--f-body);padding:.35em .65em;cursor:pointer;flex:none}
+.listen .x{border:0;font-size:1.1rem;padding:.1em .35em;color:var(--muted)}
+.listen-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;width:min(680px,calc(100% - 24px));margin:0;box-shadow:0 18px 40px -16px rgba(0,0,0,.55)}
+@media (max-width:520px){ .listen .sp{display:none} .listen .t{font-size:.72rem} }
+
+.article iframe{width:100%;height:auto;aspect-ratio:16/9;border:0;border-radius:var(--r)}
+.article video{width:100%;height:auto;border-radius:var(--r)}
+[hidden]{display:none!important}
+body{margin:0}img{max-width:100%;height:auto}
+</style>
+</head>
+<body data-kind="post">
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Arete Pursuits home"><b>Arete</b><i>Pursuits</i></a>
+    <nav class="menu" aria-label="Main">
+      <div class="dd" data-dd="lead"><button aria-expanded="false" data-group="lead">Leadership ▾</button>
+        <div class="dd-panel" hidden>
+          <a href="/services/executive-coaching/">Executive Coaching<small>Six months, 13 sessions, two assessments</small></a>
+          <a href="/services/organizations/">For Organizations<small>Workshops, DiSC, and 360s</small></a>
+        </div></div>
+      <div class="dd" data-dd="being"><button aria-expanded="false" data-group="being">Consciousness ▾</button>
+        <div class="dd-panel" hidden>
+          <a href="/services/life-coaching/">Life Coaching<small>Whatever life brings</small></a>
+          <a href="/services/consciousness-coaching/">Consciousness Coaching<small>A focused path within life coaching</small></a>
+          <a href="/meditation/">Meditation<small>Guided meditations and practice</small></a>
+        </div></div>
+      <a href="/blog/">Writing</a>
+      <a href="/resources/">Library</a>
+      <a href="/about/">About</a>
+    </nav>
+    <a class="btn btn-ember" href="/contact/">Begin a conversation</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+  </div>
+  <div class="wrap mobile" id="mobileNav" hidden>
+    <span class="label grp">Leadership</span><a href="/services/executive-coaching/">Executive Coaching</a><a href="/services/organizations/">For Organizations</a>
+    <span class="label grp">Consciousness</span><a href="/services/life-coaching/">Life Coaching</a><a href="/services/consciousness-coaching/">Consciousness Coaching</a><a href="/meditation/">Meditation</a>
+    <span class="label grp">More</span><a href="/blog/">Writing</a><a href="/resources/">Library</a><a href="/about/">About</a><a href="/contact/">Begin a conversation</a>
+  </div>
+</header>
+
+<main id="app"><div class="enter"><div class="wrap"><div class="post-head"><div class="crumbs"><a href="/blog/">Writing</a> / <a href="/category/wanderment/">Wanderment</a></div><h1>Walkabout Update</h1><div class="meta"><span>Apr 28, 2025</span><span>Josh Dietrich</span></div></div>
+ <div class="post-hero" id="posthero"><img src="/wp-content/uploads/2025/04/cover-scaled.jpg" alt=""></div><article class="article">
+<p>I have been on a walkabout since last November. I’ve used this blog to provide periodic updates, offering the occasional nugget. Recently, several people have asked me to share a more detailed update on my journey. I’m shocked when I count the months and realize I’ve been walking about for over five months. Time has flown by, and yet the experiences have been so rich that, in many ways, it feels as if time has passed slowly.</p>
+<p>Today, I’ll share some of the highlights from my journey.</p>
+<p><strong>Why a Walkabout</strong></p>
+<p>2024 was a year of growth and change for me. As the summer unfolded, I recognized I had lived in Virginia for 50 years. Looking to 2025 and beyond, I realized I was ready to live elsewhere. I wasn’t sure where, but I was confident it wasn’t Virginia.</p>
+<p>I am fortunate to have a job that allows me to work from anywhere—all I need is strong internet and a time zone that aligns with my clients. So, I decided to go nomadic and began brainstorming places in the US where I might want to live.</p>
+<p>As I built this list and began to think through plans, I realized I wanted more than just the life of a nomad. I wanted to explore places of spirituality as well. So, I chose not to go nomadic but instead to go on a Walkabout.</p>
+<p><strong>Bethany Beach, Delaware (Nov 14-27)</strong></p>
+<p>I began my journey visiting Brian Knotts, my <a href="/cultivating-wonder/">partner in wonder</a>, and his wife, Jen. I have visited them many times over the past few years, and Brian and I have grown close. If you only knew us when we first met, back in 2011, as Ellucian was forming, this may come as a surprise. Brian and I were very different people with different strengths. While it’s tempting to think he and I have just shifted and become more similar over the years, I don’t think that’s quite accurate.</p>
+<p>If you imagine a Venn diagram with two intersecting circles, you might imagine those two circles moving closer together, creating a larger area of overlap. I think it’s less about our circles moving and more about our circles expanding. The centers of our respective circles may be in the same spot, but the circumference of each of our circles has expanded, producing the same result – a larger shared area of overlap.</p>
+<p>Bethany Beach holds many memories for me. It was here that I first connected with Turtle as a spirit animal. I have enjoyed many deep, philosophical conversations with Brian. It was a bittersweet trip as I recognized I may not look at the Atlantic Ocean again for months, possibly years.</p>
+<p></p>
+<figure><img alt="" height="1200" loading="lazy" src="/wp-content/uploads/2025/04/Bethany-Beach.jpg" width="1600"/></figure>
+<p></p>
+<p><strong>West Chester, Pennsylvania (Nov 27- Dec 13)</strong></p>
+<p>I continued to Pennsylvania to spend Thanksgiving with <a href="/tales-from-the-road/">my mother</a> and stepfather. Aside from the joys of being mothered for two weeks, a highlight of this time was a weekend with my mother exploring ancestral homes.</p>
+<p>We traveled first to Lewisburg, PA, where my father grew up. The current owners of my grandparents’ home were gracious enough to give us a tour of the house, which the owner has been lovingly restoring for over ten years, doing his best to preserve the essence of a home built in the late 1800s.</p>
+<p></p>
+<figure><img alt="" height="1216" loading="lazy" src="/wp-content/uploads/2025/04/Lewisburg.jpg" width="1600"/><figcaption>Grandparents’ Home – Lewisburg, PA</figcaption></figure>
+<p></p>
+<p>The next day, we continued to Clintondale, PA, population 110, my mother’s hometown. We continued to Lock Haven and Avis. In Lock Haven, as we looked upon her high school, I received an unexpected text message from her brother, who attended the same high school. It was a magical synchronicity, and we called him to update him on what we were seeing.</p>
+<p><strong>Asheville, North Carolina (Dec 15-Jan 3)</strong></p>
+<p>I passed through Northern Virginia on my way to Asheville, NC, connecting with friends and family and visiting the gravesite of my childhood friend, David “SuperDave” Myers. This was another important spiritual step on my walkabout.</p>
+<p>Three weeks in Asheville served as a period of profound awakening for me. At 53, this was literally the first time I had lived alone. I did not know what to expect. I found I enjoyed it immensely.</p>
+<p>Asheville launched my love affair with mountains and trails. I let go of my Maximizer nature, which didn’t want to spend time driving to some place to run, and sought out different stretches of the Mountains-to-Sea trail to be with nature.</p>
+<p></p>
+<figure><img alt="" height="1200" loading="lazy" src="/wp-content/uploads/2025/04/Asheville-Mountains.jpg" width="1600"/><figcaption>Asheville Mountains</figcaption></figure>
+<p></p>
+<p>Asheville was a time of spiritual growth for me. I met a shaman, who gifted me with a Red-Tailed Hawk totem. I spent Christmas Day hiking in the Appalachians. In a hiking meditation, the <a href="/the-council-of-joshes/">Council of Joshes</a> met, with each member exploring their role on the Council. My sister had commented that ten members seemed crowded. We completed a reorganization, with the acting Council members reduced to six. Two members moved into supporting roles. One went on sabbatical, and a fourth stepped out of linear time entirely – he is waiting for us at some point in the future.</p>
+<p>I hope to return to Asheville at the end of the year to witness firsthand the healing that has occurred throughout the year.</p>
+<p><strong>Hot Springs, Arkansas (Jan 3-5)</strong></p>
+<p>I opted to spend a weekend in Hot Springs to break up my trip from Asheville to Dallas and visit two friends there. I had an 11-12 hour drive to Hot Springs, which I planned to break into two days. I would drive until I got tired, achy, or bored, then stop for the night. I was delighted to complete the entire drive in a single day. I never got tired, achy, or bored. I also had four friends who helped me pass the hours connecting on the phone as I drove.</p>
+<p>I enjoyed a 14-mile trail run through Hot Springs National Park, deepening my love for trail running and mountains. I also collected some of the magical waters of Happy Hollow Springs. Every time I visited its fountains, there was a line of people with massive water jugs refreshing their supply of this magic elixir.</p>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Hot-Springs.jpg" width="1600"/><figcaption>Hot Springs, Arkansas</figcaption></figure>
+<p></p>
+<p><strong>Dallas, Texas (Jan 5-11)</strong></p>
+<p>Dallas was not on my list of potential homes, but I have so many good friends there that I wanted to visit. I connected with at least six friends the week I was there, and I can think of many more I could not meet up with. My choice of Dallas in January was strategic, as I expected warm weather. Instead, I brought snow to Dallas. To my Dallas friends, I apologize.</p>
+<p>I stayed with Tim, a dear friend, and his house was an oasis of pinball, guitars, coffee, and cats. This was my first stop with pets since departing Virginia in November. I had forgotten how much I love cats.</p>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Dallas-Hawk.jpg" width="1600"/><figcaption>Dallas Hawk</figcaption></figure>
+<p></p>
+<p><strong>Austin, Texas (Jan 11-25)</strong></p>
+<p>I continued to Austin for two weeks with Kristy, a coaching friend and former colleague. We had one week of good weather, and one week when I brought snow to Austin as well. While Texas was unseasonably cold, I took some solace in knowing that the rest of the country was even colder.</p>
+<p>We saw one local music act, and we would have seen more if I had it to do over. It was a delightful evening with Bonnie Whitmore and Tony Kamel.</p>
+<p>I enjoyed many runs along the Colorado River and was treated to my first Turtles on my walkabout. On one run, I counted at least thirty.</p>
+<p></p>
+<figure><img alt="" height="1200" loading="lazy" src="/wp-content/uploads/2025/04/Austin-Turtles.jpg" width="1600"/><figcaption>Austin Turtle Party</figcaption></figure>
+<p></p>
+<p>I also had my first experience with self-driving cars. Austin and Phoenix both have Waymo self-driving cars in operation. I did not get a chance to ride in one, but I gradually became comfortable with the sight of a vehicle with no driver.</p>
+<p><strong>The Land of Enchantment – Albuquerque, New Mexico (Jan 25-Feb 22)</strong></p>
+<p>I enjoyed my time in Texas and look forward to visiting again, but I know Texas will not be my home.</p>
+<p>I had a decidedly different feeling as I crossed the border from Texas into New Mexico and viewed the sign that read, “Welcome to the Land of Enchantment.” That state motto touches my soul.</p>
+<p>Thirty minutes into the state, I heard a voice tell me I was home. I questioned this voice, as I had only spent five days in New Mexico before this moment. How could it be home? And yet, it insisted. There is a soul-level connection to New Mexico. They say New Mexico either draws you in or spits you out. Thus far, it has been wrapping its arms around me.</p>
+<p>In Albuquerque, you can always see the Sandia Mountains. On the East Coast, we have mountains, but we have so many trees that you often cannot see them until you are close. Out West, we have big skies that give us unobstructed views of the mountains for miles and miles. Growing up, I witnessed the “beach vs mountain” debate and always fell on the beach side. I didn’t understand the appeal of the mountains. I certainly do now.</p>
+<p>I spent four weeks in Albuquerque. I hiked the South Sandia – an 11-mile trail “run” that was 95% hiking and 5% running, climbing 3,800 feet of elevation. I ran along the Rio Grande. I explored Petroglyph National Monument and watched hot air balloons dance across the sky.</p>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Porcupine.jpg" width="1600"/><figcaption>Porcupine</figcaption></figure>
+<p></p>
+<p>I remember one Sunday when I was enjoying myself so much I didn’t want the day to end, but I had work to get done before bed. I asked the Universe to allow me to step out of linear time so I could enjoy my day to the fullest and still get everything done that I needed to get done. I then proceeded to enjoy my day.</p>
+<p>As I went to bed that evening, I recognized that the Universe had not granted me my wish. I had enjoyed the day, but I was going to bed without completing all the things I wanted to do.</p>
+<p>The Universe woke me up at 3:30 AM. By 4, I realized I was wide awake and couldn’t get back to sleep. By 8, everything on my list was completed.</p>
+<p>When you ask the Universe for something, don’t be too attached to <em>how </em>it fulfills your request…</p>
+<p></p>
+<figure><img alt="" height="1200" loading="lazy" src="/wp-content/uploads/2025/04/Sandhill-Cranes.jpg" width="1600"/><figcaption>Sandhill Cranes</figcaption></figure>
+<p></p>
+<p>I also got a taste of Santa Fe during my stay, spending a half-day walking up Canyon Road and exploring art exhibits. This is an entirely new area of exploration for me as I begin to develop my appreciation for art and learn what I am drawn to.</p>
+<p><strong>Arizona (Phoenix, Sedona, Feb 22-Mar 8)</strong></p>
+<p>My next stop was two weeks in Phoenix. I was curious to explore Arizona, especially Sedona’s energy vortexes. I expected late February to still be pleasant in Phoenix. The first week saw temperatures in the 80s!</p>
+<p>I spent a weekend in Sedona, and that time was magical. I hiked several of the most popular trails, which I enjoyed. I eventually turned down a less popular side trail on my final hike and enjoyed it even more. It was an opportunity for <a href="/stillness/">stillness</a>. When I return to Sedona, I’ll choose the less-traveled trails.</p>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Sedona.jpg" width="1600"/><figcaption>Sedona – Cathedral Rock</figcaption></figure>
+<p></p>
+<p>When I drove back to Phoenix, I traveled through Jerome, a mountain mining town. The drive was breathtaking and terrifying, with tight switchback roads. The following week, I experienced another magical synchronicity, as the protagonist in a book I was reading unexpectedly traveled to Sedona and Jerome.  I read a previous book in the series while I was in Asheville, and in another synchronicity, Asheville figured prominently in that book.</p>
+<p>I finished my two weeks in Arizona with lunch in Tucson, followed by a day of hiking the Chiricahua Mountains, and an evening in Silver City, NM. I also passed through Truth or Consequences, NM, which I have wanted to do for decades.</p>
+<p><strong>Return to the Land of Enchantment – Albuquerque, New Mexico (Mar 9-Mar 21)</strong></p>
+<p>When I planned two weeks in Phoenix, I expected to continue to Sedona for a more extended period, and then on to Colorado. However, shortly after I booked my time in Phoenix, my friend in Albuquerque discovered she would need a housesitter. I was happy to return and housesit. This meant my trip to Phoenix was the first time on my walkabout where I didn’t pack all my belongings back into my car – I left many of my items behind in New Mexico. It’s not lost on me that New Mexico is wrapping its tendrils around me lovingly, beckoning me to stay.</p>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Frisky-Roadrunners.jpg" width="1600"/><figcaption>Frisky Roadrunners</figcaption></figure>
+<p></p>
+<p><strong>Taos, New Mexico (Mar 21-23)</strong></p>
+<p>En route to Colorado, I spent a weekend in Taos. Like Sedona, I was seeking spiritual energy vortexes. I discovered one in an unexpected form as I hiked Devisadero Mountain, where I encountered a vortex of Ravens as I neared the peak. I wrote about this in one Walkabout Corner, and a friend texted me to suggest that those Ravens were, in fact, drones—and yes, they were always watching me!</p>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Taos-Raven.jpg" width="1600"/><figcaption>Taos Raven</figcaption></figure>
+<p></p>
+<p>I visited art galleries in Taos, inspired by my connection with the art of Santa Fe. One artist in particular resonated with me: <a href="https://maria-mikhailas.com/" rel="noopener" target="_blank">Maria Mikhailas</a>. I was intrigued to find out that she also surfaced on InsightTimer during my morning meditations while in Taos.</p>
+<p><strong>Denver, Colorado (Mar 23-30)</strong></p>
+<p>As I wrap up more than a month in Colorado, I acknowledge it is a close second to New Mexico on my travels to date. It already earned its <a href="/colorado/">own dedicated blog post</a> following my week in Denver. I’ll let that post speak to my week in Denver.</p>
+<p></p>
+<figure><img alt="" height="1200" loading="lazy" src="/wp-content/uploads/2025/04/Bison.jpg" width="1600"/><figcaption>Colorado Bison</figcaption></figure>
+<p></p>
+<p><strong>Northern Colorado (Greeley, Fort Collins, Mar 30-Apr 17)</strong></p>
+<p>A former Ellucian colleague graciously offered her home for several weeks in Greeley. While I stayed for three weeks, we only connected for a handful of days, as she spends much of her time on the road.</p>
+<p>Greeley is close to Fort Collins, and I connected with several friends there. I also had the opportunity to explore Rocky Mountain National Park for a day. I look forward to returning in the summer months when there is less snow.</p>
+<p>My time in Northern Colorado brought me Turkeys, Prairie Dogs, Bison, Elk, Deer, Hawks, Western Chorus Frogs, Chipmunks, Squirrels, Grasshoppers, and Bald Eagles. On my final run, I finally saw a Turtle after spending weeks scanning the Poudre River, hoping to find one. Aside from one fleeting Turtle head in Albuquerque, this was my first sighting since Austin.</p>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Elk.jpg" width="1600"/><figcaption>My First Elk Sighting</figcaption></figure>
+<p></p>
+<figure><img alt="" height="1200" loading="lazy" src="/wp-content/uploads/2025/04/Poudre-Turkey.jpg" width="1600"/><figcaption>Poudre Turkey</figcaption></figure>
+<p></p>
+<p><strong>Garden of the Gods – Colorado Springs, Colorado (Apr 18-26)</strong></p>
+<p>When I drove to Denver, I passed through Colorado Springs. An exit for “Garden of the Gods Road” caught my attention. I didn’t know anything about it, but it sounded like a very cool name for a road.</p>
+<p>Three days later, my sister texted me a picture of her desktop wallpaper. She said, “I don’t know if this is anywhere near you, but I felt compelled to send it.” It was a photo of the Garden of the Gods.</p>
+<p>Two days later, I connected with a friend who had lived in Colorado Springs. She told me it was one of her favorite places on earth.</p>
+<p>I have learned to pay attention to signs like this from the Universe. I booked a week in Colorado Springs, a few miles from the Garden of the Gods, so I’d have ample opportunity to explore it.</p>
+<p>My first visit was on Saturday. Two days of light but steady snow left Garden of the Gods blanketed in white. It was magical and completely unexpected in late April. I had a delightful run.</p>
+<p></p>
+<figure><img alt="" height="1200" loading="lazy" src="/wp-content/uploads/2025/04/GOG-Snow.jpg" width="1600"/><figcaption>Garden of the Gods – Day 1</figcaption></figure>
+<p></p>
+<p>As I finished my run, I decided to explore the Visitor’s Center. I found an animal education group in a remote room on the second floor. There stood a man holding a Peregrine Falcon on his arm. I had never seen one before. I drank in the experience of meeting Steel for ten minutes, before he put Steel away and brought out Zelda, a Prairie Falcon. I love Hawks as much as Turtles (and Falcons count). The Universe had already fulfilled its promise of a magical experience.</p>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Steel.jpg" width="1600"/><figcaption>Steel</figcaption></figure>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Zelda.jpg" width="1600"/><figcaption>Zelda</figcaption></figure>
+<p></p>
+<p>Two days later, I returned to Garden of the Gods, and the snow had vanished without a trace. The trails were completely dry. The sun was shining, I was in shorts and short sleeves, and I was immediately gifted with my first Bighorn Sheep. I had been searching for them since I set foot in Colorado.</p>
+<p></p>
+<figure><img alt="" height="1200" loading="lazy" src="/wp-content/uploads/2025/04/GOG-No-Snow.jpg" width="1600"/><figcaption>Garden of the Gods – Day 2</figcaption></figure>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Sheep.jpg" width="1600"/><figcaption>Bighorn Sheep</figcaption></figure>
+<p></p>
+<p>I also braved The Incline, a hike at the base of Pike’s Peak consisting of 2,744 steps, climbing 2,000 feet of elevation in just under a mile. It was a unique experience. I talked to one climber who does the hike as many as eight times in a day!</p>
+<p></p>
+<figure><img alt="" height="2133" loading="lazy" src="/wp-content/uploads/2025/04/Incline.jpg" width="1600"/><figcaption>The Incline</figcaption></figure>
+<p></p>
+<p><strong>Return to the Land of Enchantment (Apr 26-?)</strong></p>
+<p>As you read this, I am again in the Land of Enchantment, in Santa Fe. My walkabout begins a new chapter, as I’ve agreed to housesit for an extended period, likely into August. I look forward to experiencing New Mexico at a deeper level and figuring out whether this is truly my future home.</p>
+<p>When this becomes a book, I suppose this will be the part where I say something like:</p>
+<p>“THIS ENDS PART ONE.”</p>
+<p></p>
+<figure><img alt="" height="1106" loading="lazy" src="/wp-content/uploads/2025/04/Land-of-Enchantment.jpg" width="1600"/><figcaption>Returning to New Mexico</figcaption></figure>
+<p></p>
+<p><strong>Putting It Into Practice</strong></p>
+<p>Turn back the clock 18 months, and I would never have dreamed I’d be living on the road. As we say, I’ve pushed way out of my comfort zone.</p>
+<p>Only that metaphor doesn’t feel quite right to me. When we <em>push</em> out of our comfort zone, I get the image of a bubble around me, with external factors pushing on that bubble to keep it from expanding. I have to push against external forces to expand my comfort zone.</p>
+<p>Here’s a better way to view it. Imagine ropes of light extending from you to the walls of the bubble. Your comfort zone is your own creation. If you want to expand your comfort zone, there is no need to push. You need only loosen the ropes holding it in and allow it to expand.</p>
+<p>You define your comfort zone, not the world around you.</p>
+<p>Loosen the ropes. Let your comfort zone expand, in whatever way feels natural to you.</p>
+
+
+
+
+
+
+</article>
+ <div class="next"><span class="label">Where this could lead</span><p>If this stirred something, life and consciousness coaching is a space to explore it further, at your own pace.</p><div class="row2"><a class="btn btn-ember" href="https://aretepursuits.com/schedule/consciousness" target="_blank" rel="noopener">Schedule a conversation <span>→</span></a><a class="tl-link" href="/services/life-coaching/">About life &amp; consciousness coaching</a></div></div>
+ <aside class="bio"><img src="/img/josh.jpg" alt=""><div><p>I’m an executive, life, and consciousness coach with software executive roots. I write about leading, being, and life on the road.</p><div class="links"><a class="tl-link" href="https://teliodosis.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a><a class="tl-link" href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">Subscribe on LinkedIn</a><a class="tl-link" href="/contact/">Start a conversation</a></div></div></aside>
+ <nav class="pn" aria-label="More posts"><a href="/stillness/"><span>← OLDER</span><b>Stillness</b></a><a href="/the-box/"><span>NEWER →</span><b>The Box</b></a></nav></div></div></main>
+<footer class="site"><div class="wrap">
+  <div class="fgrid">
+    <div><a class="brand" href="/"><b>Arete</b><i>Pursuits</i></a><p class="tag">Helping leaders, and humans, grow faster than they realized they could.</p></div>
+    <div><h4>Leadership</h4><ul><li><a href="/services/executive-coaching/">Executive Coaching</a></li><li><a href="/services/organizations/">For Organizations</a></li><li><a href="/services/organizations/">DiSC &amp; 360 Feedback</a></li></ul></div>
+    <div><h4>Consciousness</h4><ul><li><a href="/services/life-coaching/">Life Coaching</a></li><li><a href="/services/consciousness-coaching/">Consciousness Coaching</a></li><li><a href="/meditation/">Meditation</a></li><li><a href="/refining-teliodosis/">Teliodosis</a></li></ul></div>
+    <div><h4>Stay close</h4><ul><li><a href="https://substack.com/@teliodosis" target="_blank" rel="noopener">Subscribe on Substack ↗</a></li><li><a href="https://www.linkedin.com/newsletters/6914190489801912320/" target="_blank" rel="noopener">LinkedIn newsletter ↗</a></li><li><a href="/blog/">Writing</a></li><li><a href="/resources/">Library</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+  </div>
+  <div class="fine"><span>© 2026 Arete Pursuits · Josh Dietrich, Professional Certified Coach (PCC)</span><span><a href="/privacy-policy/" style="color:inherit">Privacy</a></span></div>
+</div></footer>
+<script src="/site.js" defer></script>
+</body>
+</html>
