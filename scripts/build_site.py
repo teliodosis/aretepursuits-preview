@@ -323,7 +323,7 @@ if os.path.isdir(os.path.join(ROOT, 'media/audio')): shutil.copytree(os.path.joi
 shutil.copy(os.path.join(ROOT, 'scripts/site.js'), os.path.join(OUT, 'site.js'))
 from PIL import Image, ImageOps
 ImageOps.fit(Image.open(os.path.join(ROOT, 'baseline/img/p-meditations-on-ogha-pooge.jpg')).convert('RGB'), (1200, 630), Image.LANCZOS).save(os.path.join(OUT, 'og/default.jpg'), 'JPEG', quality=84)
-open(os.path.join(OUT, 'favicon.svg'), 'w').write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0F1614"/><text x="32" y="45" font-family="Georgia,serif" font-size="40" font-style="italic" text-anchor="middle" fill="#E49A5B">A</text></svg>')
+open(os.path.join(OUT, 'favicon.svg'), 'w').write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#242852"/><text x="32" y="45" font-family="Georgia,serif" font-size="40" font-style="italic" text-anchor="middle" fill="#ACCBF9">A</text></svg>')
 
 # ---------- feed, sitemap, robots, headers, redirects ----------
 def rfc822(d): return format_datetime(datetime.fromisoformat(d).replace(hour=12, tzinfo=timezone.utc))
