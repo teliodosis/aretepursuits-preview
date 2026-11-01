@@ -79,11 +79,11 @@ section{padding-block:clamp(64px,9vw,120px)}
 .door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
 .door::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,22,48,.05),rgba(20,22,48,.82) 70%)}
 .door > *:not(img){position:relative;z-index:1}
-.door .label{color:#ACCBF9}
+.door .label{color:#FFFFFF}
 .door h2{font-size:clamp(2rem,3.6vw,3.1rem);margin:10px 0 12px}
 .door p{max-width:40ch;color:#F1F3F8}
 .door .incl{margin-top:18px;font-size:.88rem;color:#D6DAE6;max-width:44ch}
-.door .incl b{font-family:var(--f-mono);font-weight:400;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#ACCBF9;margin-right:.6em}
+.door .incl b{font-family:var(--f-mono);font-weight:400;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#FFFFFF;margin-right:.6em}
 .door .go{display:inline-flex;align-items:center;gap:.5em;margin-top:20px;font-weight:600;font-size:.95rem;color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:2px;align-self:flex-start}
 @media (hover:hover) and (min-width:861px){ .doors:hover .door{flex-grow:.85} .doors .door:hover{flex-grow:1.4} .door:hover img{transform:scale(1.04)} }
 @media (max-width:860px){ .doors{flex-direction:column;min-height:0} .door{min-height:420px} }
@@ -493,7 +493,7 @@ const pages={};
 pages.home=()=>`
 <section class="hero"><img src="img/p-meditations-on-ogha-pooge.jpg" alt="Storm light over the Sangre de Cristo foothills near Santa Fe">
 <div class="wrap inner">
- <div class="label" style="color:#ACCBF9">Arete Pursuits · Executive, life &amp; consciousness coaching</div>
+ <div class="label" style="color:#FFFFFF">Arete Pursuits · Executive, life &amp; consciousness coaching</div>
  <h1 style="margin-top:18px" id="heroH">${HEROES[HI][0]}</h1>
  <p class="sub" id="heroS">${HEROES[HI][1]}</p>
  <div class="actions"><a class="btn btn-ember" href="#contact" data-jump="start">Start with a conversation <span>→</span></a><a class="btn btn-line" href="#executive-coaching" data-jump="paths">Explore the two paths</a></div>
