@@ -6,7 +6,7 @@ One JSON file per post, named `<slug>.json`:
 {
   "slug": "my-post",
   "title": "My Post",
-  "date": "2026-10-19T09:00:00",          // Eastern time; the post stays hidden until then
+  "date": "2026-10-19T06:00:00",          // Eastern time; the post stays hidden until then (6:00 AM Monday; the build runs ~6:05)
   "categories": ["Consciousness", "Growth"],
   "excerpt": "The call-to-action blurb, no hashtags.",
   "featured": "/wp-content/uploads/2026/10/my-post.jpg",   // file lives under media/

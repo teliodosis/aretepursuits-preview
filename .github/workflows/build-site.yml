@@ -4,10 +4,14 @@ on:
     branches: [main]
     paths: ['content/**', 'src/**', 'scripts/**', 'media/**', 'baseline/img/**', '.github/workflows/build-site.yml']
   schedule:
-    - cron: '5 13 * * 1'   # 9:05 Eastern (summer) on Mondays, for scheduled posts
-    - cron: '5 14 * * 1'   # 9:05 Eastern (winter)
-    - cron: '20 13 * * 1'  # 9:20 Eastern backup (summer), in case GitHub starts the 9:05 run late
-    - cron: '20 14 * * 1'  # 9:20 Eastern backup (winter)
+    # Mondays, for scheduled posts (dated 6:00 AM Eastern). GitHub's scheduler is best effort:
+    # runs can start hours late or be skipped (none ran on Nov 2, 2026), hence the backups.
+    - cron: '5 10 * * 1'   # 6:05 Eastern (summer)
+    - cron: '5 11 * * 1'   # 6:05 Eastern (winter)
+    - cron: '20 10 * * 1'  # 6:20 Eastern backup (summer)
+    - cron: '20 11 * * 1'  # 6:20 Eastern backup (winter)
+    - cron: '30 12 * * 1'  # 8:30 Eastern second backup (summer)
+    - cron: '30 13 * * 1'  # 8:30 Eastern second backup (winter)
   workflow_dispatch:
 permissions:
   contents: write
